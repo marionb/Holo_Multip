@@ -1,30 +1,13 @@
+#include <boost/lambda/lambda.hpp>
 #include <iostream>
-#include <fstream>
-
-int getLineNum(std::string fileGiven)
-{
-    const char* file = fileGiven.c_str();
-
-    int maxangles=0;
-    std::ifstream dataF;
-    dataF.open(file);
-    if(dataF.is_open())
-    {
-        std::cout<<"fille open will process";
-        std::string unused;
-        while(std::getline(dataF, unused))
-        {
-            maxangles++;
-        }
-        std::cout<<" maxangles: "<<maxangles<<"\n";
-
-    }
-    dataF.close();
-    return maxangles;
-}
+#include <iterator>
+#include <algorithm>
 
 int main()
 {
-    getLineNum("input.dat");
-    return 0;
+    using namespace boost::lambda;
+    typedef std::istream_iterator<int> in;
+
+    std::for_each(
+        in(std::cin), in(), std::cout << (_1 * 3) << " " );
 }

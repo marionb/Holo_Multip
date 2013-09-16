@@ -18,27 +18,35 @@ class Data
         virtual ~Data();
 
         /**
-        *Read data file and wirite the data in to messg
+        *Read data file and wirite the data in to the 2D array messg
         */
         void readData();
 
         /**
-        * write the contens of messg in to output
-        * @param outpur name of out put file
+        * determine the amount of lines in the file
+        * @param fileGiven  name of input file
         */
-        //void writeData(std::string output);
         static int getLineNum(std::string fileGiven);
 
-
+        /**
+        * write data from messgFinal in to an outpu file
+        * @param output     name of the file to write data in
+        */
+        void writeData(std::string output);
 
     private:
 
-        int const maxangles; //number of data points
+        const int MAXANGLES; //number of data points
 
         const char* infile; //name of file with input data
-        std::ifstream dataF;
+        std::ifstream dataF; //for input
+        std::ofstream dataW; //for output
 
-        double **messg; //"D dynamic array
+    protected:
+
+        double (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
+        double (*messgFinal)[3]; //dynamic array containing output data
+        double thmax;
 };
 
 #endif // PARAM_H

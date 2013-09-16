@@ -2,7 +2,7 @@
 #author: Marion Baumgartner
 
 #flags
-OBJS = Param.o Data.o main.o
+OBJS = Param.o Data.o DataProcess.o main.o
 CC=g++ #compiler to use
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
@@ -13,6 +13,8 @@ all: holo_multip.exe
 #create executable with the first target
 holo_multip.exe: $(OBJS)
 	$(CC) $(OBJS) -o run
+DataProcess.o:DataProcess.cpp main.o
+	$(CC) $(CFLAGS) DataProcess.cpp
 Data.o:Data.cpp main.o
 	$(CC) $(CFLAGS) Data.cpp
 Param.o: Param.cpp main.o
