@@ -85,10 +85,17 @@ void Data::apofct()
 
 void Data::calcchi()
 {
-    //TODO
-    //double sumphi=0;
+    //taking the average over all data points instead of taking the average for each circle
+    //DODO -> figure out if this also works; whi was it done circle by circle in the past?
+    //          mathematically it is probably not the same!!!
+    double sumphi=0
+    for (int i=0;i<MAXANGLES;i++)
+    {
+        sumphi+=messg[i][1];
+    }
+    sumphi=sumphi/MAXANGLES;
 
-    //???
+
 }
 
 void Data::writeData(std::string output)
