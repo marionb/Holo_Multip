@@ -1,5 +1,6 @@
 #include "Data.h"
 #include <iostream>
+//#include <iterator>
 
 Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), infile(fileName.c_str())
 {
@@ -68,6 +69,26 @@ int Data::getLineNum(std::string fileGiven)
     }
     dataF.close();
     return maxangles;
+}
+
+void Data::apofct()
+{
+    //this function has t be caled if the certain flag is set to true!
+    //what is thetamax?is it just the maximum of all thetas?
+    double width =2.0; //where does this number come from?? is it always 2?
+
+    for(int i=0;i<MAXANGLES;i++)
+    {
+        messg[i][0]*=1.0/(std::exp((messg[i][1]-thmax+3.0*width)/width) +1.0);
+    }
+}
+
+void Data::calcchi()
+{
+    //TODO
+    //double sumphi=0;
+
+    //???
 }
 
 void Data::writeData(std::string output)

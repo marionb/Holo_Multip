@@ -1,13 +1,38 @@
-#include <boost/lambda/lambda.hpp>
+//#include <boost/lambda/lambda.hpp>
 #include <iostream>
-#include <iterator>
-#include <algorithm>
+//#include <iterator>
+//#include <algorithm>
+#include <boost/math/special_functions/legendre.hpp>
+#include <vector>
+
+
+
 
 int main()
 {
-    using namespace boost::lambda;
-    typedef std::istream_iterator<int> in;
 
-    std::for_each(
-        in(std::cin), in(), std::cout << (_1 * 3) << " " );
+
+    for (int i=0;i<10;i++)
+    {
+        double x=double(i)/10.0;
+        double leg=boost::math::legendre_p <double> (1,1,x);
+        std::cout<< "this is the result "<<x<<"->"<<leg<<"\n";
+    }
+
+    std::vector<std::vector<double> > alm2;
+    std::vector<std::vector<double> > alm1(5, std::vector<double>());
+    alm2=alm1;
+    for(int i=0;i<5;i++)
+    {
+        alm2[i].push_back(0.1);
+        alm2[i].push_back(0.2);
+
+    }
+    for(int i=0;i<5;i++)
+    {
+        for(int j)
+    }
+
+
+    return 0;
 }
