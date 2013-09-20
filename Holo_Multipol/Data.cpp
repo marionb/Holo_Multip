@@ -2,16 +2,16 @@
 #include <iostream>
 //#include <iterator>
 
-Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), infile(fileName.c_str())
+Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(3) ,infile(fileName.c_str())
 {
     //the constructor takes the file name and from this name calls the static function
     //Data::getLineNum(filename) in ordet to determine the number of datapoints.
     std::cout<<"processing data file: "<<infile;
     std::cout<<" with "<<MAXANGLES<<" data points"<<std::endl;
-
     //initialize data arrays
-    this->messg=new double[MAXANGLES][3];
-    this->messgFinal=new double[MAXANGLES][3];
+    messg.resize( MAXANGLES, std::vector<double>( ROWNUMBER , 0 ) );
+    calc.resize(MAXANGLES, std::vector<double>(ROWNUMBER, 0));
+
     thmax=0;
 }
 
@@ -24,17 +24,18 @@ void Data::readData()
         std::cout<<"reading file";
         for(int i=0;i<MAXANGLES;i++)
         {
-            //std::cout<<"read data line "<<i<<std::endl;
+            std::cout<<"\n read data line "<<i;
             dataF>>messg[i][0];
             //std::cout<<" entry 0 "<<messg[i][0];
             this->dataF>>messg[i][1];
+            //std::cout<<" entry 1 "<<messg[i][1];
             if(thmax<messg[i][1]) // find the maximal theta angle in the list
             {
                 thmax=messg[i][1];
             }
             this->dataF>>messg[i][2];
+            //std::cout<<" entry 2 "<<messg[i][2]<<std::endl;
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
-            i++;
         }
     }else
     {
@@ -85,17 +86,31 @@ void Data::apofct()
 
 void Data::calcchi()
 {
-    //taking the average over all data points instead of taking the average for each circle
-    //DODO -> figure out if this also works; whi was it done circle by circle in the past?
-    //          mathematically it is probably not the same!!!
-    double sumphi=0
+    //DODO Thest this function
+    double sumphi=0;
+    double theta=messg[0][1];
+    int count=0;
+    std::vector<double> normFactor;
     for (int i=0;i<MAXANGLES;i++)
     {
-        sumphi+=messg[i][1];
+        sumphi+=messg[i][0];
+        if(theta!=messg[i+1][1])
+        {
+
+            if(i-count<=0)
+            {
+              sumphi=sumphi/(i-count);
+            }else{ std::cout<< "ERROR: can not calculate average in function calcchi, result migt be wrong!";}
+            for(int k=count;k<=i;k++)
+            {
+                messg[k][0]=messg[k][0]/sumphi;
+            }
+            sumphi=0;
+            theta=messg[i+1][1];
+            count=i;
+        }
+
     }
-    sumphi=sumphi/MAXANGLES;
-
-
 }
 
 void Data::writeData(std::string output)
@@ -114,11 +129,11 @@ void Data::writeData(std::string output)
         dataW<<std::endl;
         for(int i=0;i<MAXANGLES;i++)
         {
-            dataW<<messgFinal[i][0];
+            dataW<<calc[i][0];
             dataW<<"    ";
-            dataW<<messgFinal[i][1];
+            dataW<<calc[i][1];
             dataW<<"    ";
-            dataW<<messgFinal[i][2];
+            dataW<<calc[i][2];
             dataW<<std::endl;
         }
 
@@ -128,7 +143,6 @@ void Data::writeData(std::string output)
 }
 Data::~Data()
 {
-    delete [] messg;
-    delete [] messgFinal;
+
 
 }

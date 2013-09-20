@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include <limits>
+#include <vector>
 
 class Data
 {
@@ -55,15 +56,17 @@ class Data
 
 
         const int MAXANGLES; //number of data points
+        const int ROWNUMBER; //number of rows in the file read
 
 
 //        bool iapo;
         double thmax;
 
 //    protected:
-
-        double (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
-        double (*messgFinal)[3]; //dynamic array containing output data
+        std::vector<std::vector<double> > messg;
+        std::vector<std::vector<double> > calc;
+        //double (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
+        //double (*messgFinal)[3]; //dynamic array containing output data
 
     private:
         const char* infile; //name of file with input data

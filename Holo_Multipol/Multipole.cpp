@@ -13,11 +13,15 @@ Multipole::~Multipole()
 
 double Multipole::deg_to_rad(double deg)
 {
-    return M_PI/180.0;
+    return deg*M_PI/180.0;
+}
+double Multipole::rad_to_deg(double rad)
+{
+    return rad*180/M_PI;
 }
 
 
-void Multipole::multpl()
+void Multipole::multpl(double dphi, double dtheta)
 {
     //TODO determine the norming factor bnorm -> for now it is set to 1!
     //TODO determine dphi and dtheta for the integration
