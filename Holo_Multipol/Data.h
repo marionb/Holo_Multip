@@ -3,9 +3,12 @@
 
 #include <fstream>
 #include <iostream>
+
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <limits>
 #include <vector>
+
 
 class Data
 {
@@ -20,6 +23,8 @@ class Data
 
         /**
         *Read data file and wirite the data in to the 2D array messg
+        *The angles that are read are tranformed from degree to radian making the rest of the calculations easier
+        *Also the largest theta angle is determined bythe function
         */
         void readData();
 
@@ -29,13 +34,31 @@ class Data
         */
         static int getLineNum(std::string fileGiven);
 
+
         /**
         * write data from messgFinal in to an outpu file
         * @param output     name of the file to write data in
         */
         void writeData(std::string output);
 
-        friend class Multipole;
+        //------------------------------------------------------//
+        //Static functions
+
+        /**
+        *convert an angle in degre to rad
+        *@param deg double, value of the angle in degrees
+        *@return    value of the angle in radians using double precission
+        */
+        static inline double deg_to_rad(double deg);
+
+        /**
+        *convert an angle in rad to degrees
+        *@param rad double, value of the angle in radian
+        *@return    value of the angle in degrees using double precission
+        */
+        static inline double rad_to_deg(double rad);
+
+        //friend class Multipole;
 
 
     protected:

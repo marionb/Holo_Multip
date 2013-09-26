@@ -24,16 +24,18 @@ void Data::readData()
         std::cout<<"reading file";
         for(int i=0;i<MAXANGLES;i++)
         {
-            std::cout<<"\n read data line "<<i;
+            //std::cout<<"\n read data line "<<i;
             dataF>>messg[i][0];
             //std::cout<<" entry 0 "<<messg[i][0];
             this->dataF>>messg[i][1];
+            messg[i][1]=deg_to_rad(messg[i][1]);
             //std::cout<<" entry 1 "<<messg[i][1];
             if(thmax<messg[i][1]) // find the maximal theta angle in the list
             {
                 thmax=messg[i][1];
             }
             this->dataF>>messg[i][2];
+            messg[i][2]=deg_to_rad(messg[i][2]);
             //std::cout<<" entry 2 "<<messg[i][2]<<std::endl;
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
         }
@@ -145,4 +147,15 @@ Data::~Data()
 {
 
 
+}
+
+//------------------------------------------------------//
+//Static functions
+double Data::deg_to_rad(double deg)
+{
+    return deg*M_PI/180.0;
+}
+double Data::rad_to_deg(double rad)
+{
+    return rad*180/M_PI;
 }
