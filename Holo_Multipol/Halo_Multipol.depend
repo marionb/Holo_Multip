@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1378892515 source:/home/marion/Documents/Compclinic/Untitled Folder/Halo_Multipol/main.cpp
+	<iostream>
+	<cmath>
+
+1378892563 source:/home/marion/Documents/Compclinic/Untitled Folder/Halo_Multipol/src/ReadFile.cpp
+
+1378892563 source:/home/marion/Documents/Compclinic/code/Halo_Multipol/src/ReadFile.cpp
+
+1379058840 source:/home/marion/Documents/Compclinic/code/Halo_Multipol/main.cpp
+	<iostream>
+	<cmath>
+	"Param.h"
+	"Data.h"
+
+1378997283 /home/marion/Documents/Compclinic/code/Halo_Multipol/Param.h
+	<fstream>
+	<iostream>
+	<limits>
+
+1379058530 /home/marion/Documents/Compclinic/code/Halo_Multipol/Data.h
+	<fstream>
+	<iostream>
+	<cmath>
+	<limits>
+
