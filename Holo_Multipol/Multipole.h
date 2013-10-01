@@ -7,6 +7,7 @@
 #include "Data.h"
 #include <boost/math/special_functions/legendre.hpp>
 #include <boost/math/special_functions/spherical_harmonic.hpp>
+#include <boost/math/special_functions/bessel.hpp>
 
 class Multipole:public Data //:public Data //this class now has acces to all the pubilc and protected members of Data for acces to private members of Data make frined function/class
 {
@@ -68,7 +69,20 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     int vorz(int);
 
 
-    inline void helperFunc(double alpha, double beta);
+    inline double innerSumm(int l, double alpha, double beta);
+
+    /**
+    *calculation of the proper polar angle within the yz-plane.
+    *All polar angles are positive; negative y values should be accounted for by adding PI to the value of phi.
+    *@return polar angle in radian (double precission)
+    */
+    double calcth(double y, double z);
+
+    /**
+    *calculation of the proper azimutal angle within the yz-plane.
+    *@return azimutal angle in radian (double precission)
+    */
+    double calcphi(double x, double y);
 };
 
 

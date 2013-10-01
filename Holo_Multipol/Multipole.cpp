@@ -90,20 +90,6 @@ void Multipole::expans()
 
 void Multipole::holorad(double alpha, double beta)
 {
-    /*std::vector<double> summ;
-    double var=cos(alpha);
-    for(int l=0;l<LMAX;l+=2)
-    {
-        int il=l/2;
-        summ.push_back(alm1[0][il]);plegndr(l,0,var));
-        for(int m=ISYM;m<l;m+=ISYM)
-        {
-            double real=alm1[il][m]*boost::math::spherical_harmonic_r <double> (l,m,alpha, beta); //imaginary part
-            double imag=alm2[il][m]*boost::math::spherical_harmonic_i <double> (l,m,alpha, beta);
-            summ[il]+=2*(real-imag);
-        }
-
-    }
     double r=0;
     double kr=0;
     double suml=0;
@@ -111,21 +97,27 @@ void Multipole::holorad(double alpha, double beta)
     {
         r=nr*0.1;
         kr=k*r;
-        kr=k*r;
-        suml=0;
         for(int l=0;l<LMAX;l+=2)
         {
             int il=l/2;
-            suml+=summ(il)*boost::math::sph_bessel <double> (l, kr)*vorz(il); //TODO:not shure if this order is correct
+            suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il); //TODO:not shure if this order is correct
         }
         radimg.push_back(suml);
-    }*/
+    }
 
 }
 
-void Multipole::helperFunc(double alpha, double beta)
+double Multipole::innerSumm(int l, double alpha, double beta)
 {
-
+    double summ=0;
+    int il=l/2;
+    for(int m=ISYM;m<l;m+=ISYM)
+        {
+            double real=alm1[il][m]*boost::math::spherical_harmonic_r <double> (l,m,alpha, beta); //imaginary part
+            double imag=alm2[il][m]*boost::math::spherical_harmonic_i <double> (l,m,alpha, beta);
+            summ+=2*(real-imag);
+        }
+    return summ;
 }
 
 int Multipole::vorz(int exp)
@@ -135,4 +127,55 @@ int Multipole::vorz(int exp)
     {
         return 1;
     }else return -1;
+}
+
+double Multipole::calcth(double y, double z)
+{
+
+
+      if(y==0.0)
+      {
+          return 0.0;
+      }
+      else if(z==0.0)
+      {
+          return M_PI/2;
+      }else if(z>0.0)
+      {
+          return abs(atan(abs(y/z)));
+      }else
+      {
+          return M_PI-abs(atan(abs(y/z)));
+      }
+}
+
+double Multipole::calcphi(double x, double y)
+{
+    if(y==0)
+    {
+        if(x>0)
+        {
+            return 0;
+        }else
+        {
+            return M_PI;
+        }
+    }else if(x==0)then
+            if(y.gt.0.0)then
+               calcphi=90.0
+            else
+               calcphi=270.0
+            endif
+         else
+            if(x.gt.0.0)then
+               if(y.gt.0.0)then
+                  calcphi=atand(y/x)
+               else
+                  calcphi=360.0-abs(atand(y/x))
+               endif
+            else
+               if(y.gt.0.0)then
+                  calcphi=180.0-abs(atand(y/x))
+               else
+                  calcphi=180.0+abs(atand(y/x))
 }
