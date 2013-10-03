@@ -8,8 +8,14 @@
 #include <cmath>
 #include <limits>
 #include <vector>
+#include "specialVector.h"
 
 
+
+typedef std::vector<double> oneVector;
+typedef std::vector<std::vector<double> > twoVector; //a two dimensional vectors
+typedef std::vector<SpecialVector<double> > twoVectorxNyZ; //a two dimensional vector with negative and positive x positions
+typedef std::vector<std::vector<std::vector<double> > > threeVector;
 class Data
 {
     public:
@@ -86,15 +92,24 @@ class Data
         double thmax;
 
 //    protected:
-        std::vector<std::vector<double> > messg;
-        std::vector<std::vector<double> > calc;
+        twoVector messg;
+        twoVector calc;
         //double (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
         //double (*messgFinal)[3]; //dynamic array containing output data
+
+        oneVector radimg;
+        twoVectorxNyZ image2D;
+        //threeVector image3D;
 
     private:
         const char* infile; //name of file with input data
         std::ifstream dataF; //for input
         std::ofstream dataW; //for output
+        //const int xDimImage;
+        //const int yDimImage;
+        //const int zDimImage;
+
+
 };
 
 #endif // PARAM_H

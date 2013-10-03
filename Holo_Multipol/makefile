@@ -14,7 +14,7 @@ all: holo_multip.exe
 holo_multip.exe: $(OBJS)
 	$(CC) $(OBJS) -o run
 
-Multipole.o: Multipole.cpp main.o
+Multipole.o: Multipole.cpp specielVector.h main.o
 	$(CC) $(CFLAGS) Multipole.cpp
 
 Data.o: Data.cpp main.o

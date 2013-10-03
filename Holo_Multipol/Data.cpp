@@ -129,15 +129,15 @@ void Data::writeData(std::string output)
         dataW<<"    ";
         dataW<<"Phi angle";
         dataW<<std::endl;
-        for(int i=0;i<MAXANGLES;i++)
-        {
-            dataW<<calc[i][0];
+        //for(int i=0;i<alm1.max_size;i++)
+        //{
+            /*dataW<<calc[i][0];
             dataW<<"    ";
             dataW<<calc[i][1];
             dataW<<"    ";
             dataW<<calc[i][2];
-            dataW<<std::endl;
-        }
+            dataW<<std::endl;*/
+//        }
 
     }
 
