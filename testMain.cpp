@@ -33,7 +33,7 @@ int main()
         for(int j)
     }*/
 
-    for(int i=0;i<10;i++)
+    /*for(int i=0;i<10;i++)
     {
 
         for(int j=0;j<=i;j++)
@@ -41,8 +41,17 @@ int main()
             std::cout<<"i: "<<i<<" j: "<<j;
         }
         std::cout<<std::endl;
-    }
+    }*/
 
+ /*   std::vector<double> sizing;
+    std::cout<<"max size of initialized vector"<<sizing.max_size()<<std::endl;
+    std::cout<<"size of initialized vector"<<sizing.size()<<std::endl;
+    sizing.resize(10);
+    std::cout<<"max size after resize of vector"<<sizing.max_size()<<std::endl;
+    std::cout<<"size after resize of vector"<<sizing.size()<<std::endl;
+*/
+
+    std::vector<std::pair<int,double> >
 
     return 0;
 }

@@ -2,22 +2,15 @@
 #include <iostream>
 #include <stdlib.h>     /* abs */
 
-Multipole::Multipole(std::string fileName, int lmax, int isym, double ekin): Data(fileName),LMAX(lmax), ISYM(isym)
+Multipole::Multipole(std::string fileName, int lmax, int isym, double ekin): Data(fileName),LMAX(lmax), ISYM(isym), k(2*M_PI*sqrt(ekin/150))
 {
-    assert(LMAX<100);
-    k=2*M_PI*sqrt(ekin/150);
+    assert(LMAX<Multipole::MAX_COEFF);
     alm1.resize( LMAX/2+1, std::vector<double>());
     alm2.resize( LMAX/2+1, std::vector<double>());
 }
 Multipole::~Multipole()
-{
+{}
 
-}
-
-std::vector<double> Multipole::get_radimg()
-{
-    return radimg;
-}
 void Multipole::multpl()
 {
     //TODO: spherical_harmonic needs to be calculated as spherical_harmonic* (complex conjugated)
@@ -122,11 +115,11 @@ void Multipole::doyzimage(double grid, int xyz)
     double beta=0;
     double suml=0;
     int max=63;
+
     image2D.resize(max);
     for(int nz=0;nz<=max;nz++)
     {
-        image2D[nz].positive.resize(max+1);
-        image2D[nz].negative.resize(max);
+        image2D[nz].expand(max);
         double z=nz*grid;
         for(int ny=-max;ny<=max;ny++)
         {
@@ -141,11 +134,105 @@ void Multipole::doyzimage(double grid, int xyz)
                 int il=l/2;
                 suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il);
             }
-            //image2D
+            (ny<0)?(image2D[nz].negative[abs(ny)]=suml):(image2D[nz].negative[ny]=suml); //if ny<0 safe in negative part else (if ny>=0 safe in positive part)
         }
     }
 }
 
+void Multipole::doxyzimage(double grid)
+{
+    //TODO test if everything works fine with vector structure
+    int max=63;
+    image3D.resize(max);
+    for(int nz=0;nz<=max;nz++)
+    {
+        double z=nz*grid;
+        image3D[nz].expand(max);
+        for(int ny=-max;ny<=max;ny++)
+        {
+            double y=ny*grid;
+            //(ny<0)? (image3D[nz].negative[-ny].expand(max)):(image3D[nz].positive[ny].expand(max)); //expand only the enty ny that is used next
+            SpecialVector<double> xtemp;
+            xtemp.expand(max);
+            for(int nx=-max;nx<=max;nx++)
+            {
+                double x=nx*grid;
+                double r=sqrt(x*x+y*y+z*z);
+                double alpha=acos(z/r);
+                double beta=calcphi(x,y);
+                double kr =k*r;
+                double suml=0;
+                for(int l=0;l<=LMAX;l+=2)
+                {
+                    int il=l/2;
+                    suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il);
+                }
+                xtemp.addElement(suml,nx);
+            }
+            image3D[nz].addElement(xtemp,ny);
+        }
+    }
+    image3D[0].positive[0].addElement(0,0);
+}
+
+
+void Multipole::scaleimage(double grid)
+{
+    int max=63;
+    assert(image3D.size()!=0);
+    for(int iz=0;iz<=max;iz++)
+    {
+        for(int iy=-max;iy<max;iy++)
+        {
+            SpecialVector<double> xtemp;
+            xtemp.expand(max);
+            for(int ix=-max;ix<max;ix++)
+            {
+                double r=grid*sqrt(double(ix*ix+iy*iy+iz*iz));
+                double temp= r*image3D[iz].getElement(iy).getElement(ix);
+                xtemp.addElement(temp, ix);
+
+            }
+            image3D[iz].addElement(xtemp,iy);
+        }
+    }
+
+}
+
+void Multipole::smooth(double grid)
+{
+   /* assert(image3D.size()!=0);
+    int box = 7; //smoothing box size half
+    double width = 1; //gauss sigma width
+    std::cout<<"pewforming gaussian smoothing\n";
+    std::vector<SpecialVector<SpecialVector<double> > > >simage;
+    simage=image3D;
+    for(int nz=0;nz<=63;nz++)
+    {
+        for(int ny=0;ny<=63;ny++)
+        {
+            for(int nx=0;nx<=63;nx++)
+            {
+                double imageR=image3D[nz].getElement(ny).getElement(nx);
+                for(iz=-box;iz<=box;iz++)
+                {
+                    for(iy=-box;iy<=box;iy++)
+                    {
+                        for(ix=-box;ix<=box;ix++)
+                        {
+                            double distsq=(ix+iy+iz)*(ix+iy+iz);
+                            double gs=1/(width*2.5)*exp(-0.5*distsq/(width*width));
+                            imageR+=sigma
+                        }
+                    }
+                }
+            }
+        }
+    }*/
+}
+
+
+/*-------------------Private--------------------------------------*/
 double Multipole::innerSumm(int l, double alpha, double beta)
 {
     double summ=0;

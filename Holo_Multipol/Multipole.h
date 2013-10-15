@@ -15,7 +15,10 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     public:
     /**
     *Class constructor
-    *@param
+    *@param fileName    name of the input file
+    *@param lmax        TODO Describe
+    *@param isym        TODO Describe
+    *@param ekin        kinetic enery
     */
     Multipole(std::string fileName, int lmax, int isym, double ekin);
 
@@ -24,11 +27,6 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *@param
     */
     virtual ~Multipole();
-
-    /**
-    *returne the member variable radimg
-    */
-    std::vector<double> get_radimg();
 
     /**
     *   calculation of the real a_lm1 and imaginary a_lm2 coefficiants of the multipol expansion of the measured function g(theta,phi)
@@ -57,13 +55,38 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     void doyzimage(double grid, int xyz);
 
+    /**
+    *Calculates a two-dimensional image of the electron wave field near the photoemitter.
+    *Equation (3) from A.Stucke et al. (1992) is used.
+    *the radial grid is in angstroem with grid angstroem spacing.
+    *Function is adapted from the fortran program by Juerg Osterwalder written in 6.7.93
+    */
+    void doxyzimage(double grid);
+
+    /**
+    *Takes a 2D image array and maps it into a 2d image array of integer numbers ranging from 0 to 255.
+    *Function makes input in to 'image program more convenient for mac.
+    *Calculates r * |img(xy)|**2 to produce images.
+    *adapted from fortran program by Juerg Osterwalder, universite de fribourg, 12.7.93
+    */
+    void scaleimage(double grid);
+
+    /**
+    *Function performes a gausian smoothing of the image function
+    */
+    void smooth(double grid);
+
+    /**
+    *print the real coefficients that were calculated within this program
+    */
     void printAlm();
 
+//=======================================================================================//
     private:
     const int LMAX; //maximum number of multipole expansion (amount of coefficients)
     const int ISYM; ////what is isym?
 
-    double k; //2*pi*sqrt(ekin/150)
+    const double k; //2*pi*sqrt(ekin/150)
 
     std::vector<std::vector<double> > alm1; //real expansion coefficients
     std::vector<std::vector<double> > alm2; //imaginary expansion coefficients
@@ -92,6 +115,8 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *@return azimutal angle in radian (double precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
     */
     double calcphi(double x, double y);
+
+    static const int MAX_COEFF=100;//100 is the maximum amunt of coefficients that can be calculated
 };
 
 

@@ -9,13 +9,15 @@
 #include <limits>
 #include <vector>
 #include "specialVector.h"
+//#include "DOmega.h"
 
 
 
 typedef std::vector<double> oneVector;
 typedef std::vector<std::vector<double> > twoVector; //a two dimensional vectors
-typedef std::vector<SpecialVector<double> > twoVectorxNyZ; //a two dimensional vector with negative and positive x positions
+typedef std::vector<SpecialVector<double> > twoVectorxNyZ; //a two dimensional vector with negative and positive y positions
 typedef std::vector<std::vector<std::vector<double> > > threeVector;
+typedef std::vector<SpecialVector<SpecialVector<double> > > threeVectorxNyZzZ;//a three dimensional vector with negative and positive y and z positions
 class Data
 {
     public:
@@ -99,7 +101,7 @@ class Data
 
         oneVector radimg;
         twoVectorxNyZ image2D;
-        //threeVector image3D;
+        threeVectorxNyZzZ image3D;
 
     private:
         const char* infile; //name of file with input data
@@ -108,6 +110,8 @@ class Data
         //const int xDimImage;
         //const int yDimImage;
         //const int zDimImage;
+
+        //friend class DOmega; // class DOmega can now access data directly
 
 
 };
