@@ -36,6 +36,17 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     void multpl();
 
+
+    /**
+    *Calcualation of the angular distribution g(theta,phi) from multipole expansion coefficients
+    *alm1 and alm2 (real and imaginary parts of alm). The equation (3.58) from Jackson, p. 100 is used.
+    *g is real so that we can use only positive m values and the equation becomes
+    *
+    *g = sum_l ( a_l0 * Y_l0 + 2 * Re sum_m (a_lm * Y_lm) ).
+    *
+    *The sum_l runs from 0 to lmax and sum_m from 1 to l.
+    *Adapted from the corresponding Fortran subroutin by Juerg Osterwalder, universite de fribourg, 2.7.93
+    */
     void expans();
 
     /**

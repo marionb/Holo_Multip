@@ -1,6 +1,5 @@
 #include "DOmega.h"
 
-
 DOmega::DOmega(std::string file):gridFile(file.c_str())
 {
 
@@ -47,5 +46,20 @@ void DOmega::readFile()
 
 void DOmega::set_dtheta()
 {
+    if(dphi.empty())
+    {
+        std::cout<<"ERROR: no values available to calculate dtheta!";
+        return;
+    }
     dtheta=abs(dphi[0].second-dphi[1].second);
+}
+
+void DOmega::fitToGrid(Data element)
+{
+    for(int i=0;i<element.MAXANGLES;i++)
+    {
+
+        element.messg[i][]
+    }
+
 }

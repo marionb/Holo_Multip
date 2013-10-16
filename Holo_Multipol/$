@@ -27,7 +27,7 @@ main.o: main.cpp Param.h Data.h Multipole.h
 	$(CC) $(CFLAGS) main.cpp
 
 clean:
-	\rm *.o run
+	\rm *.o .exe
 
 #TODO tar:
 #	tar cfv task.tar 

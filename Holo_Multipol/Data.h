@@ -9,8 +9,6 @@
 #include <limits>
 #include <vector>
 #include "specialVector.h"
-//#include "DOmega.h"
-
 
 
 typedef std::vector<double> oneVector;
@@ -66,8 +64,6 @@ class Data
         */
         static inline double rad_to_deg(double rad);
 
-        //friend class Multipole;
-
 
     protected:
 
@@ -111,7 +107,7 @@ class Data
         //const int yDimImage;
         //const int zDimImage;
 
-        //friend class DOmega; // class DOmega can now access data directly
+        friend class DOmega; // class DOmega can now access data directly
 
 
 };

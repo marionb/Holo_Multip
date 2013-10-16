@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <iterator>
 
-Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(3) ,infile(fileName.c_str())
+Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str())
 {
     //the constructor takes the file name and from this name calls the static function
     //Data::getLineNum(filename) in ordet to determine the number of datapoints.
@@ -37,6 +37,8 @@ void Data::readData()
             this->dataF>>messg[i][2];
             messg[i][2]=deg_to_rad(messg[i][2]);
             //std::cout<<" entry 2 "<<messg[i][2]<<std::endl;
+            this->dataF>>messg[i][3];
+            messg[i][3]=deg_to_rad(messg[i][3]);
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
         }
     }else
