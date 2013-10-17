@@ -13,11 +13,9 @@ Multipole::~Multipole()
 
 void Multipole::multpl()
 {
-    //TODO: spherical_harmonic needs to be calculated as spherical_harmonic* (complex conjugated)
-    double omega=4.0*M_PI;
-
     std::cout<<"\n in multipl function"<<std::endl;
-
+    //TODO determine dtheta properly
+    double dtheta=2*M_PI/180.0;
     for(int l=0;l<=LMAX;l+=2)
     {
         int il=l/2;
@@ -26,7 +24,7 @@ void Multipole::multpl()
 
         //alm1[il].push_back(std::vector<double>(il)); //append a vector of length l/2+1 to make shure there is at least one element; initialize with zeros
         //alm2[il].push_back(std::vector<double>(il));
-        for(int m=0;m<=l;m++)
+        for(int m=0;m<=l;m+=ISYM)
         {
             double rint1=0;
             double rint2=0;
@@ -37,22 +35,22 @@ void Multipole::multpl()
                 double theta=messg[i][1];
                 double gmessg=messg[i][0];
 
-                //std::cout<<"i, phi, theta, g "<<i<<" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
-                rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi);
+                //std::cout<<"i, phi, theta, g "<<i<<*" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
+                rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
 
-                rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi);
+                rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
                 //std::cout<<"real, imag "<<rint1<<", "<<rint2<<"\n";
 
             }
             //std::cout<<"ended inner loop will write result \n";
 
-            alm1[il].push_back(rint1/MAXANGLES*omega);
-            alm2[il].push_back(rint2/MAXANGLES*omega);
-            //std::cout<<"result final"<<alm1[il][m];
+            alm1[il].push_back(rint1*dtheta);
+            alm2[il].push_back(rint2*dtheta);
+            std::cout<<l<<" "<<m<<" "<<alm1[il][m]<<" "<<alm2[il][m]<<std::endl;
         }
         //std::cout<<std::endl;
     }
-
+std::cout<<"alm1 (l,m,real,imag)\n";
 
 }
 
@@ -61,30 +59,29 @@ void Multipole::expans()
     std::cout<<"in expans function\n";
     for(int i=0;i<MAXANGLES;i++)
     {
-        std::cout<<"i "<<i<<std::endl;
+        //std::cout<<"i "<<i<<std::endl;
         double theta=messg[i][1];
         double phi=messg[i][2];
         double suml=0;
-        std::cout<<"(theta, phi)=("<<theta<<", "<<phi<<")\n";
+        //std::cout<<"(theta, phi)=("<<theta<<", "<<phi<<")\n";
         for (int l=0;l<LMAX;l+=2)
         {
             //std::cout<<"l is "<<l<<std::endl;
             int il=l/2;
-            double sum=alm1[il][0]*boost::math::spherical_harmonic_r <double> (l,0,theta,phi); //m=0
+            suml+=alm1[il][0]*boost::math::spherical_harmonic_r <double> (l,0,theta,phi); //m=0
             //std::cout<<"sum"<<sum<<std::endl;
             for(int m=1;m<=l;m++)
             {
-                std::cout<<"in seccond for loop!";
+                //std::cout<<"in seccond for loop!";
                 //calculate RE(sum_m A_lm*Y_lm)=sum_m RE(A_lm)*RE(Y_lm)-IM(A_lm)*IM(Y_lm)
                 double real=alm1[il][m]*boost::math::spherical_harmonic_r <double> (l,m,theta, phi); //imaginary part
                 double imag=alm2[il][m]*boost::math::spherical_harmonic_i <double> (l,m,theta, phi); //real part
-                sum+=2*(real-imag); //
+                suml+=2*(real-imag); //
                 //std::cout<<"sum, i"<<sum<<", "<<l<<std::endl;
             }
         }
-        calc[i][0]=suml;
-        calc[i][1]=suml;
-        calc[i][2]=suml;
+        std::vector<double> temp (suml, theta, phi);
+        calc.push_back(temp);
    }
 }
 

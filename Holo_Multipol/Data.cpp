@@ -10,8 +10,6 @@ Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBE
     std::cout<<" with "<<MAXANGLES<<" data points"<<std::endl;
     //initialize data arrays
     messg.resize( MAXANGLES, std::vector<double>( ROWNUMBER , 0 ) );
-    calc.resize(MAXANGLES, std::vector<double>(ROWNUMBER, 0));
-
     thmax=0;
 }
 
