@@ -81,6 +81,7 @@ class Data
         */
         void calcchi();
 
+        //const int LMAX; //maximum number of multipole expansion (amount of coefficients)
 
         const int MAXANGLES; //number of data points
         const int ROWNUMBER; //number of rows in the file read

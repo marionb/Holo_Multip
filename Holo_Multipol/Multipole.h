@@ -23,6 +23,11 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     Multipole(std::string fileName, int lmax, int isym, double ekin);
 
     /**
+    *getter method returning the number of expansion parameters
+    */
+    const int getLMAX();
+
+    /**
     *Class constructor
     *@param
     */

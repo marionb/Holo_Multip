@@ -51,7 +51,26 @@ int main()
     std::cout<<"size after resize of vector"<<sizing.size()<<std::endl;
 */
 
-    std::vector<std::pair<int,double> >
+    std::vector<std::vector<double> > temp;
+
+    for(int i=0;i<10;i++)
+    {
+        std::vector<double> second (4,100);
+        temp.push_back(second);
+    }
+
+    for(std::vector<std::vector<double> >::iterator it=temp.begin();it!=temp.end();++it)
+    {
+        std::cout<<(*it)[1]<<std::endl;
+        /*
+        for(std::vector<double>::iterator itt=(*it).begin();itt!=(*it).end();++itt)
+        {
+            std::cout<<*itt<<std::endl;
+        }*/
+
+    }
+
+
 
     return 0;
 }

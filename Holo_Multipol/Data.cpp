@@ -123,25 +123,26 @@ void Data::writeData(std::string output)
     dataW.open(file);
     if(dataW.is_open())
     {
+        dataW<<"Titel TODO\n";
+        dataW<<"calc. with holo1\n";
         dataW<<"#Intensity";
         dataW<<"    ";
         dataW<<"Theta angle";
         dataW<<"    ";
-        dataW<<"Phi angle";
-        dataW<<std::endl;
-        //for(int i=0;i<alm1.max_size;i++)
-        //{
-            /*dataW<<calc[i][0];
-            dataW<<"    ";
-            dataW<<calc[i][1];
-            dataW<<"    ";
-            dataW<<calc[i][2];
-            dataW<<std::endl;*/
-//        }
+        dataW<<"Phi angle\n";
+
+        for(twoVector::iterator it=calc.begin();it!=calc.end();++it)
+        {
+            //std::cout<<*it[0]<<" "<<*it[1]<<" "<<*it[2]<<std::endl;
+            dataW<<(*it)[0];
+            dataW<<" ";
+            dataW<<rad_to_deg((*it)[1]);
+            dataW<<" ";
+            dataW<<rad_to_deg((*it)[2]);
+            dataW<<"\n";
+        }
 
     }
-
-
 }
 Data::~Data()
 {

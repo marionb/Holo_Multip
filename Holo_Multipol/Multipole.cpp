@@ -11,6 +11,11 @@ Multipole::Multipole(std::string fileName, int lmax, int isym, double ekin): Dat
 Multipole::~Multipole()
 {}
 
+const int Multipole::getLMAX()
+{
+    return LMAX;
+}
+
 void Multipole::multpl()
 {
     std::cout<<"\n in multipl function"<<std::endl;
@@ -28,9 +33,9 @@ void Multipole::multpl()
         {
             double rint1=0;
             double rint2=0;
+            //double bnorm=0;
             for(int i=0;i<MAXANGLES;i++)
             {
-                //To optimize do a vector of functions containing the spherical harmonics for a given l and m.
                 double phi=messg[i][2];
                 double theta=messg[i][1];
                 double gmessg=messg[i][0];
@@ -40,9 +45,14 @@ void Multipole::multpl()
 
                 rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
                 //std::cout<<"real, imag "<<rint1<<", "<<rint2<<"\n";
+                /*if(i==0||(i>=1 && theta!=messg[i-1][1]))
+                {
+                    bnorm+=rint1;
+                }*/
 
-            }
+            }//std::cout<<bnorm<<std::endl;
             //std::cout<<"ended inner loop will write result \n";
+            //if(bnorm>0.001) bnorm=1;
 
             alm1[il].push_back(rint1*dtheta);
             alm2[il].push_back(rint2*dtheta);
@@ -50,7 +60,7 @@ void Multipole::multpl()
         }
         //std::cout<<std::endl;
     }
-std::cout<<"alm1 (l,m,real,imag)\n";
+std::cout<<"alm: (l,m,real,imag)\n";
 
 }
 
@@ -80,7 +90,10 @@ void Multipole::expans()
                 //std::cout<<"sum, i"<<sum<<", "<<l<<std::endl;
             }
         }
-        std::vector<double> temp (suml, theta, phi);
+        std::vector<double> temp;
+        temp.push_back(suml);
+        temp.push_back(theta);
+        temp.push_back(phi);//TODO if time: make this call better -> works for a start
         calc.push_back(temp);
    }
 }

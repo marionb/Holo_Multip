@@ -19,7 +19,7 @@ outputfile=""
 newFile="newinp.itp"    # file containing the measured data
 
 
-grid=list()             # contais the grid and bining information
+grid=list()             # contais the grid and bining information theta,phi,dphi,g(theta,phi),count
 
 
 def makeGrid():
@@ -38,7 +38,7 @@ def makeGrid():
     for i in range(len(theta)):
         grid.append([theta[i],phi[i],360/theta.count(theta[i]),0,0])
         
-    dtheta=theta[0]-theta[1] #dtheta is the same for all data points
+    dtheta=theta[0]-theta[theta.count(theta[0])+1] #dtheta is the same for all data points
     
     if(dtheta<0):
         return -1*dtheta;
@@ -46,7 +46,7 @@ def makeGrid():
         return dtheta
 
 
-def fitNewToOldGrid(dpolar=0):
+def fitNewToOldGrid(dpolar):
     """
     The function takes the nwe input data and fits it in to the grid that is given through the input file oldinp.itp
     
@@ -62,8 +62,10 @@ def fitNewToOldGrid(dpolar=0):
     
     if(len(grid)==0 or dpolar==0):
         dpolar=makeGrid()
-    
+        
     for i in range(len(gNew)):
+        #print"--------------------"
+        #print phiNew[i], thetaNew[i]
         place=findPhi(phiNew[i],thetaNew[i],dpolar)
         if(place!=-1):
             grid[place][3]=grid[place][3]+gNew[i]
@@ -90,9 +92,12 @@ def findPhi(phi, theta, deltheta):
     global grid
     if(len(grid)==0):
         print "no values in grid"
-        return 0
+        return -1
+    
     for i in range(len(grid)):
-        if((theta<grid[i][0]+deltheta and theta<=grid[i][0]-deltheta) and (phi<grid[i][1]+grid[i][2] and phi>=grid[i][1]-grid[i][2])):
+        #print "theta range %f ,%f"%(grid[i][0]*1.0-deltheta/2.0, grid[i][0]*1.0+deltheta/2.0)
+        #print "phi range %f ,%f"%(grid[i][1]*1.0-deltaphi/2.0, grid[i][1]*1.0+deltaphi/2.0)
+        if(((grid[i][0]*1.0-deltheta/2.0)<=theta and theta<(grid[i][0]*1.0+deltheta/2.0)) and ((grid[i][1]*1.0-grid[i][2]/2.0)<=phi and phi<(grid[i][1]*1.0+grid[i][2]/2.0))):
             return i
         else:
             continue
