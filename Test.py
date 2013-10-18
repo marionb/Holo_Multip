@@ -45,17 +45,25 @@ filGrid()
 print grid
 #changeOdd()
 #print grid
-
+a=list()
 for i in range(10):
     numX=rnd.randint(10,40)
     numY=rnd.randint(10,40)
-    
+
     numX=numX/10.0
     numY=numY/10.0
+    a.append(numY)
+    
     print numX, numY
     count = findPhi(numY,numX,1,1)
     print count
     print grid[count]
-"""
-hist, _ = np.histogram(values, bins=[1, 4, 7, 10], weights=freqs)
-print hist"""
+    
+
+aArray=np.array(a)
+print type(aArray)
+print aArray
+
+print np.where((1.5<aArray and aArray>2.5))
+
+
