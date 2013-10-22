@@ -83,7 +83,7 @@ class Grid:
         print"------------------------------------------------"
         try:
             gNew, thetaNew, phiNew=loadtxt(self.newFile, usecols=(0,1,2), unpack=True)
-            print "Beginning data processing; this will take a while"       
+            print "Beginning data processing; this will take a moment ..."       
             
         except:
             print "data file could not be opend. Check that ",newFile," exists in runing directory and run again."
@@ -96,7 +96,7 @@ class Grid:
         
         
         #    H,thetaEdge,phiedge=histogram2d(thetaNew,phiNew,bins=[theta,phi],weights=gNew)
-        print "length of gNew ", len(gNew)
+        #print "length of gNew ", len(gNew)
         for i in range(len(gNew)):
             #print"--------------------"
             #print phiNew[i], thetaNew[i]
@@ -134,14 +134,14 @@ class Grid:
         delYVal=self.dtheta
         
         for t in self.thetaTemp:
-            #print "theta range %f, %f, %f"%(t*1.0-delYVal/2.0, t, t*1.0+delYVal/2.0)
+            #print "theta range %f, %f, %f"%(t-delYVal/2.0, t, t+delYVal/2.0)
             if(t-delYVal<=yVal and yVal<t+delYVal):
                 index=self.theta.index(t)
                 count=self.theta.count(t)
                 
                 for i in range(index,index+count):
                     phirange=[(self.grid[i][1]*1.0-self.grid[i][2]/2.0),(self.grid[i][1]*1.0+self.grid[i][2]/2.0)]
-                    if(self.grid[i][1]*1.0-self.grid[i][2]/2.0<=xVal and xVal<self.grid[i][1]*1.0+self.grid[i][2]/2.0):
+                    if((phirange[0]<=xVal and xVal<phirange[1]) or (phirange[1]>360 and (0<=xVal and xVal<phirange[1]%360))):
                         return i
                     else:
                         continue
@@ -160,7 +160,6 @@ class Grid:
                 outFile.write(value+"\n")
     
     def cPPOut(self):
-        
         self.outputfile="CPPOut.dat" # the output Data file
         with open(self.outputfile, 'w\n') as outFile:
             outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
@@ -173,7 +172,7 @@ class Grid:
     def degToRad(self, angle):
         return angle*math.pi/180.0
     
-    def openData(self):
+    """def openData(self):
         self.g, self.theta, self.phi=loadtxt(self.gridfile, usecols=(0,1,2), unpack=True)
 
         self.g=list(self.g)  
@@ -190,76 +189,16 @@ class Grid:
         print"------------------------------------------------"
     
     def multi(self, inorm=0,isym=1):
-        bnorm=0.0
-        bm1=list()
-        bm2=list()
-        for i in range(len(self.thetaTemp)):
-            temp1=list()
-            temp2=list()
-            for m in range(0,self.lmax+1,isym):
-                rm=m
-                rint1=0.0
-                rint2=0.0
-                index=self.theta.index(self.thetaTemp[i])
-                count=self.theta.count(self.thetaTemp[i])
-                for j in range(index,index+count):
-                   phi=self.degToRad(self.grid[j][1])
-                   rint1=rint1+self.grid[j][3]*math.cos(rm*phi)
-                   rint2=rint2+self.grid[j][3]*math.sin(rm*phi) #try this by subtracting
-                   
-                the=self.degToRad(self.thetaTemp[i])
-                
-                temp1.append(rint1*math.sin(the)*self.grid[i][2]* self.dtheta)#m
-                temp2.append(rint2*math.sin(the)*self.grid[i][2]*self.dtheta)
-            bm1.append(temp1)#i
-            bm2.append(temp2)
-            bnorm=bnorm+bm1[i][0]
-    
-        #in our normalization bnorm is very near to zero, and
-        #it would be dangerous to divide by bnorm
-        if((inorm==1) or (bnorm<0.001)):
-            bnorm=1.0
-    
-        for l in range(0,self.lmax+1,2):
-             il=(l/2)
-             temp1=list()
-             print "temp", temp1
-             temp2=list()
-             for m in range(0,l+1,isym):
-                aint=0.0
-                bint=0.0
-                print "thteatemp is"
-                print self.thetaTemp
-                
-                for i in self.thetaTemp:
-                    
-                    atheta=self.degToRad(i)
-                    var=math.cos(atheta)
-                    algndr=sfunc.lpmv(-m,l,var)*(-1)**m*self.prefactor(l,-m)
-                    aint=aint+bm1[self.thetaTemp.index(i)][m]*algndr
-                    bint=bint-bm2[self.thetaTemp.index(i)][m]*algndr
-                   
-                temp1.append(aint/bnorm)
-                
-                temp2.append(bint/bnorm)
-
-             self.alm1.append(temp1)
-             self.alm2.append(temp2)
+        
              
     def prefactor(self,ll,mm):
         return math.sqrt((2*ll+1)*math.factorial(ll-mm)/float(math.factorial(ll+mm)))
-        
+    """    
     
 def main():
     print "Runing griding.py"
     newGrid= Grid(50)
-    newGrid.openData()
-    
-    newGrid.multi()
-    
-    #print "alm real"
-    #print newGrid.alm1
-    """
+
     newGrid.fitNewToOldGrid()
     s=-1
     while True:
@@ -276,7 +215,7 @@ def main():
             print "writing output for C++ code to ",newGrid.outputfile
             print"----------------------------------------------------"
             return
-    """    
+    
     
         
     

@@ -1,5 +1,7 @@
 import random as rnd
 import numpy as np
+from scipy.special import sph_harm
+import math
 
 grid=list()
 
@@ -41,29 +43,16 @@ def findPhi(phi, theta, deltheta, deltaphi):
             continue
     return -1 #the walue could not be squeezed in to the new grid
          
-filGrid()
-print grid
-#changeOdd()
-#print grid
-a=list()
-for i in range(10):
-    numX=rnd.randint(10,40)
-    numY=rnd.randint(10,40)
-
-    numX=numX/10.0
-    numY=numY/10.0
-    a.append(numY)
-    
-    print numX, numY
-    count = findPhi(numY,numX,1,1)
-    print count
-    print grid[count]
-    
-
-aArray=np.array(a)
-print type(aArray)
-print aArray
-
-print np.where((1.5<aArray and aArray>2.5))
 
 
+def spH():
+    for l in range(3):
+        for m in range(l):
+            
+            for theta in np.arange(0,2*math.pi,0.01):
+                for phi in np.arange(0,math.pi,0.01):
+                    sph_harm(m,l,theta,phi)
+
+
+
+spH()
