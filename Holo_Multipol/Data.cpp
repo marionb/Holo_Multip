@@ -26,13 +26,15 @@ void Data::readData()
             dataF>>messg[i][0];
             //std::cout<<" entry 0 "<<messg[i][0];
             this->dataF>>messg[i][1];
+            this->dataF>>messg[i][2];
+
             messg[i][1]=deg_to_rad(messg[i][1]);
             //std::cout<<" entry 1 "<<messg[i][1];
             if(thmax<messg[i][1]) // find the maximal theta angle in the list
             {
                 thmax=messg[i][1];
             }
-            this->dataF>>messg[i][2];
+
             messg[i][2]=deg_to_rad(messg[i][2]);
             //std::cout<<" entry 2 "<<messg[i][2]<<std::endl;
             this->dataF>>messg[i][3];

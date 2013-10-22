@@ -20,7 +20,7 @@ void Multipole::multpl()
 {
     std::cout<<"\n in multipl function"<<std::endl;
     //TODO determine dtheta properly
-    double dtheta=2*M_PI/180.0;
+    double dtheta=2*M_PI/180.0;//TODO
     for(int l=0;l<=LMAX;l+=2)
     {
         int il=l/2;
@@ -41,9 +41,10 @@ void Multipole::multpl()
                 double gmessg=messg[i][0];
 
                 //std::cout<<"i, phi, theta, g "<<i<<*" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
-                rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+                norm=sqrt(4.0*M_PI/(2.0*l+1.0))
+                rint1+=norm*vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
 
-                rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+                rint2+=norm*vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
                 //std::cout<<"real, imag "<<rint1<<", "<<rint2<<"\n";
                 /*if(i==0||(i>=1 && theta!=messg[i-1][1]))
                 {

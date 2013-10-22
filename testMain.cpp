@@ -7,7 +7,6 @@
 
 
 
-
 int main()
 {
 
@@ -49,7 +48,7 @@ int main()
     sizing.resize(10);
     std::cout<<"max size after resize of vector"<<sizing.max_size()<<std::endl;
     std::cout<<"size after resize of vector"<<sizing.size()<<std::endl;
-*/
+
 
     std::vector<std::vector<double> > temp;
 
@@ -68,7 +67,6 @@ int main()
             std::cout<<*itt<<std::endl;
         }*/
 
-    }
 
 
 
