@@ -19,10 +19,10 @@ import math
 
 class Grid:
     #Global variables
-    def __init__(self, maxCoeff):
+    def __init__(self, maxCoeff=50):
         self.gridfile="oldinp.itp"   # file containing the grid information
         self.outputfile=""
-        self.newFile="newinp.itp"    # file containing the measured data
+        self.newFile="oldinp.itp" #"newinp.itp"    # file containing the measured data
                
         self.grid=list()
         
@@ -114,6 +114,7 @@ class Grid:
                 self.grid[i][3]=self.grid[i][3]/self.grid[i][4]
             else:
                 continue
+            print self.grid[i][3]
         print "mached new data in to base grid."
         print"------------------------------------------------"
     
@@ -162,17 +163,18 @@ class Grid:
     def cPPOut(self):
         self.outputfile="CPPOut.dat" # the output Data file
         with open(self.outputfile, 'w\n') as outFile:
-            outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
+            #outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
             for i in range(len(self.grid)):
                 value=str("%f %f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1],self.grid[i][2]))
                 #print value
                 outFile.write(value+"\n")
-            outFile.write("dtheta=%f"%self.dtheta)
+            #outFile.write("dtheta=%f"%self.dtheta)
             
     def degToRad(self, angle):
         return angle*math.pi/180.0
     
-    """def openData(self):
+    
+    def openData(self):
         self.g, self.theta, self.phi=loadtxt(self.gridfile, usecols=(0,1,2), unpack=True)
 
         self.g=list(self.g)  
@@ -189,17 +191,31 @@ class Grid:
         print"------------------------------------------------"
     
     def multi(self, inorm=0,isym=1):
-        
-             
-    def prefactor(self,ll,mm):
-        return math.sqrt((2*ll+1)*math.factorial(ll-mm)/float(math.factorial(ll+mm)))
-    """    
+        for l in range(0,self.lmax+1,2):
+            for m in range(l+1):
+                rint=0
+                iint=0
+                for gr in self.grid:
+                    gthph=gr[3]
+                    polar=self.degToRad(gr[0])
+                    azimuthal=self.degToRad(gr[1])
+                    dphi=self.degToRad(gr[2])
+                    rint+=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).real)
+                    iint+=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).imag)
+                self.alm1.append([l,m,rint])
+                self.alm2.append([l,m,iint])        
     
 def main():
     print "Runing griding.py"
-    newGrid= Grid(50)
-
+    newGrid= Grid(10)
     newGrid.fitNewToOldGrid()
+    """
+    newGrid.openData()
+    newGrid.multi()
+    l=0
+    for i, j in zip(newGrid.alm1,newGrid.alm2):
+        print i, j
+    """
     s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

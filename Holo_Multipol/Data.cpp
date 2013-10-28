@@ -22,23 +22,36 @@ void Data::readData()
         std::cout<<"reading file";
         for(int i=0;i<MAXANGLES;i++)
         {
+            double inNum0;
+            double inNum1;
+            double inNum2;
+            double inNum3;
             //std::cout<<"\n read data line "<<i;
-            dataF>>messg[i][0];
+            this->dataF>>inNum0;
+            //std::cout<<" entry 0 "<<inNum0;
+            this->dataF>>inNum1;
+            this->dataF>>inNum2;
+            this->dataF>>inNum3;
+
+            messg[i][0]=inNum0;
+
             //std::cout<<" entry 0 "<<messg[i][0];
-            this->dataF>>messg[i][1];
-            this->dataF>>messg[i][2];
 
-            messg[i][1]=deg_to_rad(messg[i][1]);
-            //std::cout<<" entry 1 "<<messg[i][1];
-            if(thmax<messg[i][1]) // find the maximal theta angle in the list
+            //std::cout<<" || entry theta "<<inNum1;
+            //std::cout<<" entry phi "<<inNum2;
+            if(thmax<inNum1) // find the maximal theta angle in the list
             {
-                thmax=messg[i][1];
+                thmax=inNum1;
             }
+            messg[i][1]=deg_to_rad(inNum1);
+            messg[i][2]=deg_to_rad(inNum2);
+            messg[i][3]=deg_to_rad(inNum3);
+            thmax=deg_to_rad(thmax);
+            //std::cout<<" entry 1 "<<messg[i][1];
+            //std::cout<<" entry 2 "<<messg[i][2];
 
-            messg[i][2]=deg_to_rad(messg[i][2]);
-            //std::cout<<" entry 2 "<<messg[i][2]<<std::endl;
-            this->dataF>>messg[i][3];
-            messg[i][3]=deg_to_rad(messg[i][3]);
+            //std::cout<<" entry 3 "<<messg[i][3]<<std::endl;
+
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
         }
     }else
@@ -73,7 +86,7 @@ int Data::getLineNum(std::string fileGiven)
 
     }
     dataF.close();
-    return maxangles;
+    return maxangles-1;
 }
 
 void Data::apofct()

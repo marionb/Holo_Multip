@@ -33,7 +33,7 @@ void Multipole::multpl()
         {
             double rint1=0;
             double rint2=0;
-            //double bnorm=0;
+            double bnorm=1;
             for(int i=0;i<MAXANGLES;i++)
             {
                 double phi=messg[i][2];
@@ -41,23 +41,22 @@ void Multipole::multpl()
                 double gmessg=messg[i][0];
 
                 //std::cout<<"i, phi, theta, g "<<i<<*" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
-                norm=sqrt(4.0*M_PI/(2.0*l+1.0))
-                rint1+=norm*vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+                //norm=sqrt(4.0*M_PI/(2.0*l+1.0))
+                rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
 
-                rint2+=norm*vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+                rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
                 //std::cout<<"real, imag "<<rint1<<", "<<rint2<<"\n";
-                /*if(i==0||(i>=1 && theta!=messg[i-1][1]))
-                {
-                    bnorm+=rint1;
-                }*/
 
-            }//std::cout<<bnorm<<std::endl;
-            //std::cout<<"ended inner loop will write result \n";
-            //if(bnorm>0.001) bnorm=1;
 
-            alm1[il].push_back(rint1*dtheta);
-            alm2[il].push_back(rint2*dtheta);
-            std::cout<<l<<" "<<m<<" "<<alm1[il][m]<<" "<<alm2[il][m]<<std::endl;
+            }
+            if(l==0 && m==0 && rint1>0.001)
+            {
+                bnorm=rint1*dtheta;
+                std::cout<<"bnorm="<<bnorm<<std::endl;
+            }
+            alm1[il].push_back(rint1*dtheta/bnorm);
+            alm2[il].push_back(rint2*dtheta/bnorm);
+            std::cout<<l<<" "<<m<<" "<<alm1[il][m]<<std::endl;//<<" "<<alm2[il][m]<<std::endl;
         }
         //std::cout<<std::endl;
     }

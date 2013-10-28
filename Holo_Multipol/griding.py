@@ -14,13 +14,15 @@ __author__ = "Marion Baumgartner (marion.baumgartner@gmail.com)"
 __date__ = "$Date: 14/10/2013 $"
 
 from numpy import *
+import sys
+
 
 class Grid:
     #Global variables
-    def __init__(self):
-        self.gridfile="oldinp.itp"   # file containing the grid information
+    def __init__(self, gfile="oldinp.itp", nfile="newinp.itp"):
+        self.gridfile=gfile   # file containing the grid information
         self.outputfile=""
-        self.newFile="newinp.itp"    # file containing the measured data
+        self.newFile=nfile    # file containing the measured data
                
         self.grid=list()                    # contais the grid and bining information theta,phi,dphi,g(theta,phi),count
         self.theta=list()                   # contains all theta values at same index as corresponding phi value
@@ -117,7 +119,6 @@ class Grid:
         global grid
         global theta"""
          
-        
         if(len(self.grid)==0):
             print "no values in grid"
             return -1
@@ -125,15 +126,14 @@ class Grid:
         delYVal=self.dtheta
         
         for t in self.thetaTemp:
-            #print "theta range %f, %f, %f"%(t*1.0-delYVal/2.0, t, t*1.0+delYVal/2.0)
+            #print "theta range %f, %f, %f"%(t-delYVal/2.0, t, t+delYVal/2.0)
             if(t-delYVal<=yVal and yVal<t+delYVal):
                 index=self.theta.index(t)
                 count=self.theta.count(t)
-                return index
                 
-                for i in range(index,count):
-                    phirange=[(selg.grid[i][1]*1.0-self.grid[i][2]/2.0),(self.grid[i][1]*1.0+self.grid[i][2]/2.0)]
-                    if(self.grid[i][1]*1.0-self.grid[i][2]/2.0<=xVal and xVal<self.grid[i][1]*1.0+self.grid[i][2]/2.0):
+                for i in range(index,index+count):
+                    phirange=[(self.grid[i][1]*1.0-self.grid[i][2]/2.0),(self.grid[i][1]*1.0+self.grid[i][2]/2.0)]
+                    if((phirange[0]<=xVal and xVal<phirange[1]) or (phirange[1]>360 and (0<=xVal and xVal<phirange[1]%360))):
                         return i
                     else:
                         continue
@@ -155,17 +155,35 @@ class Grid:
         
         self.outputfile="CPPOut.dat" # the output Data file
         with open(self.outputfile, 'w\n') as outFile:
-            outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
+            #outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
             for i in range(len(self.grid)):
                 value=str("%f %f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1],self.grid[i][2]))
                 #print value
                 outFile.write(value+"\n")
-            outFile.write("dtheta=%f"%self.dtheta)
+           # outFile.write("dtheta=%f"%self.dtheta)
     
 def main():
-    print "Runing griding.py"
-    newGrid= Grid()
-    newGrid.fitNewToOldGrid()
+    
+    print "Running", sys.argv[0]
+    gfile=""
+    nfile=""
+    
+    if len(sys.argv) == 3:#the name of the base grid and the name of the data fiel has to be given
+        gfile=sys.argv[1]
+        nfile=sys.argv[2]  
+    elif len(sys.argv) == 1:
+        gfile="oldinp.itp"
+        nfile="newinp.itp"
+    else:
+        print "to many arguments given program takes no argument or two arguments(name of fiel with grid, name of file containing data)"
+        return -1
+    
+    print "using grid information from  ", gfile
+    print "using data from              ",nfile
+    
+    newGrid= Grid(gfile, nfile)
+    newGrid.fitNewToOldGrid()    
+
     s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

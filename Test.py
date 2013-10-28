@@ -46,12 +46,13 @@ def findPhi(phi, theta, deltheta, deltaphi):
 
 
 def spH():
-    for l in range(3):
-        for m in range(l):
-            
-            for theta in np.arange(0,2*math.pi,0.01):
-                for phi in np.arange(0,math.pi,0.01):
-                    sph_harm(m,l,theta,phi)
+    for l in range(4):
+        m=0
+           
+        for theta in np.arange(0,2*math.pi,0.01):
+            for phi in np.arange(0,math.pi,0.01):
+                print l ,m, theta, phi, sph_harm(m,l,theta,phi)
+                    
 
 
 
