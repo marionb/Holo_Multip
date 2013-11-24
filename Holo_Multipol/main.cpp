@@ -6,11 +6,11 @@
 
 int main()
 {
-    double grid=0.09;
-    Multipole *file=new Multipole("CPPOut.dat",50,1,3.73);
+    //double grid=0.09;
+    Multipole *file=new Multipole("CPPOut.dat",10,1,3.73);
     std::cout<<"created instance\n";
     file->readData();
-    //file->multpl();
+    file->multpl();
     //ile->printAlm();
     //file->expans();
 
@@ -19,6 +19,7 @@ int main()
 
     //std::cout<<"apofact is "<<apofct(file->messg[0][1],file->messg[0][1]);
 
+    delete file;
     return 0;
 }
 

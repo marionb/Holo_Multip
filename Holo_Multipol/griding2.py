@@ -190,31 +190,46 @@ class Grid:
         print "grid processing done."
         print"------------------------------------------------"
     
+    
+    
     def multi(self, inorm=0,isym=1):
+        bnorm=1
         for l in range(0,self.lmax+1,2):
             for m in range(l+1):
                 rint=0
                 iint=0
+                
                 for gr in self.grid:
                     gthph=gr[3]
                     polar=self.degToRad(gr[0])
                     azimuthal=self.degToRad(gr[1])
                     dphi=self.degToRad(gr[2])
-                    rint+=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).real)
-                    iint+=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).imag)
-                self.alm1.append([l,m,rint])
-                self.alm2.append([l,m,iint])        
+                    norm=(2*l+1)**(0.5)
+                    self.dtheta= 0.035
+                    rint+=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).real)*norm
+                    iint-=math.sin(polar)*self.dtheta*dphi*gthph*(sfunc.sph_harm(m,l,polar,azimuthal).imag)
+                
+                if(l==0 and m==0 and rint>=0.001):
+                    bnorm=rint
+                #print "bnorm= ", bnorm
+        
+                self.alm1.append([l,m,rint/bnorm])
+                self.alm2.append([l,m,iint/bnorm])
+
     
 def main():
     print "Runing griding.py"
     newGrid= Grid(10)
-    newGrid.fitNewToOldGrid()
-    """
+    #newGrid.fitNewToOldGrid()
+    
     newGrid.openData()
+    """for an in newGrid.grid:
+        print an
+    """
     newGrid.multi()
-    l=0
+    #l=0
     for i, j in zip(newGrid.alm1,newGrid.alm2):
-        print i, j
+        print i[0], i[1], i[2], j[2]
     """
     s=-1
     while True:
@@ -230,7 +245,7 @@ def main():
             print"----------------------------------------------------"
             print "writing output for C++ code to ",newGrid.outputfile
             print"----------------------------------------------------"
-            return
+            return"""
     
     
         

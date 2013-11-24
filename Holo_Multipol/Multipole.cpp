@@ -21,6 +21,7 @@ void Multipole::multpl()
     std::cout<<"\n in multipl function"<<std::endl;
     //TODO determine dtheta properly
     double dtheta=2*M_PI/180.0;//TODO
+    double bnorm=1;
     for(int l=0;l<=LMAX;l+=2)
     {
         int il=l/2;
@@ -33,7 +34,7 @@ void Multipole::multpl()
         {
             double rint1=0;
             double rint2=0;
-            double bnorm=1;
+
             for(int i=0;i<MAXANGLES;i++)
             {
                 double phi=messg[i][2];
