@@ -92,11 +92,13 @@ void Multipole::expans()
             }
         }
         std::vector<double> temp;
+        std::cout<<suml<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
         temp.push_back(suml);
         temp.push_back(theta);
         temp.push_back(phi);//TODO if time: make this call better -> works for a start
         calc.push_back(temp);
    }
+   std::cout<<"calc:(suml,theta,phi)\n";
 }
 
 

@@ -15,16 +15,17 @@ __date__ = "$Date: 14/10/2013 $"
 
 from numpy import *
 import sys
+import griding2 as gr2
 
 
 class Grid:
     #Global variables
-    def __init__(self, gfile="oldinp.itp", nfile="newinp.itp"):
+    def __init__(self, gfile="oldinp.itp", nfile="oldinp.itp"):#nfile="newinp.itp"):
         self.gridfile=gfile   # file containing the grid information
         self.outputfile=""
         self.newFile=nfile    # file containing the measured data
                
-        self.grid=list()                    # contais the grid and bining information theta,phi,dphi,g(theta,phi),count
+        self.grid=list()                    # contais the grid and bining information theta,phi,dphi,g(theta,phi),count,dOmega_i
         self.theta=list()                   # contains all theta values at same index as corresponding phi value
         self.phi=list()                     # conains all phi walues
         self.thetaTemp=list()               # contains all different theta values only once. this list is creard from redundancy
@@ -38,7 +39,7 @@ class Grid:
         """
         print"------------------------------------------------"
         
-        print "clearing grid and writing new acording to file data"
+        print "clearing grid and writing new grid acording to file data"
         del self.grid[:]
         del self.theta[:]
         del self.phi[:]
@@ -53,7 +54,6 @@ class Grid:
             print "will exit program!"
             print"------------------------------------------------"
         
-
         self.theta=list(self.theta)
         self.phi=list(self.phi)
         self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values    
@@ -62,13 +62,70 @@ class Grid:
         
         for i in range(len(self.theta)):
             dPhi=360.0/self.theta.count(self.theta[i])
-            self.dOmega.append(dPhi*pi/180*self.dtheta*pi/180*sin((self.theta[i])*pi/180))
+            Omega=dPhi*pi/180*self.dtheta*pi/180*sin((self.theta[i])*pi/180)
+            self.dOmega.append(Omega)
             #print "dOmega= ",dPhi*pi/180*self.dtheta*pi/180*sin((self.theta[i])*pi/180)
-            self.grid.append([self.theta[i],self.phi[i],dPhi,0,0])
+            self.grid.append([self.theta[i],self.phi[i],dPhi,0,0, Omega])
             
-        
+        print type(self.grid), type(self.grid[5]), self.grid[5] #TODO
 
         print "grid processing done."
+        print"------------------------------------------------"    
+    
+    def calcGrid(self, phi_ref, theta_step, phi_range, maxTheta=90):
+        """
+        calculate the phi and theta walues used for the grid
+        @param Phi_ref          Density of the phi steps for all theta values; Should be in correspondace with theta_step
+        @param Theta_step       Size of the Theta steps (1, 2 oder 3 degree usw.)
+        @param phi_range        The range for the phi values (0<phi_range<=360)
+        """
+        if(theta_step>maxTheta or theta_step<=0 or 0>phi_range or phi_range>360):
+            try:
+                raise SyntaxError('Wrong input')
+            except SyntaxError:
+                print 'Error found: '
+                raise
+
+        print "By using this function all vaues from a prewiously existing grid will be owerwritten!"
+        print"------------------------------------------------"
+        print"calculating grid using constant solid angles density;"
+        
+        del self.grid[:]
+        del self.theta[:]
+        del self.phi[:]
+        del self.thetaTemp[:]
+        del self.dOmega[:]
+ 
+        self.dtheta=theta_step
+        th=0
+        #the first point in the grid is 0, We append this point here to make shure that it is in the grid
+        self.grid.append([0,0,360,0,0,0])
+        self.phi.append(0)
+        self.theta.append(0)
+        while(th<=maxTheta):
+            amount=int(round(phi_range*sin(th*pi/180)*phi_ref/theta_step)) #function for constant solid angle density rounded to the neares whole number and converted int an integer
+            #print th, amount
+            if(amount!=0):
+                dphi=360.0/amount
+            else:
+                dphi=0
+            #print "amount, th dphi ",amount, th, dphi
+            for i in range(amount):
+                #self.grid.append([th,i*dphi,dphi,0,0])
+                self.theta.append(th)
+                self.phi.append(i*dphi)
+                self.dOmega.append(dphi*pi/180*self.dtheta*pi/180*sin((th)*pi/180)) #in radian
+                self.grid.append([th,i*dphi,dphi,0,0,self.dOmega[i]])
+                #print (th,i*dphi,dphi,0,0)
+            th+=theta_step
+            
+        self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values
+        gFile="grid.dat"
+        print "calculated grid (used for the rest of the program) can be found in ",gFile
+        with open(gFile, 'w\n') as outFile:
+            for i in self.grid:
+                value=str("%f %f" %(i[0],i[1]))
+                outFile.write(value+"\n")
         print"------------------------------------------------"    
     
     def fitNewToOldGrid(self):
@@ -84,7 +141,7 @@ class Grid:
         global phi"""
         
         if(len(self.grid)==0 or self.dtheta==0):
-            self.makeGrid() #TODO!!! calculate the grid
+            self.makeGrid()
             
         print"------------------------------------------------"
         try:
@@ -140,80 +197,53 @@ class Grid:
         
         for t in self.thetaTemp:
             #print "theta range %f, %f, %f"%(t-delYVal/2.0, t, t+delYVal/2.0)
-            if(t-delYVal<=yVal and yVal<t+delYVal):
+            if(t-delYVal/2<=yVal and yVal<t+delYVal/2):
+                findTheta=1
                 index=self.theta.index(t)
                 count=self.theta.count(t)
+                #print "theta range %f, %f, %f"%(t-delYVal/2.0, t, t+delYVal/2.0)
+                
+                #calculate first interval to check
+                phi1=self.grid[index][1]*1.0-self.grid[index][2]/2.0
+                phi2=self.grid[index][1]*1.0+self.grid[index][2]/2.0
                 
                 for i in range(index,index+count):
-                    phirange=[(self.grid[i][1]*1.0-self.grid[i][2]/2.0),(self.grid[i][1]*1.0+self.grid[i][2]/2.0)]
-                    if((phirange[0]<=xVal and xVal<phirange[1]) or (phirange[1]>360 and (0<=xVal and xVal<phirange[1]%360))):
+                    phirange=[(phi1),(phi2)]
+                    #print phirange
+                    if((phirange[0]<=xVal and xVal<phirange[1]) or (phirange[1]>360 and (0<=xVal and xVal<phirange[1]%360)) or (phirange[0]<0 and (360+phirange[0]<=xVal and xVal>phirange[1]))):
                         return i
                     else:
-                        continue
+                        #calculate new intervall
+                        phi1=phi2
+                        phi2=phi2+self.grid[i][2]
                         
             else:
                 continue
         return -1
-        
-
-    def calcGrid(self, phi_ref, theta_step, phi_range, maxTheta=90):
+    
+    
+    def checkRange(self,ymin,y,ymax):
         """
-        calculate the phi and theta walues used for the grid
-        @param Phi_ref          Density of the phi steps for all theta values; Should be in correspondace with theta_step
-        @param Theta_step       Size of the Theta steps (1, 2 oder 3 degree usw.)
-        @param phi_range        The range for the phi values (0<phi_range<=360)
-        """
-        if(theta_step>maxTheta or theta_step<=0 or 0>phi_range or phi_range>360):
-            try:
-                raise SyntaxError('Wrong input')
-            except SyntaxError:
-                print 'Error found: '
-                raise
-
-        print "By using this function all vaues from a prewiously existing grid will be owerwritten!"
-        print"------------------------------------------------"
-        print"calculating grid using constant solid angles density;"
-        
-        del self.grid[:]
-        del self.theta[:]
-        del self.phi[:]
-        del self.thetaTemp[:]
-        del self.dOmega[:]
- 
-        self.dtheta=theta_step
-        th=0
-        while(th<=maxTheta):
-            amount=int(round(phi_range*sin(th*pi/180)*phi_ref/theta_step)) #function for constant solid angle density rounded to the neares whole number and converted int an integer
-            if(amount!=0):
-                dphi=360.0/amount
-            else:
-                dphi=0
-            #print "amount, th dphi ",amount, th, dphi
-            for i in range(amount):
-                self.grid.append((th,i*dphi,dphi,0,0))
-                self.theta.append(th)
-                self.phi.append(i*dphi)
-                self.dOmega.append(dphi*pi/180*self.dtheta*pi/180*sin((th)*pi/180)) #in radian
-                #print (th,i*dphi,dphi,0,0)
-            th+=theta_step
+        function checks if a given value lies within a cerain interval
+        ==> IF y in [ymin,ymax[
+            THEN return true
+            ELSE return false
             
-        self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values
-        gFile="grid.dat"
-        print "calculated grid (used for the rest of the program) can be found in ",gFile
-        with open(gFile, 'w\n') as outFile:
-            for i in self.grid:
-                value=str("%f %f" %(i[0],i[1]))
-                outFile.write(value+"\n")
-        print"------------------------------------------------"
-        
-        
+        @param ymin the minimum of the interval
+        @param y    the value to be cheked
+        @param ymax the maximum of the interval
+        """
+        if(ymin<=y and y<ymax):
+            return True
+        else:
+            return False 
     
     def fortranOut(self):
         self.outputfile="FortranOut.dat" # the output Data file
         with open(self.outputfile, 'w\n') as outFile:
             for i in range(len(self.grid)):
                 value=str("%f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1]))
-                #print value
+                #print valuegedi    
                 outFile.write(value+"\n")
     
     def cPPOut(self):
@@ -243,6 +273,8 @@ class Grid:
         from mpl_toolkits.mplot3d.axes3d import Axes3D
         tempx=[i*pi/180.0 for i in self.phi]
         tempy=[i*pi/180.0 for i in self.theta]
+        print "(", self.phi[0],",",self.theta[0],")"
+        print "(", tempx[0],",",tempy[0],")"
         x=cos(tempx)*sin(tempy)
         y=sin(tempx)*sin(tempy)
         z=cos(tempy)        
@@ -250,7 +282,15 @@ class Grid:
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(x, y, z, c="r")
-        plt.show()        
+        plt.show()
+        
+        
+    def writeGrid(self, gFile):
+        print "calculated grid (used for the rest of the program) can be found in ",gFile
+        with open(gFile, 'w\n') as outFile:
+            for i in self.grid:
+                value=str("%f %f %f %f %f %f" %(i[0],i[1],i[2],i[3],i[4],i[5]))
+                outFile.write(value+"\n")
         
 def main():
     
@@ -271,14 +311,17 @@ def main():
     print "using grid information from  ",gfile
     print "using data from              ",nfile
     
-    newGrid= Grid(gfile, nfile)
-    #newGrid.fitNewToOldGrid()
-    newGrid.calcGrid(1, 2, 360)
-    print newGrid.OmegaArea()
-    newGrid.makeGrid()
-    print newGrid.OmegaArea()
-    newGrid.plotGrid()
-
+    #newGrid= Grid(gfile, nfile)
+    newGrid= Grid()
+    newGrid.makeGrid()#calcGrid(1, 2, 360)
+    print "dOmega=", newGrid.OmegaArea()
+    newGrid.fitNewToOldGrid()
+    newGrid.writeGrid("temp.dat")
+    #newGrid.plotGrid()
+    
+    calc = gr2.Calc(newGrid.grid,2)
+    
+    #calc.multi()
     """s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

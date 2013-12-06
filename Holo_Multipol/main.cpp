@@ -12,7 +12,7 @@ int main()
     file->readData();
     file->multpl();
     //ile->printAlm();
-    //file->expans();
+    file->expans();
 
     //file->writeData("testOut.tex");
     //file->doyzimage(grid,0);

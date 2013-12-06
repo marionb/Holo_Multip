@@ -17,182 +17,22 @@ from numpy import *
 import scipy.special as sfunc
 import math
 
-class Grid:
+class Calc:
     #Global variables
-    def __init__(self, maxCoeff=50):
-        self.gridfile="oldinp.itp"   # file containing the grid information
-        self.outputfile=""
-        self.newFile="oldinp.itp" #"newinp.itp"    # file containing the measured data
-               
-        self.grid=list()
+    def __init__(self, grid, maxCoeff=50,):
         
-        self.g=list()                       # contais the grid and bining information theta,phi,dphi,g(theta,phi),count
-        self.theta=list()                   # contains all theta values at same index as corresponding phi value
-        self.phi=list()                     # conains all phi walues
-        self.thetaTemp=list()               # contains all different theta values oned
-        self.dtheta=0
-        self.alm1=list()
-        self.alm2=list()
         
+        self.alm=list() #list containig the coefficients. Complex numbers
+        self.grid=grid
         self.lmax=maxCoeff
-        
-    
-    def makeGrid(self):
-        """
-        From the file oldinp.itp a grid created with a dphi for every point
-        The dtheta that is calculated at the end is the same for all points
-        """
-        print"------------------------------------------------"
-        try:
-            self.theta, self.phi=loadtxt(self.gridfile, usecols=(1,2), unpack=True)
-            print "Beginning grid processing"
-        except:
-            print "data file could not be opend. Check that ",gridfile," exists in runing directory and run again."
-            print"------------------ERROR-------------------------"
-            print "will exit program!"
-            print"------------------------------------------------"
-            
-        self.theta=list(self.theta)
-        self.phi=list(self.phi)
-        self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values    
-        
-        for i in range(len(self.theta)):
-            self.grid.append([self.theta[i],self.phi[i],360.0/self.theta.count(self.theta[i]),0,0])
-            
-        self.dtheta=abs(self.thetaTemp[0]-self.thetaTemp[1]) #dtheta is the same for all data points
-
-        print "grid processing done."
-        print"------------------------------------------------"
-    
-    
-    def fitNewToOldGrid(self):
-        """
-        The function takes the nwe input data and fits it in to the grid that is given through the input file oldinp.itp
-        
-        The measured value of points that lay coles within a certain range is averaged and the value of the average is set the corresponding point of the given grid.
-        In other words a two dimensional binning is done with the data given
-        
-        global grid
-        global newFile
-        global theta
-        global phi"""
-        
-        if(len(self.grid)==0 or self.dtheta==0):
-            self.makeGrid()
-            
-        print"------------------------------------------------"
-        try:
-            gNew, thetaNew, phiNew=loadtxt(self.newFile, usecols=(0,1,2), unpack=True)
-            print "Beginning data processing; this will take a moment ..."       
-            
-        except:
-            print "data file could not be opend. Check that ",newFile," exists in runing directory and run again."
-            print"------------------ERROR-------------------------"
-            print "will exit program!"
-            print"------------------------------------------------"
-        gNew=list(gNew)
-        thetaNew=list(thetaNew)
-        phiNew=list(phiNew)
-        
-        
-        #    H,thetaEdge,phiedge=histogram2d(thetaNew,phiNew,bins=[theta,phi],weights=gNew)
-        #print "length of gNew ", len(gNew)
-        for i in range(len(gNew)):
-            #print"--------------------"
-            #print phiNew[i], thetaNew[i]
-            place=self.findPhi(phiNew[i],thetaNew[i])
-
-            if(place!=-1):
-                self.grid[place][3]=self.grid[place][3]+gNew[i]
-                self.grid[place][4]=self.grid[place][4]+1
-            else:
-                print "point %d (%f, %f) not found" %(i, phiNew[i],thetaNew[i])
-                continue
-        
-        for i in range(len(self.grid)):
-            if(self.grid[i][4]!=0):
-                self.grid[i][3]=self.grid[i][3]/self.grid[i][4]
-            else:
-                continue
-            print self.grid[i][3]
-        print "mached new data in to base grid."
-        print"------------------------------------------------"
-    
-       
-    def findPhi(self, xVal, yVal):
-        """
-        for a given phi and theta find the corresponding point in the grid and return the index list index of this point
-        @param xVal      double determining azimutal angle
-        @param yVal      double determining polar angle
-        @return          int index of corresponing point on grid or -1 if point can not be fited on grid
-        global grid
-        global theta"""
-         
-        if(len(self.grid)==0):
-            print "no values in grid"
-            return -1
-        
-        delYVal=self.dtheta
-        
-        for t in self.thetaTemp:
-            #print "theta range %f, %f, %f"%(t-delYVal/2.0, t, t+delYVal/2.0)
-            if(t-delYVal<=yVal and yVal<t+delYVal):
-                index=self.theta.index(t)
-                count=self.theta.count(t)
-                
-                for i in range(index,index+count):
-                    phirange=[(self.grid[i][1]*1.0-self.grid[i][2]/2.0),(self.grid[i][1]*1.0+self.grid[i][2]/2.0)]
-                    if((phirange[0]<=xVal and xVal<phirange[1]) or (phirange[1]>360 and (0<=xVal and xVal<phirange[1]%360))):
-                        return i
-                    else:
-                        continue
-                        
-            else:
-                continue
-        return -1
-        
-    
-    def fortranOut(self):
-        self.outputfile="FortranOut.dat" # the output Data file
-        with open(self.outputfile, 'w\n') as outFile:
-            for i in range(len(self.grid)):
-                value=str("%f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1]))
-                #print value
-                outFile.write(value+"\n")
-    
-    def cPPOut(self):
-        self.outputfile="CPPOut.dat" # the output Data file
-        with open(self.outputfile, 'w\n') as outFile:
-            #outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
-            for i in range(len(self.grid)):
-                value=str("%f %f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1],self.grid[i][2]))
-                #print value
-                outFile.write(value+"\n")
-            #outFile.write("dtheta=%f"%self.dtheta)
             
     def degToRad(self, angle):
         return angle*math.pi/180.0
     
+    def radToDeg(self, angle):
+        return angle*180.0/math.pi
     
-    def openData(self):
-        self.g, self.theta, self.phi=loadtxt(self.gridfile, usecols=(0,1,2), unpack=True)
-
-        self.g=list(self.g)  
-        self.theta=list(self.theta)
-        self.phi=list(self.phi)
-        self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values    
-        
-        for i in range(len(self.theta)):
-            self.grid.append([self.theta[i],self.phi[i],360.0/self.theta.count(self.theta[i]),self.g[i],0])
-            
-        self.dtheta=abs(self.thetaTemp[0]-self.thetaTemp[1]) #dtheta is the same for all data points
-
-        print "grid processing done."
-        print"------------------------------------------------"
-    
-    
-    
-    def multi(self, inorm=0,isym=1):
+    """def multi(self, inorm=0, isym=1):
         bnorm=1
         for l in range(0,self.lmax+1,2):
             for m in range(l+1):
@@ -214,41 +54,38 @@ class Grid:
                 #print "bnorm= ", bnorm
         
                 self.alm1.append([l,m,rint/bnorm])
-                self.alm2.append([l,m,iint/bnorm])
+                self.alm2.append([l,m,iint/bnorm])"""
+                
+    def multi(self,inorm=0, isym=1):
+        bnorm=1.0
+        for l in range(0,self.lmax+1,2):
+            temp=list()
+            for m in range(l+1):
+                #Do the alculation
+                
+                summ=0
+                print "-----------------"
+                for val in self.grid:
+                    temp2=sfunc.sph_harm(m,l,val[1],val[0])
+                    summ+=temp2*val[5]*val[3]
+                    print val[3]
 
-    
-def main():
-    print "Runing griding.py"
-    newGrid= Grid(10)
-    #newGrid.fitNewToOldGrid()
-    
-    newGrid.openData()
-    """for an in newGrid.grid:
-        print an
-    """
-    newGrid.multi()
-    #l=0
-    for i, j in zip(newGrid.alm1,newGrid.alm2):
-        print i[0], i[1], i[2], j[2]
-    """
-    s=-1
-    while True:
-        s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))
-        if(s==0):
-            newGrid.fortranOut()
-            print"----------------------------------------------------"
-            print "writing output for Fortran code to ",newGrid.outputfile
-            print"----------------------------------------------------"
-            return
-        if(s==1):
-            newGrid.cPPOut()
-            print"----------------------------------------------------"
-            print "writing output for C++ code to ",newGrid.outputfile
-            print"----------------------------------------------------"
-            return"""
-    
-    
+                if(l==0):
+                    print "normalisation", summ
+                    bnorm=summ
+                    print"normalization factor= ",bnorm
+                
+                temp.append([l,m,summ,summ/bnorm])
+                print temp[m]
+            self.alm.append(temp)
+            
+    def expand(self):
+        pass
+            
         
+def main():
+    print "main function is not mentioned to be used!"
+    pass  
     
 if __name__ == '__main__':
     main()

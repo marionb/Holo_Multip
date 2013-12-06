@@ -91,7 +91,7 @@ int Data::getLineNum(std::string fileGiven)
 
 void Data::apofct()
 {
-    //this function has t be caled if the certain flag is set to true!
+    //this function has to be caled if the certain flag is set to true!
     //what is thetamax?is it just the maximum of all thetas?
     double width =2.0; //where does this number come from?? is it always 2?
 
