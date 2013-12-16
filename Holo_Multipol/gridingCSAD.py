@@ -287,8 +287,9 @@ class Grid:
     def writeGrid(self, gFile):
         print "calculated grid (used for the rest of the program) can be found in ",gFile
         with open(gFile, 'w\n') as outFile:
+            outFile.write("#theta   phi     dphi    g(theta,phi)    dOmega_i\n")
             for i in self.grid:
-                value=str("%f %f %f %f %f %f" %(i[0],i[1],i[2],i[3],i[4],i[5]))
+                value=str("%f %f %f %f %f" %(i[0],i[1],i[2],i[3],i[5]))
                 outFile.write(value+"\n")
  
 def main():
@@ -299,28 +300,30 @@ def main():
     
     if len(sys.argv) == 3:#the name of the base grid and the name of the data fiel has to be given
         gfile=sys.argv[1]
-        nfile=sys.argv[2]  
-    elif len(sys.argv) == 1:
+        nfile=sys.argv[2]
+        print "using grid information from  ",gfile
+        print "using data from              ",nfile
+        newGrid= Grid(gfile, nfile)
+        newGrid.makeGrid()
+        
+    elif len(sys.argv) == 2:
+        print "Program will calculate grid using constant solid angle density"
         gfile="oldinp.itp"
-        nfile="newinp.itp"
+        nfile=sys.argv[1]
+        print "using data from              ",nfile
+        newGrid= Grid(gfile, nfile)
+        newGrid.calcGrid(0.95, 2, 360,90)
+                #-------->*                
     else:
-        print "to many arguments given program takes no argument or two arguments(name of fiel with grid, name of file containing data)"
+        print "wrong amount of arguments; options are one argument (name of data file) or two arguments (name of fiel with grid, name of file containing data)"
         return -1
     
-    print "using grid information from  ",gfile
-    print "using data from              ",nfile
     
-    newGrid= Grid(gfile, nfile)
-    newGrid.calcGrid(0.95, 2, 360)
+    
     print "dOmega=", newGrid.OmegaArea()
     newGrid.fitNewToOldGrid()
     newGrid.writeGrid("temp.dat")
-    #newGrid.plotGrid()
-    
-    calc = gr2.Calc(newGrid.grid,2)
-    
-    calc.multi()
-    print "2,90=>",calc.expand(2,90)
+
     """s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

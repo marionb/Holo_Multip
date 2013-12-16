@@ -19,12 +19,14 @@ import math
 
 class Calc:
     #Global variables
-    def __init__(self, grid, maxCoeff=50,):
-        
-        
+    def __init__(self, grid, expgrid=0, maxCoeff=50,):
         self.alm=list() #list containig the coefficients. Complex numbers
         self.grid=grid
         self.lmax=maxCoeff
+        if(expgrid==0):
+            pass
+        else:
+            self.expansionGrid=expgrid
             
     def degToRad(self, angle):
         return angle*math.pi/180.0
@@ -57,6 +59,9 @@ class Calc:
                 self.alm2.append([l,m,iint/bnorm])"""
                 
     def multi(self,inorm=0, isym=1):
+        """
+        calculates the coefficients A_lm for themulti pole expansion
+        """
         bnorm=1.0
         for l in range(0,self.lmax+1,2):
             temp=list()
@@ -67,11 +72,9 @@ class Calc:
                 print "-----------------"
                 for val in self.grid:
                     temp2=sfunc.sph_harm(m,l,val[1],val[0])
-                    summ+=temp2*val[5]*val[3]
-                    print val[3]
-
+                    summ+=temp2.conjugate()*val[5]*val[3]
+                    
                 if(l==0):
-                    print "normalisation", summ
                     bnorm=summ
                     print"normalization factor= ",bnorm
                 
@@ -79,10 +82,33 @@ class Calc:
                 print temp[m]
             self.alm.append(temp)
             
-    def expand(self):
-        pass
-            
+    def intencity(self, theta, phi):
+        """
+        calculate the intencity g(theta,phi) at a given point theta, phi using
+            g(theta,phi)=sum_{0<=l<=l_max}[A_l0*Y_l0(theta,phi))+2*Re(sum_{0<m<=l}A_lm*Y_lm(theta,phi))]
         
+        @param theta    polar angle
+        @param phi      azimutal angle
+        """
+        summ=0
+        summ0=0
+        for l in range(0,self.lmax+1,2):
+            summ0+=(self.alm[l/2][0][3]*sfunc.sph_harm(0,l,phi,theta)).real
+            for m in range(1,l+1):
+                #print "-----------------------------------"
+                summ+=(self.alm[l/2][m][3] * sfunc.sph_harm(m,l,phi,theta)).real
+                
+        return summ0+2*summ
+            
+    def expand(self):
+        """
+        calculate the intecities g(theta,phi) for all points on a given Sgrid
+        """
+        for term in self.grid:
+            i=self.index(term)
+            self.grid[i][2]=self.intencity(term[0],term[1])
+    
+    
 def main():
     print "main function is not mentioned to be used!"
     pass  
