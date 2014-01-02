@@ -58,9 +58,13 @@ class Grid:
         self.phi=list(self.phi)
         self.thetaTemp=list(set(self.theta))  #get rid of multiple values in the list so we have all different theta values    
         
-        self.dtheta=abs(self.thetaTemp[0]-self.thetaTemp[1]) #dtheta is the same for all data points        
+        self.dtheta=abs(self.thetaTemp[0]-self.thetaTemp[1]) #dtheta is the same for all data points
+        
+        #for i in range(len(self.thetaTemp)):
+        #    print self.thetaTemp[i], self.theta.count(self.thetaTemp[i])
         
         for i in range(len(self.theta)):
+            
             dPhi=360.0/self.theta.count(self.theta[i])
             Omega=dPhi*pi/180*self.dtheta*pi/180*sin((self.theta[i])*pi/180)
             self.dOmega.append(Omega)
@@ -100,15 +104,16 @@ class Grid:
         self.grid.append([0,0,360,0,0,0])
         self.phi.append(0)
         self.theta.append(0)
+        th+=theta_step
         while(th<=maxTheta):
-            amount=int(round(phi_range*sin(th*pi/180)*phi_ref/theta_step)) #function for constant solid angle density rounded to the neares whole number and converted int an integer
+            amount=int(phi_range*sin(th*pi/180)*phi_ref/theta_step) #function for constant solid angle density rounded to the neares whole number and converted int an integer
             #print th, amount
             if(amount!=0):
                 dphi=360.0/amount
             else:
                 dphi=0
             #print "amount, th dphi ",amount, th, dphi
-            for i in range(amount):
+            for i in range(int(amount)):
                 #self.grid.append([th,i*dphi,dphi,0,0])
                 self.theta.append(th)
                 self.phi.append(i*dphi)
@@ -311,16 +316,18 @@ def main():
     print "using data from              ",nfile
     
     newGrid= Grid(gfile, nfile)
-    newGrid.calcGrid(0.95, 2, 360)
+    newGrid.makeGrid()
+    #newGrid.calcGrid(1, 2, 360)
     print "dOmega=", newGrid.OmegaArea()
     newGrid.fitNewToOldGrid()
     newGrid.writeGrid("temp.dat")
     #newGrid.plotGrid()
     
-    calc = gr2.Calc(newGrid.grid,2)
+    calc = gr2.Calc(newGrid.grid,50)
     
     calc.multi()
-    print "2,90=>",calc.expand(2,90)
+    calc.expand()
+    calc.writeData("calc.dat")
     """s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

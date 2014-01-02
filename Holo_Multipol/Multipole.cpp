@@ -9,7 +9,10 @@ Multipole::Multipole(std::string fileName, int lmax, int isym, double ekin): Dat
     alm2.resize( LMAX/2+1, std::vector<double>());
 }
 Multipole::~Multipole()
-{}
+{
+    delete alm1;
+    delete alm2;
+}
 
 const int Multipole::getLMAX()
 {
@@ -19,8 +22,7 @@ const int Multipole::getLMAX()
 void Multipole::multpl()
 {
     std::cout<<"\n in multipl function"<<std::endl;
-    //TODO determine dtheta properly
-    double dtheta=2*M_PI/180.0;//TODO
+    double dtheta=2*M_PI/180.0;
     double bnorm=1;
     for(int l=0;l<=LMAX;l+=2)
     {
@@ -41,7 +43,7 @@ void Multipole::multpl()
                 double theta=messg[i][1];
                 double gmessg=messg[i][0];
 
-                //std::cout<<"i, phi, theta, g "<<i<<*" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
+                std::cout<<"i, phi, theta, g "<<i<<" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
                 //norm=sqrt(4.0*M_PI/(2.0*l+1.0))
                 rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
 
@@ -52,7 +54,7 @@ void Multipole::multpl()
             }
             if(l==0 && m==0 && rint1>0.001)
             {
-                bnorm=rint1*dtheta;
+                    bnorm=rint1*dtheta;
                 std::cout<<"bnorm="<<bnorm<<std::endl;
             }
             alm1[il].push_back(rint1*dtheta/bnorm);
