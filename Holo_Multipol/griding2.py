@@ -48,15 +48,17 @@ class Calc:
                     temp2=sfunc.sph_harm(m,l,val[1],val[0])
                     summ+=temp2.conjugate()*val[3]*val[5] #Y*_lm(theta,phi)*g(thea,phi)*sin(theta)dphi*dtheta
                     
-                if(l==0):
+                if(l==0 and m==0):
                     bnorm=summ
                     #print"normalization factor= ",bnorm
                 
                 temp.append([l,m,summ,summ/bnorm])
                 #print temp[m]
             self.alm.append(temp)
+        self.writeCoeff("PYcoeff.dat")
         print "calcualted coefficients"
         print "-------------------------------------------"
+        
     def intencity(self, theta, phi):
         """
         calculate the intencity g(theta,phi) at a given point theta, phi using
@@ -65,16 +67,15 @@ class Calc:
         @param theta    polar angle
         @param phi      azimutal angle
         """
-        summ=0
         summ0=0
+        summ=complex(0,0)
         for l in range(0,self.lmax+1,2):
             summ0+=(self.alm[l/2][0][3]*sfunc.sph_harm(0,l,phi,theta)).real
             #print self.alm[l/2]
             for m in range(1,l+1):
                 #print "-----------------------------------"
-                summr+=(self.alm[l/2][m][3] * sfunc.sph_harm(m,l,phi,theta))
-                
-        return summ0+2*(summ.real+summ.imag)
+                summ+=self.alm[l/2][m][3]* sfunc.sph_harm(m,l,phi,theta) 
+        return summ0+2*summ.real
             
     def expand(self):
         """
@@ -87,6 +88,7 @@ class Calc:
             
         print "function has been expanded"
         print "--------------------------------------"
+        
     def writeData(self, dataFiel):
         """
         write information from grit in to dataFile
@@ -96,7 +98,20 @@ class Calc:
             for i in self.grid:
                 value=str("%f %f %f" %(i[0],i[1],i[2]))
                 outFile.write(value+"\n")
-                
+    
+    def writeCoeff(self, dataFiel):
+        """
+        write information from Coeff in to dataFile
+        """
+        print "Calculated Coefficients can be found in ",dataFiel
+        with open(dataFiel, 'w\n') as outFile:
+            value1=str(self.lmax)
+            outFile.write(value1+"\n")
+            
+            for i in self.alm:
+                for h in i:
+                    value=str("%f %f %f %f" %(h[0], h[1], h[3].real, h[3].imag))
+                    outFile.write(value+"\n")            
 
 def main():
     print "main function is not ment to be used!"

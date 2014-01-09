@@ -18,6 +18,7 @@ import sys
 import griding2 as gr2
 
 
+
 class Grid:
     #Global variables
     def __init__(self, gfile="oldinp.itp", nfile="newinp.itp"):
@@ -256,7 +257,7 @@ class Grid:
         with open(self.outputfile, 'w\n') as outFile:
             #outFile.write("#g(theta, phi), theta, phi, dphi (values are in degrees)\n")
             for i in range(len(self.grid)):
-                value=str("%f %f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1],self.grid[i][2]))
+                value=str("%f %f %f %f" %(self.grid[i][3],self.grid[i][0],self.grid[i][1],self.grid[i][5],))
                 #print value
                 outFile.write(value+"\n")
            # outFile.write("dtheta=%f"%self.dtheta)
@@ -322,12 +323,21 @@ def main():
     newGrid.fitNewToOldGrid()
     newGrid.writeGrid("temp.dat")
     #newGrid.plotGrid()
+    newGrid.cPPOut()
+    print"----------------------------------------------------"
+    print "writing output for C++ code to ",newGrid.outputfile
+    print"----------------------------------------------------"
     
-    calc = gr2.Calc(newGrid.grid,50)
+    calc = gr2.Calc(newGrid.grid,10)
     
     calc.multi()
     calc.expand()
     calc.writeData("calc.dat")
+    
+    
+    #print('\a')
+    #sys.stdout.write('\a')
+    #sys.stdout.flush()
     """s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <complex>
 
 #include "Multipole.h"
 #include "Data.h"
@@ -7,11 +8,11 @@
 int main()
 {
     //double grid=0.09;
-    Multipole *file=new Multipole("CPPOut.dat",10,1,3.73);
+    Multipole *file=new Multipole("oldinp.itp",10,1,3.73);
     std::cout<<"created instance\n";
     file->readData();
     file->multpl();
-    //ile->printAlm();
+    //file->printAlm();
     file->expans();
 
     //file->writeData("testOut.tex");

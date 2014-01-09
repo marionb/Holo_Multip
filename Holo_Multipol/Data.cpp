@@ -19,13 +19,13 @@ void Data::readData()
     dataF.open(infile);
     if(dataF.is_open())
     {
-        std::cout<<"reading file";
+        std::cout<<"--------------------------------------------------------------- \n reading file\n";
         for(int i=0;i<MAXANGLES;i++)
         {
-            double inNum0;
-            double inNum1;
-            double inNum2;
-            double inNum3;
+            double inNum0; // g(theta,phi)
+            double inNum1; // theta
+            double inNum2; //phi
+            double inNum3; //DOmega
             //std::cout<<"\n read data line "<<i;
             this->dataF>>inNum0;
             //std::cout<<" entry 0 "<<inNum0;
@@ -43,6 +43,7 @@ void Data::readData()
             {
                 thmax=inNum1;
             }
+            //convert angles from degres to radian
             messg[i][1]=deg_to_rad(inNum1);
             messg[i][2]=deg_to_rad(inNum2);
             messg[i][3]=deg_to_rad(inNum3);
@@ -56,12 +57,12 @@ void Data::readData()
         }
     }else
     {
-        std::cout<<"Can not open file! Will exit!";
+        std::cout<<"Can not open file! Will exit! \n ---------------------------------------------------------------";
         //Throw error here!!!
         return;
 
     }
-    std::cout<<"read file succesfully!";
+    std::cout<<"read file succesfully! \n ---------------------------------------------------------------";
     this->dataF.close();
 }
 

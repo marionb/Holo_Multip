@@ -4,7 +4,7 @@
 //#include <algorithm>
 #include <boost/math/special_functions/legendre.hpp>
 #include <vector>
-
+#include <complex>
 
 
 int main()
@@ -68,7 +68,7 @@ int main()
         }*/
 
 
-
-
+    std::complex<double> cOne (2,2);
+    std::cout<< cOne/2.0;
     return 0;
 }

@@ -5,13 +5,13 @@
 Multipole::Multipole(std::string fileName, int lmax, int isym, double ekin): Data(fileName),LMAX(lmax), ISYM(isym), k(2*M_PI*sqrt(ekin/150))
 {
     assert(LMAX<Multipole::MAX_COEFF);
-    alm1.resize( LMAX/2+1, std::vector<double>());
-    alm2.resize( LMAX/2+1, std::vector<double>());
+    alm.resize( LMAX/2+1, std::vector<std::complex<double> >());
 }
 Multipole::~Multipole()
 {
-    delete alm1;
-    delete alm2;
+    //TODO enentiuelle leichen löschen
+    //delete alm1;
+    //delete alm2;
 }
 
 const int Multipole::getLMAX()
@@ -21,9 +21,8 @@ const int Multipole::getLMAX()
 
 void Multipole::multpl()
 {
-    std::cout<<"\n in multipl function"<<std::endl;
-    double dtheta=2*M_PI/180.0;
-    double bnorm=1;
+    std::cout<<"\n --------------------------------------------------------------- \n expanding multipole coefficients"<<std::endl;
+    double bnorm = 1;
     for(int l=0;l<=LMAX;l+=2)
     {
         int il=l/2;
@@ -34,32 +33,31 @@ void Multipole::multpl()
         //alm2[il].push_back(std::vector<double>(il));
         for(int m=0;m<=l;m+=ISYM)
         {
-            double rint1=0;
-            double rint2=0;
+            std::complex<double> int_res=0;
 
+            //go through all angles alm=int(g(theta,phi)*conj(Y_lm(thea,phi)) dOmega
             for(int i=0;i<MAXANGLES;i++)
             {
                 double phi=messg[i][2];
                 double theta=messg[i][1];
                 double gmessg=messg[i][0];
+                double dOmega=messg[i][3];
 
-                std::cout<<"i, phi, theta, g "<<i<<" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
-                //norm=sqrt(4.0*M_PI/(2.0*l+1.0))
-                rint1+=vorz(m)*gmessg*boost::math::spherical_harmonic_r<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+                //std::cout<<"i, phi, theta, g "<<i<<" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
+                int_res+=gmessg*std::conj(boost::math::spherical_harmonic<double>(l, m, theta, phi))*dOmega;
 
-                rint2+=vorz(m)*gmessg*boost::math::spherical_harmonic_i<double>(l, (-1)*m, theta, phi)*sin(theta)*messg[i][3];
+
                 //std::cout<<"real, imag "<<rint1<<", "<<rint2<<"\n";
 
 
             }
-            if(l==0 && m==0 && rint1>0.001)
+            if(l==0 && m==0 && std::real(int_res)>0.001)
             {
-                    bnorm=rint1*dtheta;
+                bnorm=std::real(int_res);
                 std::cout<<"bnorm="<<bnorm<<std::endl;
             }
-            alm1[il].push_back(rint1*dtheta/bnorm);
-            alm2[il].push_back(rint2*dtheta/bnorm);
-            std::cout<<l<<" "<<m<<" "<<alm1[il][m]<<std::endl;//<<" "<<alm2[il][m]<<std::endl;
+            alm[il].push_back(int_res/ bnorm);
+            std::cout<<l<<" "<<m<<" "<<alm[il][m]<<std::endl;//<<" "<<alm2[il][m]<<std::endl;
         }
         //std::cout<<std::endl;
     }
@@ -69,42 +67,27 @@ std::cout<<"alm: (l,m,real,imag)\n";
 
 void Multipole::expans()
 {
-    std::cout<<"in expans function\n";
+    std::cout<<"\n --------------------------------------------------------------- \n expanding function according to calculated coefficients \n";
+    calc.clear();
     for(int i=0;i<MAXANGLES;i++)
     {
-        //std::cout<<"i "<<i<<std::endl;
+        std::cout<<"i "<<i<<std::endl;
         double theta=messg[i][1];
         double phi=messg[i][2];
-        double suml=0;
-        //std::cout<<"(theta, phi)=("<<theta<<", "<<phi<<")\n";
-        for (int l=0;l<LMAX;l+=2)
-        {
-            //std::cout<<"l is "<<l<<std::endl;
-            int il=l/2;
-            suml+=alm1[il][0]*boost::math::spherical_harmonic_r <double> (l,0,theta,phi); //m=0
-            //std::cout<<"sum"<<sum<<std::endl;
-            for(int m=1;m<=l;m++)
-            {
-                //std::cout<<"in seccond for loop!";
-                //calculate RE(sum_m A_lm*Y_lm)=sum_m RE(A_lm)*RE(Y_lm)-IM(A_lm)*IM(Y_lm)
-                double real=alm1[il][m]*boost::math::spherical_harmonic_r <double> (l,m,theta, phi); //imaginary part
-                double imag=alm2[il][m]*boost::math::spherical_harmonic_i <double> (l,m,theta, phi); //real part
-                suml+=2*(real-imag); //
-                //std::cout<<"sum, i"<<sum<<", "<<l<<std::endl;
-            }
-        }
+        double g_theta_phi=intencity(theta,phi);
         std::vector<double> temp;
-        std::cout<<suml<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
-        temp.push_back(suml);
+        std::cout<<g_theta_phi<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
+        temp.push_back(g_theta_phi);
         temp.push_back(theta);
         temp.push_back(phi);//TODO if time: make this call better -> works for a start
+
         calc.push_back(temp);
    }
-   std::cout<<"calc:(suml,theta,phi)\n";
+   std::cout<<"calc:(g(theat,phi),theta,phi)\n";
 }
 
 
-void Multipole::holorad(double alpha, double beta)
+/*void Multipole::holorad(double alpha, double beta)
 {
     double r=0;
     double kr=0;
@@ -243,25 +226,31 @@ void Multipole::smooth(double grid)
                 }
             }
         }
-    }*/
+    }*--->/
 }
 
 
 /*-------------------Private--------------------------------------*/
-double Multipole::innerSumm(int l, double alpha, double beta)
+double Multipole::intencity(double theta, double phi)
 {
-    double summ=0;
-    int il=l/2;
-    for(int m=ISYM;m<=l;m+=ISYM)
+    double summ0=0;
+    std::complex<double> summ (0,0);
+    for(int l=0; l<=LMAX; l+=2)
+    {
+        int m=0;
+        summ0+=std::real(alm[l/2][m]*boost::math::spherical_harmonic<double> (l,m,theta,phi));
+        m+=ISYM;
+        for(;m<=l;m+=ISYM)
         {
-            double real=alm1[il][m]*boost::math::spherical_harmonic_r <double> (l,m,alpha, beta); //imaginary part
-            double imag=alm2[il][m]*boost::math::spherical_harmonic_i <double> (l,m,alpha, beta);
-            summ+=2*(real-imag);
+            summ+=alm[l/2][m]*boost::math::spherical_harmonic<double> (l,m,theta,phi);
         }
-    return summ;
+    }
+
+
+    return summ0+2*std::real(summ);
 }
 
-void Multipole::printAlm()
+/*void Multipole::printAlm()
 {
     for(unsigned int i=0;i<alm1.max_size();i++)
     {
@@ -343,4 +332,4 @@ double Multipole::calcphi(double x, double y)
         }
     }
     return -1;
-}
+}*/
