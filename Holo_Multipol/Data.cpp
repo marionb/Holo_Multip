@@ -9,7 +9,7 @@ Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBE
     std::cout<<"processing data file: "<<infile;
     std::cout<<" with "<<MAXANGLES<<" data points"<<std::endl;
     //initialize data arrays
-    messg.resize( MAXANGLES, std::vector<double>( ROWNUMBER , 0 ) );
+    messg.resize( MAXANGLES, std::vector<dataType>( ROWNUMBER , 0 ) );
     thmax=0;
 }
 
@@ -19,19 +19,22 @@ void Data::readData()
     dataF.open(infile);
     if(dataF.is_open())
     {
-        std::cout<<"--------------------------------------------------------------- \n reading file\n";
+        std::cout<<"--------------------------------------------------------------- \nreading file\n";
         for(int i=0;i<MAXANGLES;i++)
         {
-            double inNum0; // g(theta,phi)
-            double inNum1; // theta
-            double inNum2; //phi
-            double inNum3; //DOmega
-            //std::cout<<"\n read data line "<<i;
+            dataType inNum0; // g(theta,phi)
+            dataType inNum1; // theta
+            dataType inNum2; //phi
+            dataType inNum3; //DOmega
+            //std::cout<<"\n read data line "<<i<<"   ";
             this->dataF>>inNum0;
-            //std::cout<<" entry 0 "<<inNum0;
+            //std::cout<<inNum0<<" ";
             this->dataF>>inNum1;
+            //std::cout<<inNum1<<" ";
             this->dataF>>inNum2;
+            //std::cout<<inNum2<<" ";
             this->dataF>>inNum3;
+            //std::cout<<inNum3<<" ";
 
             messg[i][0]=inNum0;
 
@@ -50,19 +53,18 @@ void Data::readData()
             thmax=deg_to_rad(thmax);
             //std::cout<<" entry 1 "<<messg[i][1];
             //std::cout<<" entry 2 "<<messg[i][2];
-
             //std::cout<<" entry 3 "<<messg[i][3]<<std::endl;
 
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
         }
     }else
     {
-        std::cout<<"Can not open file! Will exit! \n ---------------------------------------------------------------";
+        std::cout<<"Can not open file! Will exit! \n---------------------------------------------------------------";
         //Throw error here!!!
         return;
 
     }
-    std::cout<<"read file succesfully! \n ---------------------------------------------------------------";
+    std::cout<<"\nread file succesfully! \n---------------------------------------------------------------\n";
     this->dataF.close();
 }
 
@@ -87,7 +89,7 @@ int Data::getLineNum(std::string fileGiven)
 
     }
     dataF.close();
-    return maxangles-1;
+    return maxangles;
 }
 
 void Data::apofct()
@@ -105,10 +107,10 @@ void Data::apofct()
 void Data::calcchi()
 {
     //DODO Thest this function
-    double sumphi=0;
-    double theta=messg[0][1];
+    dataType sumphi=0;
+    dataType theta=messg[0][1];
     int count=0;
-    std::vector<double> normFactor;
+    std::vector<dataType> normFactor;
     for (int i=0;i<MAXANGLES;i++)
     {
         sumphi+=messg[i][0];
@@ -168,11 +170,11 @@ Data::~Data()
 
 //------------------------------------------------------//
 //Static functions
-double Data::deg_to_rad(double deg)
+dataType Data::deg_to_rad(dataType deg)
 {
     return deg*M_PI/180.0;
 }
-double Data::rad_to_deg(double rad)
+dataType Data::rad_to_deg(dataType rad)
 {
     return rad*180/M_PI;
 }

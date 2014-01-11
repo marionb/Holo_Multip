@@ -323,12 +323,8 @@ def main():
     newGrid.fitNewToOldGrid()
     newGrid.writeGrid("temp.dat")
     #newGrid.plotGrid()
-    newGrid.cPPOut()
-    print"----------------------------------------------------"
-    print "writing output for C++ code to ",newGrid.outputfile
-    print"----------------------------------------------------"
     
-    calc = gr2.Calc(newGrid.grid,10)
+    calc = gr2.Calc(newGrid.grid,0)
     
     calc.multi()
     calc.expand()
@@ -338,7 +334,7 @@ def main():
     #print('\a')
     #sys.stdout.write('\a')
     #sys.stdout.flush()
-    """s=-1
+    s=-1
     while True:
         s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))
         if(s==0):
@@ -352,7 +348,7 @@ def main():
             print"----------------------------------------------------"
             print "writing output for C++ code to ",newGrid.outputfile
             print"----------------------------------------------------"
-            return"""
+            return
         
     
         

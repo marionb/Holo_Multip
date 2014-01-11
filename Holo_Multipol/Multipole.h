@@ -22,7 +22,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *@param isym        TODO Describe
     *@param ekin        kinetic enery
     */
-    Multipole(std::string fileName, int lmax, int isym, double ekin);
+    Multipole(std::string fileName, int lmax, int isym, dataType ekin);
 
     /**
     *getter method returning the number of expansion parameters
@@ -59,11 +59,11 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     /**
     *calculateion of a radial image curve of the electron wave field near the photoemitter.
     *Equation (3) from A.Stucke et al. (1992) is used.
-    *@param alpha, beta     double precission; define the radial curve; the angles are given within the same polar coordinates frame as the data.
+    *@param alpha, beta     dataType precission; define the radial curve; the angles are given within the same polar coordinates frame as the data.
     *The radial grid is in angstrom with 0.1\AA spacing
     *Function is adopted from the fortran Program by Juerg Osterwalde writen in 1993
     */
-    //void holorad(double, double);
+    //void holorad(dataType, dataType);
 
     /**
     *Calculates a two dimensional image of the electron wave field near the photoemitter.
@@ -71,7 +71,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *Ther radial grid is in angstroem with grid spacing in Angstroe
     *Function is adopted from the fortran Program by Juerg Osterwalde writen in 1993
     */
-    //void doyzimage(double grid, int xyz);
+    //void doyzimage(dataType grid, int xyz);
 
     /**
     *Calculates a two-dimensional image of the electron wave field near the photoemitter.
@@ -79,7 +79,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *the radial grid is in angstroem with grid angstroem spacing.
     *Function is adapted from the fortran program by Juerg Osterwalder written in 6.7.93
     */
-    //void doxyzimage(double grid);
+    //void doxyzimage(dataType grid);
 
     /**
     *Takes a 2D image array and maps it into a 2d image array of integer numbers ranging from 0 to 255.
@@ -87,12 +87,12 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *Calculates r * |img(xy)|**2 to produce images.
     *adapted from fortran program by Juerg Osterwalder, universite de fribourg, 12.7.93
     */
-    //void scaleimage(double grid);
+    //void scaleimage(dataType grid);
 
     /**
     *Function performes a gausian smoothing of the image function
     */
-    //void smooth(double grid);
+    //void smooth(dataType grid);
 
     /**
     *print the real coefficients that were calculated within this program
@@ -104,13 +104,13 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     const int LMAX; //maximum number of multipole expansion (amount of coefficients)
     const int ISYM; ////what is isym?
 
-    const double k; //2*pi*sqrt(ekin/150)
+    const dataType k; //2*pi*sqrt(ekin/150)
 
-    std::vector<std::vector<std::complex<double> > > alm; //expansion coefficients
+    std::vector<std::vector<std::complex<dataType> > > alm; //expansion coefficients
 
     //To add elements to the two dimensional vector use alm.push_back(row)
-    //where row is a vector of double type containing the data that belonges in to this row
-    //std::vector<double> gCalc; take this vector from the base clas
+    //where row is a vector of dataType type containing the data that belonges in to this row
+    //std::vector<dataType> gCalc; take this vector from the base clas
 
     /**
     *calculate (-1)^exp with exp in [1,2,3,4,...]
@@ -126,20 +126,20 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *@param theta    polar angle
     *@param phi      azimutal angle
     */
-    inline double intencity(double theta, double phi);
+    dataType intencity(dataType theta, dataType phi);
 
     /**
     *calculation of the proper polar angle within the yz-plane.
     *All polar angles are positive; negative y values should be accounted for by adding PI to the value of phi.
-    *@return polar angle in radian (double precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
+    *@return polar angle in radian (dataType precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
     */
-    //double calcth(double y, double z);
+    //dataType calcth(dataType y, dataType z);
 
     /**
     *calculation of the proper azimutal angle within the yz-plane.
-    *@return azimutal angle in radian (double precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
+    *@return azimutal angle in radian (dataType precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
     */
-    //double calcphi(double x, double y);
+    //dataType calcphi(dataType x, dataType y);
 
     static const int MAX_COEFF=100;//100 is the maximum amunt of coefficients that can be calculated
 };

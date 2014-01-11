@@ -8,7 +8,7 @@
 int main()
 {
     //double grid=0.09;
-    Multipole *file=new Multipole("oldinp.itp",10,1,3.73);
+    Multipole *file=new Multipole("CPPOut.dat",10,1,3.73);
     std::cout<<"created instance\n";
     file->readData();
     file->multpl();
@@ -25,7 +25,8 @@ int main()
 }
 
 
-
+//TODO Check whi oldinp.itp does not work porperly
+//TODO
 
 
 

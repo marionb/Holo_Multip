@@ -10,21 +10,21 @@
 #include <vector>
 #include "specialVector.h"
 
-
-typedef std::vector<double> oneVector;
-typedef std::vector<std::vector<double> > twoVector; //a two dimensional vectors
-typedef std::vector<SpecialVector<double> > twoVectorxNyZ; //a two dimensional vector with negative and positive y positions
-typedef std::vector<std::vector<std::vector<double> > > threeVector;
-typedef std::vector<SpecialVector<SpecialVector<double> > > threeVectorxNyZzZ;//a three dimensional vector with negative and positive y and z positions
+typedef float dataType;
+typedef std::vector<dataType> oneVector;
+typedef std::vector<std::vector<dataType> > twoVector; //a two dimensional vectors
+typedef std::vector<SpecialVector<dataType> > twoVectorxNyZ; //a two dimensional vector with negative and positive y positions
+typedef std::vector<std::vector<std::vector<dataType> > > threeVector;
+typedef std::vector<SpecialVector<SpecialVector<dataType> > > threeVectorxNyZzZ;//a three dimensional vector with negative and positive y and z positions
 class Data
 {
     public:
+
+        Data(std::string fileName);
         /**
         *Class constructor
         *@param input   char array of data file name
         */
-        Data(std::string fileName);
-
         virtual ~Data();
 
         /**
@@ -52,25 +52,25 @@ class Data
 
         /**
         *convert an angle in degre to rad
-        *@param deg double, value of the angle in degrees
-        *@return    value of the angle in radians using double precission
+        *@param deg dataType, value of the angle in degrees
+        *@return    value of the angle in radians using dataType precission
         */
-        static inline double deg_to_rad(double deg);
+        static inline dataType deg_to_rad(dataType deg);
 
         /**
         *convert an angle in rad to degrees
-        *@param rad double, value of the angle in radian
-        *@return    value of the angle in degrees using double precission
+        *@param rad dataType, value of the angle in radian
+        *@return    value of the angle in degrees using dataType precission
         */
-        static inline double rad_to_deg(double rad);
+        static inline dataType rad_to_deg(dataType rad);
 
 
     protected:
 
         /**
         *calculation of a fermi function like apodizing function
-        *PRE:   double theta and double thmax -> values for which te function is calculated
-        *POST:  double with the value of the apodizing function
+        *PRE:   dataType theta and dataType thmax -> values for which te function is calculated
+        *POST:  dataType with the value of the apodizing function
         */
         inline void apofct();
 
@@ -88,13 +88,13 @@ class Data
 
 
 //        bool iapo;
-        double thmax;
+        dataType thmax;
 
 //    protected:
         twoVector messg;
         twoVector calc;
-        //double (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
-        //double (*messgFinal)[3]; //dynamic array containing output data
+        //dataType (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
+        //dataType (*messgFinal)[3]; //dynamic array containing output data
 
         oneVector radimg;
         twoVectorxNyZ image2D;

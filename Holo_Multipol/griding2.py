@@ -50,7 +50,7 @@ class Calc:
                     
                 if(l==0 and m==0):
                     bnorm=summ
-                    #print"normalization factor= ",bnorm
+                    print"normalization factor= ",bnorm
                 
                 temp.append([l,m,summ,summ/bnorm])
                 #print temp[m]
@@ -112,6 +112,19 @@ class Calc:
                 for h in i:
                     value=str("%f %f %f %f" %(h[0], h[1], h[3].real, h[3].imag))
                     outFile.write(value+"\n")            
+
+
+def intencityFree(g,theta, phi, dOmega, l ,m):
+        """
+        calculate the intencity g(theta,phi) at a given point theta, phi using
+            g(theta,phi)=sum_{0<=l<=l_max}[A_l0*Y_l0(theta,phi))+2*Re(sum_{0<m<=l}A_lm*Y_lm(theta,phi))]
+        
+        @param theta    polar angle
+        @param phi      azimutal angle
+        """
+        temp2=sfunc.sph_harm(m,l,phi,theta)   
+        return temp2.conjugate()*g*dOmega
+
 
 def main():
     print "main function is not ment to be used!"
