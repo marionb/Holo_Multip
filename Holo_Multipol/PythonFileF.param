@@ -1,0 +1,18 @@
+# parameter file for creating a grid as given below
+#FileCode
+#FileContainingGrid
+#Phi_ref
+#Theta_step
+#phi_range
+#Theta_max (optional)
+#plot grit (True/Flase)
+#Output (options are CPP or Fortran)
+#--------------------------------------------------
+
+False           
+Grid.dat
+1
+2 
+360
+False
+CPP

@@ -19,7 +19,7 @@ void Data::readData()
     dataF.open(infile);
     if(dataF.is_open())
     {
-        std::cout<<"--------------------------------------------------------------- \nreading file\n";
+        std::cout<<"--------------------------------------------------------------- \nreading file "<<infile<<std::endl;
         for(int i=0;i<MAXANGLES;i++)
         {
             dataType inNum0; // g(theta,phi)
@@ -64,7 +64,7 @@ void Data::readData()
         return;
 
     }
-    std::cout<<"\nread file succesfully! \n---------------------------------------------------------------\n";
+    std::cout<<"read file succesfully! \n---------------------------------------------------------------\n";
     this->dataF.close();
 }
 

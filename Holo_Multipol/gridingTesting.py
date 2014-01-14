@@ -81,7 +81,6 @@ class Grid:
         @param Phi_ref          Density of the phi steps for all theta values; Should be in correspondace with theta_step
         @param Theta_step       Size of the Theta steps (1, 2 oder 3 degree usw.)
         @param phi_range        The range for the phi values (0<phi_range<=360)
-        @param maxTheta         the maximum value that theta can obtain (maxTheta<=90)
         """
         if(theta_step>maxTheta or theta_step<=0 or 0>phi_range or phi_range>360):
             try:
@@ -119,7 +118,7 @@ class Grid:
                 #self.grid.append([th,i*dphi,dphi,0,0])
                 self.theta.append(th)
                 self.phi.append(i*dphi)
-                self.dOmega.append(dphi*self.dtheta*sin((th)*pi/180)) #in radian
+                self.dOmega.append(dphi*pi/180*self.dtheta*pi/180*sin((th)*pi/180)) #in radian
                 self.grid.append([th,i*dphi,dphi,0,0,self.dOmega[i]])
                 #print (th,i*dphi,dphi,0,0)
             th+=theta_step
@@ -292,81 +291,64 @@ class Grid:
         
         
     def writeGrid(self, gFile):
-        print "calculated grid can be found in ",gFile
+        print "calculated grid (used for the rest of the program) can be found in ",gFile
         with open(gFile, 'w\n') as outFile:
             for i in self.grid:
                 value=str("%f %f %f %f %f %f" %(i[0],i[1],i[2],i[3],i[4],i[5]))
                 outFile.write(value+"\n")
  
- 
 def main():
     
     print "Running", sys.argv[0]
-    paramFile=""
-    parameter=list()#maximum amount of parameters in param file
-    maximum=8 
+    gfile=""
+    nfile=""
     
-    if len(sys.argv) == 2:#the name of the base grid and the name of the data fiel has to be given
-        paramFile=sys.argv[1]
-
+    if len(sys.argv) == 3:#the name of the base grid and the name of the data fiel has to be given
+        gfile=sys.argv[1]
+        nfile=sys.argv[2]  
     elif len(sys.argv) == 1:
-        paramFile="PythonFile.param"
-        
+        gfile="oldinp.itp"
+        nfile="newinp.itp"
     else:
         print "to many arguments given program takes no argument or two arguments(name of fiel with grid, name of file containing data)"
         return -1
     
-    print "using parametes from ",paramFile
+    print "using grid information from  ",gfile
+    print "using data from              ",nfile
     
-    try:
-        pm=open(paramFile, 'r')
-        parameter=pm.readlines()
-        
-        for i in range(len(parameter)):
-            parameter[i]=parameter[i].replace("\n","")
-        
-    except:
-        print "parameter file could not be opend. Check that ",paramFile," exists in runing directory and run again."
-        print"------------------ERROR-------------------------"
-        print "Programm will exit!"
-        print"------------------------------------------------"
-        return
+    newGrid= Grid(gfile, nfile)
+    newGrid.makeGrid()
+#    newGrid.calcGrid(1, 2, 360)
+    print "dOmega=", newGrid.OmegaArea()
+    newGrid.fitNewToOldGrid()
+    newGrid.writeGrid("temp.dat")
+    #newGrid.plotGrid()
     
-    expGrid= Grid()
+#    calc = gr2.Calc(newGrid.grid,0)
     
-    if(len(parameter)==(maximum-1)):
-        expGrid.calcGrid(float(parameter[2]),float(parameter[3]),float(parameter[4]))
-    elif(len(parameter)==maximum):
-        expGrid.calcGrid(float(parameter[2]),float(parameter[3]),float(parameter[4]),float(parameter[5]))
-        
-    if(parameter[-2]=="True" or parameter[-2]=="true" or parameter[-2]=="TRUE"):
-        expGrid.plotGrid()
+#    calc.multi()
+#    calc.expand()
+#    calc.writeData("calc.dat")
     
-    if(parameter[0]=="False" or parameter[0]=="false" or parameter[0]=="FALSE"):
-        #finish program here
-        return
-    else:
-        #continue
-        pass  
-
- 
-    print "dOmega=", expGrid.OmegaArea()
-    expGrid.fitNewToOldGrid()
-
-
-   
-    if(parameter[-1]=="Fortran"):
-        expGrid.fortranOut()
-        print"----------------------------------------------------"
-        print "writing output for Fortran code to ",expGrid.outputfile
-        print"----------------------------------------------------"
-        return
-    if(parameter[-1]=="CPP"):
-        expGrid.cPPOut()
-        print"----------------------------------------------------"
-        print "writing output for C++ code to ",expGrid.outputfile
-        print"----------------------------------------------------"
-        return
+    
+    #print('\a')
+    #sys.stdout.write('\a')
+    #sys.stdout.flush()
+    s=-1
+    while True:
+        s = int(raw_input('Type 0 for Fortan output; 1 for c++ output '))
+        if(s==0):
+            newGrid.fortranOut()
+            print"----------------------------------------------------"
+            print "writing output for Fortran code to ",newGrid.outputfile
+            print"----------------------------------------------------"
+            return
+        if(s==1):
+            newGrid.cPPOut()
+            print"----------------------------------------------------"
+            print "writing output for C++ code to ",newGrid.outputfile
+            print"----------------------------------------------------"
+            return
         
     
         

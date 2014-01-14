@@ -2,13 +2,13 @@
 #include <iostream>
 #include <stdlib.h>     /* abs */
 
-Multipole::Multipole(std::string fileName, int lmax, int isym, dataType ekin): Data(fileName),LMAX(lmax), ISYM(isym), k(2*M_PI*sqrt(ekin/150))
+Multipole::Multipole(std::string fileName, int lmax, int isym): Data(fileName),LMAX(lmax), ISYM(isym)//, k(2*M_PI*sqrt(ekin/150))
 {
     assert(LMAX<Multipole::MAX_COEFF);
 }
 Multipole::~Multipole()
 {
-    //TODO enentiuelle leichen löschen
+    //TODO eventuelle leichen löschen
     //delete alm1;
     //delete alm2;
 }
@@ -20,7 +20,7 @@ const int Multipole::getLMAX()
 
 void Multipole::multpl()
 {
-    std::cout<<"\n --------------------------------------------------------------- \n expanding multipole coefficients"<<std::endl;
+    std::cout<<"\n --------------------------------------------------------------- \n calculating multipole coefficients"<<std::endl;
     dataType bnorm = 1;
     alm.clear();
     for(int l=0;l<=LMAX;l+=2)
@@ -58,7 +58,7 @@ void Multipole::multpl()
 
 
             }
-            std::cout<<"real, imag "<<int_res<<"\n";
+            //std::cout<<"real, imag "<<int_res<<"\n";
 
             if(l==0 && m==0 && std::real(int_res)>0.001)
             {

@@ -22,7 +22,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     *@param isym        TODO Describe
     *@param ekin        kinetic enery
     */
-    Multipole(std::string fileName, int lmax, int isym, dataType ekin);
+    Multipole(std::string fileName, int lmax, int isym);
 
     /**
     *getter method returning the number of expansion parameters
@@ -102,9 +102,9 @@ class Multipole:public Data //:public Data //this class now has acces to all the
 //=======================================================================================//
     private:
     const int LMAX; //maximum number of multipole expansion (amount of coefficients)
-    const int ISYM; ////what is isym?
+    const int ISYM;
 
-    const dataType k; //2*pi*sqrt(ekin/150)
+    //const dataType k; //2*pi*sqrt(ekin/150)
 
     std::vector<std::vector<std::complex<dataType> > > alm; //expansion coefficients
 
