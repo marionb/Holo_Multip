@@ -1,4512 +1,4521 @@
-oldinp.itp has 4506 lines
-processing data file: oldinp.itp with 4505 data points
-created instance
---------------------------------------------------------------- 
- reading file
+runing ./run
+----------------------------------------------------
 
- read data line 0   44798 82 0.34 44777 
- read data line 1   44293.5 82 4.38 43762.5 
- read data line 2   43555.5 82 8.43 44078.5 
- read data line 3   44967.5 82 12.47 45437 
- read data line 4   45381 82 16.52 45245.5 
- read data line 5   44788.5 82 20.56 44821 
- read data line 6   44424 82 24.61 43957 
- read data line 7   44174.5 82 28.65 43763.5 
- read data line 8   43353 82 32.7 43045 
- read data line 9   43226.5 82 36.74 43048.5 
- read data line 10   42242 82 40.79 41887 
- read data line 11   41689.5 82 44.83 40780.5 
- read data line 12   41188 82 48.88 41418 
- read data line 13   42061 82 52.92 41850 
- read data line 14   41515.5 82 56.97 41284.5 
- read data line 15   41017 82 61.01 40906.5 
- read data line 16   39798 82 65.06 39526.5 
- read data line 17   38656.5 82 69.1 38106.5 
- read data line 18   37514 82 73.15 37008 
- read data line 19   36981 82 77.19 36654 
- read data line 20   36157 82 81.24 36433 
- read data line 21   36176.5 82 85.28 36056.5 
- read data line 22   35416.5 82 89.33 34895.5 
- read data line 23   33959 82 93.37 32834.5 
- read data line 24   32273.5 82 97.42 31777.5 
- read data line 25   31567.5 82 101.46 31787.5 
- read data line 26   32655 82 105.51 33222.5 
- read data line 27   33636 82 109.55 33824.5 
- read data line 28   33881 82 113.6 33751 
- read data line 29   33618.5 82 117.64 33683 
- read data line 30   33527.5 82 121.69 32925 
- read data line 31   32450.5 82 125.73 32245 
- read data line 32   32110 82 129.78 32471 
- read data line 33   32980 82 133.82 33399.5 
- read data line 34   33660.5 82 137.87 33838.5 
- read data line 35   33484.5 82 141.91 33535 
- read data line 36   33845.5 82 145.96 33814.5 
- read data line 37   33703 82 150 34012 
- read data line 38   34087 82 154.04 34185 
- read data line 39   34452 82 158.09 34640 
- read data line 40   34828 82 162.13 34824.5 
- read data line 41   34401 82 166.18 34743.5 
- read data line 42   35323 82 170.22 36258.5 
- read data line 43   36575 82 174.27 36788 
- read data line 44   36545.5 82 178.31 36599 
- read data line 45   37254 82 182.36 37358.5 
- read data line 46   37092.5 82 186.4 36952.5 
- read data line 47   36448.5 82 190.45 36280 
- read data line 48   36104 82 194.49 36225.5 
- read data line 49   36695 82 198.54 37034 
- read data line 50   37803 82 202.58 38437 
- read data line 51   38969 82 206.63 39058.5 
- read data line 52   38986 82 210.67 37930.5 
- read data line 53   37106 82 214.72 36736 
- read data line 54   37113 82 218.76 38034.5 
- read data line 55   38493.5 82 222.81 39602.5 
- read data line 56   40821 82 226.85 41546.5 
- read data line 57   41546.5 82 230.9 41548.5 
- read data line 58   41608.5 82 234.94 41945.5 
- read data line 59   42343.5 82 238.99 42822.5 
- read data line 60   42924 82 243.03 42990.5 
- read data line 61   43105.5 82 247.08 43425 
- read data line 62   43978 82 251.12 44731.5 
- read data line 63   45367 82 255.17 45335.5 
- read data line 64   45381.5 82 259.21 45303 
- read data line 65   44894 82 263.26 45144.5 
- read data line 66   45438.5 82 267.3 45869 
- read data line 67   45793 82 271.35 46290.5 
- read data line 68   46717.5 82 275.39 47182 
- read data line 69   47045 82 279.44 46783.5 
- read data line 70   46659.5 82 283.48 46317.5 
- read data line 71   46663 82 287.53 47610.5 
- read data line 72   48125 82 291.57 48600 
- read data line 73   48385 82 295.62 48262 
- read data line 74   48002.5 82 299.66 48345.5 
- read data line 75   48779.5 82 303.71 48925.5 
- read data line 76   48488 82 307.75 48369 
- read data line 77   47569 82 311.8 47027.5 
- read data line 78   47092 82 315.84 46520.5 
- read data line 79   46840 82 319.89 47006 
- read data line 80   47189.5 82 323.93 47408 
- read data line 81   46871.5 82 327.98 44422 
- read data line 82   45430.5 82 332.02 44022 
- read data line 83   42822.5 82 336.07 42127 
- read data line 84   41926.5 82 340.11 42446 
- read data line 85   42995.5 82 344.16 43765.5 
- read data line 86   44614.5 82 348.2 44983 
- read data line 87   45257 82 352.25 44718 
- read data line 88   44357.5 82 356.29 44467 
- read data line 89   48035 80 0.51 47961.5 
- read data line 90   47152.5 80 4.58 47096.5 
- read data line 91   47507.5 80 8.64 48346.5 
- read data line 92   48870 80 12.71 49297 
- read data line 93   49374 80 16.78 49090 
- read data line 94   48616.5 80 20.85 48306 
- read data line 95   47899 80 24.92 47611.5 
- read data line 96   47815 80 28.98 47551.5 
- read data line 97   47255.5 80 33.05 47289.5 
- read data line 98   47068 80 37.12 46891.5 
- read data line 99   46523 80 41.19 45691.5 
- read data line 100   45116 80 45.25 44789 
- read data line 101   44975 80 49.32 45372 
- read data line 102   45549.5 80 53.39 44977 
- read data line 103   44613.5 80 57.46 44088.5 
- read data line 104   43829 80 61.53 43390 
- read data line 105   43122 80 65.59 42366 
- read data line 106   42038.5 80 69.66 41338 
- read data line 107   40616.5 80 73.73 40541.5 
- read data line 108   40381 80 77.8 40288 
- read data line 109   40150.5 80 81.86 39929 
- read data line 110   40014 80 85.93 39556.5 
- read data line 111   38846 80 90 38024 
- read data line 112   36600.5 80 94.07 35702.5 
- read data line 113   35297.5 80 98.14 34955 
- read data line 114   35095 80 102.2 35640.5 
- read data line 115   36560.5 80 106.27 37146.5 
- read data line 116   37376 80 110.34 37307 
- read data line 117   36899.5 80 114.41 36460 
- read data line 118   36274 80 118.47 36261.5 
- read data line 119   36296.5 80 122.54 35874 
- read data line 120   35436.5 80 126.61 35534 
- read data line 121   35856.5 80 130.68 36447 
- read data line 122   36746 80 134.75 37371.5 
- read data line 123   37366 80 138.81 37071.5 
- read data line 124   37248.5 80 142.88 37053 
- read data line 125   37301.5 80 146.95 37258.5 
- read data line 126   37338 80 151.02 37840.5 
- read data line 127   38209.5 80 155.08 38527.5 
- read data line 128   38574 80 159.15 38627.5 
- read data line 129   38209.5 80 163.22 38008.5 
- read data line 130   38178.5 80 167.29 38871.5 
- read data line 131   39733 80 171.36 40262.5 
- read data line 132   40231.5 80 175.42 39861.5 
- read data line 133   39998 80 179.49 40447 
- read data line 134   40988.5 80 183.56 41220.5 
- read data line 135   40997.5 80 187.63 40728.5 
- read data line 136   40743 80 191.69 40788.5 
- read data line 137   40367.5 80 195.76 40922.5 
- read data line 138   41606.5 80 199.83 42375.5 
- read data line 139   43024.5 80 203.9 43538.5 
- read data line 140   43762.5 80 207.97 42990.5 
- read data line 141   42206 80 212.03 41605.5 
- read data line 142   41153.5 80 216.1 41137 
- read data line 143   41921 80 220.17 43127 
- read data line 144   43925 80 224.24 44657 
- read data line 145   45007.5 80 228.31 44906 
- read data line 146   44369.5 80 232.37 44638 
- read data line 147   45018.5 80 236.44 46066 
- read data line 148   46727 80 240.51 46772 
- read data line 149   46572 80 244.58 47039 
- read data line 150   47572 80 248.64 48580.5 
- read data line 151   49453.5 80 252.71 49446.5 
- read data line 152   49892 80 256.78 50030 
- read data line 153   49774.5 80 260.85 49895.5 
- read data line 154   50083 80 264.92 50282 
- read data line 155   50235 80 268.98 50860.5 
- read data line 156   51150 80 273.05 51496 
- read data line 157   51493.5 80 277.12 51701 
- read data line 158   51061.5 80 281.19 50526.5 
- read data line 159   50694 80 285.25 50759 
- read data line 160   51097.5 80 289.32 51518 
- read data line 161   52024 80 293.39 51679.5 
- read data line 162   51188 80 297.46 51622.5 
- read data line 163   52382 80 301.53 53178.5 
- read data line 164   53137.5 80 305.59 53473 
- read data line 165   53217.5 80 309.66 53260 
- read data line 166   52435 80 313.73 52211 
- read data line 167   52154 80 317.8 52321 
- read data line 168   52745.5 80 321.86 52980 
- read data line 169   52751.5 80 325.93 52647.5 
- read data line 170   51500.5 80 330 50267 
- read data line 171   49031.5 80 334.07 47754.5 
- read data line 172   47021 80 338.14 47213 
- read data line 173   47425 80 342.2 47814.5 
- read data line 174   48626 80 346.27 49134.5 
- read data line 175   48943 80 350.34 48607.5 
- read data line 176   47695 80 354.41 47465 
- read data line 177   47772.5 80 358.47 53981 
- read data line 178   53996.5 78 2.73 53577.5 
- read data line 179   53266 78 6.82 53961.5 
- read data line 180   54768.5 78 10.91 54975.5 
- read data line 181   55438 78 15 55660 
- read data line 182   55350 78 19.09 54968 
- read data line 183   55022 78 23.18 54698 
- read data line 184   54259.5 78 27.27 54441.5 
- read data line 185   54249.5 78 31.36 54091.5 
- read data line 186   53872 78 35.45 53605 
- read data line 187   52716.5 78 39.55 52485.5 
- read data line 188   51404.5 78 43.64 50452.5 
- read data line 189   50173.5 78 47.73 50714.5 
- read data line 190   50417.5 78 51.82 50137 
- read data line 191   49157 78 55.91 48656 
- read data line 192   48146 78 60 48534 
- read data line 193   48424.5 78 64.09 48371 
- read data line 194   48344.5 78 68.18 47854.5 
- read data line 195   47347.5 78 72.27 47059 
- read data line 196   46844.5 78 76.36 46321.5 
- read data line 197   46058 78 80.45 46479.5 
- read data line 198   46412 78 84.55 46219 
- read data line 199   45894 78 88.64 44900.5 
- read data line 200   43878 78 92.73 42383.5 
- read data line 201   41390 78 96.82 40788.5 
- read data line 202   40851 78 100.91 41053.5 
- read data line 203   41336.5 78 105 42133 
- read data line 204   42254 78 109.09 42059 
- read data line 205   41344 78 113.18 40942 
- read data line 206   40965.5 78 117.27 41275 
- read data line 207   41691 78 121.36 41564 
- read data line 208   41080.5 78 125.45 40789.5 
- read data line 209   41213 78 129.55 42030 
- read data line 210   42657 78 133.64 43156 
- read data line 211   43201 78 137.73 43271.5 
- read data line 212   43537 78 141.82 43177.5 
- read data line 213   43306.5 78 145.91 43547 
- read data line 214   43823.5 78 150 44116 
- read data line 215   44316 78 154.09 44607.5 
- read data line 216   44929 78 158.18 45079.5 
- read data line 217   44762 78 162.27 44008.5 
- read data line 218   44289.5 78 166.36 44302 
- read data line 219   44996 78 170.45 45290 
- read data line 220   45197.5 78 174.55 44726.5 
- read data line 221   44653.5 78 178.64 44670 
- read data line 222   45648 78 182.73 46719.5 
- read data line 223   47751.5 78 186.82 47800 
- read data line 224   47761 78 190.91 48081.5 
- read data line 225   47809 78 195 47751.5 
- read data line 226   48133 78 199.09 48575 
- read data line 227   49597 78 203.18 50032 
- read data line 228   50164 78 207.27 50017.5 
- read data line 229   49401 78 211.36 48859.5 
- read data line 230   47914 78 215.45 48212.5 
- read data line 231   48544 78 219.55 49089 
- read data line 232   50017 78 223.64 50398.5 
- read data line 233   49801.5 78 227.73 49137.5 
- read data line 234   48440 78 231.82 48539.5 
- read data line 235   48601.5 78 235.91 50287 
- read data line 236   51397 78 240 51997.5 
- read data line 237   51557.5 78 244.09 52278.5 
- read data line 238   52879 78 248.18 53714.5 
- read data line 239   54852.5 78 252.27 55836.5 
- read data line 240   55758 78 256.36 56052.5 
- read data line 241   56745 78 260.45 56815 
- read data line 242   56741 78 264.55 57248 
- read data line 243   57632 78 268.64 57959.5 
- read data line 244   58348.5 78 272.73 58511.5 
- read data line 245   58726.5 78 276.82 58087.5 
- read data line 246   57820 78 280.91 57306.5 
- read data line 247   56488.5 78 285 56697 
- read data line 248   57260.5 78 289.09 58090.5 
- read data line 249   57442 78 293.18 57265 
- read data line 250   56855.5 78 297.27 56789 
- read data line 251   57741 78 301.36 58957.5 
- read data line 252   60064 78 305.45 61008.5 
- read data line 253   61365.5 78 309.55 61699 
- read data line 254   61590.5 78 313.64 61260 
- read data line 255   61421 78 317.73 60824.5 
- read data line 256   61346.5 78 321.82 61411 
- read data line 257   61484.5 78 325.91 60965 
- read data line 258   60144.5 78 330 59301.5 
- read data line 259   57774.5 78 334.09 57055 
- read data line 260   56285.5 78 338.18 56607.5 
- read data line 261   56638.5 78 342.27 56761 
- read data line 262   56520.5 78 346.36 56164 
- read data line 263   54845.5 78 350.45 54014 
- read data line 264   52992.5 78 354.55 53676 
- read data line 265   53850.5 78 358.64 62132 
- read data line 266   61615.5 76 3.1 61217.5 
- read data line 267   60481.5 76 7.24 61081 
- read data line 268   61810 76 11.38 62384 
- read data line 269   62752 76 15.52 62690 
- read data line 270   62647.5 76 19.66 62471 
- read data line 271   62257 76 23.79 62060.5 
- read data line 272   61956 76 27.93 62011.5 
- read data line 273   61866 76 32.07 61728 
- read data line 274   61032 76 36.21 60332 
- read data line 275   59683.5 76 40.34 58064.5 
- read data line 276   56982 76 44.48 56284.5 
- read data line 277   55769.5 76 48.62 56102.5 
- read data line 278   55260 76 52.76 54608 
- read data line 279   53561.5 76 56.9 52925.5 
- read data line 280   52697 76 61.03 53458 
- read data line 281   54151 76 65.17 54899.5 
- read data line 282   55207.5 76 69.31 55247 
- read data line 283   55061 76 73.45 53754.5 
- read data line 284   53589.5 76 77.59 53270.5 
- read data line 285   53049 76 81.72 53016 
- read data line 286   52993 76 85.86 52454 
- read data line 287   51772 76 90 51095 
- read data line 288   49830.5 76 94.14 49089 
- read data line 289   48285 76 98.28 48795 
- read data line 290   48906.5 76 102.41 48792 
- read data line 291   48432 76 106.55 47908 
- read data line 292   46940 76 110.69 45951.5 
- read data line 293   45386 76 114.83 45866.5 
- read data line 294   46818.5 76 118.97 47621.5 
- read data line 295   47191.5 76 123.1 47568.5 
- read data line 296   47079 76 127.24 47567 
- read data line 297   48459 76 131.38 48981.5 
- read data line 298   49763.5 76 135.52 50192.5 
- read data line 299   50594 76 139.66 51053 
- read data line 300   51016 76 143.79 51055 
- read data line 301   51189 76 147.93 51693 
- read data line 302   52597.5 76 152.07 52673.5 
- read data line 303   52590 76 156.21 52637.5 
- read data line 304   52767.5 76 160.34 51735 
- read data line 305   51587 76 164.48 50955.5 
- read data line 306   50865 76 168.62 51223.5 
- read data line 307   51915.5 76 172.76 51726 
- read data line 308   50928 76 176.9 49883 
- read data line 309   50289 76 181.03 51544 
- read data line 310   53084.5 76 185.17 54746 
- read data line 311   55575.5 76 189.31 56136 
- read data line 312   56499.5 76 193.45 56173.5 
- read data line 313   56137.5 76 197.59 55946.5 
- read data line 314   56273.5 76 201.72 57103 
- read data line 315   56791.5 76 205.86 56804 
- read data line 316   57037 76 210 56721.5 
- read data line 317   56048.5 76 214.14 56172.5 
- read data line 318   55997.5 76 218.28 57113 
- read data line 319   56921 76 222.41 56820.5 
- read data line 320   55948.5 76 226.55 54233.5 
- read data line 321   53776.5 76 230.69 52651.5 
- read data line 322   53352 76 234.83 54473 
- read data line 323   55697 76 238.97 56779.5 
- read data line 324   56745 76 243.1 56690.5 
- read data line 325   57155 76 247.24 57684 
- read data line 326   59239 76 251.38 60388.5 
- read data line 327   61632.5 76 255.52 62388.5 
- read data line 328   63000 76 259.66 63640 
- read data line 329   63901.5 76 263.79 64244.5 
- read data line 330   64775 76 267.93 65435 
- read data line 331   66081 76 272.07 66235.5 
- read data line 332   65564 76 276.21 64923 
- read data line 333   64201 76 280.34 63643 
- read data line 334   62470.5 76 284.48 62075 
- read data line 335   62884 76 288.62 64244.5 
- read data line 336   64448.5 76 292.76 63961 
- read data line 337   62668 76 296.9 62145.5 
- read data line 338   63203 76 301.03 64539.5 
- read data line 339   66675 76 305.17 68628.5 
- read data line 340   69986.5 76 309.31 70856.5 
- read data line 341   71312.5 76 313.45 70680.5 
- read data line 342   70509.5 76 317.59 70367 
- read data line 343   70478.5 76 321.72 70212.5 
- read data line 344   69847 76 325.86 69731.5 
- read data line 345   69051 76 330 68425.5 
- read data line 346   67215.5 76 334.14 66675 
- read data line 347   66841 76 338.28 67032 
- read data line 348   67196.5 76 342.41 66357.5 
- read data line 349   65323 76 346.55 63982 
- read data line 350   62376.5 76 350.69 61000 
- read data line 351   60381.5 76 354.83 60667 
- read data line 352   61938.5 76 358.97 68984.5 
- read data line 353   68259 74 3.29 67329.5 
- read data line 354   66552.5 74 7.46 66354.5 
- read data line 355   67272.5 74 11.62 67403 
- read data line 356   67979 74 15.78 68788.5 
- read data line 357   69109.5 74 19.94 68646.5 
- read data line 358   68506 74 24.1 68692 
- read data line 359   68295.5 74 28.27 68135.5 
- read data line 360   68130 74 32.43 67514 
- read data line 361   66247 74 36.59 65105.5 
- read data line 362   63981 74 40.75 62037.5 
- read data line 363   61282.5 74 44.91 60476.5 
- read data line 364   60785 74 49.08 61601.5 
- read data line 365   61310.5 74 53.24 59853.5 
- read data line 366   58016.5 74 57.4 57504.5 
- read data line 367   57712 74 61.56 58729.5 
- read data line 368   60143 74 65.72 61132.5 
- read data line 369   61944.5 74 69.88 61699 
- read data line 370   61791.5 74 74.05 60876 
- read data line 371   60210.5 74 78.21 59712 
- read data line 372   59856.5 74 82.37 59600 
- read data line 373   59086 74 86.53 58723.5 
- read data line 374   58508 74 90.69 57654.5 
- read data line 375   56537.5 74 94.86 56561 
- read data line 376   56430.5 74 99.02 56329.5 
- read data line 377   56769 74 103.18 55942 
- read data line 378   54698.5 74 107.34 53265 
- read data line 379   51955.5 74 111.5 50377.5 
- read data line 380   50544.5 74 115.66 51450.5 
- read data line 381   52740.5 74 119.83 53325 
- read data line 382   53221 74 123.99 53125.5 
- read data line 383   53195.5 74 128.15 53943.5 
- read data line 384   54683.5 74 132.31 55542.5 
- read data line 385   56063.5 74 136.47 57021 
- read data line 386   57538 74 140.64 57693 
- read data line 387   58130.5 74 144.8 58187.5 
- read data line 388   58978.5 74 148.96 59246.5 
- read data line 389   59619.5 74 153.12 59911.5 
- read data line 390   59558 74 157.28 58859 
- read data line 391   58368.5 74 161.45 57528 
- read data line 392   56870 74 165.61 57010.5 
- read data line 393   58072 74 169.77 58730.5 
- read data line 394   58690.5 74 173.93 56980.5 
- read data line 395   56420 74 178.09 56177 
- read data line 396   57094.5 74 182.25 59252.5 
- read data line 397   61166.5 74 186.42 62689 
- read data line 398   64377.5 74 190.58 64394.5 
- read data line 399   64366.5 74 194.74 64158 
- read data line 400   64042 74 198.9 63380 
- read data line 401   63735.5 74 203.06 62878.5 
- read data line 402   63498 74 207.23 63768 
- read data line 403   63575.5 74 211.39 63435 
- read data line 404   63692 74 215.55 63737.5 
- read data line 405   64486 74 219.71 64742.5 
- read data line 406   64218.5 74 223.87 63665 
- read data line 407   62347.5 74 228.03 59660 
- read data line 408   58965 74 232.2 58002 
- read data line 409   59577.5 74 236.36 61207.5 
- read data line 410   62593 74 240.52 62722.5 
- read data line 411   62482 74 244.68 61976.5 
- read data line 412   62365 74 248.84 63537 
- read data line 413   64462.5 74 253.01 65475 
- read data line 414   66658.5 74 257.17 68131.5 
- read data line 415   68766.5 74 261.33 69686.5 
- read data line 416   69935 74 265.49 70529.5 
- read data line 417   71089.5 74 269.65 71436.5 
- read data line 418   71247.5 74 273.81 70598 
- read data line 419   69672 74 277.98 68256 
- read data line 420   67709 74 282.14 67531 
- read data line 421   67739.5 74 286.3 69155.5 
- read data line 422   70404.5 74 290.46 70851.5 
- read data line 423   69968 74 294.62 68593 
- read data line 424   67691 74 298.79 68709 
- read data line 425   70393 74 302.95 73306.5 
- read data line 426   76018 74 307.11 77818 
- read data line 427   79295.5 74 311.27 79001 
- read data line 428   78458 74 315.43 78336 
- read data line 429   77167 74 319.6 77592 
- read data line 430   76668.5 74 323.76 76309.5 
- read data line 431   76214.5 74 327.92 76471 
- read data line 432   75905 74 332.08 75241.5 
- read data line 433   75088 74 336.24 75122.5 
- read data line 434   75553.5 74 340.4 75380.5 
- read data line 435   73868.5 74 344.57 73042 
- read data line 436   71588.5 74 348.73 69060.5 
- read data line 437   67269 74 352.89 66963.5 
- read data line 438   67323 74 357.05 68664 
- read data line 439   76197 72 1.58 76145 
- read data line 440   74911.5 72 5.79 72971.5 
- read data line 441   72047.5 72 10 72364 
- read data line 442   71827 72 14.21 72826.5 
- read data line 443   73592 72 18.42 74649 
- read data line 444   75022 72 22.63 74525 
- read data line 445   74324.5 72 26.84 74486.5 
- read data line 446   74303 72 31.05 73794.5 
- read data line 447   72250 72 35.26 70433 
- read data line 448   68717.5 72 39.47 67283.5 
- read data line 449   65908 72 43.68 66065 
- read data line 450   66647 72 47.89 67815 
- read data line 451   67694 72 52.11 66917.5 
- read data line 452   65030.5 72 56.32 63396 
- read data line 453   62722 72 60.53 63809.5 
- read data line 454   65511.5 72 64.74 67965.5 
- read data line 455   69624.5 72 68.95 69794.5 
- read data line 456   69933.5 72 73.16 69445.5 
- read data line 457   69006.5 72 77.37 68792 
- read data line 458   67791 72 81.58 67028.5 
- read data line 459   66579.5 72 85.79 66075 
- read data line 460   65749.5 72 90 65876 
- read data line 461   65560 72 94.21 65329.5 
- read data line 462   65023.5 72 98.42 65397.5 
- read data line 463   65365.5 72 102.63 64849 
- read data line 464   63887 72 106.84 62138 
- read data line 465   60019.5 72 111.05 57986.5 
- read data line 466   56614.5 72 115.26 57421.5 
- read data line 467   59143 72 119.47 60480.5 
- read data line 468   60522 72 123.68 59471 
- read data line 469   58920.5 72 127.89 58600 
- read data line 470   59439 72 132.11 60262 
- read data line 471   61131 72 136.32 62656 
- read data line 472   63386.5 72 140.53 64429.5 
- read data line 473   64669.5 72 144.74 64736 
- read data line 474   65575.5 72 148.95 66218 
- read data line 475   66701 72 153.16 66018 
- read data line 476   65179.5 72 157.37 63882 
- read data line 477   63140.5 72 161.58 62681 
- read data line 478   62715.5 72 165.79 63638.5 
- read data line 479   65235 72 170 66186.5 
- read data line 480   65773.5 72 174.21 64065 
- read data line 481   62558 72 178.42 62073 
- read data line 482   63722.5 72 182.63 65903.5 
- read data line 483   68395 72 186.84 70614 
- read data line 484   71938.5 72 191.05 72496.5 
- read data line 485   71263 72 195.26 71339.5 
- read data line 486   71497 72 199.47 70850 
- read data line 487   70139 72 203.68 69792 
- read data line 488   69967.5 72 207.89 70276.5 
- read data line 489   70757.5 72 212.11 71613 
- read data line 490   71954 72 216.32 72499.5 
- read data line 491   73124.5 72 220.53 73555 
- read data line 492   73423 72 224.74 71927 
- read data line 493   69435 72 228.95 67010.5 
- read data line 494   64781 72 233.16 65242 
- read data line 495   66382.5 72 237.37 68192 
- read data line 496   69894 72 241.58 70617 
- read data line 497   69652.5 72 245.79 69136.5 
- read data line 498   68458 72 250 68596 
- read data line 499   68959.5 72 254.21 70201 
- read data line 500   71650.5 72 258.42 73506.5 
- read data line 501   74303 72 262.63 75606.5 
- read data line 502   76106 72 266.84 76810 
- read data line 503   76871 72 271.05 76313 
- read data line 504   74514.5 72 275.26 73384 
- read data line 505   72081.5 72 279.47 71763 
- read data line 506   72279.5 72 283.68 73714.5 
- read data line 507   75903.5 72 287.89 77721.5 
- read data line 508   77474.5 72 292.11 75771.5 
- read data line 509   74213 72 296.32 73277.5 
- read data line 510   73653 72 300.53 75832 
- read data line 511   79200.5 72 304.74 82640 
- read data line 512   85032 72 308.95 86472 
- read data line 513   86563.5 72 313.16 85530 
- read data line 514   85535 72 317.37 85032 
- read data line 515   84457 72 321.58 83001.5 
- read data line 516   82495 72 325.79 82347.5 
- read data line 517   82282.5 72 330 82425.5 
- read data line 518   82774 72 334.21 82882.5 
- read data line 519   83632 72 338.42 83696.5 
- read data line 520   83637.5 72 342.63 83684 
- read data line 521   81946.5 72 346.84 78883.5 
- read data line 522   75986 72 351.05 73504 
- read data line 523   73084.5 72 355.26 74535 
- read data line 524   75621 72 359.47 83183 
- read data line 525   83299 70 4.08 82595 
- read data line 526   80585.5 70 8.34 78380.5 
- read data line 527   77032.5 70 12.6 76070 
- read data line 528   76353.5 70 16.86 78137 
- read data line 529   79131 70 21.12 79818 
- read data line 530   80419 70 25.38 80477 
- read data line 531   80363 70 29.64 79539.5 
- read data line 532   77388 70 33.91 75042.5 
- read data line 533   72329.5 70 38.17 70820 
- read data line 534   70979 70 42.43 71873 
- read data line 535   73214.5 70 46.69 74532.5 
- read data line 536   74820 70 50.95 73499 
- read data line 537   70970 70 55.21 69167 
- read data line 538   68550.5 70 59.47 69358 
- read data line 539   71280 70 63.73 74022 
- read data line 540   76377 70 67.99 77829.5 
- read data line 541   78214.5 70 72.25 77062 
- read data line 542   76370.5 70 76.51 75488.5 
- read data line 543   75128.5 70 80.77 74003.5 
- read data line 544   72854.5 70 85.03 71954.5 
- read data line 545   72270.5 70 89.29 72541 
- read data line 546   72563 70 93.55 72852.5 
- read data line 547   73068.5 70 97.81 73061.5 
- read data line 548   73662.5 70 102.07 73434 
- read data line 549   73129 70 106.33 70565.5 
- read data line 550   67225 70 110.59 64994.5 
- read data line 551   63425 70 114.85 63665.5 
- read data line 552   65082.5 70 119.11 66809 
- read data line 553   67627.5 70 123.37 67368 
- read data line 554   66038.5 70 127.63 64712 
- read data line 555   64065 70 131.89 64203.5 
- read data line 556   64645 70 136.15 66351 
- read data line 557   67680 70 140.41 69069.5 
- read data line 558   70197.5 70 144.67 70470 
- read data line 559   70971 70 148.93 71317.5 
- read data line 560   71147.5 70 153.2 69736 
- read data line 561   68423.5 70 157.46 67281 
- read data line 562   66892.5 70 161.72 67574.5 
- read data line 563   69034.5 70 165.98 71177.5 
- read data line 564   72417 70 170.24 72585.5 
- read data line 565   70756.5 70 174.5 69337.5 
- read data line 566   67557.5 70 178.76 68094 
- read data line 567   69481.5 70 183.02 72500.5 
- read data line 568   76286 70 187.28 79002 
- read data line 569   80081.5 70 191.54 79698.5 
- read data line 570   79113 70 195.8 78000 
- read data line 571   77397.5 70 200.06 76574.5 
- read data line 572   75401.5 70 204.32 75507.5 
- read data line 573   75531.5 70 208.58 76295 
- read data line 574   77374 70 212.84 78946.5 
- read data line 575   79955 70 217.1 80876 
- read data line 576   81675 70 221.36 81934 
- read data line 577   80310.5 70 225.62 77841.5 
- read data line 578   74361.5 70 229.88 72078.5 
- read data line 579   71318.5 70 234.14 72055 
- read data line 580   74058.5 70 238.4 75844 
- read data line 581   77736.5 70 242.66 79031.5 
- read data line 582   78437.5 70 246.92 76436 
- read data line 583   75412.5 70 251.18 73492.5 
- read data line 584   73727.5 70 255.44 74857 
- read data line 585   76995.5 70 259.7 79029 
- read data line 586   80806 70 263.96 81964 
- read data line 587   83088 70 268.22 82176 
- read data line 588   81259 70 272.49 79323.5 
- read data line 589   77001 70 276.75 75907.5 
- read data line 590   76390.5 70 281.01 77955 
- read data line 591   81051.5 70 285.27 83210 
- read data line 592   84777.5 70 289.53 84289.5 
- read data line 593   81800 70 293.79 79637 
- read data line 594   77757.5 70 298.05 78822 
- read data line 595   79859 70 302.31 83711.5 
- read data line 596   87151 70 306.57 90337.5 
- read data line 597   92548.5 70 310.83 92789 
- read data line 598   92430.5 70 315.09 91610 
- read data line 599   90237 70 319.35 89246 
- read data line 600   88034.5 70 323.61 86861.5 
- read data line 601   86330 70 327.87 86914.5 
- read data line 602   87040.5 70 332.13 88556 
- read data line 603   89324.5 70 336.39 90648.5 
- read data line 604   91458.5 70 340.65 91319.5 
- read data line 605   90193 70 344.91 87579.5 
- read data line 606   84036 70 349.17 81282.5 
- read data line 607   79277 70 353.43 78811 
- read data line 608   80078 70 357.69 81535.5 
- read data line 609   87449.5 68 0.36 89119.5 
- read data line 610   90827 68 4.7 89975.5 
- read data line 611   87334.5 68 9.04 84419 
- read data line 612   81413 68 13.37 79753 
- read data line 613   80004.5 68 17.71 81620.5 
- read data line 614   83465 68 22.05 85012.5 
- read data line 615   85040.5 68 26.39 85183 
- read data line 616   83526 68 30.72 81466 
- read data line 617   78474 68 35.06 76598.5 
- read data line 618   75000 68 39.4 75792 
- read data line 619   77542 68 43.73 80152.5 
- read data line 620   81487 68 48.07 81776.5 
- read data line 621   79940 68 52.41 77102.5 
- read data line 622   74944 68 56.75 73142 
- read data line 623   73326.5 68 61.08 75324 
- read data line 624   77650.5 68 65.42 80628 
- read data line 625   82655 68 69.76 83828.5 
- read data line 626   83652.5 68 74.1 82365 
- read data line 627   81162 68 78.43 80293.5 
- read data line 628   78321 68 82.77 77282 
- read data line 629   76191.5 68 87.11 76399.5 
- read data line 630   76656.5 68 91.45 77362 
- read data line 631   78254.5 68 95.78 79241.5 
- read data line 632   79844 68 100.12 80818 
- read data line 633   80127.5 68 104.46 78620 
- read data line 634   75683 68 108.8 72572 
- read data line 635   69938.5 68 113.13 69025 
- read data line 636   69363 68 117.47 70885.5 
- read data line 637   72875.5 68 121.81 74415.5 
- read data line 638   74706.5 68 126.14 73846.5 
- read data line 639   71448 68 130.48 69500.5 
- read data line 640   68534 68 134.82 68731.5 
- read data line 641   69981 68 139.16 72468.5 
- read data line 642   74015 68 143.49 75099 
- read data line 643   76032 68 147.83 76734 
- read data line 644   75643.5 68 152.17 74017.5 
- read data line 645   71740.5 68 156.51 70552 
- read data line 646   70688.5 68 160.84 72534.5 
- read data line 647   75667.5 68 165.18 77931.5 
- read data line 648   79649 68 169.52 79095.5 
- read data line 649   76812 68 173.86 74582.5 
- read data line 650   72939.5 68 178.19 72861 
- read data line 651   73813 68 182.53 75957.5 
- read data line 652   78922.5 68 186.87 82718 
- read data line 653   84617.5 68 191.2 85475.5 
- read data line 654   84800.5 68 195.54 83665 
- read data line 655   82303.5 68 199.88 80574 
- read data line 656   78837.5 68 204.22 77449.5 
- read data line 657   77543 68 208.55 79152 
- read data line 658   81702 68 212.89 83429.5 
- read data line 659   85286.5 68 217.23 86997.5 
- read data line 660   88290 68 221.57 87164.5 
- read data line 661   84772.5 68 225.9 81987.5 
- read data line 662   79662.5 68 230.24 78797.5 
- read data line 663   78377.5 68 234.58 78651 
- read data line 664   79709.5 68 238.92 82436.5 
- read data line 665   84047.5 68 243.25 86558.5 
- read data line 666   86321.5 68 247.59 84392 
- read data line 667   81583 68 251.93 78748 
- read data line 668   77789 68 256.27 79148 
- read data line 669   80907.5 68 260.6 84051.5 
- read data line 670   85810 68 264.94 87021.5 
- read data line 671   87775 68 269.28 86930.5 
- read data line 672   84031.5 68 273.61 81624 
- read data line 673   80135 68 277.95 80142 
- read data line 674   82129.5 68 282.29 86326 
- read data line 675   89291.5 68 286.63 90667 
- read data line 676   90088.5 68 290.96 87241.5 
- read data line 677   84876 68 295.3 83017.5 
- read data line 678   83222.5 68 299.64 84462.5 
- read data line 679   86818 68 303.98 89369 
- read data line 680   92590.5 68 308.31 95320 
- read data line 681   96564 68 312.65 96246.5 
- read data line 682   95688 68 316.99 93877.5 
- read data line 683   92296.5 68 321.33 90091.5 
- read data line 684   88261.5 68 325.66 87302.5 
- read data line 685   88373.5 68 330 90432 
- read data line 686   92458.5 68 334.34 94921.5 
- read data line 687   96264.5 68 338.67 97151 
- read data line 688   96411.5 68 343.01 94063.5 
- read data line 689   91083 68 347.35 88105.5 
- read data line 690   86431 68 351.69 84934.5 
- read data line 691   84441 68 356.02 85586 
- read data line 692   91132.5 66 0.73 93779 
- read data line 693   95793 66 5.12 94921.5 
- read data line 694   93251.5 66 9.51 89320.5 
- read data line 695   85156.5 66 13.9 83408 
- read data line 696   83096 66 18.29 84496 
- read data line 697   86980.5 66 22.68 89175 
- read data line 698   89725 66 27.07 89298.5 
- read data line 699   86775 66 31.46 83155.5 
- read data line 700   80192.5 66 35.85 78400 
- read data line 701   78906 66 40.24 81427.5 
- read data line 702   84833.5 66 44.63 86797.5 
- read data line 703   86980.5 66 49.02 85592.5 
- read data line 704   82910 66 53.41 79704.5 
- read data line 705   77817.5 66 57.8 78244.5 
- read data line 706   79447 66 62.2 80656.5 
- read data line 707   82702 66 66.59 85172.5 
- read data line 708   86915 66 70.98 87341 
- read data line 709   87304 66 75.37 85965 
- read data line 710   84514.5 66 79.76 82477 
- read data line 711   80452.5 66 84.15 78036 
- read data line 712   77653.5 66 88.54 78566 
- read data line 713   80489 66 92.93 81841.5 
- read data line 714   83757 66 97.32 85150 
- read data line 715   86285 66 101.71 85139 
- read data line 716   82580 66 106.1 79957 
- read data line 717   77597.5 66 110.49 76056 
- read data line 718   75130.5 66 114.88 74604 
- read data line 719   75656 66 119.27 77231.5 
- read data line 720   79733 66 123.66 81579 
- read data line 721   81262 66 128.05 79274.5 
- read data line 722   75795.5 66 132.44 72907.5 
- read data line 723   72073.5 66 136.83 73305.5 
- read data line 724   75783 66 141.22 78009.5 
- read data line 725   80459.5 66 145.61 81095.5 
- read data line 726   81035.5 66 150 79994 
- read data line 727   76858 66 154.39 75071 
- read data line 728   73945 66 158.78 75310 
- read data line 729   78352.5 66 163.17 81763.5 
- read data line 730   83990 66 167.56 84357.5 
- read data line 731   82977 66 171.95 80680 
- read data line 732   78662.5 66 176.34 77284 
- read data line 733   78260.5 66 180.73 79541.5 
- read data line 734   80894.5 66 185.12 84041 
- read data line 735   86099 66 189.51 88071 
- read data line 736   88998 66 193.9 88796.5 
- read data line 737   87853 66 198.29 85654 
- read data line 738   82757 66 202.68 79870.5 
- read data line 739   78930.5 66 207.07 80046 
- read data line 740   82543 66 211.46 85945.5 
- read data line 741   88767.5 66 215.85 90867.5 
- read data line 742   92168.5 66 220.24 91537 
- read data line 743   89699.5 66 224.63 87451.5 
- read data line 744   86361 66 229.02 86136 
- read data line 745   85375.5 66 233.41 85160.5 
- read data line 746   84596.5 66 237.8 86027 
- read data line 747   88587 66 242.2 90892 
- read data line 748   91964 66 246.59 91880.5 
- read data line 749   88356.5 66 250.98 85095 
- read data line 750   83219 66 255.37 82248.5 
- read data line 751   84318 66 259.76 86502.5 
- read data line 752   90026 66 264.15 91624.5 
- read data line 753   92133.5 66 268.54 90655.5 
- read data line 754   87459.5 66 272.93 84806.5 
- read data line 755   83581.5 66 277.32 84704.5 
- read data line 756   87830 66 281.71 91294 
- read data line 757   94121.5 66 286.1 95086 
- read data line 758   93265.5 66 290.49 90423.5 
- read data line 759   88446 66 294.88 87923.5 
- read data line 760   88827.5 66 299.27 90476 
- read data line 761   91828 66 303.66 93351.5 
- read data line 762   95338.5 66 308.05 97028.5 
- read data line 763   98417 66 312.44 99285 
- read data line 764   98597.5 66 316.83 96904.5 
- read data line 765   94012.5 66 321.22 91141 
- read data line 766   88845 66 325.61 88059.5 
- read data line 767   89482 66 330 92109 
- read data line 768   95393 66 334.39 97324.5 
- read data line 769   99536.5 66 338.78 100137 
- read data line 770   98954.5 66 343.17 96253.5 
- read data line 771   94341 66 347.56 92462.5 
- read data line 772   92286 66 351.95 91053 
- read data line 773   90031.5 66 356.34 90287 
- read data line 774   94924.5 64 1.3 96457 
- read data line 775   98502 64 5.78 98474.5 
- read data line 776   96485.5 64 10.25 92195 
- read data line 777   88225.5 64 14.72 86177.5 
- read data line 778   85857.5 64 19.19 87498.5 
- read data line 779   90145.5 64 23.66 92452 
- read data line 780   92262.5 64 28.14 89500 
- read data line 781   85838 64 32.61 82694.5 
- read data line 782   81079 64 37.08 82394 
- read data line 783   85547 64 41.55 88929 
- read data line 784   91338.5 64 46.02 91045 
- read data line 785   88933.5 64 50.5 85955.5 
- read data line 786   83524 64 54.97 82932.5 
- read data line 787   83768.5 64 59.44 84470 
- read data line 788   85623.5 64 63.91 86799.5 
- read data line 789   88589.5 64 68.39 89666 
- read data line 790   90601 64 72.86 90273.5 
- read data line 791   89564.5 64 77.33 87275 
- read data line 792   84458 64 81.8 81709.5 
- read data line 793   79488 64 86.27 79053.5 
- read data line 794   80372 64 90.75 83513 
- read data line 795   85532.5 64 95.22 88097.5 
- read data line 796   89216 64 99.69 89250 
- read data line 797   88033 64 104.16 85831.5 
- read data line 798   84091 64 108.63 83278 
- read data line 799   82619.5 64 113.11 81768 
- read data line 800   80817 64 117.58 80592 
- read data line 801   82140.5 64 122.05 84551 
- read data line 802   86195.5 64 126.52 85504 
- read data line 803   83572 64 130.99 79703.5 
- read data line 804   76475.5 64 135.47 75488.5 
- read data line 805   76672 64 139.94 79093.5 
- read data line 806   82237 64 144.41 84672.5 
- read data line 807   85252.5 64 148.88 83521 
- read data line 808   80420.5 64 153.35 77708 
- read data line 809   77172.5 64 157.83 78758 
- read data line 810   81841 64 162.3 85375.5 
- read data line 811   88407 64 166.77 88658 
- read data line 812   86325 64 171.24 84060.5 
- read data line 813   82368 64 175.71 82826 
- read data line 814   83969.5 64 180.19 85721.5 
- read data line 815   86549 64 184.66 87646.5 
- read data line 816   89676.5 64 189.13 90892.5 
- read data line 817   92009.5 64 193.6 91813.5 
- read data line 818   90494.5 64 198.07 87686 
- read data line 819   85320.5 64 202.55 83548.5 
- read data line 820   82464 64 207.02 83708.5 
- read data line 821   86380.5 64 211.49 88872.5 
- read data line 822   92278.5 64 215.96 94488 
- read data line 823   94724 64 220.43 94433 
- read data line 824   93515 64 224.91 92459 
- read data line 825   93073 64 229.38 93076.5 
- read data line 826   92431.5 64 233.85 91339 
- read data line 827   90354 64 238.32 90892.5 
- read data line 828   92958.5 64 242.8 95084 
- read data line 829   96677 64 247.27 96300.5 
- read data line 830   93801.5 64 251.74 90105.5 
- read data line 831   88274.5 64 256.21 86665.5 
- read data line 832   87122 64 260.68 90250.5 
- read data line 833   92328.5 64 265.16 94117 
- read data line 834   92914.5 64 269.63 90812 
- read data line 835   88600 64 274.1 87069 
- read data line 836   87247.5 64 278.57 90054.5 
- read data line 837   93854.5 64 283.04 97036 
- read data line 838   97817.5 64 287.52 96521 
- read data line 839   93729.5 64 291.99 91759 
- read data line 840   91911 64 296.46 93095 
- read data line 841   95030.5 64 300.93 97026 
- read data line 842   97779.5 64 305.4 98708 
- read data line 843   99490.5 64 309.88 100216 
- read data line 844   100492 64 314.35 99097 
- read data line 845   97726.5 64 318.82 95725.5 
- read data line 846   93198.5 64 323.29 91631.5 
- read data line 847   91144.5 64 327.76 93023.5 
- read data line 848   94494 64 332.24 97416.5 
- read data line 849   99663.5 64 336.71 100890 
- read data line 850   101440 64 341.18 99993 
- read data line 851   98850.5 64 345.65 98364.5 
- read data line 852   97645.5 64 350.12 97557 
- read data line 853   96155 64 354.6 94777 
- read data line 854   93870 64 359.07 97849 
- read data line 855   99248 62 4.18 101062 
- read data line 856   101445 62 8.73 99283.5 
- read data line 857   95610 62 13.29 92195.5 
- read data line 858   90019.5 62 17.85 89719 
- read data line 859   90815 62 22.41 92854.5 
- read data line 860   92984 62 26.96 91875 
- read data line 861   89567.5 62 31.52 87216 
- read data line 862   85164.5 62 36.08 85587.5 
- read data line 863   88547.5 62 40.63 92536.5 
- read data line 864   94972 62 45.19 94357.5 
- read data line 865   92249 62 49.75 89296 
- read data line 866   87856 62 54.3 87439 
- read data line 867   88527.5 62 58.86 90113 
- read data line 868   91506 62 63.42 91744.5 
- read data line 869   93053 62 67.97 93248.5 
- read data line 870   93207.5 62 72.53 92260 
- read data line 871   91778.5 62 77.09 89543 
- read data line 872   87405.5 62 81.65 84900 
- read data line 873   82861 62 86.2 83026.5 
- read data line 874   84582 62 90.76 86502.5 
- read data line 875   88358 62 95.32 90092.5 
- read data line 876   91580.5 62 99.87 91310.5 
- read data line 877   90392.5 62 104.43 89373.5 
- read data line 878   89549 62 108.99 89620 
- read data line 879   89295.5 62 113.54 88034 
- read data line 880   85894 62 118.1 85118 
- read data line 881   86421.5 62 122.66 87765.5 
- read data line 882   89451 62 127.22 89837.5 
- read data line 883   88000 62 131.77 84774 
- read data line 884   81632 62 136.33 80186 
- read data line 885   80329 62 140.89 82691.5 
- read data line 886   85004.5 62 145.44 86929 
- read data line 887   86405.5 62 150 84547 
- read data line 888   82550 62 154.56 80476.5 
- read data line 889   81431 62 159.11 84655 
- read data line 890   89490.5 62 163.67 91652 
- read data line 891   92292 62 168.23 89986 
- read data line 892   87683 62 172.78 86541 
- read data line 893   86802.5 62 177.34 88630.5 
- read data line 894   90561 62 181.9 92687 
- read data line 895   93514 62 186.46 93832.5 
- read data line 896   94673 62 191.01 94494 
- read data line 897   94055.5 62 195.57 92761.5 
- read data line 898   92111.5 62 200.13 90456.5 
- read data line 899   90083.5 62 204.68 90305 
- read data line 900   90924.5 62 209.24 92282.5 
- read data line 901   93655 62 213.8 94621 
- read data line 902   95648.5 62 218.35 96017 
- read data line 903   96340 62 222.91 97204 
- read data line 904   98044 62 227.47 99072 
- read data line 905   99739 62 232.03 98794 
- read data line 906   97854.5 62 236.58 96050 
- read data line 907   95982.5 62 241.14 97052 
- read data line 908   98837 62 245.7 101057 
- read data line 909   101050 62 250.25 98614.5 
- read data line 910   95612.5 62 254.81 93130 
- read data line 911   92517 62 259.37 93296.5 
- read data line 912   94706.5 62 263.92 95184 
- read data line 913   95876.5 62 268.48 94545.5 
- read data line 914   93514.5 62 273.04 91919 
- read data line 915   91637 62 277.59 93854 
- read data line 916   97680 62 282.15 100516 
- read data line 917   101384 62 286.71 99631.5 
- read data line 918   96851.5 62 291.27 94788 
- read data line 919   95831 62 295.82 97505 
- read data line 920   99170 62 300.38 101048 
- read data line 921   101955 62 304.94 101618 
- read data line 922   101505 62 309.49 101208 
- read data line 923   99591 62 314.05 99155.5 
- read data line 924   98218.5 62 318.61 97722.5 
- read data line 925   96987.5 62 323.16 97878 
- read data line 926   97858.5 62 327.72 97974 
- read data line 927   98611.5 62 332.28 99089.5 
- read data line 928   99863 62 336.84 99839.5 
- read data line 929   100191 62 341.39 100305 
- read data line 930   101026 62 345.95 101492 
- read data line 931   102558 62 350.51 101646 
- read data line 932   100119 62 355.06 98460 
- read data line 933   97282 62 359.62 99474 
- read data line 934   100166 60 2.52 101383 
- read data line 935   103264 60 7.16 103950 
- read data line 936   101687 60 11.81 98611.5 
- read data line 937   94360.5 60 16.45 93085 
- read data line 938   92949 60 21.1 94232 
- read data line 939   94453 60 25.74 94500.5 
- read data line 940   93266 60 30.39 91242 
- read data line 941   89414 60 35.03 89670 
- read data line 942   92099.5 60 39.68 95689.5 
- read data line 943   97425 60 44.32 97024 
- read data line 944   94766 60 48.97 92211.5 
- read data line 945   91145.5 60 53.61 91473 
- read data line 946   93271.5 60 58.26 95275.5 
- read data line 947   96652.5 60 62.9 95921 
- read data line 948   95763 60 67.55 94881 
- read data line 949   93707 60 72.19 92882.5 
- read data line 950   91504.5 60 76.84 90153 
- read data line 951   89715.5 60 81.48 90100 
- read data line 952   89837.5 60 86.13 90084 
- read data line 953   90065.5 60 90.77 90544.5 
- read data line 954   91072.5 60 95.42 91160 
- read data line 955   91268.5 60 100.06 91356 
- read data line 956   91775 60 104.71 92405 
- read data line 957   93785 60 109.35 94448.5 
- read data line 958   93837 60 114 92453 
- read data line 959   91231.5 60 118.65 89673.5 
- read data line 960   90206 60 123.29 92043 
- read data line 961   93585 60 127.94 94623.5 
- read data line 962   92248.5 60 132.58 88824 
- read data line 963   86443 60 137.23 85592.5 
- read data line 964   86157.5 60 141.87 87489 
- read data line 965   88585.5 60 146.52 89086 
- read data line 966   88197 60 151.16 86905 
- read data line 967   85547.5 60 155.81 86007 
- read data line 968   88500.5 60 160.45 92685 
- read data line 969   95555.5 60 165.1 95119 
- read data line 970   92800 60 169.74 90886 
- read data line 971   90534 60 174.39 91247.5 
- read data line 972   94196.5 60 179.03 95618.5 
- read data line 973   97332.5 60 183.68 97644 
- read data line 974   96704 60 188.32 95754 
- read data line 975   94513.5 60 192.97 93772.5 
- read data line 976   93698.5 60 197.61 94048 
- read data line 977   95895 60 202.26 98188.5 
- read data line 978   99778 60 206.9 100379 
- read data line 979   99320.5 60 211.55 97220.5 
- read data line 980   95869 60 216.19 94886.5 
- read data line 981   95230.5 60 220.84 96688.5 
- read data line 982   98219 60 225.48 100964 
- read data line 983   103066 60 230.13 104280 
- read data line 984   103433 60 234.77 101950 
- read data line 985   100851 60 239.42 100093 
- read data line 986   100868 60 244.06 103103 
- read data line 987   105589 60 248.71 105094 
- read data line 988   102156 60 253.35 99002.5 
- read data line 989   96615 60 258 96267 
- read data line 990   96746.5 60 262.65 98324 
- read data line 991   99156 60 267.29 99313 
- read data line 992   97302.5 60 271.94 95323 
- read data line 993   94677.5 60 276.58 96294.5 
- read data line 994   99932 60 281.23 102214 
- read data line 995   103180 60 285.87 101800 
- read data line 996   99557.5 60 290.52 97452.5 
- read data line 997   98631 60 295.16 100574 
- read data line 998   102636 60 299.81 103471 
- read data line 999   103589 60 304.45 102118 
- read data line 1000   100837 60 309.1 98901.5 
- read data line 1001   97733 60 313.74 96608.5 
- read data line 1002   97708.5 60 318.39 99629 
- read data line 1003   101968 60 323.03 104070 
- read data line 1004   105598 60 327.68 105017 
- read data line 1005   103169 60 332.32 100516 
- read data line 1006   98369 60 336.97 96801.5 
- read data line 1007   97343 60 341.61 99004 
- read data line 1008   101201 60 346.26 103352 
- read data line 1009   104879 60 350.9 104868 
- read data line 1010   103440 60 355.55 101278 
- read data line 1011   101802 58 0.79 102382 
- read data line 1012   103978 58 5.53 105986 
- read data line 1013   105542 58 10.26 102716 
- read data line 1014   98909 58 15 95326 
- read data line 1015   94883.5 58 19.74 95207 
- read data line 1016   96846.5 58 24.47 97688.5 
- read data line 1017   96976 58 29.21 95018 
- read data line 1018   91999.5 58 33.95 91249 
- read data line 1019   93056 58 38.68 96992 
- read data line 1020   99162 58 43.42 99362.5 
- read data line 1021   97511 58 48.16 95026.5 
- read data line 1022   94121 58 52.89 94621 
- read data line 1023   96279.5 58 57.63 98037.5 
- read data line 1024   98376.5 58 62.37 98211 
- read data line 1025   96733.5 58 67.11 94419 
- read data line 1026   93076 58 71.84 90243.5 
- read data line 1027   89709 58 76.58 90559 
- read data line 1028   92224 58 81.32 94833 
- read data line 1029   96643 58 86.05 97549 
- read data line 1030   97100 58 90.79 94782 
- read data line 1031   92243.5 58 95.53 89686.5 
- read data line 1032   88757.5 58 100.26 89068 
- read data line 1033   91261.5 58 105 93529.5 
- read data line 1034   95823 58 109.74 96822 
- read data line 1035   97679 58 114.47 96252.5 
- read data line 1036   94230.5 58 119.21 92881.5 
- read data line 1037   92983.5 58 123.95 95803.5 
- read data line 1038   97806 58 128.68 97993.5 
- read data line 1039   95245.5 58 133.42 91955 
- read data line 1040   89311 58 138.16 88963 
- read data line 1041   89606.5 58 142.89 91458 
- read data line 1042   92576.5 58 147.63 92634.5 
- read data line 1043   90710 58 152.37 88980.5 
- read data line 1044   88610.5 58 157.11 90038 
- read data line 1045   94306 58 161.84 97500.5 
- read data line 1046   97391 58 166.58 96086 
- read data line 1047   94390 58 171.32 93164 
- read data line 1048   94904 58 176.05 97981 
- read data line 1049   99881 58 180.79 99287.5 
- read data line 1050   98788.5 58 185.53 97861.5 
- read data line 1051   95531.5 58 190.26 93548 
- read data line 1052   92474 58 195 93246.5 
- read data line 1053   95721.5 58 199.74 100145 
- read data line 1054   104399 58 204.47 107065 
- read data line 1055   107410 58 209.21 105833 
- read data line 1056   101340 58 213.95 97176.5 
- read data line 1057   94937.5 58 218.68 94051 
- read data line 1058   95459 58 223.42 98460 
- read data line 1059   101006 58 228.16 103969 
- read data line 1060   106697 58 232.89 106614 
- read data line 1061   105649 58 237.63 103568 
- read data line 1062   102943 58 242.37 103356 
- read data line 1063   106285 58 247.11 106952 
- read data line 1064   106046 58 251.84 102705 
- read data line 1065   99599.5 58 256.58 98108 
- read data line 1066   98277 58 261.32 100046 
- read data line 1067   101577 58 266.05 102335 
- read data line 1068   101697 58 270.79 98339.5 
- read data line 1069   96486.5 58 275.53 96816 
- read data line 1070   99630 58 280.26 102458 
- read data line 1071   103944 58 285 103706 
- read data line 1072   101546 58 289.74 100818 
- read data line 1073   101068 58 294.47 103387 
- read data line 1074   104943 58 299.21 105400 
- read data line 1075   104714 58 303.95 102670 
- read data line 1076   100652 58 308.68 98262 
- read data line 1077   95819 58 313.42 95209.5 
- read data line 1078   96801 58 318.16 100594 
- read data line 1079   106026 58 322.89 110144 
- read data line 1080   111814 58 327.63 109968 
- read data line 1081   106224 58 332.37 101726 
- read data line 1082   97035.5 58 337.11 95212 
- read data line 1083   95675 58 341.84 97587.5 
- read data line 1084   100710 58 346.58 103730 
- read data line 1085   105504 58 351.32 106440 
- read data line 1086   105927 58 356.05 104108 
- read data line 1087   102246 56 1.41 103047 
- read data line 1088   104512 56 6.24 105986 
- read data line 1089   104535 56 11.07 101144 
- read data line 1090   97895.5 56 15.91 95974 
- read data line 1091   96813 56 20.74 98710 
- read data line 1092   100726 56 25.57 100284 
- read data line 1093   98591 56 30.4 96036.5 
- read data line 1094   93790.5 56 35.23 93760 
- read data line 1095   96505.5 56 40.07 99419.5 
- read data line 1096   100538 56 44.9 98870.5 
- read data line 1097   97322 56 49.73 96384.5 
- read data line 1098   96775 56 54.56 98761.5 
- read data line 1099   100573 56 59.4 100101 
- read data line 1100   98934 56 64.23 97348 
- read data line 1101   94556.5 56 69.06 91876 
- read data line 1102   89578.5 56 73.89 89593 
- read data line 1103   90159.5 56 78.72 94477 
- read data line 1104   99136.5 56 83.56 102231 
- read data line 1105   103486 56 88.39 101507 
- read data line 1106   97849 56 93.22 93298.5 
- read data line 1107   88880.5 56 98.05 87601.5 
- read data line 1108   88345 56 102.89 90727 
- read data line 1109   93250 56 107.72 95822.5 
- read data line 1110   98661 56 112.55 99147.5 
- read data line 1111   98572.5 56 117.38 96225 
- read data line 1112   94777 56 122.21 95788.5 
- read data line 1113   97929 56 127.05 100100 
- read data line 1114   98769 56 131.88 95421 
- read data line 1115   92154 56 136.71 90173 
- read data line 1116   91199 56 141.54 93109 
- read data line 1117   94907 56 146.38 96338.5 
- read data line 1118   94999 56 151.21 92453.5 
- read data line 1119   90751.5 56 156.04 91278 
- read data line 1120   94218.5 56 160.87 97973 
- read data line 1121   99248.5 56 165.7 98318 
- read data line 1122   96919.5 56 170.54 95802 
- read data line 1123   97771.5 56 175.37 100879 
- read data line 1124   102330 56 180.2 102294 
- read data line 1125   101335 56 185.03 99415.5 
- read data line 1126   97238.5 56 189.87 94900 
- read data line 1127   92922.5 56 194.7 93731 
- read data line 1128   97720.5 56 199.53 104702 
- read data line 1129   108978 56 204.36 112848 
- read data line 1130   112468 56 209.19 108824 
- read data line 1131   104258 56 214.03 98534.5 
- read data line 1132   95626.5 56 218.86 94940 
- read data line 1133   97245 56 223.69 100680 
- read data line 1134   104342 56 228.52 106907 
- read data line 1135   108142 56 233.36 107987 
- read data line 1136   106250 56 238.19 104054 
- read data line 1137   103886 56 243.02 105284 
- read data line 1138   106697 56 247.85 106430 
- read data line 1139   104994 56 252.68 102238 
- read data line 1140   100708 56 257.52 99900.5 
- read data line 1141   101548 56 262.35 102602 
- read data line 1142   104555 56 267.18 104320 
- read data line 1143   102926 56 272.01 100396 
- read data line 1144   99325 56 276.85 99780 
- read data line 1145   102585 56 281.68 104310 
- read data line 1146   103818 56 286.51 102196 
- read data line 1147   100398 56 291.34 100798 
- read data line 1148   103064 56 296.17 105632 
- read data line 1149   107324 56 301.01 107089 
- read data line 1150   106212 56 305.84 103861 
- read data line 1151   100452 56 310.67 97049.5 
- read data line 1152   96095 56 315.5 98648.5 
- read data line 1153   103528 56 320.34 109996 
- read data line 1154   114284 56 325.17 116248 
- read data line 1155   114633 56 330 109616 
- read data line 1156   103426 56 334.83 98368.5 
- read data line 1157   95865.5 56 339.66 97258 
- read data line 1158   99882.5 56 344.5 102703 
- read data line 1159   105150 56 349.33 107492 
- read data line 1160   107732 56 354.16 106402 
- read data line 1161   103915 56 358.99 101077 
- read data line 1162   102356 54 4.76 103836 
- read data line 1163   103702 54 9.72 102956 
- read data line 1164   100270 54 14.69 98947.5 
- read data line 1165   98491.5 54 19.66 99538.5 
- read data line 1166   100760 54 24.62 101267 
- read data line 1167   99635.5 54 29.59 98029 
- read data line 1168   96319 54 34.55 95991 
- read data line 1169   97320 54 39.52 99441.5 
- read data line 1170   99682.5 54 44.48 98387 
- read data line 1171   96950 54 49.45 95815 
- read data line 1172   96653.5 54 54.41 99800 
- read data line 1173   102005 54 59.38 102668 
- read data line 1174   101282 54 64.34 99700.5 
- read data line 1175   96145.5 54 69.31 91789.5 
- read data line 1176   90165.5 54 74.28 90621 
- read data line 1177   94540 54 79.24 96191.5 
- read data line 1178   102322 54 84.21 105879 
- read data line 1179   105974 54 89.17 103056 
- read data line 1180   97723 54 94.14 92187.5 
- read data line 1181   88837 54 99.1 88728 
- read data line 1182   91809.5 54 104.07 94672.5 
- read data line 1183   98021 54 109.03 100415 
- read data line 1184   101294 54 114 100593 
- read data line 1185   97723.5 54 118.97 95619.5 
- read data line 1186   96020.5 54 123.93 97998 
- read data line 1187   99396.5 54 128.9 98194 
- read data line 1188   96323 54 133.86 93505.5 
- read data line 1189   92969.5 54 138.83 93937 
- read data line 1190   95424.5 54 143.79 97151.5 
- read data line 1191   98240.5 54 148.76 97299.5 
- read data line 1192   95356 54 153.72 94123 
- read data line 1193   94825.5 54 158.69 97324.5 
- read data line 1194   99588 54 163.66 99332.5 
- read data line 1195   97999.5 54 168.62 96489.5 
- read data line 1196   97363 54 173.59 100472 
- read data line 1197   103770 54 178.55 106320 
- read data line 1198   106672 54 183.52 105347 
- read data line 1199   102951 54 188.48 99399.5 
- read data line 1200   96565.5 54 193.45 96362.5 
- read data line 1201   99501 54 198.41 105600 
- read data line 1202   110878 54 203.38 115660 
- read data line 1203   116131 54 208.34 113380 
- read data line 1204   108462 54 213.31 103375 
- read data line 1205   100277 54 218.28 100014 
- read data line 1206   101999 54 223.24 106154 
- read data line 1207   109162 54 228.21 111052 
- read data line 1208   111550 54 233.17 109910 
- read data line 1209   106741 54 238.14 104564 
- read data line 1210   103726 54 243.1 104880 
- read data line 1211   106460 54 248.07 107114 
- read data line 1212   105834 54 253.03 105007 
- read data line 1213   103380 54 258 102970 
- read data line 1214   103286 54 262.97 103826 
- read data line 1215   104068 54 267.93 103603 
- read data line 1216   102545 54 272.9 101760 
- read data line 1217   102266 54 277.86 103610 
- read data line 1218   105210 54 282.83 104530 
- read data line 1219   102310 54 287.79 100252 
- read data line 1220   100126 54 292.76 103034 
- read data line 1221   106712 54 297.72 110478 
- read data line 1222   112198 54 302.69 111480 
- read data line 1223   109134 54 307.66 105621 
- read data line 1224   102017 54 312.62 100517 
- read data line 1225   102178 54 317.59 106524 
- read data line 1226   112193 54 322.55 116659 
- read data line 1227   118465 54 327.52 115054 
- read data line 1228   110186 54 332.48 104406 
- read data line 1229   100619 54 337.45 99444 
- read data line 1230   101423 54 342.41 104458 
- read data line 1231   107444 54 347.38 109860 
- read data line 1232   110166 54 352.34 108370 
- read data line 1233   105399 54 357.31 102250 
- read data line 1234   100782 52 0.64 100305 
- read data line 1235   101908 52 5.74 103998 
- read data line 1236   104076 52 10.85 103676 
- read data line 1237   101936 52 15.96 99677 
- read data line 1238   99616.5 52 21.06 98936.5 
- read data line 1239   98574 52 26.17 98367.5 
- read data line 1240   97824 52 31.28 97674.5 
- read data line 1241   98288.5 52 36.38 99848.5 
- read data line 1242   101427 52 41.49 100220 
- read data line 1243   98039.5 52 46.6 95581 
- read data line 1244   95177.5 52 51.7 97204.5 
- read data line 1245   100940 52 56.81 104554 
- read data line 1246   106168 52 61.91 105858 
- read data line 1247   103002 52 67.02 99549.5 
- read data line 1248   95426.5 52 72.13 93468 
- read data line 1249   95954.5 52 77.23 96473.5 
- read data line 1250   102532 52 82.34 107780 
- read data line 1251   109329 52 87.45 107858 
- read data line 1252   103572 52 92.55 98025 
- read data line 1253   93532 52 97.66 92829.5 
- read data line 1254   94777.5 52 102.77 98320.5 
- read data line 1255   101405 52 107.87 103820 
- read data line 1256   104006 52 112.98 102932 
- read data line 1257   99609.5 52 118.09 96974.5 
- read data line 1258   95422.5 52 123.19 96533.5 
- read data line 1259   98761.5 52 128.3 100574 
- read data line 1260   99351.5 52 133.4 97390.5 
- read data line 1261   95930 52 138.51 95760 
- read data line 1262   96179 52 143.62 96972 
- read data line 1263   97232.5 52 148.72 97040.5 
- read data line 1264   96681 52 153.83 96197 
- read data line 1265   97379 52 158.94 99435.5 
- read data line 1266   100139 52 164.04 98779 
- read data line 1267   96184 52 169.15 94902.5 
- read data line 1268   97417.5 52 174.26 101648 
- read data line 1269   106160 52 179.36 108492 
- read data line 1270   109812 52 184.47 108716 
- read data line 1271   106041 52 189.57 101992 
- read data line 1272   100932 52 194.68 101593 
- read data line 1273   105315 52 199.79 109712 
- read data line 1274   113406 52 204.89 114750 
- read data line 1275   113436 52 210 110027 
- read data line 1276   105708 52 215.11 103894 
- read data line 1277   104112 52 220.21 106151 
- read data line 1278   109044 52 225.32 111868 
- read data line 1279   112470 52 230.43 111548 
- read data line 1280   109566 52 235.53 107072 
- read data line 1281   103513 52 240.64 102056 
- read data line 1282   103111 52 245.74 106154 
- read data line 1283   107615 52 250.85 107767 
- read data line 1284   106949 52 255.96 104862 
- read data line 1285   102826 52 261.06 101170 
- read data line 1286   100876 52 266.17 100259 
- read data line 1287   100044 52 271.28 101139 
- read data line 1288   102788 52 276.38 105622 
- read data line 1289   107560 52 281.49 106666 
- read data line 1290   103818 52 286.6 100998 
- read data line 1291   99462 52 291.7 100848 
- read data line 1292   104298 52 296.81 108671 
- read data line 1293   111486 52 301.91 112023 
- read data line 1294   111726 52 307.02 110328 
- read data line 1295   107150 52 312.13 105477 
- read data line 1296   105565 52 317.23 108168 
- read data line 1297   111258 52 322.34 114386 
- read data line 1298   114812 52 327.45 113289 
- read data line 1299   109560 52 332.55 106428 
- read data line 1300   104589 52 337.66 104859 
- read data line 1301   107250 52 342.77 110298 
- read data line 1302   111283 52 347.87 111993 
- read data line 1303   110274 52 352.98 107042 
- read data line 1304   103430 52 358.09 99219.5 
- read data line 1305   100218 50 4.16 102903 
- read data line 1306   105761 50 9.42 106544 
- read data line 1307   105776 50 14.67 102354 
- read data line 1308   99743.5 50 19.93 97511.5 
- read data line 1309   96239.5 50 25.18 95123 
- read data line 1310   95576 50 30.44 97606.5 
- read data line 1311   99923 50 35.69 102781 
- read data line 1312   104394 50 40.95 102462 
- read data line 1313   99404.5 50 46.2 96149 
- read data line 1314   95118.5 50 51.46 96451.5 
- read data line 1315   100268 50 56.72 103812 
- read data line 1316   106316 50 61.97 106496 
- read data line 1317   105210 50 67.23 103009 
- read data line 1318   100884 50 72.48 99006.5 
- read data line 1319   97820 50 77.74 100444 
- read data line 1320   103830 50 82.99 106378 
- read data line 1321   106508 50 88.25 104074 
- read data line 1322   100512 50 93.5 97639.5 
- read data line 1323   96894.5 50 98.76 98688.5 
- read data line 1324   101798 50 104.01 103967 
- read data line 1325   105046 50 109.27 104227 
- read data line 1326   102303 50 114.53 99574 
- read data line 1327   97479.5 50 119.78 94850.5 
- read data line 1328   95119 50 125.04 98088.5 
- read data line 1329   100631 50 130.29 101034 
- read data line 1330   100463 50 135.55 98000 
- read data line 1331   95813 50 140.8 94339.5 
- read data line 1332   93786.5 50 146.06 93480 
- read data line 1333   94348.5 50 151.31 95022 
- read data line 1334   97349 50 156.57 100414 
- read data line 1335   103351 50 161.82 102130 
- read data line 1336   99404 50 167.08 96527 
- read data line 1337   95398 50 172.34 97763 
- read data line 1338   101248 50 177.59 105164 
- read data line 1339   107630 50 182.85 109134 
- read data line 1340   109254 50 188.1 108880 
- read data line 1341   107429 50 193.36 105813 
- read data line 1342   106596 50 198.61 107232 
- read data line 1343   108642 50 203.87 109528 
- read data line 1344   109809 50 209.12 108334 
- read data line 1345   107431 50 214.38 107633 
- read data line 1346   109341 50 219.64 111471 
- read data line 1347   113074 50 224.89 112928 
- read data line 1348   111608 50 230.15 109398 
- read data line 1349   106870 50 235.4 104326 
- read data line 1350   102777 50 240.66 102662 
- read data line 1351   104668 50 245.91 107346 
- read data line 1352   109446 50 251.17 110278 
- read data line 1353   109948 50 256.42 106978 
- read data line 1354   104324 50 261.68 101038 
- read data line 1355   99949 50 266.93 99528 
- read data line 1356   101216 50 272.19 103512 
- read data line 1357   107306 50 277.45 110422 
- read data line 1358   109905 50 282.7 106863 
- read data line 1359   103197 50 287.96 100502 
- read data line 1360   100286 50 293.21 102251 
- read data line 1361   104824 50 298.47 107724 
- read data line 1362   110036 50 303.72 112062 
- read data line 1363   112800 50 308.98 112860 
- read data line 1364   110942 50 314.23 109868 
- read data line 1365   109546 50 319.49 109151 
- read data line 1366   108858 50 324.74 108450 
- read data line 1367   108174 50 330 107038 
- read data line 1368   107636 50 335.26 108582 
- read data line 1369   110220 50 340.51 112222 
- read data line 1370   112554 50 345.77 110662 
- read data line 1371   109031 50 351.02 106424 
- read data line 1372   103236 50 356.28 100812 
- read data line 1373   100236 48 2.48 101420 
- read data line 1374   103970 48 7.89 105928 
- read data line 1375   107760 48 13.31 106907 
- read data line 1376   104688 48 18.72 101264 
- read data line 1377   98404 48 24.14 96743 
- read data line 1378   97689.5 48 29.55 100097 
- read data line 1379   103131 48 34.96 106478 
- read data line 1380   106538 48 40.38 103803 
- read data line 1381   100140 48 45.79 96440.5 
- read data line 1382   95821 48 51.2 96400 
- read data line 1383   98411.5 48 56.62 101256 
- read data line 1384   103456 48 62.03 104708 
- read data line 1385   106092 48 67.44 106546 
- read data line 1386   104678 48 72.86 103507 
- read data line 1387   102544 48 78.27 102260 
- read data line 1388   102238 48 83.68 102299 
- read data line 1389   101552 48 89.1 101179 
- read data line 1390   99750.5 48 94.51 100064 
- read data line 1391   102170 48 99.92 103925 
- read data line 1392   104876 48 105.34 104878 
- read data line 1393   102846 48 110.75 100778 
- read data line 1394   98333.5 48 116.17 96129.5 
- read data line 1395   94744 48 121.58 94980.5 
- read data line 1396   97648 48 126.99 100573 
- read data line 1397   102601 48 132.41 102707 
- read data line 1398   101060 48 137.82 98804 
- read data line 1399   96097 48 143.23 94512.5 
- read data line 1400   93334 48 148.65 95105.5 
- read data line 1401   98282 48 154.06 101098 
- read data line 1402   104902 48 159.47 105628 
- read data line 1403   103662 48 164.89 99525 
- read data line 1404   97602 48 170.3 97062 
- read data line 1405   99869.5 48 175.71 101696 
- read data line 1406   104780 48 181.13 108088 
- read data line 1407   110248 48 186.54 112190 
- read data line 1408   111732 48 191.95 110682 
- read data line 1409   109248 48 197.37 107187 
- read data line 1410   105714 48 202.78 104560 
- read data line 1411   103980 48 208.2 104360 
- read data line 1412   106306 48 213.61 108138 
- read data line 1413   111275 48 219.02 113828 
- read data line 1414   115180 48 224.44 115323 
- read data line 1415   114371 48 229.85 111982 
- read data line 1416   109099 48 235.26 106142 
- read data line 1417   104292 48 240.68 103304 
- read data line 1418   104637 48 246.09 106394 
- read data line 1419   109820 48 251.5 111094 
- read data line 1420   113116 48 256.92 112103 
- read data line 1421   108766 48 262.33 105820 
- read data line 1422   103547 48 267.74 104501 
- read data line 1423   107460 48 273.16 110116 
- read data line 1424   111870 48 278.57 110646 
- read data line 1425   107696 48 283.98 103962 
- read data line 1426   101086 48 289.4 101282 
- read data line 1427   102684 48 294.81 105372 
- read data line 1428   109404 48 300.23 112181 
- read data line 1429   114719 48 305.64 115776 
- read data line 1430   115634 48 311.05 114462 
- read data line 1431   112512 48 316.47 109670 
- read data line 1432   107646 48 321.88 104790 
- read data line 1433   103435 48 327.29 103704 
- read data line 1434   105306 48 332.71 107978 
- read data line 1435   110498 48 338.12 113233 
- read data line 1436   114272 48 343.53 114273 
- read data line 1437   112340 48 348.95 109763 
- read data line 1438   106454 48 354.36 103108 
- read data line 1439   101051 48 359.77 103460 
- read data line 1440   100762 46 3.49 100642 
- read data line 1441   102845 46 9.07 106568 
- read data line 1442   109012 46 14.65 109930 
- read data line 1443   108174 46 20.23 105668 
- read data line 1444   103751 46 25.81 103398 
- read data line 1445   105508 46 31.4 108296 
- read data line 1446   108728 46 36.98 107241 
- read data line 1447   103576 46 42.56 99653.5 
- read data line 1448   97037.5 46 48.14 96783.5 
- read data line 1449   98153.5 46 53.72 100505 
- read data line 1450   103996 46 59.3 107611 
- read data line 1451   109410 46 64.88 110002 
- read data line 1452   110122 46 70.47 108526 
- read data line 1453   106321 46 76.05 103550 
- read data line 1454   100840 46 81.63 97927 
- read data line 1455   96877 46 87.21 96818 
- read data line 1456   98513.5 46 92.79 100655 
- read data line 1457   103189 46 98.37 105778 
- read data line 1458   107610 46 103.95 108810 
- read data line 1459   107648 46 109.53 105398 
- read data line 1460   102754 46 115.12 100120 
- read data line 1461   97379 46 120.7 96079 
- read data line 1462   96775 46 126.28 99235 
- read data line 1463   102364 46 131.86 104587 
- read data line 1464   105844 46 137.44 104160 
- read data line 1465   101867 46 143.02 99584 
- read data line 1466   98707 46 148.6 100956 
- read data line 1467   104355 46 154.19 106942 
- read data line 1468   107836 46 159.77 105260 
- read data line 1469   102028 46 165.35 99203.5 
- read data line 1470   98500.5 46 170.93 100562 
- read data line 1471   104077 46 176.51 107531 
- read data line 1472   111888 46 182.09 115110 
- read data line 1473   116704 46 187.67 116954 
- read data line 1474   115814 46 193.26 114638 
- read data line 1475   111376 46 198.84 107782 
- read data line 1476   103546 46 204.42 101914 
- read data line 1477   102744 46 210 106203 
- read data line 1478   109158 46 215.58 114026 
- read data line 1479   116854 46 221.16 119273 
- read data line 1480   121084 46 226.74 121064 
- read data line 1481   120702 46 232.33 117469 
- read data line 1482   113222 46 237.91 108486 
- read data line 1483   105554 46 243.49 104021 
- read data line 1484   105348 46 249.07 108421 
- read data line 1485   112255 46 254.65 114282 
- read data line 1486   115007 46 260.23 113550 
- read data line 1487   111902 46 265.81 111394 
- read data line 1488   113216 46 271.4 114628 
- read data line 1489   114936 46 276.98 112720 
- read data line 1490   107508 46 282.56 103148 
- read data line 1491   101712 46 288.14 102438 
- read data line 1492   105384 46 293.72 109969 
- read data line 1493   115528 46 299.3 119604 
- read data line 1494   121682 46 304.88 122299 
- read data line 1495   121540 46 310.47 120534 
- read data line 1496   117082 46 316.05 113434 
- read data line 1497   108136 46 321.63 103989 
- read data line 1498   101956 46 327.21 103208 
- read data line 1499   106776 46 332.79 110626 
- read data line 1500   114314 46 338.37 117120 
- read data line 1501   118677 46 343.95 119378 
- read data line 1502   119070 46 349.53 117204 
- read data line 1503   112746 46 355.12 107490 
- read data line 1504   104402 44 1.68 100692 
- read data line 1505   100781 44 7.44 102798 
- read data line 1506   106788 44 13.2 110660 
- read data line 1507   111884 44 18.96 110854 
- read data line 1508   109936 44 24.72 109819 
- read data line 1509   110942 44 30.48 111568 
- read data line 1510   110304 44 36.24 106552 
- read data line 1511   101163 44 42 97934.5 
- read data line 1512   96935 44 47.76 98282.5 
- read data line 1513   101710 44 53.52 106683 
- read data line 1514   111406 44 59.28 114392 
- read data line 1515   115402 44 65.04 115595 
- read data line 1516   113762 44 70.8 113017 
- read data line 1517   109049 44 76.56 104592 
- read data line 1518   99911 44 82.32 95848.5 
- read data line 1519   94961 44 88.08 97119 
- read data line 1520   100604 44 93.84 104492 
- read data line 1521   108006 44 99.6 110161 
- read data line 1522   112495 44 105.36 113274 
- read data line 1523   112650 44 111.12 110600 
- read data line 1524   106467 44 116.88 101869 
- read data line 1525   98503 44 122.64 95976.5 
- read data line 1526   97171 44 128.4 99497 
- read data line 1527   103511 44 134.16 106854 
- read data line 1528   108094 44 139.92 106994 
- read data line 1529   105624 44 145.68 106074 
- read data line 1530   107594 44 151.44 110055 
- read data line 1531   109916 44 157.2 106354 
- read data line 1532   102510 44 162.96 99198 
- read data line 1533   98288 44 168.72 100710 
- read data line 1534   105563 44 174.48 110936 
- read data line 1535   116232 44 180.24 119068 
- read data line 1536   121363 44 186 121758 
- read data line 1537   121588 44 191.76 120248 
- read data line 1538   117550 44 197.52 112335 
- read data line 1539   107168 44 203.28 104144 
- read data line 1540   104546 44 209.04 107272 
- read data line 1541   112380 44 214.8 116602 
- read data line 1542   120509 44 220.56 123411 
- read data line 1543   124756 44 226.32 126275 
- read data line 1544   125782 44 232.08 123196 
- read data line 1545   118628 44 237.84 112804 
- read data line 1546   108132 44 243.6 104912 
- read data line 1547   105790 44 249.36 108189 
- read data line 1548   111862 44 255.12 114474 
- read data line 1549   116777 44 260.88 116224 
- read data line 1550   115598 44 266.64 116991 
- read data line 1551   117929 44 272.4 117960 
- read data line 1552   115466 44 278.16 111161 
- read data line 1553   106362 44 283.92 104250 
- read data line 1554   104036 44 289.68 108156 
- read data line 1555   113070 44 295.44 117564 
- read data line 1556   122306 44 301.2 124480 
- read data line 1557   126742 44 306.96 126302 
- read data line 1558   124674 44 312.72 121622 
- read data line 1559   116560 44 318.48 110620 
- read data line 1560   106372 44 324.24 104856 
- read data line 1561   106890 44 330 111111 
- read data line 1562   115740 44 335.76 118907 
- read data line 1563   122111 44 341.52 123124 
- read data line 1564   124390 44 347.28 123138 
- read data line 1565   120637 44 353.04 115379 
- read data line 1566   109574 44 358.8 110797 
- read data line 1567   106097 42 3 104297 
- read data line 1568   103890 42 9 106148 
- read data line 1569   109774 42 15 111280 
- read data line 1570   111932 42 21 111666 
- read data line 1571   112570 42 27 113512 
- read data line 1572   113818 42 33 111248 
- read data line 1573   106746 42 39 102014 
- read data line 1574   99183.5 42 45 99317 
- read data line 1575   102288 42 51 106966 
- read data line 1576   112688 42 57 116315 
- read data line 1577   119074 42 63 119562 
- read data line 1578   119328 42 69 118120 
- read data line 1579   115093 42 75 110508 
- read data line 1580   104092 42 81 100026 
- read data line 1581   97618 42 87 98985 
- read data line 1582   103435 42 93 107714 
- read data line 1583   111705 42 99 114078 
- read data line 1584   116207 42 105 117132 
- read data line 1585   117520 42 111 114864 
- read data line 1586   111272 42 117 104757 
- read data line 1587   100626 42 123 97386.5 
- read data line 1588   97676.5 42 129 100550 
- read data line 1589   104297 42 135 107748 
- read data line 1590   109316 42 141 108866 
- read data line 1591   108806 42 147 110740 
- read data line 1592   111726 42 153 112225 
- read data line 1593   109572 42 159 104965 
- read data line 1594   101680 42 165 101074 
- read data line 1595   103958 42 171 108258 
- read data line 1596   114481 42 177 118994 
- read data line 1597   122326 42 183 124514 
- read data line 1598   126170 42 189 124834 
- read data line 1599   122960 42 195 117674 
- read data line 1600   113495 42 201 109898 
- read data line 1601   108034 42 207 110212 
- read data line 1602   113272 42 213 117939 
- read data line 1603   121997 42 219 125235 
- read data line 1604   127524 42 225 128828 
- read data line 1605   127778 42 231 124836 
- read data line 1606   121728 42 237 116828 
- read data line 1607   113856 42 243 110745 
- read data line 1608   109784 42 249 110503 
- read data line 1609   112598 42 255 115346 
- read data line 1610   116452 42 261 117630 
- read data line 1611   117836 42 267 119094 
- read data line 1612   120298 42 273 119136 
- read data line 1613   116855 42 279 112378 
- read data line 1614   109872 42 285 109722 
- read data line 1615   111418 42 291 114518 
- read data line 1616   118358 42 297 122503 
- read data line 1617   125764 42 303 128484 
- read data line 1618   129079 42 309 127473 
- read data line 1619   123762 42 315 118330 
- read data line 1620   113970 42 321 110748 
- read data line 1621   109628 42 327 111966 
- read data line 1622   115168 42 333 118708 
- read data line 1623   122264 42 339 125144 
- read data line 1624   126826 42 345 126446 
- read data line 1625   124858 42 351 120952 
- read data line 1626   116342 42 357 113474 
- read data line 1627   111034 40 4.43 109434 
- read data line 1628   109648 40 10.7 110738 
- read data line 1629   112508 40 16.96 113121 
- read data line 1630   114266 40 23.22 115794 
- read data line 1631   116040 40 29.48 116492 
- read data line 1632   113578 40 35.74 109758 
- read data line 1633   106885 40 42 105083 
- read data line 1634   105798 40 48.26 107485 
- read data line 1635   110981 40 54.52 114236 
- read data line 1636   117677 40 60.78 120718 
- read data line 1637   121938 40 67.04 121849 
- read data line 1638   118784 40 73.3 114550 
- read data line 1639   108208 40 79.57 104986 
- read data line 1640   102712 40 85.83 103318 
- read data line 1641   105860 40 92.09 109746 
- read data line 1642   113474 40 98.35 116670 
- read data line 1643   118404 40 104.61 119475 
- read data line 1644   119184 40 110.87 116524 
- read data line 1645   111959 40 117.13 107644 
- read data line 1646   103836 40 123.39 101664 
- read data line 1647   101632 40 129.65 103548 
- read data line 1648   106528 40 135.91 108521 
- read data line 1649   109902 40 142.17 111358 
- read data line 1650   112636 40 148.43 113798 
- read data line 1651   113610 40 154.7 112247 
- read data line 1652   108842 40 160.96 106795 
- read data line 1653   106788 40 167.22 107932 
- read data line 1654   110930 40 173.48 114938 
- read data line 1655   118496 40 179.74 121776 
- read data line 1656   124685 40 186 125644 
- read data line 1657   124572 40 192.26 121484 
- read data line 1658   117382 40 198.52 114551 
- read data line 1659   112858 40 204.78 112865 
- read data line 1660   115089 40 211.04 117474 
- read data line 1661   120452 40 217.3 123756 
- read data line 1662   126769 40 223.57 128116 
- read data line 1663   129098 40 229.83 127386 
- read data line 1664   123722 40 236.09 120566 
- read data line 1665   118252 40 242.35 117173 
- read data line 1666   115822 40 248.61 116084 
- read data line 1667   116791 40 254.87 117903 
- read data line 1668   119504 40 261.13 121550 
- read data line 1669   123952 40 267.39 124168 
- read data line 1670   123816 40 273.65 121683 
- read data line 1671   118754 40 279.91 116752 
- read data line 1672   116198 40 286.17 116631 
- read data line 1673   117796 40 292.43 118922 
- read data line 1674   121302 40 298.7 124610 
- read data line 1675   126950 40 304.96 126890 
- read data line 1676   124519 40 311.22 121426 
- read data line 1677   117929 40 317.48 115676 
- read data line 1678   113945 40 323.74 113784 
- read data line 1679   115038 40 330 117285 
- read data line 1680   118992 40 336.26 121823 
- read data line 1681   124296 40 342.52 126189 
- read data line 1682   126267 40 348.78 124183 
- read data line 1683   120072 40 355.04 116068 
- read data line 1684   117930 38 2.73 116397 
- read data line 1685   115264 38 9.27 113960 
- read data line 1686   115106 38 15.82 117781 
- read data line 1687   120102 38 22.36 122335 
- read data line 1688   122478 38 28.91 120646 
- read data line 1689   116702 38 35.45 113450 
- read data line 1690   111924 38 42 111392 
- read data line 1691   111818 38 48.55 113223 
- read data line 1692   114074 38 55.09 116818 
- read data line 1693   119493 38 61.64 120656 
- read data line 1694   120032 38 68.18 117685 
- read data line 1695   114168 38 74.73 110844 
- read data line 1696   108629 38 81.27 107215 
- read data line 1697   107422 38 87.82 108834 
- read data line 1698   110785 38 94.36 112642 
- read data line 1699   114910 38 100.91 117753 
- read data line 1700   119650 38 107.45 119220 
- read data line 1701   116648 38 114 113366 
- read data line 1702   111162 38 120.55 109472 
- read data line 1703   108960 38 127.09 107918 
- read data line 1704   107996 38 133.64 109157 
- read data line 1705   111947 38 140.18 114409 
- read data line 1706   116669 38 146.73 118467 
- read data line 1707   117992 38 153.27 115825 
- read data line 1708   113930 38 159.82 112167 
- read data line 1709   113038 38 166.36 113482 
- read data line 1710   114846 38 172.91 116540 
- read data line 1711   118765 38 179.45 121248 
- read data line 1712   122600 38 186 122360 
- read data line 1713   120494 38 192.55 118590 
- read data line 1714   117390 38 199.09 116757 
- read data line 1715   115868 38 205.64 117150 
- read data line 1716   118740 38 212.18 119888 
- read data line 1717   119820 38 218.73 121150 
- read data line 1718   123598 38 225.27 125712 
- read data line 1719   126102 38 231.82 124365 
- read data line 1720   123144 38 238.36 122368 
- read data line 1721   121861 38 244.91 121564 
- read data line 1722   120228 38 251.45 119694 
- read data line 1723   120082 38 258 123412 
- read data line 1724   126894 38 264.55 130018 
- read data line 1725   130290 38 271.09 127842 
- read data line 1726   123760 38 277.64 121390 
- read data line 1727   120800 38 284.18 120718 
- read data line 1728   120411 38 290.73 120506 
- read data line 1729   120518 38 297.27 121425 
- read data line 1730   122470 38 303.82 121189 
- read data line 1731   119601 38 310.36 118110 
- read data line 1732   118066 38 316.91 117571 
- read data line 1733   117193 38 323.45 117566 
- read data line 1734   118349 38 330 118694 
- read data line 1735   118553 38 336.55 118728 
- read data line 1736   120773 38 343.09 122921 
- read data line 1737   123043 38 349.64 121836 
- read data line 1738   119526 38 356.18 118530 
- read data line 1739   118601 36 0.86 118889 
- read data line 1740   118142 36 7.71 117057 
- read data line 1741   117520 36 14.57 121202 
- read data line 1742   124320 36 21.43 127404 
- read data line 1743   128056 36 28.29 124594 
- read data line 1744   120316 36 35.14 116522 
- read data line 1745   115706 36 42 115902 
- read data line 1746   114830 36 48.86 115139 
- read data line 1747   115132 36 55.71 116128 
- read data line 1748   116990 36 62.57 116478 
- read data line 1749   113758 36 69.43 112208 
- read data line 1750   111780 36 76.29 111218 
- read data line 1751   110368 36 83.14 111176 
- read data line 1752   111818 36 90 112488 
- read data line 1753   111446 36 96.86 111366 
- read data line 1754   112805 36 103.71 115174 
- read data line 1755   116043 36 110.57 114864 
- read data line 1756   113075 36 117.43 112891 
- read data line 1757   113084 36 124.29 112556 
- read data line 1758   111614 36 131.14 110756 
- read data line 1759   112669 36 138 116274 
- read data line 1760   120716 36 144.86 123218 
- read data line 1761   123412 36 151.71 120282 
- read data line 1762   116680 36 158.57 115302 
- read data line 1763   115666 36 165.43 116256 
- read data line 1764   115494 36 172.29 115696 
- read data line 1765   116464 36 179.14 117989 
- read data line 1766   117896 36 186 116821 
- read data line 1767   116612 36 192.86 117799 
- read data line 1768   118877 36 199.71 119421 
- read data line 1769   120157 36 206.57 121313 
- read data line 1770   122140 36 213.43 120598 
- read data line 1771   119066 36 220.29 118950 
- read data line 1772   118768 36 227.14 119432 
- read data line 1773   119576 36 234 119694 
- read data line 1774   121187 36 240.86 121620 
- read data line 1775   121640 36 247.71 122160 
- read data line 1776   122028 36 254.57 123697 
- read data line 1777   128221 36 261.43 132928 
- read data line 1778   134756 36 268.29 133496 
- read data line 1779   130194 36 275.14 125477 
- read data line 1780   123034 36 282 121821 
- read data line 1781   120556 36 288.86 118084 
- read data line 1782   117418 36 295.71 117135 
- read data line 1783   116512 36 302.57 116400 
- read data line 1784   115886 36 309.43 117290 
- read data line 1785   119630 36 316.29 120749 
- read data line 1786   121786 36 323.14 122107 
- read data line 1787   121658 36 330 120606 
- read data line 1788   118921 36 336.86 117318 
- read data line 1789   117543 36 343.71 117458 
- read data line 1790   117823 36 350.57 117528 
- read data line 1791   118221 36 357.43 115286 
- read data line 1792   116237 34 6 118130 
- read data line 1793   119391 34 13.2 123283 
- read data line 1794   128078 34 20.4 130770 
- read data line 1795   131111 34 27.6 127218 
- read data line 1796   122373 34 34.8 118514 
- read data line 1797   116733 34 42 115618 
- read data line 1798   113669 34 49.2 112408 
- read data line 1799   112122 34 56.4 111480 
- read data line 1800   111378 34 63.6 110421 
- read data line 1801   110178 34 70.8 111633 
- read data line 1802   113028 34 78 113903 
- read data line 1803   113993 34 85.2 114728 
- read data line 1804   114918 34 92.4 112798 
- read data line 1805   110660 34 99.6 109596 
- read data line 1806   110472 34 106.8 110331 
- read data line 1807   110428 34 114 110895 
- read data line 1808   112576 34 121.2 112761 
- read data line 1809   113268 34 128.4 112880 
- read data line 1810   114320 34 135.6 118002 
- read data line 1811   122736 34 142.8 127314 
- read data line 1812   127112 34 150 124290 
- read data line 1813   119643 34 157.2 117134 
- read data line 1814   116787 34 164.4 115026 
- read data line 1815   113670 34 171.6 112754 
- read data line 1816   112598 34 178.8 112564 
- read data line 1817   112918 34 186 113726 
- read data line 1818   116095 34 193.2 119166 
- read data line 1819   122081 34 200.4 123684 
- read data line 1820   125262 34 207.6 125414 
- read data line 1821   124040 34 214.8 121463 
- read data line 1822   118303 34 222 115842 
- read data line 1823   114142 34 229.2 113342 
- read data line 1824   113416 34 236.4 115336 
- read data line 1825   116522 34 243.6 118558 
- read data line 1826   121219 34 250.8 123236 
- read data line 1827   127192 34 258 131555 
- read data line 1828   135142 34 265.2 135366 
- read data line 1829   132898 34 272.4 128777 
- read data line 1830   124374 34 279.6 121349 
- read data line 1831   117074 34 286.8 113926 
- read data line 1832   111536 34 294 110583 
- read data line 1833   111017 34 301.2 111678 
- read data line 1834   113350 34 308.4 117440 
- read data line 1835   120647 34 315.6 123665 
- read data line 1836   125036 34 322.8 125490 
- read data line 1837   125720 34 330 123391 
- read data line 1838   119906 34 337.2 116490 
- read data line 1839   114087 34 344.4 112032 
- read data line 1840   111485 34 351.6 111949 
- read data line 1841   113842 34 358.8 107216 
- read data line 1842   109912 32 4.11 113803 
- read data line 1843   118248 32 11.68 122648 
- read data line 1844   126841 32 19.26 128905 
- read data line 1845   128414 32 26.84 125856 
- read data line 1846   121634 32 34.42 117784 
- read data line 1847   113838 32 42 110002 
- read data line 1848   106534 32 49.58 105013 
- read data line 1849   104411 32 57.16 104931 
- read data line 1850   105073 32 64.74 108296 
- read data line 1851   111807 32 72.32 115135 
- read data line 1852   117380 32 79.89 119006 
- read data line 1853   119270 32 87.47 118288 
- read data line 1854   115552 32 95.05 112135 
- read data line 1855   108740 32 102.63 105524 
- read data line 1856   103694 32 110.21 103356 
- read data line 1857   103743 32 117.79 106314 
- read data line 1858   107444 32 125.37 110740 
- read data line 1859   113646 32 132.95 117039 
- read data line 1860   121515 32 140.53 126350 
- read data line 1861   126743 32 148.11 125070 
- read data line 1862   121406 32 155.68 117576 
- read data line 1863   113912 32 163.26 110528 
- read data line 1864   107256 32 170.84 105452 
- read data line 1865   104408 32 178.42 106116 
- read data line 1866   108098 32 186 111860 
- read data line 1867   116062 32 193.58 120644 
- read data line 1868   124337 32 201.16 126881 
- read data line 1869   127585 32 208.74 126870 
- read data line 1870   124552 32 216.32 119868 
- read data line 1871   115732 32 223.89 111287 
- read data line 1872   108378 32 231.47 107100 
- read data line 1873   107310 32 239.05 108374 
- read data line 1874   112510 32 246.63 115946 
- read data line 1875   121292 32 254.21 125277 
- read data line 1876   129034 32 261.79 130993 
- read data line 1877   130445 32 269.37 128902 
- read data line 1878   125616 32 276.95 120985 
- read data line 1879   115896 32 284.53 110550 
- read data line 1880   107257 32 292.11 105259 
- read data line 1881   105602 32 299.68 107986 
- read data line 1882   110941 32 307.26 115316 
- read data line 1883   120547 32 314.84 124021 
- read data line 1884   126908 32 322.42 128336 
- read data line 1885   127508 32 330 124364 
- read data line 1886   119742 32 337.58 114133 
- read data line 1887   110605 32 345.16 107344 
- read data line 1888   105826 32 352.74 105722 
- read data line 1889   107212 30 2.36 111384 
- read data line 1890   116566 30 10.45 121274 
- read data line 1891   123916 30 18.54 125134 
- read data line 1892   123635 30 26.63 121848 
- read data line 1893   118515 30 34.72 114030 
- read data line 1894   109088 30 42.81 103746 
- read data line 1895   100591 30 50.9 99705.5 
- read data line 1896   100773 30 58.99 102002 
- read data line 1897   105842 30 67.08 109460 
- read data line 1898   114537 30 75.17 118199 
- read data line 1899   119354 30 83.26 120586 
- read data line 1900   118623 30 91.35 114722 
- read data line 1901   109746 30 99.44 105542 
- read data line 1902   102156 30 107.53 99980 
- read data line 1903   99005.5 30 115.62 99152 
- read data line 1904   102120 30 123.71 105679 
- read data line 1905   110634 30 131.8 116384 
- read data line 1906   120212 30 139.89 122554 
- read data line 1907   121771 30 147.98 120741 
- read data line 1908   118352 30 156.07 115231 
- read data line 1909   109545 30 164.16 106011 
- read data line 1910   103149 30 172.25 101549 
- read data line 1911   102118 30 180.34 104805 
- read data line 1912   107834 30 188.43 112191 
- read data line 1913   116900 30 196.52 121739 
- read data line 1914   124886 30 204.61 125433 
- read data line 1915   124082 30 212.7 120742 
- read data line 1916   115919 30 220.79 112176 
- read data line 1917   109079 30 228.88 107196 
- read data line 1918   106630 30 236.97 107604 
- read data line 1919   109785 30 245.06 114771 
- read data line 1920   119062 30 253.15 123817 
- read data line 1921   125844 30 261.24 126452 
- read data line 1922   125576 30 269.33 124318 
- read data line 1923   122487 30 277.42 118317 
- read data line 1924   114184 30 285.51 109821 
- read data line 1925   107255 30 293.6 106602 
- read data line 1926   107023 30 301.69 109116 
- read data line 1927   112181 30 309.78 116346 
- read data line 1928   121370 30 317.87 124312 
- read data line 1929   125597 30 325.95 124532 
- read data line 1930   120524 30 334.04 115144 
- read data line 1931   111000 30 342.13 108557 
- read data line 1932   106100 30 350.22 105176 
- read data line 1933   105345 30 358.31 111016 
- read data line 1934   113736 28 4.29 117074 
- read data line 1935   120586 28 12.86 123055 
- read data line 1936   122355 28 21.43 121266 
- read data line 1937   119431 28 30 117785 
- read data line 1938   114392 28 38.57 109394 
- read data line 1939   105442 28 47.14 102870 
- read data line 1940   101590 28 55.71 101836 
- read data line 1941   102202 28 64.29 104948 
- read data line 1942   108958 28 72.86 113044 
- read data line 1943   116268 28 81.43 117436 
- read data line 1944   115672 28 90 111983 
- read data line 1945   107288 28 98.57 102970 
- read data line 1946   100393 28 107.14 99576 
- read data line 1947   99032.5 28 115.71 100160 
- read data line 1948   102030 28 124.29 106890 
- read data line 1949   113028 28 132.86 116053 
- read data line 1950   119132 28 141.43 118528 
- read data line 1951   117498 28 150 117066 
- read data line 1952   115422 28 158.57 111836 
- read data line 1953   108788 28 167.14 105694 
- read data line 1954   105096 28 175.71 104599 
- read data line 1955   105594 28 184.29 106608 
- read data line 1956   110303 28 192.86 113822 
- read data line 1957   118080 28 201.43 121037 
- read data line 1958   121482 28 210 119422 
- read data line 1959   115393 28 218.57 112872 
- read data line 1960   111074 28 227.14 111074 
- read data line 1961   111085 28 235.71 113100 
- read data line 1962   115263 28 244.29 118541 
- read data line 1963   122442 28 252.86 125874 
- read data line 1964   126262 28 261.43 126006 
- read data line 1965   125336 28 270 124054 
- read data line 1966   123535 28 278.57 121016 
- read data line 1967   118161 28 287.14 116006 
- read data line 1968   114840 28 295.71 112624 
- read data line 1969   111800 28 304.29 111516 
- read data line 1970   114238 28 312.86 117896 
- read data line 1971   121016 28 321.43 122391 
- read data line 1972   120984 28 330 117426 
- read data line 1973   113774 28 338.57 110757 
- read data line 1974   110077 28 347.14 109726 
- read data line 1975   110002 28 355.71 119860 
- read data line 1976   121531 26 6.92 123370 
- read data line 1977   123188 26 16.15 122096 
- read data line 1978   120371 26 25.38 119796 
- read data line 1979   118486 26 34.62 117424 
- read data line 1980   114323 26 43.85 111780 
- read data line 1981   109862 26 53.08 107149 
- read data line 1982   105500 26 62.31 104916 
- read data line 1983   106749 26 71.54 109709 
- read data line 1984   112530 26 80.77 113431 
- read data line 1985   112228 26 90 109198 
- read data line 1986   104954 26 99.23 103090 
- read data line 1987   103162 26 108.46 103186 
- read data line 1988   104880 26 117.69 106888 
- read data line 1989   110263 26 126.92 113854 
- read data line 1990   117348 26 136.15 118454 
- read data line 1991   118230 26 145.38 117396 
- read data line 1992   117653 26 154.62 117350 
- read data line 1993   116054 26 163.85 114288 
- read data line 1994   113451 26 173.08 112608 
- read data line 1995   111268 26 182.31 110144 
- read data line 1996   110993 26 191.54 112731 
- read data line 1997   115538 26 200.77 117713 
- read data line 1998   118340 26 210 116964 
- read data line 1999   115823 26 219.23 115544 
- read data line 2000   116446 26 228.46 118400 
- read data line 2001   120160 26 237.69 122138 
- read data line 2002   123732 26 246.92 125604 
- read data line 2003   125796 26 256.15 124906 
- read data line 2004   123358 26 265.38 122805 
- read data line 2005   122830 26 274.62 124131 
- read data line 2006   123816 26 283.85 123978 
- read data line 2007   123708 26 293.08 121931 
- read data line 2008   119772 26 302.31 117906 
- read data line 2009   116852 26 311.54 118147 
- read data line 2010   118526 26 320.77 118858 
- read data line 2011   118294 26 330 117352 
- read data line 2012   115605 26 339.23 115953 
- read data line 2013   116594 26 348.46 117623 
- read data line 2014   118625 26 357.69 124062 
- read data line 2015   122814 24 9.45 120448 
- read data line 2016   117778 24 19.32 116923 
- read data line 2017   116766 24 29.18 118416 
- read data line 2018   119078 24 39.04 119528 
- read data line 2019   118848 24 48.9 116830 
- read data line 2020   114044 24 58.77 111892 
- read data line 2021   109500 24 68.63 109212 
- read data line 2022   110613 24 78.49 110924 
- read data line 2023   109902 24 88.36 108420 
- read data line 2024   107656 24 98.22 107835 
- read data line 2025   109408 24 108.08 111437 
- read data line 2026   113234 24 117.95 114434 
- read data line 2027   116374 24 127.81 117049 
- read data line 2028   116618 24 137.67 114854 
- read data line 2029   113786 24 147.53 115025 
- read data line 2030   116486 24 157.4 118619 
- read data line 2031   119944 24 167.26 120068 
- read data line 2032   119966 24 177.12 119126 
- read data line 2033   117798 24 186.99 116819 
- read data line 2034   116208 24 196.85 117068 
- read data line 2035   116491 24 206.71 118008 
- read data line 2036   119700 24 216.58 121606 
- read data line 2037   123666 24 226.44 125468 
- read data line 2038   126178 24 236.3 125710 
- read data line 2039   125882 24 246.16 124632 
- read data line 2040   121705 24 256.03 119222 
- read data line 2041   116978 24 265.89 116971 
- read data line 2042   118794 24 275.75 121606 
- read data line 2043   124406 24 285.62 126599 
- read data line 2044   127132 24 295.48 127244 
- read data line 2045   126222 24 305.34 124453 
- read data line 2046   122378 24 315.21 121970 
- read data line 2047   120736 24 325.07 121180 
- read data line 2048   122136 24 334.93 123194 
- read data line 2049   124582 24 344.79 125448 
- read data line 2050   124826 24 354.66 124355 
- read data line 2051   122508 22 2.24 119314 
- read data line 2052   115512 22 12.99 111550 
- read data line 2053   110885 22 23.73 111917 
- read data line 2054   114490 22 34.48 117210 
- read data line 2055   119509 22 45.22 121087 
- read data line 2056   120767 22 55.97 119584 
- read data line 2057   116534 22 66.72 114759 
- read data line 2058   113050 22 77.46 111957 
- read data line 2059   110322 22 88.21 111204 
- read data line 2060   113716 22 98.96 115443 
- read data line 2061   116532 22 109.7 117151 
- read data line 2062   116579 22 120.45 116348 
- read data line 2063   114578 22 131.19 112078 
- read data line 2064   109595 22 141.94 107514 
- read data line 2065   109335 22 152.69 112942 
- read data line 2066   115980 22 163.43 118158 
- read data line 2067   120512 22 174.18 122036 
- read data line 2068   122980 22 184.93 123246 
- read data line 2069   123190 22 195.67 122250 
- read data line 2070   122408 22 206.42 123612 
- read data line 2071   125696 22 217.16 128049 
- read data line 2072   128112 22 227.91 127180 
- read data line 2073   125404 22 238.66 123834 
- read data line 2074   121574 22 249.4 117862 
- read data line 2075   114526 22 260.15 112214 
- read data line 2076   112326 22 270.9 114926 
- read data line 2077   118620 22 281.64 121348 
- read data line 2078   124216 22 292.39 126614 
- read data line 2079   129036 22 303.13 130281 
- read data line 2080   130474 22 313.88 129796 
- read data line 2081   129208 22 324.63 128515 
- read data line 2082   129632 22 335.37 130046 
- read data line 2083   128930 22 346.12 127163 
- read data line 2084   124602 22 356.87 116690 
- read data line 2085   113072 20 11.31 110098 
- read data line 2086   108532 20 23.11 109394 
- read data line 2087   111716 20 34.92 113811 
- read data line 2088   116557 20 46.72 118822 
- read data line 2089   120358 20 58.52 121302 
- read data line 2090   121876 20 70.33 121510 
- read data line 2091   120610 20 82.13 120107 
- read data line 2092   120254 20 93.93 120978 
- read data line 2093   120790 20 105.74 118472 
- read data line 2094   116474 20 117.54 114266 
- read data line 2095   111496 20 129.34 107804 
- read data line 2096   105169 20 141.15 104044 
- read data line 2097   106026 20 152.95 108878 
- read data line 2098   112200 20 164.75 115458 
- read data line 2099   117912 20 176.56 121640 
- read data line 2100   125902 20 188.36 129360 
- read data line 2101   131640 20 200.16 132322 
- read data line 2102   133564 20 211.97 133816 
- read data line 2103   132626 20 223.77 129366 
- read data line 2104   125881 20 235.57 122742 
- read data line 2105   119704 20 247.38 117100 
- read data line 2106   114213 20 259.18 112630 
- read data line 2107   113638 20 270.98 115802 
- read data line 2108   117448 20 282.79 118772 
- read data line 2109   122536 20 294.59 126394 
- read data line 2110   132112 20 306.39 136084 
- read data line 2111   138510 20 318.2 138852 
- read data line 2112   137702 20 330 136972 
- read data line 2113   133936 20 341.8 129032 
- read data line 2114   123888 20 353.61 120888 
- read data line 2115   117804 18 2.73 115307 
- read data line 2116   114173 18 15.82 113352 
- read data line 2117   113296 18 28.91 114188 
- read data line 2118   114380 18 42 115385 
- read data line 2119   118426 18 55.09 123073 
- read data line 2120   125916 18 68.18 128750 
- read data line 2121   129608 18 81.27 129152 
- read data line 2122   126645 18 94.36 123802 
- read data line 2123   120442 18 107.45 115930 
- read data line 2124   112698 18 120.55 110145 
- read data line 2125   107792 18 133.64 106434 
- read data line 2126   106578 18 146.73 108192 
- read data line 2127   110331 18 159.82 112228 
- read data line 2128   114272 18 172.91 118316 
- read data line 2129   123718 18 186 129550 
- read data line 2130   135183 18 199.09 137102 
- read data line 2131   138316 18 212.18 136553 
- read data line 2132   132387 18 225.27 127162 
- read data line 2133   122586 18 238.36 119492 
- read data line 2134   118310 18 251.45 118758 
- read data line 2135   120208 18 264.55 120860 
- read data line 2136   120852 18 277.64 120186 
- read data line 2137   119996 18 290.73 122914 
- read data line 2138   128235 18 303.82 134417 
- read data line 2139   138760 18 316.91 140964 
- read data line 2140   140780 18 330 137568 
- read data line 2141   132292 18 343.09 125568 
- read data line 2142   120993 18 356.18 118824 
- read data line 2143   119652 16 14.08 120117 
- read data line 2144   119773 16 28.78 117450 
- read data line 2145   116176 16 43.47 116375 
- read data line 2146   120524 16 58.16 124652 
- read data line 2147   129048 16 72.86 131093 
- read data line 2148   131920 16 87.55 129136 
- read data line 2149   123385 16 102.24 117648 
- read data line 2150   113070 16 116.94 110787 
- read data line 2151   110233 16 131.63 111491 
- read data line 2152   113529 16 146.33 114197 
- read data line 2153   114457 16 161.02 113730 
- read data line 2154   115612 16 175.71 119368 
- read data line 2155   124966 16 190.41 130319 
- read data line 2156   134140 16 205.1 134128 
- read data line 2157   131876 16 219.8 127320 
- read data line 2158   122312 16 234.49 120122 
- read data line 2159   120194 16 249.18 123285 
- read data line 2160   125689 16 263.88 126240 
- read data line 2161   125428 16 278.57 123564 
- read data line 2162   122394 16 293.27 124069 
- read data line 2163   128032 16 307.96 132279 
- read data line 2164   134536 16 322.65 134274 
- read data line 2165   130482 16 337.35 125492 
- read data line 2166   120980 16 352.04 119074 
- read data line 2167   120621 14 3.49 122866 
- read data line 2168   124614 14 20.23 123838 
- read data line 2169   120333 14 36.98 117816 
- read data line 2170   117608 14 53.72 120402 
- read data line 2171   122838 14 70.47 125713 
- read data line 2172   125854 14 87.21 121346 
- read data line 2173   116848 14 103.95 112748 
- read data line 2174   110542 14 120.7 112087 
- read data line 2175   115208 14 137.44 117862 
- read data line 2176   119323 14 154.19 118086 
- read data line 2177   116683 14 170.93 115940 
- read data line 2178   118114 14 187.67 119838 
- read data line 2179   122548 14 204.42 122547 
- read data line 2180   121574 14 221.16 119922 
- read data line 2181   119506 14 237.91 121287 
- read data line 2182   124260 14 254.65 127395 
- read data line 2183   128636 14 271.4 127966 
- read data line 2184   125030 14 288.14 123012 
- read data line 2185   121355 14 304.88 122032 
- read data line 2186   122469 14 321.63 123058 
- read data line 2187   121773 14 338.37 120693 
- read data line 2188   119821 14 355.12 125017 
- read data line 2189   126296 12 18.65 125256 
- read data line 2190   121471 12 38.11 118810 
- read data line 2191   116388 12 57.57 114503 
- read data line 2192   114406 12 77.03 113998 
- read data line 2193   111200 12 96.49 110484 
- read data line 2194   110304 12 115.95 113285 
- read data line 2195   116759 12 135.41 120594 
- read data line 2196   120776 12 154.86 119960 
- read data line 2197   117983 12 174.32 116151 
- read data line 2198   114060 12 193.78 114246 
- read data line 2199   113840 12 213.24 115280 
- read data line 2200   117318 12 232.7 120730 
- read data line 2201   125298 12 252.16 128118 
- read data line 2202   129414 12 271.62 128478 
- read data line 2203   125394 12 291.08 121757 
- read data line 2204   118212 12 310.54 116518 
- read data line 2205   116296 12 330 117560 
- read data line 2206   119201 12 349.46 122433 
- read data line 2207   126122 10 4.84 127734 
- read data line 2208   126354 10 28.06 123020 
- read data line 2209   117723 10 51.29 113570 
- read data line 2210   109310 10 74.52 107672 
- read data line 2211   106280 10 97.74 108994 
- read data line 2212   112844 10 120.97 117438 
- read data line 2213   120106 10 144.19 121366 
- read data line 2214   120848 10 167.42 118495 
- read data line 2215   115282 10 190.65 112802 
- read data line 2216   113352 10 213.87 115890 
- read data line 2217   120387 10 237.1 125266 
- read data line 2218   128470 10 260.32 130050 
- read data line 2219   127916 10 283.55 124661 
- read data line 2220   120456 10 306.77 117678 
- read data line 2221   117086 10 330 119052 
- read data line 2222   122590 10 353.23 128700 
- read data line 2223   127372 8 27.6 122086 
- read data line 2224   116014 8 56.4 111339 
- read data line 2225   107794 8 85.2 108140 
- read data line 2226   112703 8 114 117430 
- read data line 2227   121146 8 142.8 123138 
- read data line 2228   121236 8 171.6 118860 
- read data line 2229   117226 8 200.4 117924 
- read data line 2230   121039 8 229.2 126436 
- read data line 2231   130992 8 258 132992 
- read data line 2232   130200 8 286.8 126734 
- read data line 2233   124288 8 315.6 122921 
- read data line 2234   124270 8 344.4 127353 
- read data line 2235   132773 6 10 129138 
- read data line 2236   122436 6 50 116633 
- read data line 2237   113612 6 90 115610 
- read data line 2238   120746 6 130 125124 
- read data line 2239   125122 6 170 124308 
- read data line 2240   124874 6 210 127863 
- read data line 2241   133360 6 250 135897 
- read data line 2242   135888 6 290 132614 
- read data line 2243   130998 6 330 132293 
- read data line 2244   137412 4 0 132860 
- read data line 2245   126598 4 60 120490 
- read data line 2246   123454 4 120 127431 
- read data line 2247   129424 4 180 129616 
- read data line 2248   134000 4 240 135905 
- read data line 2249   135863 4 300 136204 
- read data line 2250   132812 2 30 125464 
- read data line 2251   126637 2 150 131288 
- read data line 2252   133782 2 270 136983 
- read data line 2253   133782 2 270 136983 
- read data line 2254   133782 2 270 136983 
- read data line 2255   133782 2 270 136983 
- read data line 2256   133782 2 270 136983 
- read data line 2257   133782 2 270 136983 
- read data line 2258   133782 2 270 136983 
- read data line 2259   133782 2 270 136983 
- read data line 2260   133782 2 270 136983 
- read data line 2261   133782 2 270 136983 
- read data line 2262   133782 2 270 136983 
- read data line 2263   133782 2 270 136983 
- read data line 2264   133782 2 270 136983 
- read data line 2265   133782 2 270 136983 
- read data line 2266   133782 2 270 136983 
- read data line 2267   133782 2 270 136983 
- read data line 2268   133782 2 270 136983 
- read data line 2269   133782 2 270 136983 
- read data line 2270   133782 2 270 136983 
- read data line 2271   133782 2 270 136983 
- read data line 2272   133782 2 270 136983 
- read data line 2273   133782 2 270 136983 
- read data line 2274   133782 2 270 136983 
- read data line 2275   133782 2 270 136983 
- read data line 2276   133782 2 270 136983 
- read data line 2277   133782 2 270 136983 
- read data line 2278   133782 2 270 136983 
- read data line 2279   133782 2 270 136983 
- read data line 2280   133782 2 270 136983 
- read data line 2281   133782 2 270 136983 
- read data line 2282   133782 2 270 136983 
- read data line 2283   133782 2 270 136983 
- read data line 2284   133782 2 270 136983 
- read data line 2285   133782 2 270 136983 
- read data line 2286   133782 2 270 136983 
- read data line 2287   133782 2 270 136983 
- read data line 2288   133782 2 270 136983 
- read data line 2289   133782 2 270 136983 
- read data line 2290   133782 2 270 136983 
- read data line 2291   133782 2 270 136983 
- read data line 2292   133782 2 270 136983 
- read data line 2293   133782 2 270 136983 
- read data line 2294   133782 2 270 136983 
- read data line 2295   133782 2 270 136983 
- read data line 2296   133782 2 270 136983 
- read data line 2297   133782 2 270 136983 
- read data line 2298   133782 2 270 136983 
- read data line 2299   133782 2 270 136983 
- read data line 2300   133782 2 270 136983 
- read data line 2301   133782 2 270 136983 
- read data line 2302   133782 2 270 136983 
- read data line 2303   133782 2 270 136983 
- read data line 2304   133782 2 270 136983 
- read data line 2305   133782 2 270 136983 
- read data line 2306   133782 2 270 136983 
- read data line 2307   133782 2 270 136983 
- read data line 2308   133782 2 270 136983 
- read data line 2309   133782 2 270 136983 
- read data line 2310   133782 2 270 136983 
- read data line 2311   133782 2 270 136983 
- read data line 2312   133782 2 270 136983 
- read data line 2313   133782 2 270 136983 
- read data line 2314   133782 2 270 136983 
- read data line 2315   133782 2 270 136983 
- read data line 2316   133782 2 270 136983 
- read data line 2317   133782 2 270 136983 
- read data line 2318   133782 2 270 136983 
- read data line 2319   133782 2 270 136983 
- read data line 2320   133782 2 270 136983 
- read data line 2321   133782 2 270 136983 
- read data line 2322   133782 2 270 136983 
- read data line 2323   133782 2 270 136983 
- read data line 2324   133782 2 270 136983 
- read data line 2325   133782 2 270 136983 
- read data line 2326   133782 2 270 136983 
- read data line 2327   133782 2 270 136983 
- read data line 2328   133782 2 270 136983 
- read data line 2329   133782 2 270 136983 
- read data line 2330   133782 2 270 136983 
- read data line 2331   133782 2 270 136983 
- read data line 2332   133782 2 270 136983 
- read data line 2333   133782 2 270 136983 
- read data line 2334   133782 2 270 136983 
- read data line 2335   133782 2 270 136983 
- read data line 2336   133782 2 270 136983 
- read data line 2337   133782 2 270 136983 
- read data line 2338   133782 2 270 136983 
- read data line 2339   133782 2 270 136983 
- read data line 2340   133782 2 270 136983 
- read data line 2341   133782 2 270 136983 
- read data line 2342   133782 2 270 136983 
- read data line 2343   133782 2 270 136983 
- read data line 2344   133782 2 270 136983 
- read data line 2345   133782 2 270 136983 
- read data line 2346   133782 2 270 136983 
- read data line 2347   133782 2 270 136983 
- read data line 2348   133782 2 270 136983 
- read data line 2349   133782 2 270 136983 
- read data line 2350   133782 2 270 136983 
- read data line 2351   133782 2 270 136983 
- read data line 2352   133782 2 270 136983 
- read data line 2353   133782 2 270 136983 
- read data line 2354   133782 2 270 136983 
- read data line 2355   133782 2 270 136983 
- read data line 2356   133782 2 270 136983 
- read data line 2357   133782 2 270 136983 
- read data line 2358   133782 2 270 136983 
- read data line 2359   133782 2 270 136983 
- read data line 2360   133782 2 270 136983 
- read data line 2361   133782 2 270 136983 
- read data line 2362   133782 2 270 136983 
- read data line 2363   133782 2 270 136983 
- read data line 2364   133782 2 270 136983 
- read data line 2365   133782 2 270 136983 
- read data line 2366   133782 2 270 136983 
- read data line 2367   133782 2 270 136983 
- read data line 2368   133782 2 270 136983 
- read data line 2369   133782 2 270 136983 
- read data line 2370   133782 2 270 136983 
- read data line 2371   133782 2 270 136983 
- read data line 2372   133782 2 270 136983 
- read data line 2373   133782 2 270 136983 
- read data line 2374   133782 2 270 136983 
- read data line 2375   133782 2 270 136983 
- read data line 2376   133782 2 270 136983 
- read data line 2377   133782 2 270 136983 
- read data line 2378   133782 2 270 136983 
- read data line 2379   133782 2 270 136983 
- read data line 2380   133782 2 270 136983 
- read data line 2381   133782 2 270 136983 
- read data line 2382   133782 2 270 136983 
- read data line 2383   133782 2 270 136983 
- read data line 2384   133782 2 270 136983 
- read data line 2385   133782 2 270 136983 
- read data line 2386   133782 2 270 136983 
- read data line 2387   133782 2 270 136983 
- read data line 2388   133782 2 270 136983 
- read data line 2389   133782 2 270 136983 
- read data line 2390   133782 2 270 136983 
- read data line 2391   133782 2 270 136983 
- read data line 2392   133782 2 270 136983 
- read data line 2393   133782 2 270 136983 
- read data line 2394   133782 2 270 136983 
- read data line 2395   133782 2 270 136983 
- read data line 2396   133782 2 270 136983 
- read data line 2397   133782 2 270 136983 
- read data line 2398   133782 2 270 136983 
- read data line 2399   133782 2 270 136983 
- read data line 2400   133782 2 270 136983 
- read data line 2401   133782 2 270 136983 
- read data line 2402   133782 2 270 136983 
- read data line 2403   133782 2 270 136983 
- read data line 2404   133782 2 270 136983 
- read data line 2405   133782 2 270 136983 
- read data line 2406   133782 2 270 136983 
- read data line 2407   133782 2 270 136983 
- read data line 2408   133782 2 270 136983 
- read data line 2409   133782 2 270 136983 
- read data line 2410   133782 2 270 136983 
- read data line 2411   133782 2 270 136983 
- read data line 2412   133782 2 270 136983 
- read data line 2413   133782 2 270 136983 
- read data line 2414   133782 2 270 136983 
- read data line 2415   133782 2 270 136983 
- read data line 2416   133782 2 270 136983 
- read data line 2417   133782 2 270 136983 
- read data line 2418   133782 2 270 136983 
- read data line 2419   133782 2 270 136983 
- read data line 2420   133782 2 270 136983 
- read data line 2421   133782 2 270 136983 
- read data line 2422   133782 2 270 136983 
- read data line 2423   133782 2 270 136983 
- read data line 2424   133782 2 270 136983 
- read data line 2425   133782 2 270 136983 
- read data line 2426   133782 2 270 136983 
- read data line 2427   133782 2 270 136983 
- read data line 2428   133782 2 270 136983 
- read data line 2429   133782 2 270 136983 
- read data line 2430   133782 2 270 136983 
- read data line 2431   133782 2 270 136983 
- read data line 2432   133782 2 270 136983 
- read data line 2433   133782 2 270 136983 
- read data line 2434   133782 2 270 136983 
- read data line 2435   133782 2 270 136983 
- read data line 2436   133782 2 270 136983 
- read data line 2437   133782 2 270 136983 
- read data line 2438   133782 2 270 136983 
- read data line 2439   133782 2 270 136983 
- read data line 2440   133782 2 270 136983 
- read data line 2441   133782 2 270 136983 
- read data line 2442   133782 2 270 136983 
- read data line 2443   133782 2 270 136983 
- read data line 2444   133782 2 270 136983 
- read data line 2445   133782 2 270 136983 
- read data line 2446   133782 2 270 136983 
- read data line 2447   133782 2 270 136983 
- read data line 2448   133782 2 270 136983 
- read data line 2449   133782 2 270 136983 
- read data line 2450   133782 2 270 136983 
- read data line 2451   133782 2 270 136983 
- read data line 2452   133782 2 270 136983 
- read data line 2453   133782 2 270 136983 
- read data line 2454   133782 2 270 136983 
- read data line 2455   133782 2 270 136983 
- read data line 2456   133782 2 270 136983 
- read data line 2457   133782 2 270 136983 
- read data line 2458   133782 2 270 136983 
- read data line 2459   133782 2 270 136983 
- read data line 2460   133782 2 270 136983 
- read data line 2461   133782 2 270 136983 
- read data line 2462   133782 2 270 136983 
- read data line 2463   133782 2 270 136983 
- read data line 2464   133782 2 270 136983 
- read data line 2465   133782 2 270 136983 
- read data line 2466   133782 2 270 136983 
- read data line 2467   133782 2 270 136983 
- read data line 2468   133782 2 270 136983 
- read data line 2469   133782 2 270 136983 
- read data line 2470   133782 2 270 136983 
- read data line 2471   133782 2 270 136983 
- read data line 2472   133782 2 270 136983 
- read data line 2473   133782 2 270 136983 
- read data line 2474   133782 2 270 136983 
- read data line 2475   133782 2 270 136983 
- read data line 2476   133782 2 270 136983 
- read data line 2477   133782 2 270 136983 
- read data line 2478   133782 2 270 136983 
- read data line 2479   133782 2 270 136983 
- read data line 2480   133782 2 270 136983 
- read data line 2481   133782 2 270 136983 
- read data line 2482   133782 2 270 136983 
- read data line 2483   133782 2 270 136983 
- read data line 2484   133782 2 270 136983 
- read data line 2485   133782 2 270 136983 
- read data line 2486   133782 2 270 136983 
- read data line 2487   133782 2 270 136983 
- read data line 2488   133782 2 270 136983 
- read data line 2489   133782 2 270 136983 
- read data line 2490   133782 2 270 136983 
- read data line 2491   133782 2 270 136983 
- read data line 2492   133782 2 270 136983 
- read data line 2493   133782 2 270 136983 
- read data line 2494   133782 2 270 136983 
- read data line 2495   133782 2 270 136983 
- read data line 2496   133782 2 270 136983 
- read data line 2497   133782 2 270 136983 
- read data line 2498   133782 2 270 136983 
- read data line 2499   133782 2 270 136983 
- read data line 2500   133782 2 270 136983 
- read data line 2501   133782 2 270 136983 
- read data line 2502   133782 2 270 136983 
- read data line 2503   133782 2 270 136983 
- read data line 2504   133782 2 270 136983 
- read data line 2505   133782 2 270 136983 
- read data line 2506   133782 2 270 136983 
- read data line 2507   133782 2 270 136983 
- read data line 2508   133782 2 270 136983 
- read data line 2509   133782 2 270 136983 
- read data line 2510   133782 2 270 136983 
- read data line 2511   133782 2 270 136983 
- read data line 2512   133782 2 270 136983 
- read data line 2513   133782 2 270 136983 
- read data line 2514   133782 2 270 136983 
- read data line 2515   133782 2 270 136983 
- read data line 2516   133782 2 270 136983 
- read data line 2517   133782 2 270 136983 
- read data line 2518   133782 2 270 136983 
- read data line 2519   133782 2 270 136983 
- read data line 2520   133782 2 270 136983 
- read data line 2521   133782 2 270 136983 
- read data line 2522   133782 2 270 136983 
- read data line 2523   133782 2 270 136983 
- read data line 2524   133782 2 270 136983 
- read data line 2525   133782 2 270 136983 
- read data line 2526   133782 2 270 136983 
- read data line 2527   133782 2 270 136983 
- read data line 2528   133782 2 270 136983 
- read data line 2529   133782 2 270 136983 
- read data line 2530   133782 2 270 136983 
- read data line 2531   133782 2 270 136983 
- read data line 2532   133782 2 270 136983 
- read data line 2533   133782 2 270 136983 
- read data line 2534   133782 2 270 136983 
- read data line 2535   133782 2 270 136983 
- read data line 2536   133782 2 270 136983 
- read data line 2537   133782 2 270 136983 
- read data line 2538   133782 2 270 136983 
- read data line 2539   133782 2 270 136983 
- read data line 2540   133782 2 270 136983 
- read data line 2541   133782 2 270 136983 
- read data line 2542   133782 2 270 136983 
- read data line 2543   133782 2 270 136983 
- read data line 2544   133782 2 270 136983 
- read data line 2545   133782 2 270 136983 
- read data line 2546   133782 2 270 136983 
- read data line 2547   133782 2 270 136983 
- read data line 2548   133782 2 270 136983 
- read data line 2549   133782 2 270 136983 
- read data line 2550   133782 2 270 136983 
- read data line 2551   133782 2 270 136983 
- read data line 2552   133782 2 270 136983 
- read data line 2553   133782 2 270 136983 
- read data line 2554   133782 2 270 136983 
- read data line 2555   133782 2 270 136983 
- read data line 2556   133782 2 270 136983 
- read data line 2557   133782 2 270 136983 
- read data line 2558   133782 2 270 136983 
- read data line 2559   133782 2 270 136983 
- read data line 2560   133782 2 270 136983 
- read data line 2561   133782 2 270 136983 
- read data line 2562   133782 2 270 136983 
- read data line 2563   133782 2 270 136983 
- read data line 2564   133782 2 270 136983 
- read data line 2565   133782 2 270 136983 
- read data line 2566   133782 2 270 136983 
- read data line 2567   133782 2 270 136983 
- read data line 2568   133782 2 270 136983 
- read data line 2569   133782 2 270 136983 
- read data line 2570   133782 2 270 136983 
- read data line 2571   133782 2 270 136983 
- read data line 2572   133782 2 270 136983 
- read data line 2573   133782 2 270 136983 
- read data line 2574   133782 2 270 136983 
- read data line 2575   133782 2 270 136983 
- read data line 2576   133782 2 270 136983 
- read data line 2577   133782 2 270 136983 
- read data line 2578   133782 2 270 136983 
- read data line 2579   133782 2 270 136983 
- read data line 2580   133782 2 270 136983 
- read data line 2581   133782 2 270 136983 
- read data line 2582   133782 2 270 136983 
- read data line 2583   133782 2 270 136983 
- read data line 2584   133782 2 270 136983 
- read data line 2585   133782 2 270 136983 
- read data line 2586   133782 2 270 136983 
- read data line 2587   133782 2 270 136983 
- read data line 2588   133782 2 270 136983 
- read data line 2589   133782 2 270 136983 
- read data line 2590   133782 2 270 136983 
- read data line 2591   133782 2 270 136983 
- read data line 2592   133782 2 270 136983 
- read data line 2593   133782 2 270 136983 
- read data line 2594   133782 2 270 136983 
- read data line 2595   133782 2 270 136983 
- read data line 2596   133782 2 270 136983 
- read data line 2597   133782 2 270 136983 
- read data line 2598   133782 2 270 136983 
- read data line 2599   133782 2 270 136983 
- read data line 2600   133782 2 270 136983 
- read data line 2601   133782 2 270 136983 
- read data line 2602   133782 2 270 136983 
- read data line 2603   133782 2 270 136983 
- read data line 2604   133782 2 270 136983 
- read data line 2605   133782 2 270 136983 
- read data line 2606   133782 2 270 136983 
- read data line 2607   133782 2 270 136983 
- read data line 2608   133782 2 270 136983 
- read data line 2609   133782 2 270 136983 
- read data line 2610   133782 2 270 136983 
- read data line 2611   133782 2 270 136983 
- read data line 2612   133782 2 270 136983 
- read data line 2613   133782 2 270 136983 
- read data line 2614   133782 2 270 136983 
- read data line 2615   133782 2 270 136983 
- read data line 2616   133782 2 270 136983 
- read data line 2617   133782 2 270 136983 
- read data line 2618   133782 2 270 136983 
- read data line 2619   133782 2 270 136983 
- read data line 2620   133782 2 270 136983 
- read data line 2621   133782 2 270 136983 
- read data line 2622   133782 2 270 136983 
- read data line 2623   133782 2 270 136983 
- read data line 2624   133782 2 270 136983 
- read data line 2625   133782 2 270 136983 
- read data line 2626   133782 2 270 136983 
- read data line 2627   133782 2 270 136983 
- read data line 2628   133782 2 270 136983 
- read data line 2629   133782 2 270 136983 
- read data line 2630   133782 2 270 136983 
- read data line 2631   133782 2 270 136983 
- read data line 2632   133782 2 270 136983 
- read data line 2633   133782 2 270 136983 
- read data line 2634   133782 2 270 136983 
- read data line 2635   133782 2 270 136983 
- read data line 2636   133782 2 270 136983 
- read data line 2637   133782 2 270 136983 
- read data line 2638   133782 2 270 136983 
- read data line 2639   133782 2 270 136983 
- read data line 2640   133782 2 270 136983 
- read data line 2641   133782 2 270 136983 
- read data line 2642   133782 2 270 136983 
- read data line 2643   133782 2 270 136983 
- read data line 2644   133782 2 270 136983 
- read data line 2645   133782 2 270 136983 
- read data line 2646   133782 2 270 136983 
- read data line 2647   133782 2 270 136983 
- read data line 2648   133782 2 270 136983 
- read data line 2649   133782 2 270 136983 
- read data line 2650   133782 2 270 136983 
- read data line 2651   133782 2 270 136983 
- read data line 2652   133782 2 270 136983 
- read data line 2653   133782 2 270 136983 
- read data line 2654   133782 2 270 136983 
- read data line 2655   133782 2 270 136983 
- read data line 2656   133782 2 270 136983 
- read data line 2657   133782 2 270 136983 
- read data line 2658   133782 2 270 136983 
- read data line 2659   133782 2 270 136983 
- read data line 2660   133782 2 270 136983 
- read data line 2661   133782 2 270 136983 
- read data line 2662   133782 2 270 136983 
- read data line 2663   133782 2 270 136983 
- read data line 2664   133782 2 270 136983 
- read data line 2665   133782 2 270 136983 
- read data line 2666   133782 2 270 136983 
- read data line 2667   133782 2 270 136983 
- read data line 2668   133782 2 270 136983 
- read data line 2669   133782 2 270 136983 
- read data line 2670   133782 2 270 136983 
- read data line 2671   133782 2 270 136983 
- read data line 2672   133782 2 270 136983 
- read data line 2673   133782 2 270 136983 
- read data line 2674   133782 2 270 136983 
- read data line 2675   133782 2 270 136983 
- read data line 2676   133782 2 270 136983 
- read data line 2677   133782 2 270 136983 
- read data line 2678   133782 2 270 136983 
- read data line 2679   133782 2 270 136983 
- read data line 2680   133782 2 270 136983 
- read data line 2681   133782 2 270 136983 
- read data line 2682   133782 2 270 136983 
- read data line 2683   133782 2 270 136983 
- read data line 2684   133782 2 270 136983 
- read data line 2685   133782 2 270 136983 
- read data line 2686   133782 2 270 136983 
- read data line 2687   133782 2 270 136983 
- read data line 2688   133782 2 270 136983 
- read data line 2689   133782 2 270 136983 
- read data line 2690   133782 2 270 136983 
- read data line 2691   133782 2 270 136983 
- read data line 2692   133782 2 270 136983 
- read data line 2693   133782 2 270 136983 
- read data line 2694   133782 2 270 136983 
- read data line 2695   133782 2 270 136983 
- read data line 2696   133782 2 270 136983 
- read data line 2697   133782 2 270 136983 
- read data line 2698   133782 2 270 136983 
- read data line 2699   133782 2 270 136983 
- read data line 2700   133782 2 270 136983 
- read data line 2701   133782 2 270 136983 
- read data line 2702   133782 2 270 136983 
- read data line 2703   133782 2 270 136983 
- read data line 2704   133782 2 270 136983 
- read data line 2705   133782 2 270 136983 
- read data line 2706   133782 2 270 136983 
- read data line 2707   133782 2 270 136983 
- read data line 2708   133782 2 270 136983 
- read data line 2709   133782 2 270 136983 
- read data line 2710   133782 2 270 136983 
- read data line 2711   133782 2 270 136983 
- read data line 2712   133782 2 270 136983 
- read data line 2713   133782 2 270 136983 
- read data line 2714   133782 2 270 136983 
- read data line 2715   133782 2 270 136983 
- read data line 2716   133782 2 270 136983 
- read data line 2717   133782 2 270 136983 
- read data line 2718   133782 2 270 136983 
- read data line 2719   133782 2 270 136983 
- read data line 2720   133782 2 270 136983 
- read data line 2721   133782 2 270 136983 
- read data line 2722   133782 2 270 136983 
- read data line 2723   133782 2 270 136983 
- read data line 2724   133782 2 270 136983 
- read data line 2725   133782 2 270 136983 
- read data line 2726   133782 2 270 136983 
- read data line 2727   133782 2 270 136983 
- read data line 2728   133782 2 270 136983 
- read data line 2729   133782 2 270 136983 
- read data line 2730   133782 2 270 136983 
- read data line 2731   133782 2 270 136983 
- read data line 2732   133782 2 270 136983 
- read data line 2733   133782 2 270 136983 
- read data line 2734   133782 2 270 136983 
- read data line 2735   133782 2 270 136983 
- read data line 2736   133782 2 270 136983 
- read data line 2737   133782 2 270 136983 
- read data line 2738   133782 2 270 136983 
- read data line 2739   133782 2 270 136983 
- read data line 2740   133782 2 270 136983 
- read data line 2741   133782 2 270 136983 
- read data line 2742   133782 2 270 136983 
- read data line 2743   133782 2 270 136983 
- read data line 2744   133782 2 270 136983 
- read data line 2745   133782 2 270 136983 
- read data line 2746   133782 2 270 136983 
- read data line 2747   133782 2 270 136983 
- read data line 2748   133782 2 270 136983 
- read data line 2749   133782 2 270 136983 
- read data line 2750   133782 2 270 136983 
- read data line 2751   133782 2 270 136983 
- read data line 2752   133782 2 270 136983 
- read data line 2753   133782 2 270 136983 
- read data line 2754   133782 2 270 136983 
- read data line 2755   133782 2 270 136983 
- read data line 2756   133782 2 270 136983 
- read data line 2757   133782 2 270 136983 
- read data line 2758   133782 2 270 136983 
- read data line 2759   133782 2 270 136983 
- read data line 2760   133782 2 270 136983 
- read data line 2761   133782 2 270 136983 
- read data line 2762   133782 2 270 136983 
- read data line 2763   133782 2 270 136983 
- read data line 2764   133782 2 270 136983 
- read data line 2765   133782 2 270 136983 
- read data line 2766   133782 2 270 136983 
- read data line 2767   133782 2 270 136983 
- read data line 2768   133782 2 270 136983 
- read data line 2769   133782 2 270 136983 
- read data line 2770   133782 2 270 136983 
- read data line 2771   133782 2 270 136983 
- read data line 2772   133782 2 270 136983 
- read data line 2773   133782 2 270 136983 
- read data line 2774   133782 2 270 136983 
- read data line 2775   133782 2 270 136983 
- read data line 2776   133782 2 270 136983 
- read data line 2777   133782 2 270 136983 
- read data line 2778   133782 2 270 136983 
- read data line 2779   133782 2 270 136983 
- read data line 2780   133782 2 270 136983 
- read data line 2781   133782 2 270 136983 
- read data line 2782   133782 2 270 136983 
- read data line 2783   133782 2 270 136983 
- read data line 2784   133782 2 270 136983 
- read data line 2785   133782 2 270 136983 
- read data line 2786   133782 2 270 136983 
- read data line 2787   133782 2 270 136983 
- read data line 2788   133782 2 270 136983 
- read data line 2789   133782 2 270 136983 
- read data line 2790   133782 2 270 136983 
- read data line 2791   133782 2 270 136983 
- read data line 2792   133782 2 270 136983 
- read data line 2793   133782 2 270 136983 
- read data line 2794   133782 2 270 136983 
- read data line 2795   133782 2 270 136983 
- read data line 2796   133782 2 270 136983 
- read data line 2797   133782 2 270 136983 
- read data line 2798   133782 2 270 136983 
- read data line 2799   133782 2 270 136983 
- read data line 2800   133782 2 270 136983 
- read data line 2801   133782 2 270 136983 
- read data line 2802   133782 2 270 136983 
- read data line 2803   133782 2 270 136983 
- read data line 2804   133782 2 270 136983 
- read data line 2805   133782 2 270 136983 
- read data line 2806   133782 2 270 136983 
- read data line 2807   133782 2 270 136983 
- read data line 2808   133782 2 270 136983 
- read data line 2809   133782 2 270 136983 
- read data line 2810   133782 2 270 136983 
- read data line 2811   133782 2 270 136983 
- read data line 2812   133782 2 270 136983 
- read data line 2813   133782 2 270 136983 
- read data line 2814   133782 2 270 136983 
- read data line 2815   133782 2 270 136983 
- read data line 2816   133782 2 270 136983 
- read data line 2817   133782 2 270 136983 
- read data line 2818   133782 2 270 136983 
- read data line 2819   133782 2 270 136983 
- read data line 2820   133782 2 270 136983 
- read data line 2821   133782 2 270 136983 
- read data line 2822   133782 2 270 136983 
- read data line 2823   133782 2 270 136983 
- read data line 2824   133782 2 270 136983 
- read data line 2825   133782 2 270 136983 
- read data line 2826   133782 2 270 136983 
- read data line 2827   133782 2 270 136983 
- read data line 2828   133782 2 270 136983 
- read data line 2829   133782 2 270 136983 
- read data line 2830   133782 2 270 136983 
- read data line 2831   133782 2 270 136983 
- read data line 2832   133782 2 270 136983 
- read data line 2833   133782 2 270 136983 
- read data line 2834   133782 2 270 136983 
- read data line 2835   133782 2 270 136983 
- read data line 2836   133782 2 270 136983 
- read data line 2837   133782 2 270 136983 
- read data line 2838   133782 2 270 136983 
- read data line 2839   133782 2 270 136983 
- read data line 2840   133782 2 270 136983 
- read data line 2841   133782 2 270 136983 
- read data line 2842   133782 2 270 136983 
- read data line 2843   133782 2 270 136983 
- read data line 2844   133782 2 270 136983 
- read data line 2845   133782 2 270 136983 
- read data line 2846   133782 2 270 136983 
- read data line 2847   133782 2 270 136983 
- read data line 2848   133782 2 270 136983 
- read data line 2849   133782 2 270 136983 
- read data line 2850   133782 2 270 136983 
- read data line 2851   133782 2 270 136983 
- read data line 2852   133782 2 270 136983 
- read data line 2853   133782 2 270 136983 
- read data line 2854   133782 2 270 136983 
- read data line 2855   133782 2 270 136983 
- read data line 2856   133782 2 270 136983 
- read data line 2857   133782 2 270 136983 
- read data line 2858   133782 2 270 136983 
- read data line 2859   133782 2 270 136983 
- read data line 2860   133782 2 270 136983 
- read data line 2861   133782 2 270 136983 
- read data line 2862   133782 2 270 136983 
- read data line 2863   133782 2 270 136983 
- read data line 2864   133782 2 270 136983 
- read data line 2865   133782 2 270 136983 
- read data line 2866   133782 2 270 136983 
- read data line 2867   133782 2 270 136983 
- read data line 2868   133782 2 270 136983 
- read data line 2869   133782 2 270 136983 
- read data line 2870   133782 2 270 136983 
- read data line 2871   133782 2 270 136983 
- read data line 2872   133782 2 270 136983 
- read data line 2873   133782 2 270 136983 
- read data line 2874   133782 2 270 136983 
- read data line 2875   133782 2 270 136983 
- read data line 2876   133782 2 270 136983 
- read data line 2877   133782 2 270 136983 
- read data line 2878   133782 2 270 136983 
- read data line 2879   133782 2 270 136983 
- read data line 2880   133782 2 270 136983 
- read data line 2881   133782 2 270 136983 
- read data line 2882   133782 2 270 136983 
- read data line 2883   133782 2 270 136983 
- read data line 2884   133782 2 270 136983 
- read data line 2885   133782 2 270 136983 
- read data line 2886   133782 2 270 136983 
- read data line 2887   133782 2 270 136983 
- read data line 2888   133782 2 270 136983 
- read data line 2889   133782 2 270 136983 
- read data line 2890   133782 2 270 136983 
- read data line 2891   133782 2 270 136983 
- read data line 2892   133782 2 270 136983 
- read data line 2893   133782 2 270 136983 
- read data line 2894   133782 2 270 136983 
- read data line 2895   133782 2 270 136983 
- read data line 2896   133782 2 270 136983 
- read data line 2897   133782 2 270 136983 
- read data line 2898   133782 2 270 136983 
- read data line 2899   133782 2 270 136983 
- read data line 2900   133782 2 270 136983 
- read data line 2901   133782 2 270 136983 
- read data line 2902   133782 2 270 136983 
- read data line 2903   133782 2 270 136983 
- read data line 2904   133782 2 270 136983 
- read data line 2905   133782 2 270 136983 
- read data line 2906   133782 2 270 136983 
- read data line 2907   133782 2 270 136983 
- read data line 2908   133782 2 270 136983 
- read data line 2909   133782 2 270 136983 
- read data line 2910   133782 2 270 136983 
- read data line 2911   133782 2 270 136983 
- read data line 2912   133782 2 270 136983 
- read data line 2913   133782 2 270 136983 
- read data line 2914   133782 2 270 136983 
- read data line 2915   133782 2 270 136983 
- read data line 2916   133782 2 270 136983 
- read data line 2917   133782 2 270 136983 
- read data line 2918   133782 2 270 136983 
- read data line 2919   133782 2 270 136983 
- read data line 2920   133782 2 270 136983 
- read data line 2921   133782 2 270 136983 
- read data line 2922   133782 2 270 136983 
- read data line 2923   133782 2 270 136983 
- read data line 2924   133782 2 270 136983 
- read data line 2925   133782 2 270 136983 
- read data line 2926   133782 2 270 136983 
- read data line 2927   133782 2 270 136983 
- read data line 2928   133782 2 270 136983 
- read data line 2929   133782 2 270 136983 
- read data line 2930   133782 2 270 136983 
- read data line 2931   133782 2 270 136983 
- read data line 2932   133782 2 270 136983 
- read data line 2933   133782 2 270 136983 
- read data line 2934   133782 2 270 136983 
- read data line 2935   133782 2 270 136983 
- read data line 2936   133782 2 270 136983 
- read data line 2937   133782 2 270 136983 
- read data line 2938   133782 2 270 136983 
- read data line 2939   133782 2 270 136983 
- read data line 2940   133782 2 270 136983 
- read data line 2941   133782 2 270 136983 
- read data line 2942   133782 2 270 136983 
- read data line 2943   133782 2 270 136983 
- read data line 2944   133782 2 270 136983 
- read data line 2945   133782 2 270 136983 
- read data line 2946   133782 2 270 136983 
- read data line 2947   133782 2 270 136983 
- read data line 2948   133782 2 270 136983 
- read data line 2949   133782 2 270 136983 
- read data line 2950   133782 2 270 136983 
- read data line 2951   133782 2 270 136983 
- read data line 2952   133782 2 270 136983 
- read data line 2953   133782 2 270 136983 
- read data line 2954   133782 2 270 136983 
- read data line 2955   133782 2 270 136983 
- read data line 2956   133782 2 270 136983 
- read data line 2957   133782 2 270 136983 
- read data line 2958   133782 2 270 136983 
- read data line 2959   133782 2 270 136983 
- read data line 2960   133782 2 270 136983 
- read data line 2961   133782 2 270 136983 
- read data line 2962   133782 2 270 136983 
- read data line 2963   133782 2 270 136983 
- read data line 2964   133782 2 270 136983 
- read data line 2965   133782 2 270 136983 
- read data line 2966   133782 2 270 136983 
- read data line 2967   133782 2 270 136983 
- read data line 2968   133782 2 270 136983 
- read data line 2969   133782 2 270 136983 
- read data line 2970   133782 2 270 136983 
- read data line 2971   133782 2 270 136983 
- read data line 2972   133782 2 270 136983 
- read data line 2973   133782 2 270 136983 
- read data line 2974   133782 2 270 136983 
- read data line 2975   133782 2 270 136983 
- read data line 2976   133782 2 270 136983 
- read data line 2977   133782 2 270 136983 
- read data line 2978   133782 2 270 136983 
- read data line 2979   133782 2 270 136983 
- read data line 2980   133782 2 270 136983 
- read data line 2981   133782 2 270 136983 
- read data line 2982   133782 2 270 136983 
- read data line 2983   133782 2 270 136983 
- read data line 2984   133782 2 270 136983 
- read data line 2985   133782 2 270 136983 
- read data line 2986   133782 2 270 136983 
- read data line 2987   133782 2 270 136983 
- read data line 2988   133782 2 270 136983 
- read data line 2989   133782 2 270 136983 
- read data line 2990   133782 2 270 136983 
- read data line 2991   133782 2 270 136983 
- read data line 2992   133782 2 270 136983 
- read data line 2993   133782 2 270 136983 
- read data line 2994   133782 2 270 136983 
- read data line 2995   133782 2 270 136983 
- read data line 2996   133782 2 270 136983 
- read data line 2997   133782 2 270 136983 
- read data line 2998   133782 2 270 136983 
- read data line 2999   133782 2 270 136983 
- read data line 3000   133782 2 270 136983 
- read data line 3001   133782 2 270 136983 
- read data line 3002   133782 2 270 136983 
- read data line 3003   133782 2 270 136983 
- read data line 3004   133782 2 270 136983 
- read data line 3005   133782 2 270 136983 
- read data line 3006   133782 2 270 136983 
- read data line 3007   133782 2 270 136983 
- read data line 3008   133782 2 270 136983 
- read data line 3009   133782 2 270 136983 
- read data line 3010   133782 2 270 136983 
- read data line 3011   133782 2 270 136983 
- read data line 3012   133782 2 270 136983 
- read data line 3013   133782 2 270 136983 
- read data line 3014   133782 2 270 136983 
- read data line 3015   133782 2 270 136983 
- read data line 3016   133782 2 270 136983 
- read data line 3017   133782 2 270 136983 
- read data line 3018   133782 2 270 136983 
- read data line 3019   133782 2 270 136983 
- read data line 3020   133782 2 270 136983 
- read data line 3021   133782 2 270 136983 
- read data line 3022   133782 2 270 136983 
- read data line 3023   133782 2 270 136983 
- read data line 3024   133782 2 270 136983 
- read data line 3025   133782 2 270 136983 
- read data line 3026   133782 2 270 136983 
- read data line 3027   133782 2 270 136983 
- read data line 3028   133782 2 270 136983 
- read data line 3029   133782 2 270 136983 
- read data line 3030   133782 2 270 136983 
- read data line 3031   133782 2 270 136983 
- read data line 3032   133782 2 270 136983 
- read data line 3033   133782 2 270 136983 
- read data line 3034   133782 2 270 136983 
- read data line 3035   133782 2 270 136983 
- read data line 3036   133782 2 270 136983 
- read data line 3037   133782 2 270 136983 
- read data line 3038   133782 2 270 136983 
- read data line 3039   133782 2 270 136983 
- read data line 3040   133782 2 270 136983 
- read data line 3041   133782 2 270 136983 
- read data line 3042   133782 2 270 136983 
- read data line 3043   133782 2 270 136983 
- read data line 3044   133782 2 270 136983 
- read data line 3045   133782 2 270 136983 
- read data line 3046   133782 2 270 136983 
- read data line 3047   133782 2 270 136983 
- read data line 3048   133782 2 270 136983 
- read data line 3049   133782 2 270 136983 
- read data line 3050   133782 2 270 136983 
- read data line 3051   133782 2 270 136983 
- read data line 3052   133782 2 270 136983 
- read data line 3053   133782 2 270 136983 
- read data line 3054   133782 2 270 136983 
- read data line 3055   133782 2 270 136983 
- read data line 3056   133782 2 270 136983 
- read data line 3057   133782 2 270 136983 
- read data line 3058   133782 2 270 136983 
- read data line 3059   133782 2 270 136983 
- read data line 3060   133782 2 270 136983 
- read data line 3061   133782 2 270 136983 
- read data line 3062   133782 2 270 136983 
- read data line 3063   133782 2 270 136983 
- read data line 3064   133782 2 270 136983 
- read data line 3065   133782 2 270 136983 
- read data line 3066   133782 2 270 136983 
- read data line 3067   133782 2 270 136983 
- read data line 3068   133782 2 270 136983 
- read data line 3069   133782 2 270 136983 
- read data line 3070   133782 2 270 136983 
- read data line 3071   133782 2 270 136983 
- read data line 3072   133782 2 270 136983 
- read data line 3073   133782 2 270 136983 
- read data line 3074   133782 2 270 136983 
- read data line 3075   133782 2 270 136983 
- read data line 3076   133782 2 270 136983 
- read data line 3077   133782 2 270 136983 
- read data line 3078   133782 2 270 136983 
- read data line 3079   133782 2 270 136983 
- read data line 3080   133782 2 270 136983 
- read data line 3081   133782 2 270 136983 
- read data line 3082   133782 2 270 136983 
- read data line 3083   133782 2 270 136983 
- read data line 3084   133782 2 270 136983 
- read data line 3085   133782 2 270 136983 
- read data line 3086   133782 2 270 136983 
- read data line 3087   133782 2 270 136983 
- read data line 3088   133782 2 270 136983 
- read data line 3089   133782 2 270 136983 
- read data line 3090   133782 2 270 136983 
- read data line 3091   133782 2 270 136983 
- read data line 3092   133782 2 270 136983 
- read data line 3093   133782 2 270 136983 
- read data line 3094   133782 2 270 136983 
- read data line 3095   133782 2 270 136983 
- read data line 3096   133782 2 270 136983 
- read data line 3097   133782 2 270 136983 
- read data line 3098   133782 2 270 136983 
- read data line 3099   133782 2 270 136983 
- read data line 3100   133782 2 270 136983 
- read data line 3101   133782 2 270 136983 
- read data line 3102   133782 2 270 136983 
- read data line 3103   133782 2 270 136983 
- read data line 3104   133782 2 270 136983 
- read data line 3105   133782 2 270 136983 
- read data line 3106   133782 2 270 136983 
- read data line 3107   133782 2 270 136983 
- read data line 3108   133782 2 270 136983 
- read data line 3109   133782 2 270 136983 
- read data line 3110   133782 2 270 136983 
- read data line 3111   133782 2 270 136983 
- read data line 3112   133782 2 270 136983 
- read data line 3113   133782 2 270 136983 
- read data line 3114   133782 2 270 136983 
- read data line 3115   133782 2 270 136983 
- read data line 3116   133782 2 270 136983 
- read data line 3117   133782 2 270 136983 
- read data line 3118   133782 2 270 136983 
- read data line 3119   133782 2 270 136983 
- read data line 3120   133782 2 270 136983 
- read data line 3121   133782 2 270 136983 
- read data line 3122   133782 2 270 136983 
- read data line 3123   133782 2 270 136983 
- read data line 3124   133782 2 270 136983 
- read data line 3125   133782 2 270 136983 
- read data line 3126   133782 2 270 136983 
- read data line 3127   133782 2 270 136983 
- read data line 3128   133782 2 270 136983 
- read data line 3129   133782 2 270 136983 
- read data line 3130   133782 2 270 136983 
- read data line 3131   133782 2 270 136983 
- read data line 3132   133782 2 270 136983 
- read data line 3133   133782 2 270 136983 
- read data line 3134   133782 2 270 136983 
- read data line 3135   133782 2 270 136983 
- read data line 3136   133782 2 270 136983 
- read data line 3137   133782 2 270 136983 
- read data line 3138   133782 2 270 136983 
- read data line 3139   133782 2 270 136983 
- read data line 3140   133782 2 270 136983 
- read data line 3141   133782 2 270 136983 
- read data line 3142   133782 2 270 136983 
- read data line 3143   133782 2 270 136983 
- read data line 3144   133782 2 270 136983 
- read data line 3145   133782 2 270 136983 
- read data line 3146   133782 2 270 136983 
- read data line 3147   133782 2 270 136983 
- read data line 3148   133782 2 270 136983 
- read data line 3149   133782 2 270 136983 
- read data line 3150   133782 2 270 136983 
- read data line 3151   133782 2 270 136983 
- read data line 3152   133782 2 270 136983 
- read data line 3153   133782 2 270 136983 
- read data line 3154   133782 2 270 136983 
- read data line 3155   133782 2 270 136983 
- read data line 3156   133782 2 270 136983 
- read data line 3157   133782 2 270 136983 
- read data line 3158   133782 2 270 136983 
- read data line 3159   133782 2 270 136983 
- read data line 3160   133782 2 270 136983 
- read data line 3161   133782 2 270 136983 
- read data line 3162   133782 2 270 136983 
- read data line 3163   133782 2 270 136983 
- read data line 3164   133782 2 270 136983 
- read data line 3165   133782 2 270 136983 
- read data line 3166   133782 2 270 136983 
- read data line 3167   133782 2 270 136983 
- read data line 3168   133782 2 270 136983 
- read data line 3169   133782 2 270 136983 
- read data line 3170   133782 2 270 136983 
- read data line 3171   133782 2 270 136983 
- read data line 3172   133782 2 270 136983 
- read data line 3173   133782 2 270 136983 
- read data line 3174   133782 2 270 136983 
- read data line 3175   133782 2 270 136983 
- read data line 3176   133782 2 270 136983 
- read data line 3177   133782 2 270 136983 
- read data line 3178   133782 2 270 136983 
- read data line 3179   133782 2 270 136983 
- read data line 3180   133782 2 270 136983 
- read data line 3181   133782 2 270 136983 
- read data line 3182   133782 2 270 136983 
- read data line 3183   133782 2 270 136983 
- read data line 3184   133782 2 270 136983 
- read data line 3185   133782 2 270 136983 
- read data line 3186   133782 2 270 136983 
- read data line 3187   133782 2 270 136983 
- read data line 3188   133782 2 270 136983 
- read data line 3189   133782 2 270 136983 
- read data line 3190   133782 2 270 136983 
- read data line 3191   133782 2 270 136983 
- read data line 3192   133782 2 270 136983 
- read data line 3193   133782 2 270 136983 
- read data line 3194   133782 2 270 136983 
- read data line 3195   133782 2 270 136983 
- read data line 3196   133782 2 270 136983 
- read data line 3197   133782 2 270 136983 
- read data line 3198   133782 2 270 136983 
- read data line 3199   133782 2 270 136983 
- read data line 3200   133782 2 270 136983 
- read data line 3201   133782 2 270 136983 
- read data line 3202   133782 2 270 136983 
- read data line 3203   133782 2 270 136983 
- read data line 3204   133782 2 270 136983 
- read data line 3205   133782 2 270 136983 
- read data line 3206   133782 2 270 136983 
- read data line 3207   133782 2 270 136983 
- read data line 3208   133782 2 270 136983 
- read data line 3209   133782 2 270 136983 
- read data line 3210   133782 2 270 136983 
- read data line 3211   133782 2 270 136983 
- read data line 3212   133782 2 270 136983 
- read data line 3213   133782 2 270 136983 
- read data line 3214   133782 2 270 136983 
- read data line 3215   133782 2 270 136983 
- read data line 3216   133782 2 270 136983 
- read data line 3217   133782 2 270 136983 
- read data line 3218   133782 2 270 136983 
- read data line 3219   133782 2 270 136983 
- read data line 3220   133782 2 270 136983 
- read data line 3221   133782 2 270 136983 
- read data line 3222   133782 2 270 136983 
- read data line 3223   133782 2 270 136983 
- read data line 3224   133782 2 270 136983 
- read data line 3225   133782 2 270 136983 
- read data line 3226   133782 2 270 136983 
- read data line 3227   133782 2 270 136983 
- read data line 3228   133782 2 270 136983 
- read data line 3229   133782 2 270 136983 
- read data line 3230   133782 2 270 136983 
- read data line 3231   133782 2 270 136983 
- read data line 3232   133782 2 270 136983 
- read data line 3233   133782 2 270 136983 
- read data line 3234   133782 2 270 136983 
- read data line 3235   133782 2 270 136983 
- read data line 3236   133782 2 270 136983 
- read data line 3237   133782 2 270 136983 
- read data line 3238   133782 2 270 136983 
- read data line 3239   133782 2 270 136983 
- read data line 3240   133782 2 270 136983 
- read data line 3241   133782 2 270 136983 
- read data line 3242   133782 2 270 136983 
- read data line 3243   133782 2 270 136983 
- read data line 3244   133782 2 270 136983 
- read data line 3245   133782 2 270 136983 
- read data line 3246   133782 2 270 136983 
- read data line 3247   133782 2 270 136983 
- read data line 3248   133782 2 270 136983 
- read data line 3249   133782 2 270 136983 
- read data line 3250   133782 2 270 136983 
- read data line 3251   133782 2 270 136983 
- read data line 3252   133782 2 270 136983 
- read data line 3253   133782 2 270 136983 
- read data line 3254   133782 2 270 136983 
- read data line 3255   133782 2 270 136983 
- read data line 3256   133782 2 270 136983 
- read data line 3257   133782 2 270 136983 
- read data line 3258   133782 2 270 136983 
- read data line 3259   133782 2 270 136983 
- read data line 3260   133782 2 270 136983 
- read data line 3261   133782 2 270 136983 
- read data line 3262   133782 2 270 136983 
- read data line 3263   133782 2 270 136983 
- read data line 3264   133782 2 270 136983 
- read data line 3265   133782 2 270 136983 
- read data line 3266   133782 2 270 136983 
- read data line 3267   133782 2 270 136983 
- read data line 3268   133782 2 270 136983 
- read data line 3269   133782 2 270 136983 
- read data line 3270   133782 2 270 136983 
- read data line 3271   133782 2 270 136983 
- read data line 3272   133782 2 270 136983 
- read data line 3273   133782 2 270 136983 
- read data line 3274   133782 2 270 136983 
- read data line 3275   133782 2 270 136983 
- read data line 3276   133782 2 270 136983 
- read data line 3277   133782 2 270 136983 
- read data line 3278   133782 2 270 136983 
- read data line 3279   133782 2 270 136983 
- read data line 3280   133782 2 270 136983 
- read data line 3281   133782 2 270 136983 
- read data line 3282   133782 2 270 136983 
- read data line 3283   133782 2 270 136983 
- read data line 3284   133782 2 270 136983 
- read data line 3285   133782 2 270 136983 
- read data line 3286   133782 2 270 136983 
- read data line 3287   133782 2 270 136983 
- read data line 3288   133782 2 270 136983 
- read data line 3289   133782 2 270 136983 
- read data line 3290   133782 2 270 136983 
- read data line 3291   133782 2 270 136983 
- read data line 3292   133782 2 270 136983 
- read data line 3293   133782 2 270 136983 
- read data line 3294   133782 2 270 136983 
- read data line 3295   133782 2 270 136983 
- read data line 3296   133782 2 270 136983 
- read data line 3297   133782 2 270 136983 
- read data line 3298   133782 2 270 136983 
- read data line 3299   133782 2 270 136983 
- read data line 3300   133782 2 270 136983 
- read data line 3301   133782 2 270 136983 
- read data line 3302   133782 2 270 136983 
- read data line 3303   133782 2 270 136983 
- read data line 3304   133782 2 270 136983 
- read data line 3305   133782 2 270 136983 
- read data line 3306   133782 2 270 136983 
- read data line 3307   133782 2 270 136983 
- read data line 3308   133782 2 270 136983 
- read data line 3309   133782 2 270 136983 
- read data line 3310   133782 2 270 136983 
- read data line 3311   133782 2 270 136983 
- read data line 3312   133782 2 270 136983 
- read data line 3313   133782 2 270 136983 
- read data line 3314   133782 2 270 136983 
- read data line 3315   133782 2 270 136983 
- read data line 3316   133782 2 270 136983 
- read data line 3317   133782 2 270 136983 
- read data line 3318   133782 2 270 136983 
- read data line 3319   133782 2 270 136983 
- read data line 3320   133782 2 270 136983 
- read data line 3321   133782 2 270 136983 
- read data line 3322   133782 2 270 136983 
- read data line 3323   133782 2 270 136983 
- read data line 3324   133782 2 270 136983 
- read data line 3325   133782 2 270 136983 
- read data line 3326   133782 2 270 136983 
- read data line 3327   133782 2 270 136983 
- read data line 3328   133782 2 270 136983 
- read data line 3329   133782 2 270 136983 
- read data line 3330   133782 2 270 136983 
- read data line 3331   133782 2 270 136983 
- read data line 3332   133782 2 270 136983 
- read data line 3333   133782 2 270 136983 
- read data line 3334   133782 2 270 136983 
- read data line 3335   133782 2 270 136983 
- read data line 3336   133782 2 270 136983 
- read data line 3337   133782 2 270 136983 
- read data line 3338   133782 2 270 136983 
- read data line 3339   133782 2 270 136983 
- read data line 3340   133782 2 270 136983 
- read data line 3341   133782 2 270 136983 
- read data line 3342   133782 2 270 136983 
- read data line 3343   133782 2 270 136983 
- read data line 3344   133782 2 270 136983 
- read data line 3345   133782 2 270 136983 
- read data line 3346   133782 2 270 136983 
- read data line 3347   133782 2 270 136983 
- read data line 3348   133782 2 270 136983 
- read data line 3349   133782 2 270 136983 
- read data line 3350   133782 2 270 136983 
- read data line 3351   133782 2 270 136983 
- read data line 3352   133782 2 270 136983 
- read data line 3353   133782 2 270 136983 
- read data line 3354   133782 2 270 136983 
- read data line 3355   133782 2 270 136983 
- read data line 3356   133782 2 270 136983 
- read data line 3357   133782 2 270 136983 
- read data line 3358   133782 2 270 136983 
- read data line 3359   133782 2 270 136983 
- read data line 3360   133782 2 270 136983 
- read data line 3361   133782 2 270 136983 
- read data line 3362   133782 2 270 136983 
- read data line 3363   133782 2 270 136983 
- read data line 3364   133782 2 270 136983 
- read data line 3365   133782 2 270 136983 
- read data line 3366   133782 2 270 136983 
- read data line 3367   133782 2 270 136983 
- read data line 3368   133782 2 270 136983 
- read data line 3369   133782 2 270 136983 
- read data line 3370   133782 2 270 136983 
- read data line 3371   133782 2 270 136983 
- read data line 3372   133782 2 270 136983 
- read data line 3373   133782 2 270 136983 
- read data line 3374   133782 2 270 136983 
- read data line 3375   133782 2 270 136983 
- read data line 3376   133782 2 270 136983 
- read data line 3377   133782 2 270 136983 
- read data line 3378   133782 2 270 136983 
- read data line 3379   133782 2 270 136983 
- read data line 3380   133782 2 270 136983 
- read data line 3381   133782 2 270 136983 
- read data line 3382   133782 2 270 136983 
- read data line 3383   133782 2 270 136983 
- read data line 3384   133782 2 270 136983 
- read data line 3385   133782 2 270 136983 
- read data line 3386   133782 2 270 136983 
- read data line 3387   133782 2 270 136983 
- read data line 3388   133782 2 270 136983 
- read data line 3389   133782 2 270 136983 
- read data line 3390   133782 2 270 136983 
- read data line 3391   133782 2 270 136983 
- read data line 3392   133782 2 270 136983 
- read data line 3393   133782 2 270 136983 
- read data line 3394   133782 2 270 136983 
- read data line 3395   133782 2 270 136983 
- read data line 3396   133782 2 270 136983 
- read data line 3397   133782 2 270 136983 
- read data line 3398   133782 2 270 136983 
- read data line 3399   133782 2 270 136983 
- read data line 3400   133782 2 270 136983 
- read data line 3401   133782 2 270 136983 
- read data line 3402   133782 2 270 136983 
- read data line 3403   133782 2 270 136983 
- read data line 3404   133782 2 270 136983 
- read data line 3405   133782 2 270 136983 
- read data line 3406   133782 2 270 136983 
- read data line 3407   133782 2 270 136983 
- read data line 3408   133782 2 270 136983 
- read data line 3409   133782 2 270 136983 
- read data line 3410   133782 2 270 136983 
- read data line 3411   133782 2 270 136983 
- read data line 3412   133782 2 270 136983 
- read data line 3413   133782 2 270 136983 
- read data line 3414   133782 2 270 136983 
- read data line 3415   133782 2 270 136983 
- read data line 3416   133782 2 270 136983 
- read data line 3417   133782 2 270 136983 
- read data line 3418   133782 2 270 136983 
- read data line 3419   133782 2 270 136983 
- read data line 3420   133782 2 270 136983 
- read data line 3421   133782 2 270 136983 
- read data line 3422   133782 2 270 136983 
- read data line 3423   133782 2 270 136983 
- read data line 3424   133782 2 270 136983 
- read data line 3425   133782 2 270 136983 
- read data line 3426   133782 2 270 136983 
- read data line 3427   133782 2 270 136983 
- read data line 3428   133782 2 270 136983 
- read data line 3429   133782 2 270 136983 
- read data line 3430   133782 2 270 136983 
- read data line 3431   133782 2 270 136983 
- read data line 3432   133782 2 270 136983 
- read data line 3433   133782 2 270 136983 
- read data line 3434   133782 2 270 136983 
- read data line 3435   133782 2 270 136983 
- read data line 3436   133782 2 270 136983 
- read data line 3437   133782 2 270 136983 
- read data line 3438   133782 2 270 136983 
- read data line 3439   133782 2 270 136983 
- read data line 3440   133782 2 270 136983 
- read data line 3441   133782 2 270 136983 
- read data line 3442   133782 2 270 136983 
- read data line 3443   133782 2 270 136983 
- read data line 3444   133782 2 270 136983 
- read data line 3445   133782 2 270 136983 
- read data line 3446   133782 2 270 136983 
- read data line 3447   133782 2 270 136983 
- read data line 3448   133782 2 270 136983 
- read data line 3449   133782 2 270 136983 
- read data line 3450   133782 2 270 136983 
- read data line 3451   133782 2 270 136983 
- read data line 3452   133782 2 270 136983 
- read data line 3453   133782 2 270 136983 
- read data line 3454   133782 2 270 136983 
- read data line 3455   133782 2 270 136983 
- read data line 3456   133782 2 270 136983 
- read data line 3457   133782 2 270 136983 
- read data line 3458   133782 2 270 136983 
- read data line 3459   133782 2 270 136983 
- read data line 3460   133782 2 270 136983 
- read data line 3461   133782 2 270 136983 
- read data line 3462   133782 2 270 136983 
- read data line 3463   133782 2 270 136983 
- read data line 3464   133782 2 270 136983 
- read data line 3465   133782 2 270 136983 
- read data line 3466   133782 2 270 136983 
- read data line 3467   133782 2 270 136983 
- read data line 3468   133782 2 270 136983 
- read data line 3469   133782 2 270 136983 
- read data line 3470   133782 2 270 136983 
- read data line 3471   133782 2 270 136983 
- read data line 3472   133782 2 270 136983 
- read data line 3473   133782 2 270 136983 
- read data line 3474   133782 2 270 136983 
- read data line 3475   133782 2 270 136983 
- read data line 3476   133782 2 270 136983 
- read data line 3477   133782 2 270 136983 
- read data line 3478   133782 2 270 136983 
- read data line 3479   133782 2 270 136983 
- read data line 3480   133782 2 270 136983 
- read data line 3481   133782 2 270 136983 
- read data line 3482   133782 2 270 136983 
- read data line 3483   133782 2 270 136983 
- read data line 3484   133782 2 270 136983 
- read data line 3485   133782 2 270 136983 
- read data line 3486   133782 2 270 136983 
- read data line 3487   133782 2 270 136983 
- read data line 3488   133782 2 270 136983 
- read data line 3489   133782 2 270 136983 
- read data line 3490   133782 2 270 136983 
- read data line 3491   133782 2 270 136983 
- read data line 3492   133782 2 270 136983 
- read data line 3493   133782 2 270 136983 
- read data line 3494   133782 2 270 136983 
- read data line 3495   133782 2 270 136983 
- read data line 3496   133782 2 270 136983 
- read data line 3497   133782 2 270 136983 
- read data line 3498   133782 2 270 136983 
- read data line 3499   133782 2 270 136983 
- read data line 3500   133782 2 270 136983 
- read data line 3501   133782 2 270 136983 
- read data line 3502   133782 2 270 136983 
- read data line 3503   133782 2 270 136983 
- read data line 3504   133782 2 270 136983 
- read data line 3505   133782 2 270 136983 
- read data line 3506   133782 2 270 136983 
- read data line 3507   133782 2 270 136983 
- read data line 3508   133782 2 270 136983 
- read data line 3509   133782 2 270 136983 
- read data line 3510   133782 2 270 136983 
- read data line 3511   133782 2 270 136983 
- read data line 3512   133782 2 270 136983 
- read data line 3513   133782 2 270 136983 
- read data line 3514   133782 2 270 136983 
- read data line 3515   133782 2 270 136983 
- read data line 3516   133782 2 270 136983 
- read data line 3517   133782 2 270 136983 
- read data line 3518   133782 2 270 136983 
- read data line 3519   133782 2 270 136983 
- read data line 3520   133782 2 270 136983 
- read data line 3521   133782 2 270 136983 
- read data line 3522   133782 2 270 136983 
- read data line 3523   133782 2 270 136983 
- read data line 3524   133782 2 270 136983 
- read data line 3525   133782 2 270 136983 
- read data line 3526   133782 2 270 136983 
- read data line 3527   133782 2 270 136983 
- read data line 3528   133782 2 270 136983 
- read data line 3529   133782 2 270 136983 
- read data line 3530   133782 2 270 136983 
- read data line 3531   133782 2 270 136983 
- read data line 3532   133782 2 270 136983 
- read data line 3533   133782 2 270 136983 
- read data line 3534   133782 2 270 136983 
- read data line 3535   133782 2 270 136983 
- read data line 3536   133782 2 270 136983 
- read data line 3537   133782 2 270 136983 
- read data line 3538   133782 2 270 136983 
- read data line 3539   133782 2 270 136983 
- read data line 3540   133782 2 270 136983 
- read data line 3541   133782 2 270 136983 
- read data line 3542   133782 2 270 136983 
- read data line 3543   133782 2 270 136983 
- read data line 3544   133782 2 270 136983 
- read data line 3545   133782 2 270 136983 
- read data line 3546   133782 2 270 136983 
- read data line 3547   133782 2 270 136983 
- read data line 3548   133782 2 270 136983 
- read data line 3549   133782 2 270 136983 
- read data line 3550   133782 2 270 136983 
- read data line 3551   133782 2 270 136983 
- read data line 3552   133782 2 270 136983 
- read data line 3553   133782 2 270 136983 
- read data line 3554   133782 2 270 136983 
- read data line 3555   133782 2 270 136983 
- read data line 3556   133782 2 270 136983 
- read data line 3557   133782 2 270 136983 
- read data line 3558   133782 2 270 136983 
- read data line 3559   133782 2 270 136983 
- read data line 3560   133782 2 270 136983 
- read data line 3561   133782 2 270 136983 
- read data line 3562   133782 2 270 136983 
- read data line 3563   133782 2 270 136983 
- read data line 3564   133782 2 270 136983 
- read data line 3565   133782 2 270 136983 
- read data line 3566   133782 2 270 136983 
- read data line 3567   133782 2 270 136983 
- read data line 3568   133782 2 270 136983 
- read data line 3569   133782 2 270 136983 
- read data line 3570   133782 2 270 136983 
- read data line 3571   133782 2 270 136983 
- read data line 3572   133782 2 270 136983 
- read data line 3573   133782 2 270 136983 
- read data line 3574   133782 2 270 136983 
- read data line 3575   133782 2 270 136983 
- read data line 3576   133782 2 270 136983 
- read data line 3577   133782 2 270 136983 
- read data line 3578   133782 2 270 136983 
- read data line 3579   133782 2 270 136983 
- read data line 3580   133782 2 270 136983 
- read data line 3581   133782 2 270 136983 
- read data line 3582   133782 2 270 136983 
- read data line 3583   133782 2 270 136983 
- read data line 3584   133782 2 270 136983 
- read data line 3585   133782 2 270 136983 
- read data line 3586   133782 2 270 136983 
- read data line 3587   133782 2 270 136983 
- read data line 3588   133782 2 270 136983 
- read data line 3589   133782 2 270 136983 
- read data line 3590   133782 2 270 136983 
- read data line 3591   133782 2 270 136983 
- read data line 3592   133782 2 270 136983 
- read data line 3593   133782 2 270 136983 
- read data line 3594   133782 2 270 136983 
- read data line 3595   133782 2 270 136983 
- read data line 3596   133782 2 270 136983 
- read data line 3597   133782 2 270 136983 
- read data line 3598   133782 2 270 136983 
- read data line 3599   133782 2 270 136983 
- read data line 3600   133782 2 270 136983 
- read data line 3601   133782 2 270 136983 
- read data line 3602   133782 2 270 136983 
- read data line 3603   133782 2 270 136983 
- read data line 3604   133782 2 270 136983 
- read data line 3605   133782 2 270 136983 
- read data line 3606   133782 2 270 136983 
- read data line 3607   133782 2 270 136983 
- read data line 3608   133782 2 270 136983 
- read data line 3609   133782 2 270 136983 
- read data line 3610   133782 2 270 136983 
- read data line 3611   133782 2 270 136983 
- read data line 3612   133782 2 270 136983 
- read data line 3613   133782 2 270 136983 
- read data line 3614   133782 2 270 136983 
- read data line 3615   133782 2 270 136983 
- read data line 3616   133782 2 270 136983 
- read data line 3617   133782 2 270 136983 
- read data line 3618   133782 2 270 136983 
- read data line 3619   133782 2 270 136983 
- read data line 3620   133782 2 270 136983 
- read data line 3621   133782 2 270 136983 
- read data line 3622   133782 2 270 136983 
- read data line 3623   133782 2 270 136983 
- read data line 3624   133782 2 270 136983 
- read data line 3625   133782 2 270 136983 
- read data line 3626   133782 2 270 136983 
- read data line 3627   133782 2 270 136983 
- read data line 3628   133782 2 270 136983 
- read data line 3629   133782 2 270 136983 
- read data line 3630   133782 2 270 136983 
- read data line 3631   133782 2 270 136983 
- read data line 3632   133782 2 270 136983 
- read data line 3633   133782 2 270 136983 
- read data line 3634   133782 2 270 136983 
- read data line 3635   133782 2 270 136983 
- read data line 3636   133782 2 270 136983 
- read data line 3637   133782 2 270 136983 
- read data line 3638   133782 2 270 136983 
- read data line 3639   133782 2 270 136983 
- read data line 3640   133782 2 270 136983 
- read data line 3641   133782 2 270 136983 
- read data line 3642   133782 2 270 136983 
- read data line 3643   133782 2 270 136983 
- read data line 3644   133782 2 270 136983 
- read data line 3645   133782 2 270 136983 
- read data line 3646   133782 2 270 136983 
- read data line 3647   133782 2 270 136983 
- read data line 3648   133782 2 270 136983 
- read data line 3649   133782 2 270 136983 
- read data line 3650   133782 2 270 136983 
- read data line 3651   133782 2 270 136983 
- read data line 3652   133782 2 270 136983 
- read data line 3653   133782 2 270 136983 
- read data line 3654   133782 2 270 136983 
- read data line 3655   133782 2 270 136983 
- read data line 3656   133782 2 270 136983 
- read data line 3657   133782 2 270 136983 
- read data line 3658   133782 2 270 136983 
- read data line 3659   133782 2 270 136983 
- read data line 3660   133782 2 270 136983 
- read data line 3661   133782 2 270 136983 
- read data line 3662   133782 2 270 136983 
- read data line 3663   133782 2 270 136983 
- read data line 3664   133782 2 270 136983 
- read data line 3665   133782 2 270 136983 
- read data line 3666   133782 2 270 136983 
- read data line 3667   133782 2 270 136983 
- read data line 3668   133782 2 270 136983 
- read data line 3669   133782 2 270 136983 
- read data line 3670   133782 2 270 136983 
- read data line 3671   133782 2 270 136983 
- read data line 3672   133782 2 270 136983 
- read data line 3673   133782 2 270 136983 
- read data line 3674   133782 2 270 136983 
- read data line 3675   133782 2 270 136983 
- read data line 3676   133782 2 270 136983 
- read data line 3677   133782 2 270 136983 
- read data line 3678   133782 2 270 136983 
- read data line 3679   133782 2 270 136983 
- read data line 3680   133782 2 270 136983 
- read data line 3681   133782 2 270 136983 
- read data line 3682   133782 2 270 136983 
- read data line 3683   133782 2 270 136983 
- read data line 3684   133782 2 270 136983 
- read data line 3685   133782 2 270 136983 
- read data line 3686   133782 2 270 136983 
- read data line 3687   133782 2 270 136983 
- read data line 3688   133782 2 270 136983 
- read data line 3689   133782 2 270 136983 
- read data line 3690   133782 2 270 136983 
- read data line 3691   133782 2 270 136983 
- read data line 3692   133782 2 270 136983 
- read data line 3693   133782 2 270 136983 
- read data line 3694   133782 2 270 136983 
- read data line 3695   133782 2 270 136983 
- read data line 3696   133782 2 270 136983 
- read data line 3697   133782 2 270 136983 
- read data line 3698   133782 2 270 136983 
- read data line 3699   133782 2 270 136983 
- read data line 3700   133782 2 270 136983 
- read data line 3701   133782 2 270 136983 
- read data line 3702   133782 2 270 136983 
- read data line 3703   133782 2 270 136983 
- read data line 3704   133782 2 270 136983 
- read data line 3705   133782 2 270 136983 
- read data line 3706   133782 2 270 136983 
- read data line 3707   133782 2 270 136983 
- read data line 3708   133782 2 270 136983 
- read data line 3709   133782 2 270 136983 
- read data line 3710   133782 2 270 136983 
- read data line 3711   133782 2 270 136983 
- read data line 3712   133782 2 270 136983 
- read data line 3713   133782 2 270 136983 
- read data line 3714   133782 2 270 136983 
- read data line 3715   133782 2 270 136983 
- read data line 3716   133782 2 270 136983 
- read data line 3717   133782 2 270 136983 
- read data line 3718   133782 2 270 136983 
- read data line 3719   133782 2 270 136983 
- read data line 3720   133782 2 270 136983 
- read data line 3721   133782 2 270 136983 
- read data line 3722   133782 2 270 136983 
- read data line 3723   133782 2 270 136983 
- read data line 3724   133782 2 270 136983 
- read data line 3725   133782 2 270 136983 
- read data line 3726   133782 2 270 136983 
- read data line 3727   133782 2 270 136983 
- read data line 3728   133782 2 270 136983 
- read data line 3729   133782 2 270 136983 
- read data line 3730   133782 2 270 136983 
- read data line 3731   133782 2 270 136983 
- read data line 3732   133782 2 270 136983 
- read data line 3733   133782 2 270 136983 
- read data line 3734   133782 2 270 136983 
- read data line 3735   133782 2 270 136983 
- read data line 3736   133782 2 270 136983 
- read data line 3737   133782 2 270 136983 
- read data line 3738   133782 2 270 136983 
- read data line 3739   133782 2 270 136983 
- read data line 3740   133782 2 270 136983 
- read data line 3741   133782 2 270 136983 
- read data line 3742   133782 2 270 136983 
- read data line 3743   133782 2 270 136983 
- read data line 3744   133782 2 270 136983 
- read data line 3745   133782 2 270 136983 
- read data line 3746   133782 2 270 136983 
- read data line 3747   133782 2 270 136983 
- read data line 3748   133782 2 270 136983 
- read data line 3749   133782 2 270 136983 
- read data line 3750   133782 2 270 136983 
- read data line 3751   133782 2 270 136983 
- read data line 3752   133782 2 270 136983 
- read data line 3753   133782 2 270 136983 
- read data line 3754   133782 2 270 136983 
- read data line 3755   133782 2 270 136983 
- read data line 3756   133782 2 270 136983 
- read data line 3757   133782 2 270 136983 
- read data line 3758   133782 2 270 136983 
- read data line 3759   133782 2 270 136983 
- read data line 3760   133782 2 270 136983 
- read data line 3761   133782 2 270 136983 
- read data line 3762   133782 2 270 136983 
- read data line 3763   133782 2 270 136983 
- read data line 3764   133782 2 270 136983 
- read data line 3765   133782 2 270 136983 
- read data line 3766   133782 2 270 136983 
- read data line 3767   133782 2 270 136983 
- read data line 3768   133782 2 270 136983 
- read data line 3769   133782 2 270 136983 
- read data line 3770   133782 2 270 136983 
- read data line 3771   133782 2 270 136983 
- read data line 3772   133782 2 270 136983 
- read data line 3773   133782 2 270 136983 
- read data line 3774   133782 2 270 136983 
- read data line 3775   133782 2 270 136983 
- read data line 3776   133782 2 270 136983 
- read data line 3777   133782 2 270 136983 
- read data line 3778   133782 2 270 136983 
- read data line 3779   133782 2 270 136983 
- read data line 3780   133782 2 270 136983 
- read data line 3781   133782 2 270 136983 
- read data line 3782   133782 2 270 136983 
- read data line 3783   133782 2 270 136983 
- read data line 3784   133782 2 270 136983 
- read data line 3785   133782 2 270 136983 
- read data line 3786   133782 2 270 136983 
- read data line 3787   133782 2 270 136983 
- read data line 3788   133782 2 270 136983 
- read data line 3789   133782 2 270 136983 
- read data line 3790   133782 2 270 136983 
- read data line 3791   133782 2 270 136983 
- read data line 3792   133782 2 270 136983 
- read data line 3793   133782 2 270 136983 
- read data line 3794   133782 2 270 136983 
- read data line 3795   133782 2 270 136983 
- read data line 3796   133782 2 270 136983 
- read data line 3797   133782 2 270 136983 
- read data line 3798   133782 2 270 136983 
- read data line 3799   133782 2 270 136983 
- read data line 3800   133782 2 270 136983 
- read data line 3801   133782 2 270 136983 
- read data line 3802   133782 2 270 136983 
- read data line 3803   133782 2 270 136983 
- read data line 3804   133782 2 270 136983 
- read data line 3805   133782 2 270 136983 
- read data line 3806   133782 2 270 136983 
- read data line 3807   133782 2 270 136983 
- read data line 3808   133782 2 270 136983 
- read data line 3809   133782 2 270 136983 
- read data line 3810   133782 2 270 136983 
- read data line 3811   133782 2 270 136983 
- read data line 3812   133782 2 270 136983 
- read data line 3813   133782 2 270 136983 
- read data line 3814   133782 2 270 136983 
- read data line 3815   133782 2 270 136983 
- read data line 3816   133782 2 270 136983 
- read data line 3817   133782 2 270 136983 
- read data line 3818   133782 2 270 136983 
- read data line 3819   133782 2 270 136983 
- read data line 3820   133782 2 270 136983 
- read data line 3821   133782 2 270 136983 
- read data line 3822   133782 2 270 136983 
- read data line 3823   133782 2 270 136983 
- read data line 3824   133782 2 270 136983 
- read data line 3825   133782 2 270 136983 
- read data line 3826   133782 2 270 136983 
- read data line 3827   133782 2 270 136983 
- read data line 3828   133782 2 270 136983 
- read data line 3829   133782 2 270 136983 
- read data line 3830   133782 2 270 136983 
- read data line 3831   133782 2 270 136983 
- read data line 3832   133782 2 270 136983 
- read data line 3833   133782 2 270 136983 
- read data line 3834   133782 2 270 136983 
- read data line 3835   133782 2 270 136983 
- read data line 3836   133782 2 270 136983 
- read data line 3837   133782 2 270 136983 
- read data line 3838   133782 2 270 136983 
- read data line 3839   133782 2 270 136983 
- read data line 3840   133782 2 270 136983 
- read data line 3841   133782 2 270 136983 
- read data line 3842   133782 2 270 136983 
- read data line 3843   133782 2 270 136983 
- read data line 3844   133782 2 270 136983 
- read data line 3845   133782 2 270 136983 
- read data line 3846   133782 2 270 136983 
- read data line 3847   133782 2 270 136983 
- read data line 3848   133782 2 270 136983 
- read data line 3849   133782 2 270 136983 
- read data line 3850   133782 2 270 136983 
- read data line 3851   133782 2 270 136983 
- read data line 3852   133782 2 270 136983 
- read data line 3853   133782 2 270 136983 
- read data line 3854   133782 2 270 136983 
- read data line 3855   133782 2 270 136983 
- read data line 3856   133782 2 270 136983 
- read data line 3857   133782 2 270 136983 
- read data line 3858   133782 2 270 136983 
- read data line 3859   133782 2 270 136983 
- read data line 3860   133782 2 270 136983 
- read data line 3861   133782 2 270 136983 
- read data line 3862   133782 2 270 136983 
- read data line 3863   133782 2 270 136983 
- read data line 3864   133782 2 270 136983 
- read data line 3865   133782 2 270 136983 
- read data line 3866   133782 2 270 136983 
- read data line 3867   133782 2 270 136983 
- read data line 3868   133782 2 270 136983 
- read data line 3869   133782 2 270 136983 
- read data line 3870   133782 2 270 136983 
- read data line 3871   133782 2 270 136983 
- read data line 3872   133782 2 270 136983 
- read data line 3873   133782 2 270 136983 
- read data line 3874   133782 2 270 136983 
- read data line 3875   133782 2 270 136983 
- read data line 3876   133782 2 270 136983 
- read data line 3877   133782 2 270 136983 
- read data line 3878   133782 2 270 136983 
- read data line 3879   133782 2 270 136983 
- read data line 3880   133782 2 270 136983 
- read data line 3881   133782 2 270 136983 
- read data line 3882   133782 2 270 136983 
- read data line 3883   133782 2 270 136983 
- read data line 3884   133782 2 270 136983 
- read data line 3885   133782 2 270 136983 
- read data line 3886   133782 2 270 136983 
- read data line 3887   133782 2 270 136983 
- read data line 3888   133782 2 270 136983 
- read data line 3889   133782 2 270 136983 
- read data line 3890   133782 2 270 136983 
- read data line 3891   133782 2 270 136983 
- read data line 3892   133782 2 270 136983 
- read data line 3893   133782 2 270 136983 
- read data line 3894   133782 2 270 136983 
- read data line 3895   133782 2 270 136983 
- read data line 3896   133782 2 270 136983 
- read data line 3897   133782 2 270 136983 
- read data line 3898   133782 2 270 136983 
- read data line 3899   133782 2 270 136983 
- read data line 3900   133782 2 270 136983 
- read data line 3901   133782 2 270 136983 
- read data line 3902   133782 2 270 136983 
- read data line 3903   133782 2 270 136983 
- read data line 3904   133782 2 270 136983 
- read data line 3905   133782 2 270 136983 
- read data line 3906   133782 2 270 136983 
- read data line 3907   133782 2 270 136983 
- read data line 3908   133782 2 270 136983 
- read data line 3909   133782 2 270 136983 
- read data line 3910   133782 2 270 136983 
- read data line 3911   133782 2 270 136983 
- read data line 3912   133782 2 270 136983 
- read data line 3913   133782 2 270 136983 
- read data line 3914   133782 2 270 136983 
- read data line 3915   133782 2 270 136983 
- read data line 3916   133782 2 270 136983 
- read data line 3917   133782 2 270 136983 
- read data line 3918   133782 2 270 136983 
- read data line 3919   133782 2 270 136983 
- read data line 3920   133782 2 270 136983 
- read data line 3921   133782 2 270 136983 
- read data line 3922   133782 2 270 136983 
- read data line 3923   133782 2 270 136983 
- read data line 3924   133782 2 270 136983 
- read data line 3925   133782 2 270 136983 
- read data line 3926   133782 2 270 136983 
- read data line 3927   133782 2 270 136983 
- read data line 3928   133782 2 270 136983 
- read data line 3929   133782 2 270 136983 
- read data line 3930   133782 2 270 136983 
- read data line 3931   133782 2 270 136983 
- read data line 3932   133782 2 270 136983 
- read data line 3933   133782 2 270 136983 
- read data line 3934   133782 2 270 136983 
- read data line 3935   133782 2 270 136983 
- read data line 3936   133782 2 270 136983 
- read data line 3937   133782 2 270 136983 
- read data line 3938   133782 2 270 136983 
- read data line 3939   133782 2 270 136983 
- read data line 3940   133782 2 270 136983 
- read data line 3941   133782 2 270 136983 
- read data line 3942   133782 2 270 136983 
- read data line 3943   133782 2 270 136983 
- read data line 3944   133782 2 270 136983 
- read data line 3945   133782 2 270 136983 
- read data line 3946   133782 2 270 136983 
- read data line 3947   133782 2 270 136983 
- read data line 3948   133782 2 270 136983 
- read data line 3949   133782 2 270 136983 
- read data line 3950   133782 2 270 136983 
- read data line 3951   133782 2 270 136983 
- read data line 3952   133782 2 270 136983 
- read data line 3953   133782 2 270 136983 
- read data line 3954   133782 2 270 136983 
- read data line 3955   133782 2 270 136983 
- read data line 3956   133782 2 270 136983 
- read data line 3957   133782 2 270 136983 
- read data line 3958   133782 2 270 136983 
- read data line 3959   133782 2 270 136983 
- read data line 3960   133782 2 270 136983 
- read data line 3961   133782 2 270 136983 
- read data line 3962   133782 2 270 136983 
- read data line 3963   133782 2 270 136983 
- read data line 3964   133782 2 270 136983 
- read data line 3965   133782 2 270 136983 
- read data line 3966   133782 2 270 136983 
- read data line 3967   133782 2 270 136983 
- read data line 3968   133782 2 270 136983 
- read data line 3969   133782 2 270 136983 
- read data line 3970   133782 2 270 136983 
- read data line 3971   133782 2 270 136983 
- read data line 3972   133782 2 270 136983 
- read data line 3973   133782 2 270 136983 
- read data line 3974   133782 2 270 136983 
- read data line 3975   133782 2 270 136983 
- read data line 3976   133782 2 270 136983 
- read data line 3977   133782 2 270 136983 
- read data line 3978   133782 2 270 136983 
- read data line 3979   133782 2 270 136983 
- read data line 3980   133782 2 270 136983 
- read data line 3981   133782 2 270 136983 
- read data line 3982   133782 2 270 136983 
- read data line 3983   133782 2 270 136983 
- read data line 3984   133782 2 270 136983 
- read data line 3985   133782 2 270 136983 
- read data line 3986   133782 2 270 136983 
- read data line 3987   133782 2 270 136983 
- read data line 3988   133782 2 270 136983 
- read data line 3989   133782 2 270 136983 
- read data line 3990   133782 2 270 136983 
- read data line 3991   133782 2 270 136983 
- read data line 3992   133782 2 270 136983 
- read data line 3993   133782 2 270 136983 
- read data line 3994   133782 2 270 136983 
- read data line 3995   133782 2 270 136983 
- read data line 3996   133782 2 270 136983 
- read data line 3997   133782 2 270 136983 
- read data line 3998   133782 2 270 136983 
- read data line 3999   133782 2 270 136983 
- read data line 4000   133782 2 270 136983 
- read data line 4001   133782 2 270 136983 
- read data line 4002   133782 2 270 136983 
- read data line 4003   133782 2 270 136983 
- read data line 4004   133782 2 270 136983 
- read data line 4005   133782 2 270 136983 
- read data line 4006   133782 2 270 136983 
- read data line 4007   133782 2 270 136983 
- read data line 4008   133782 2 270 136983 
- read data line 4009   133782 2 270 136983 
- read data line 4010   133782 2 270 136983 
- read data line 4011   133782 2 270 136983 
- read data line 4012   133782 2 270 136983 
- read data line 4013   133782 2 270 136983 
- read data line 4014   133782 2 270 136983 
- read data line 4015   133782 2 270 136983 
- read data line 4016   133782 2 270 136983 
- read data line 4017   133782 2 270 136983 
- read data line 4018   133782 2 270 136983 
- read data line 4019   133782 2 270 136983 
- read data line 4020   133782 2 270 136983 
- read data line 4021   133782 2 270 136983 
- read data line 4022   133782 2 270 136983 
- read data line 4023   133782 2 270 136983 
- read data line 4024   133782 2 270 136983 
- read data line 4025   133782 2 270 136983 
- read data line 4026   133782 2 270 136983 
- read data line 4027   133782 2 270 136983 
- read data line 4028   133782 2 270 136983 
- read data line 4029   133782 2 270 136983 
- read data line 4030   133782 2 270 136983 
- read data line 4031   133782 2 270 136983 
- read data line 4032   133782 2 270 136983 
- read data line 4033   133782 2 270 136983 
- read data line 4034   133782 2 270 136983 
- read data line 4035   133782 2 270 136983 
- read data line 4036   133782 2 270 136983 
- read data line 4037   133782 2 270 136983 
- read data line 4038   133782 2 270 136983 
- read data line 4039   133782 2 270 136983 
- read data line 4040   133782 2 270 136983 
- read data line 4041   133782 2 270 136983 
- read data line 4042   133782 2 270 136983 
- read data line 4043   133782 2 270 136983 
- read data line 4044   133782 2 270 136983 
- read data line 4045   133782 2 270 136983 
- read data line 4046   133782 2 270 136983 
- read data line 4047   133782 2 270 136983 
- read data line 4048   133782 2 270 136983 
- read data line 4049   133782 2 270 136983 
- read data line 4050   133782 2 270 136983 
- read data line 4051   133782 2 270 136983 
- read data line 4052   133782 2 270 136983 
- read data line 4053   133782 2 270 136983 
- read data line 4054   133782 2 270 136983 
- read data line 4055   133782 2 270 136983 
- read data line 4056   133782 2 270 136983 
- read data line 4057   133782 2 270 136983 
- read data line 4058   133782 2 270 136983 
- read data line 4059   133782 2 270 136983 
- read data line 4060   133782 2 270 136983 
- read data line 4061   133782 2 270 136983 
- read data line 4062   133782 2 270 136983 
- read data line 4063   133782 2 270 136983 
- read data line 4064   133782 2 270 136983 
- read data line 4065   133782 2 270 136983 
- read data line 4066   133782 2 270 136983 
- read data line 4067   133782 2 270 136983 
- read data line 4068   133782 2 270 136983 
- read data line 4069   133782 2 270 136983 
- read data line 4070   133782 2 270 136983 
- read data line 4071   133782 2 270 136983 
- read data line 4072   133782 2 270 136983 
- read data line 4073   133782 2 270 136983 
- read data line 4074   133782 2 270 136983 
- read data line 4075   133782 2 270 136983 
- read data line 4076   133782 2 270 136983 
- read data line 4077   133782 2 270 136983 
- read data line 4078   133782 2 270 136983 
- read data line 4079   133782 2 270 136983 
- read data line 4080   133782 2 270 136983 
- read data line 4081   133782 2 270 136983 
- read data line 4082   133782 2 270 136983 
- read data line 4083   133782 2 270 136983 
- read data line 4084   133782 2 270 136983 
- read data line 4085   133782 2 270 136983 
- read data line 4086   133782 2 270 136983 
- read data line 4087   133782 2 270 136983 
- read data line 4088   133782 2 270 136983 
- read data line 4089   133782 2 270 136983 
- read data line 4090   133782 2 270 136983 
- read data line 4091   133782 2 270 136983 
- read data line 4092   133782 2 270 136983 
- read data line 4093   133782 2 270 136983 
- read data line 4094   133782 2 270 136983 
- read data line 4095   133782 2 270 136983 
- read data line 4096   133782 2 270 136983 
- read data line 4097   133782 2 270 136983 
- read data line 4098   133782 2 270 136983 
- read data line 4099   133782 2 270 136983 
- read data line 4100   133782 2 270 136983 
- read data line 4101   133782 2 270 136983 
- read data line 4102   133782 2 270 136983 
- read data line 4103   133782 2 270 136983 
- read data line 4104   133782 2 270 136983 
- read data line 4105   133782 2 270 136983 
- read data line 4106   133782 2 270 136983 
- read data line 4107   133782 2 270 136983 
- read data line 4108   133782 2 270 136983 
- read data line 4109   133782 2 270 136983 
- read data line 4110   133782 2 270 136983 
- read data line 4111   133782 2 270 136983 
- read data line 4112   133782 2 270 136983 
- read data line 4113   133782 2 270 136983 
- read data line 4114   133782 2 270 136983 
- read data line 4115   133782 2 270 136983 
- read data line 4116   133782 2 270 136983 
- read data line 4117   133782 2 270 136983 
- read data line 4118   133782 2 270 136983 
- read data line 4119   133782 2 270 136983 
- read data line 4120   133782 2 270 136983 
- read data line 4121   133782 2 270 136983 
- read data line 4122   133782 2 270 136983 
- read data line 4123   133782 2 270 136983 
- read data line 4124   133782 2 270 136983 
- read data line 4125   133782 2 270 136983 
- read data line 4126   133782 2 270 136983 
- read data line 4127   133782 2 270 136983 
- read data line 4128   133782 2 270 136983 
- read data line 4129   133782 2 270 136983 
- read data line 4130   133782 2 270 136983 
- read data line 4131   133782 2 270 136983 
- read data line 4132   133782 2 270 136983 
- read data line 4133   133782 2 270 136983 
- read data line 4134   133782 2 270 136983 
- read data line 4135   133782 2 270 136983 
- read data line 4136   133782 2 270 136983 
- read data line 4137   133782 2 270 136983 
- read data line 4138   133782 2 270 136983 
- read data line 4139   133782 2 270 136983 
- read data line 4140   133782 2 270 136983 
- read data line 4141   133782 2 270 136983 
- read data line 4142   133782 2 270 136983 
- read data line 4143   133782 2 270 136983 
- read data line 4144   133782 2 270 136983 
- read data line 4145   133782 2 270 136983 
- read data line 4146   133782 2 270 136983 
- read data line 4147   133782 2 270 136983 
- read data line 4148   133782 2 270 136983 
- read data line 4149   133782 2 270 136983 
- read data line 4150   133782 2 270 136983 
- read data line 4151   133782 2 270 136983 
- read data line 4152   133782 2 270 136983 
- read data line 4153   133782 2 270 136983 
- read data line 4154   133782 2 270 136983 
- read data line 4155   133782 2 270 136983 
- read data line 4156   133782 2 270 136983 
- read data line 4157   133782 2 270 136983 
- read data line 4158   133782 2 270 136983 
- read data line 4159   133782 2 270 136983 
- read data line 4160   133782 2 270 136983 
- read data line 4161   133782 2 270 136983 
- read data line 4162   133782 2 270 136983 
- read data line 4163   133782 2 270 136983 
- read data line 4164   133782 2 270 136983 
- read data line 4165   133782 2 270 136983 
- read data line 4166   133782 2 270 136983 
- read data line 4167   133782 2 270 136983 
- read data line 4168   133782 2 270 136983 
- read data line 4169   133782 2 270 136983 
- read data line 4170   133782 2 270 136983 
- read data line 4171   133782 2 270 136983 
- read data line 4172   133782 2 270 136983 
- read data line 4173   133782 2 270 136983 
- read data line 4174   133782 2 270 136983 
- read data line 4175   133782 2 270 136983 
- read data line 4176   133782 2 270 136983 
- read data line 4177   133782 2 270 136983 
- read data line 4178   133782 2 270 136983 
- read data line 4179   133782 2 270 136983 
- read data line 4180   133782 2 270 136983 
- read data line 4181   133782 2 270 136983 
- read data line 4182   133782 2 270 136983 
- read data line 4183   133782 2 270 136983 
- read data line 4184   133782 2 270 136983 
- read data line 4185   133782 2 270 136983 
- read data line 4186   133782 2 270 136983 
- read data line 4187   133782 2 270 136983 
- read data line 4188   133782 2 270 136983 
- read data line 4189   133782 2 270 136983 
- read data line 4190   133782 2 270 136983 
- read data line 4191   133782 2 270 136983 
- read data line 4192   133782 2 270 136983 
- read data line 4193   133782 2 270 136983 
- read data line 4194   133782 2 270 136983 
- read data line 4195   133782 2 270 136983 
- read data line 4196   133782 2 270 136983 
- read data line 4197   133782 2 270 136983 
- read data line 4198   133782 2 270 136983 
- read data line 4199   133782 2 270 136983 
- read data line 4200   133782 2 270 136983 
- read data line 4201   133782 2 270 136983 
- read data line 4202   133782 2 270 136983 
- read data line 4203   133782 2 270 136983 
- read data line 4204   133782 2 270 136983 
- read data line 4205   133782 2 270 136983 
- read data line 4206   133782 2 270 136983 
- read data line 4207   133782 2 270 136983 
- read data line 4208   133782 2 270 136983 
- read data line 4209   133782 2 270 136983 
- read data line 4210   133782 2 270 136983 
- read data line 4211   133782 2 270 136983 
- read data line 4212   133782 2 270 136983 
- read data line 4213   133782 2 270 136983 
- read data line 4214   133782 2 270 136983 
- read data line 4215   133782 2 270 136983 
- read data line 4216   133782 2 270 136983 
- read data line 4217   133782 2 270 136983 
- read data line 4218   133782 2 270 136983 
- read data line 4219   133782 2 270 136983 
- read data line 4220   133782 2 270 136983 
- read data line 4221   133782 2 270 136983 
- read data line 4222   133782 2 270 136983 
- read data line 4223   133782 2 270 136983 
- read data line 4224   133782 2 270 136983 
- read data line 4225   133782 2 270 136983 
- read data line 4226   133782 2 270 136983 
- read data line 4227   133782 2 270 136983 
- read data line 4228   133782 2 270 136983 
- read data line 4229   133782 2 270 136983 
- read data line 4230   133782 2 270 136983 
- read data line 4231   133782 2 270 136983 
- read data line 4232   133782 2 270 136983 
- read data line 4233   133782 2 270 136983 
- read data line 4234   133782 2 270 136983 
- read data line 4235   133782 2 270 136983 
- read data line 4236   133782 2 270 136983 
- read data line 4237   133782 2 270 136983 
- read data line 4238   133782 2 270 136983 
- read data line 4239   133782 2 270 136983 
- read data line 4240   133782 2 270 136983 
- read data line 4241   133782 2 270 136983 
- read data line 4242   133782 2 270 136983 
- read data line 4243   133782 2 270 136983 
- read data line 4244   133782 2 270 136983 
- read data line 4245   133782 2 270 136983 
- read data line 4246   133782 2 270 136983 
- read data line 4247   133782 2 270 136983 
- read data line 4248   133782 2 270 136983 
- read data line 4249   133782 2 270 136983 
- read data line 4250   133782 2 270 136983 
- read data line 4251   133782 2 270 136983 
- read data line 4252   133782 2 270 136983 
- read data line 4253   133782 2 270 136983 
- read data line 4254   133782 2 270 136983 
- read data line 4255   133782 2 270 136983 
- read data line 4256   133782 2 270 136983 
- read data line 4257   133782 2 270 136983 
- read data line 4258   133782 2 270 136983 
- read data line 4259   133782 2 270 136983 
- read data line 4260   133782 2 270 136983 
- read data line 4261   133782 2 270 136983 
- read data line 4262   133782 2 270 136983 
- read data line 4263   133782 2 270 136983 
- read data line 4264   133782 2 270 136983 
- read data line 4265   133782 2 270 136983 
- read data line 4266   133782 2 270 136983 
- read data line 4267   133782 2 270 136983 
- read data line 4268   133782 2 270 136983 
- read data line 4269   133782 2 270 136983 
- read data line 4270   133782 2 270 136983 
- read data line 4271   133782 2 270 136983 
- read data line 4272   133782 2 270 136983 
- read data line 4273   133782 2 270 136983 
- read data line 4274   133782 2 270 136983 
- read data line 4275   133782 2 270 136983 
- read data line 4276   133782 2 270 136983 
- read data line 4277   133782 2 270 136983 
- read data line 4278   133782 2 270 136983 
- read data line 4279   133782 2 270 136983 
- read data line 4280   133782 2 270 136983 
- read data line 4281   133782 2 270 136983 
- read data line 4282   133782 2 270 136983 
- read data line 4283   133782 2 270 136983 
- read data line 4284   133782 2 270 136983 
- read data line 4285   133782 2 270 136983 
- read data line 4286   133782 2 270 136983 
- read data line 4287   133782 2 270 136983 
- read data line 4288   133782 2 270 136983 
- read data line 4289   133782 2 270 136983 
- read data line 4290   133782 2 270 136983 
- read data line 4291   133782 2 270 136983 
- read data line 4292   133782 2 270 136983 
- read data line 4293   133782 2 270 136983 
- read data line 4294   133782 2 270 136983 
- read data line 4295   133782 2 270 136983 
- read data line 4296   133782 2 270 136983 
- read data line 4297   133782 2 270 136983 
- read data line 4298   133782 2 270 136983 
- read data line 4299   133782 2 270 136983 
- read data line 4300   133782 2 270 136983 
- read data line 4301   133782 2 270 136983 
- read data line 4302   133782 2 270 136983 
- read data line 4303   133782 2 270 136983 
- read data line 4304   133782 2 270 136983 
- read data line 4305   133782 2 270 136983 
- read data line 4306   133782 2 270 136983 
- read data line 4307   133782 2 270 136983 
- read data line 4308   133782 2 270 136983 
- read data line 4309   133782 2 270 136983 
- read data line 4310   133782 2 270 136983 
- read data line 4311   133782 2 270 136983 
- read data line 4312   133782 2 270 136983 
- read data line 4313   133782 2 270 136983 
- read data line 4314   133782 2 270 136983 
- read data line 4315   133782 2 270 136983 
- read data line 4316   133782 2 270 136983 
- read data line 4317   133782 2 270 136983 
- read data line 4318   133782 2 270 136983 
- read data line 4319   133782 2 270 136983 
- read data line 4320   133782 2 270 136983 
- read data line 4321   133782 2 270 136983 
- read data line 4322   133782 2 270 136983 
- read data line 4323   133782 2 270 136983 
- read data line 4324   133782 2 270 136983 
- read data line 4325   133782 2 270 136983 
- read data line 4326   133782 2 270 136983 
- read data line 4327   133782 2 270 136983 
- read data line 4328   133782 2 270 136983 
- read data line 4329   133782 2 270 136983 
- read data line 4330   133782 2 270 136983 
- read data line 4331   133782 2 270 136983 
- read data line 4332   133782 2 270 136983 
- read data line 4333   133782 2 270 136983 
- read data line 4334   133782 2 270 136983 
- read data line 4335   133782 2 270 136983 
- read data line 4336   133782 2 270 136983 
- read data line 4337   133782 2 270 136983 
- read data line 4338   133782 2 270 136983 
- read data line 4339   133782 2 270 136983 
- read data line 4340   133782 2 270 136983 
- read data line 4341   133782 2 270 136983 
- read data line 4342   133782 2 270 136983 
- read data line 4343   133782 2 270 136983 
- read data line 4344   133782 2 270 136983 
- read data line 4345   133782 2 270 136983 
- read data line 4346   133782 2 270 136983 
- read data line 4347   133782 2 270 136983 
- read data line 4348   133782 2 270 136983 
- read data line 4349   133782 2 270 136983 
- read data line 4350   133782 2 270 136983 
- read data line 4351   133782 2 270 136983 
- read data line 4352   133782 2 270 136983 
- read data line 4353   133782 2 270 136983 
- read data line 4354   133782 2 270 136983 
- read data line 4355   133782 2 270 136983 
- read data line 4356   133782 2 270 136983 
- read data line 4357   133782 2 270 136983 
- read data line 4358   133782 2 270 136983 
- read data line 4359   133782 2 270 136983 
- read data line 4360   133782 2 270 136983 
- read data line 4361   133782 2 270 136983 
- read data line 4362   133782 2 270 136983 
- read data line 4363   133782 2 270 136983 
- read data line 4364   133782 2 270 136983 
- read data line 4365   133782 2 270 136983 
- read data line 4366   133782 2 270 136983 
- read data line 4367   133782 2 270 136983 
- read data line 4368   133782 2 270 136983 
- read data line 4369   133782 2 270 136983 
- read data line 4370   133782 2 270 136983 
- read data line 4371   133782 2 270 136983 
- read data line 4372   133782 2 270 136983 
- read data line 4373   133782 2 270 136983 
- read data line 4374   133782 2 270 136983 
- read data line 4375   133782 2 270 136983 
- read data line 4376   133782 2 270 136983 
- read data line 4377   133782 2 270 136983 
- read data line 4378   133782 2 270 136983 
- read data line 4379   133782 2 270 136983 
- read data line 4380   133782 2 270 136983 
- read data line 4381   133782 2 270 136983 
- read data line 4382   133782 2 270 136983 
- read data line 4383   133782 2 270 136983 
- read data line 4384   133782 2 270 136983 
- read data line 4385   133782 2 270 136983 
- read data line 4386   133782 2 270 136983 
- read data line 4387   133782 2 270 136983 
- read data line 4388   133782 2 270 136983 
- read data line 4389   133782 2 270 136983 
- read data line 4390   133782 2 270 136983 
- read data line 4391   133782 2 270 136983 
- read data line 4392   133782 2 270 136983 
- read data line 4393   133782 2 270 136983 
- read data line 4394   133782 2 270 136983 
- read data line 4395   133782 2 270 136983 
- read data line 4396   133782 2 270 136983 
- read data line 4397   133782 2 270 136983 
- read data line 4398   133782 2 270 136983 
- read data line 4399   133782 2 270 136983 
- read data line 4400   133782 2 270 136983 
- read data line 4401   133782 2 270 136983 
- read data line 4402   133782 2 270 136983 
- read data line 4403   133782 2 270 136983 
- read data line 4404   133782 2 270 136983 
- read data line 4405   133782 2 270 136983 
- read data line 4406   133782 2 270 136983 
- read data line 4407   133782 2 270 136983 
- read data line 4408   133782 2 270 136983 
- read data line 4409   133782 2 270 136983 
- read data line 4410   133782 2 270 136983 
- read data line 4411   133782 2 270 136983 
- read data line 4412   133782 2 270 136983 
- read data line 4413   133782 2 270 136983 
- read data line 4414   133782 2 270 136983 
- read data line 4415   133782 2 270 136983 
- read data line 4416   133782 2 270 136983 
- read data line 4417   133782 2 270 136983 
- read data line 4418   133782 2 270 136983 
- read data line 4419   133782 2 270 136983 
- read data line 4420   133782 2 270 136983 
- read data line 4421   133782 2 270 136983 
- read data line 4422   133782 2 270 136983 
- read data line 4423   133782 2 270 136983 
- read data line 4424   133782 2 270 136983 
- read data line 4425   133782 2 270 136983 
- read data line 4426   133782 2 270 136983 
- read data line 4427   133782 2 270 136983 
- read data line 4428   133782 2 270 136983 
- read data line 4429   133782 2 270 136983 
- read data line 4430   133782 2 270 136983 
- read data line 4431   133782 2 270 136983 
- read data line 4432   133782 2 270 136983 
- read data line 4433   133782 2 270 136983 
- read data line 4434   133782 2 270 136983 
- read data line 4435   133782 2 270 136983 
- read data line 4436   133782 2 270 136983 
- read data line 4437   133782 2 270 136983 
- read data line 4438   133782 2 270 136983 
- read data line 4439   133782 2 270 136983 
- read data line 4440   133782 2 270 136983 
- read data line 4441   133782 2 270 136983 
- read data line 4442   133782 2 270 136983 
- read data line 4443   133782 2 270 136983 
- read data line 4444   133782 2 270 136983 
- read data line 4445   133782 2 270 136983 
- read data line 4446   133782 2 270 136983 
- read data line 4447   133782 2 270 136983 
- read data line 4448   133782 2 270 136983 
- read data line 4449   133782 2 270 136983 
- read data line 4450   133782 2 270 136983 
- read data line 4451   133782 2 270 136983 
- read data line 4452   133782 2 270 136983 
- read data line 4453   133782 2 270 136983 
- read data line 4454   133782 2 270 136983 
- read data line 4455   133782 2 270 136983 
- read data line 4456   133782 2 270 136983 
- read data line 4457   133782 2 270 136983 
- read data line 4458   133782 2 270 136983 
- read data line 4459   133782 2 270 136983 
- read data line 4460   133782 2 270 136983 
- read data line 4461   133782 2 270 136983 
- read data line 4462   133782 2 270 136983 
- read data line 4463   133782 2 270 136983 
- read data line 4464   133782 2 270 136983 
- read data line 4465   133782 2 270 136983 
- read data line 4466   133782 2 270 136983 
- read data line 4467   133782 2 270 136983 
- read data line 4468   133782 2 270 136983 
- read data line 4469   133782 2 270 136983 
- read data line 4470   133782 2 270 136983 
- read data line 4471   133782 2 270 136983 
- read data line 4472   133782 2 270 136983 
- read data line 4473   133782 2 270 136983 
- read data line 4474   133782 2 270 136983 
- read data line 4475   133782 2 270 136983 
- read data line 4476   133782 2 270 136983 
- read data line 4477   133782 2 270 136983 
- read data line 4478   133782 2 270 136983 
- read data line 4479   133782 2 270 136983 
- read data line 4480   133782 2 270 136983 
- read data line 4481   133782 2 270 136983 
- read data line 4482   133782 2 270 136983 
- read data line 4483   133782 2 270 136983 
- read data line 4484   133782 2 270 136983 
- read data line 4485   133782 2 270 136983 
- read data line 4486   133782 2 270 136983 
- read data line 4487   133782 2 270 136983 
- read data line 4488   133782 2 270 136983 
- read data line 4489   133782 2 270 136983 
- read data line 4490   133782 2 270 136983 
- read data line 4491   133782 2 270 136983 
- read data line 4492   133782 2 270 136983 
- read data line 4493   133782 2 270 136983 
- read data line 4494   133782 2 270 136983 
- read data line 4495   133782 2 270 136983 
- read data line 4496   133782 2 270 136983 
- read data line 4497   133782 2 270 136983 
- read data line 4498   133782 2 270 136983 
- read data line 4499   133782 2 270 136983 
- read data line 4500   133782 2 270 136983 
- read data line 4501   133782 2 270 136983 
- read data line 4502   133782 2 270 136983 
- read data line 4503   133782 2 270 136983 
- read data line 4504   133782 2 270 136983 read file succesfully! 
- ---------------------------------------------------------------
+no parameter file given; will use param.in
+---------------------------------------------------------------
+reading file param.in
+read param.in successfully
+--------------------------------------------------------------- 
+CPPOutOld.dat has 4506 lines
+processing data file: CPPOutOld.dat with 4506 data points
+--------------------------------------------------------------- 
+reading file CPPOutOld.dat
+read file succesfully! 
+---------------------------------------------------------------
+44798 82 0.34
+44777 82 2.36
+44293.5 82 4.38
+43762.5 82 6.4
+43555.5 82 8.43
+44078.5 82 10.45
+44967.5 82 12.47
+45437 82 14.49
+45381 82 16.52
+45245.5 82 18.54
+44788.5 82 20.56
+44821 82 22.58
+44424 82 24.61
+43957 82 26.63
+44174.5 82 28.65
+43763.5 82 30.67
+43353 82 32.7
+43045 82 34.72
+43226.5 82 36.74
+43048.5 82 38.76
+42242 82 40.79
+41887 82 42.81
+41689.5 82 44.83
+40780.5 82 46.85
+41188 82 48.88
+41418 82 50.9
+42061 82 52.92
+41850 82 54.94
+41515.5 82 56.97
+41284.5 82 58.99
+41017 82 61.01
+40906.5 82 63.03
+39798 82 65.06
+39526.5 82 67.08
+38656.5 82 69.1
+38106.5 82 71.12
+37514 82 73.15
+37008 82 75.17
+36981 82 77.19
+36654 82 79.21
+36157 82 81.24
+36433 82 83.26
+36176.5 82 85.28
+36056.5 82 87.3
+35416.5 82 89.33
+34895.5 82 91.35
+33959 82 93.37
+32834.5 82 95.39
+32273.5 82 97.42
+31777.5 82 99.44
+31567.5 82 101.46
+31787.5 82 103.48
+32655 82 105.51
+33222.5 82 107.53
+33636 82 109.55
+33824.5 82 111.57
+33881 82 113.6
+33751 82 115.62
+33618.5 82 117.64
+33683 82 119.66
+33527.5 82 121.69
+32925 82 123.71
+32450.5 82 125.73
+32245 82 127.75
+32110 82 129.78
+32471 82 131.8
+32980 82 133.82
+33399.5 82 135.84
+33660.5 82 137.87
+33838.5 82 139.89
+33484.5 82 141.91
+33535 82 143.93
+33845.5 82 145.96
+33814.5 82 147.98
+33703 82 150
+34012 82 152.02
+34087 82 154.04
+34185 82 156.07
+34452 82 158.09
+34640 82 160.11
+34828 82 162.13
+34824.5 82 164.16
+34401 82 166.18
+34743.5 82 168.2
+35323 82 170.22
+36258.5 82 172.25
+36575 82 174.27
+36788 82 176.29
+36545.5 82 178.31
+36599 82 180.34
+37254 82 182.36
+37358.5 82 184.38
+37092.5 82 186.4
+36952.5 82 188.43
+36448.5 82 190.45
+36280 82 192.47
+36104 82 194.49
+36225.5 82 196.52
+36695 82 198.54
+37034 82 200.56
+37803 82 202.58
+38437 82 204.61
+38969 82 206.63
+39058.5 82 208.65
+38986 82 210.67
+37930.5 82 212.7
+37106 82 214.72
+36736 82 216.74
+37113 82 218.76
+38034.5 82 220.79
+38493.5 82 222.81
+39602.5 82 224.83
+40821 82 226.85
+41546.5 82 228.88
+41546.5 82 230.9
+41548.5 82 232.92
+41608.5 82 234.94
+41945.5 82 236.97
+42343.5 82 238.99
+42822.5 82 241.01
+42924 82 243.03
+42990.5 82 245.06
+43105.5 82 247.08
+43425 82 249.1
+43978 82 251.12
+44731.5 82 253.15
+45367 82 255.17
+45335.5 82 257.19
+45381.5 82 259.21
+45303 82 261.24
+44894 82 263.26
+45144.5 82 265.28
+45438.5 82 267.3
+45869 82 269.33
+45793 82 271.35
+46290.5 82 273.37
+46717.5 82 275.39
+47182 82 277.42
+47045 82 279.44
+46783.5 82 281.46
+46659.5 82 283.48
+46317.5 82 285.51
+46663 82 287.53
+47610.5 82 289.55
+48125 82 291.57
+48600 82 293.6
+48385 82 295.62
+48262 82 297.64
+48002.5 82 299.66
+48345.5 82 301.69
+48779.5 82 303.71
+48925.5 82 305.73
+48488 82 307.75
+48369 82 309.78
+47569 82 311.8
+47027.5 82 313.82
+47092 82 315.84
+46520.5 82 317.87
+46840 82 319.89
+47006 82 321.91
+47189.5 82 323.93
+47408 82 325.95
+46871.5 82 327.98
+44422 82 330
+45430.5 82 332.02
+44022 82 334.04
+42822.5 82 336.07
+42127 82 338.09
+41926.5 82 340.11
+42446 82 342.13
+42995.5 82 344.16
+43765.5 82 346.18
+44614.5 82 348.2
+44983 82 350.22
+45257 82 352.25
+44718 82 354.27
+44357.5 82 356.29
+44467 82 358.31
+48035 80 0.51
+47961.5 80 2.54
+47152.5 80 4.58
+47096.5 80 6.61
+47507.5 80 8.64
+48346.5 80 10.68
+48870 80 12.71
+49297 80 14.75
+49374 80 16.78
+49090 80 18.81
+48616.5 80 20.85
+48306 80 22.88
+47899 80 24.92
+47611.5 80 26.95
+47815 80 28.98
+47551.5 80 31.02
+47255.5 80 33.05
+47289.5 80 35.08
+47068 80 37.12
+46891.5 80 39.15
+46523 80 41.19
+45691.5 80 43.22
+45116 80 45.25
+44789 80 47.29
+44975 80 49.32
+45372 80 51.36
+45549.5 80 53.39
+44977 80 55.42
+44613.5 80 57.46
+44088.5 80 59.49
+43829 80 61.53
+43390 80 63.56
+43122 80 65.59
+42366 80 67.63
+42038.5 80 69.66
+41338 80 71.69
+40616.5 80 73.73
+40541.5 80 75.76
+40381 80 77.8
+40288 80 79.83
+40150.5 80 81.86
+39929 80 83.9
+40014 80 85.93
+39556.5 80 87.97
+38846 80 90
+38024 80 92.03
+36600.5 80 94.07
+35702.5 80 96.1
+35297.5 80 98.14
+34955 80 100.17
+35095 80 102.2
+35640.5 80 104.24
+36560.5 80 106.27
+37146.5 80 108.31
+37376 80 110.34
+37307 80 112.37
+36899.5 80 114.41
+36460 80 116.44
+36274 80 118.47
+36261.5 80 120.51
+36296.5 80 122.54
+35874 80 124.58
+35436.5 80 126.61
+35534 80 128.64
+35856.5 80 130.68
+36447 80 132.71
+36746 80 134.75
+37371.5 80 136.78
+37366 80 138.81
+37071.5 80 140.85
+37248.5 80 142.88
+37053 80 144.92
+37301.5 80 146.95
+37258.5 80 148.98
+37338 80 151.02
+37840.5 80 153.05
+38209.5 80 155.08
+38527.5 80 157.12
+38574 80 159.15
+38627.5 80 161.19
+38209.5 80 163.22
+38008.5 80 165.25
+38178.5 80 167.29
+38871.5 80 169.32
+39733 80 171.36
+40262.5 80 173.39
+40231.5 80 175.42
+39861.5 80 177.46
+39998 80 179.49
+40447 80 181.53
+40988.5 80 183.56
+41220.5 80 185.59
+40997.5 80 187.63
+40728.5 80 189.66
+40743 80 191.69
+40788.5 80 193.73
+40367.5 80 195.76
+40922.5 80 197.8
+41606.5 80 199.83
+42375.5 80 201.86
+43024.5 80 203.9
+43538.5 80 205.93
+43762.5 80 207.97
+42990.5 80 210
+42206 80 212.03
+41605.5 80 214.07
+41153.5 80 216.1
+41137 80 218.14
+41921 80 220.17
+43127 80 222.2
+43925 80 224.24
+44657 80 226.27
+45007.5 80 228.31
+44906 80 230.34
+44369.5 80 232.37
+44638 80 234.41
+45018.5 80 236.44
+46066 80 238.47
+46727 80 240.51
+46772 80 242.54
+46572 80 244.58
+47039 80 246.61
+47572 80 248.64
+48580.5 80 250.68
+49453.5 80 252.71
+49446.5 80 254.75
+49892 80 256.78
+50030 80 258.81
+49774.5 80 260.85
+49895.5 80 262.88
+50083 80 264.92
+50282 80 266.95
+50235 80 268.98
+50860.5 80 271.02
+51150 80 273.05
+51496 80 275.08
+51493.5 80 277.12
+51701 80 279.15
+51061.5 80 281.19
+50526.5 80 283.22
+50694 80 285.25
+50759 80 287.29
+51097.5 80 289.32
+51518 80 291.36
+52024 80 293.39
+51679.5 80 295.42
+51188 80 297.46
+51622.5 80 299.49
+52382 80 301.53
+53178.5 80 303.56
+53137.5 80 305.59
+53473 80 307.63
+53217.5 80 309.66
+53260 80 311.69
+52435 80 313.73
+52211 80 315.76
+52154 80 317.8
+52321 80 319.83
+52745.5 80 321.86
+52980 80 323.9
+52751.5 80 325.93
+52647.5 80 327.97
+51500.5 80 330
+50267 80 332.03
+49031.5 80 334.07
+47754.5 80 336.1
+47021 80 338.14
+47213 80 340.17
+47425 80 342.2
+47814.5 80 344.24
+48626 80 346.27
+49134.5 80 348.31
+48943 80 350.34
+48607.5 80 352.37
+47695 80 354.41
+47465 80 356.44
+47772.5 80 358.47
+53981 78 0.68
+53996.5 78 2.73
+53577.5 78 4.77
+53266 78 6.82
+53961.5 78 8.86
+54768.5 78 10.91
+54975.5 78 12.95
+55438 78 15
+55660 78 17.05
+55350 78 19.09
+54968 78 21.14
+55022 78 23.18
+54698 78 25.23
+54259.5 78 27.27
+54441.5 78 29.32
+54249.5 78 31.36
+54091.5 78 33.41
+53872 78 35.45
+53605 78 37.5
+52716.5 78 39.55
+52485.5 78 41.59
+51404.5 78 43.64
+50452.5 78 45.68
+50173.5 78 47.73
+50714.5 78 49.77
+50417.5 78 51.82
+50137 78 53.86
+49157 78 55.91
+48656 78 57.95
+48146 78 60
+48534 78 62.05
+48424.5 78 64.09
+48371 78 66.14
+48344.5 78 68.18
+47854.5 78 70.23
+47347.5 78 72.27
+47059 78 74.32
+46844.5 78 76.36
+46321.5 78 78.41
+46058 78 80.45
+46479.5 78 82.5
+46412 78 84.55
+46219 78 86.59
+45894 78 88.64
+44900.5 78 90.68
+43878 78 92.73
+42383.5 78 94.77
+41390 78 96.82
+40788.5 78 98.86
+40851 78 100.91
+41053.5 78 102.95
+41336.5 78 105
+42133 78 107.05
+42254 78 109.09
+42059 78 111.14
+41344 78 113.18
+40942 78 115.23
+40965.5 78 117.27
+41275 78 119.32
+41691 78 121.36
+41564 78 123.41
+41080.5 78 125.45
+40789.5 78 127.5
+41213 78 129.55
+42030 78 131.59
+42657 78 133.64
+43156 78 135.68
+43201 78 137.73
+43271.5 78 139.77
+43537 78 141.82
+43177.5 78 143.86
+43306.5 78 145.91
+43547 78 147.95
+43823.5 78 150
+44116 78 152.05
+44316 78 154.09
+44607.5 78 156.14
+44929 78 158.18
+45079.5 78 160.23
+44762 78 162.27
+44008.5 78 164.32
+44289.5 78 166.36
+44302 78 168.41
+44996 78 170.45
+45290 78 172.5
+45197.5 78 174.55
+44726.5 78 176.59
+44653.5 78 178.64
+44670 78 180.68
+45648 78 182.73
+46719.5 78 184.77
+47751.5 78 186.82
+47800 78 188.86
+47761 78 190.91
+48081.5 78 192.95
+47809 78 195
+47751.5 78 197.05
+48133 78 199.09
+48575 78 201.14
+49597 78 203.18
+50032 78 205.23
+50164 78 207.27
+50017.5 78 209.32
+49401 78 211.36
+48859.5 78 213.41
+47914 78 215.45
+48212.5 78 217.5
+48544 78 219.55
+49089 78 221.59
+50017 78 223.64
+50398.5 78 225.68
+49801.5 78 227.73
+49137.5 78 229.77
+48440 78 231.82
+48539.5 78 233.86
+48601.5 78 235.91
+50287 78 237.95
+51397 78 240
+51997.5 78 242.05
+51557.5 78 244.09
+52278.5 78 246.14
+52879 78 248.18
+53714.5 78 250.23
+54852.5 78 252.27
+55836.5 78 254.32
+55758 78 256.36
+56052.5 78 258.41
+56745 78 260.45
+56815 78 262.5
+56741 78 264.55
+57248 78 266.59
+57632 78 268.64
+57959.5 78 270.68
+58348.5 78 272.73
+58511.5 78 274.77
+58726.5 78 276.82
+58087.5 78 278.86
+57820 78 280.91
+57306.5 78 282.95
+56488.5 78 285
+56697 78 287.05
+57260.5 78 289.09
+58090.5 78 291.14
+57442 78 293.18
+57265 78 295.23
+56855.5 78 297.27
+56789 78 299.32
+57741 78 301.36
+58957.5 78 303.41
+60064 78 305.45
+61008.5 78 307.5
+61365.5 78 309.55
+61699 78 311.59
+61590.5 78 313.64
+61260 78 315.68
+61421 78 317.73
+60824.5 78 319.77
+61346.5 78 321.82
+61411 78 323.86
+61484.5 78 325.91
+60965 78 327.95
+60144.5 78 330
+59301.5 78 332.05
+57774.5 78 334.09
+57055 78 336.14
+56285.5 78 338.18
+56607.5 78 340.23
+56638.5 78 342.27
+56761 78 344.32
+56520.5 78 346.36
+56164 78 348.41
+54845.5 78 350.45
+54014 78 352.5
+52992.5 78 354.55
+53676 78 356.59
+53850.5 78 358.64
+62132 76 1.03
+61615.5 76 3.1
+61217.5 76 5.17
+60481.5 76 7.24
+61081 76 9.31
+61810 76 11.38
+62384 76 13.45
+62752 76 15.52
+62690 76 17.59
+62647.5 76 19.66
+62471 76 21.72
+62257 76 23.79
+62060.5 76 25.86
+61956 76 27.93
+62011.5 76 30
+61866 76 32.07
+61728 76 34.14
+61032 76 36.21
+60332 76 38.28
+59683.5 76 40.34
+58064.5 76 42.41
+56982 76 44.48
+56284.5 76 46.55
+55769.5 76 48.62
+56102.5 76 50.69
+55260 76 52.76
+54608 76 54.83
+53561.5 76 56.9
+52925.5 76 58.97
+52697 76 61.03
+53458 76 63.1
+54151 76 65.17
+54899.5 76 67.24
+55207.5 76 69.31
+55247 76 71.38
+55061 76 73.45
+53754.5 76 75.52
+53589.5 76 77.59
+53270.5 76 79.66
+53049 76 81.72
+53016 76 83.79
+52993 76 85.86
+52454 76 87.93
+51772 76 90
+51095 76 92.07
+49830.5 76 94.14
+49089 76 96.21
+48285 76 98.28
+48795 76 100.34
+48906.5 76 102.41
+48792 76 104.48
+48432 76 106.55
+47908 76 108.62
+46940 76 110.69
+45951.5 76 112.76
+45386 76 114.83
+45866.5 76 116.9
+46818.5 76 118.97
+47621.5 76 121.03
+47191.5 76 123.1
+47568.5 76 125.17
+47079 76 127.24
+47567 76 129.31
+48459 76 131.38
+48981.5 76 133.45
+49763.5 76 135.52
+50192.5 76 137.59
+50594 76 139.66
+51053 76 141.72
+51016 76 143.79
+51055 76 145.86
+51189 76 147.93
+51693 76 150
+52597.5 76 152.07
+52673.5 76 154.14
+52590 76 156.21
+52637.5 76 158.28
+52767.5 76 160.34
+51735 76 162.41
+51587 76 164.48
+50955.5 76 166.55
+50865 76 168.62
+51223.5 76 170.69
+51915.5 76 172.76
+51726 76 174.83
+50928 76 176.9
+49883 76 178.97
+50289 76 181.03
+51544 76 183.1
+53084.5 76 185.17
+54746 76 187.24
+55575.5 76 189.31
+56136 76 191.38
+56499.5 76 193.45
+56173.5 76 195.52
+56137.5 76 197.59
+55946.5 76 199.66
+56273.5 76 201.72
+57103 76 203.79
+56791.5 76 205.86
+56804 76 207.93
+57037 76 210
+56721.5 76 212.07
+56048.5 76 214.14
+56172.5 76 216.21
+55997.5 76 218.28
+57113 76 220.34
+56921 76 222.41
+56820.5 76 224.48
+55948.5 76 226.55
+54233.5 76 228.62
+53776.5 76 230.69
+52651.5 76 232.76
+53352 76 234.83
+54473 76 236.9
+55697 76 238.97
+56779.5 76 241.03
+56745 76 243.1
+56690.5 76 245.17
+57155 76 247.24
+57684 76 249.31
+59239 76 251.38
+60388.5 76 253.45
+61632.5 76 255.52
+62388.5 76 257.59
+63000 76 259.66
+63640 76 261.72
+63901.5 76 263.79
+64244.5 76 265.86
+64775 76 267.93
+65435 76 270
+66081 76 272.07
+66235.5 76 274.14
+65564 76 276.21
+64923 76 278.28
+64201 76 280.34
+63643 76 282.41
+62470.5 76 284.48
+62075 76 286.55
+62884 76 288.62
+64244.5 76 290.69
+64448.5 76 292.76
+63961 76 294.83
+62668 76 296.9
+62145.5 76 298.97
+63203 76 301.03
+64539.5 76 303.1
+66675 76 305.17
+68628.5 76 307.24
+69986.5 76 309.31
+70856.5 76 311.38
+71312.5 76 313.45
+70680.5 76 315.52
+70509.5 76 317.59
+70367 76 319.66
+70478.5 76 321.72
+70212.5 76 323.79
+69847 76 325.86
+69731.5 76 327.93
+69051 76 330
+68425.5 76 332.07
+67215.5 76 334.14
+66675 76 336.21
+66841 76 338.28
+67032 76 340.34
+67196.5 76 342.41
+66357.5 76 344.48
+65323 76 346.55
+63982 76 348.62
+62376.5 76 350.69
+61000 76 352.76
+60381.5 76 354.83
+60667 76 356.9
+61938.5 76 358.97
+68984.5 74 1.21
+68259 74 3.29
+67329.5 74 5.38
+66552.5 74 7.46
+66354.5 74 9.54
+67272.5 74 11.62
+67403 74 13.7
+67979 74 15.78
+68788.5 74 17.86
+69109.5 74 19.94
+68646.5 74 22.02
+68506 74 24.1
+68692 74 26.18
+68295.5 74 28.27
+68135.5 74 30.35
+68130 74 32.43
+67514 74 34.51
+66247 74 36.59
+65105.5 74 38.67
+63981 74 40.75
+62037.5 74 42.83
+61282.5 74 44.91
+60476.5 74 46.99
+60785 74 49.08
+61601.5 74 51.16
+61310.5 74 53.24
+59853.5 74 55.32
+58016.5 74 57.4
+57504.5 74 59.48
+57712 74 61.56
+58729.5 74 63.64
+60143 74 65.72
+61132.5 74 67.8
+61944.5 74 69.88
+61699 74 71.97
+61791.5 74 74.05
+60876 74 76.13
+60210.5 74 78.21
+59712 74 80.29
+59856.5 74 82.37
+59600 74 84.45
+59086 74 86.53
+58723.5 74 88.61
+58508 74 90.69
+57654.5 74 92.77
+56537.5 74 94.86
+56561 74 96.94
+56430.5 74 99.02
+56329.5 74 101.1
+56769 74 103.18
+55942 74 105.26
+54698.5 74 107.34
+53265 74 109.42
+51955.5 74 111.5
+50377.5 74 113.58
+50544.5 74 115.66
+51450.5 74 117.75
+52740.5 74 119.83
+53325 74 121.91
+53221 74 123.99
+53125.5 74 126.07
+53195.5 74 128.15
+53943.5 74 130.23
+54683.5 74 132.31
+55542.5 74 134.39
+56063.5 74 136.47
+57021 74 138.55
+57538 74 140.64
+57693 74 142.72
+58130.5 74 144.8
+58187.5 74 146.88
+58978.5 74 148.96
+59246.5 74 151.04
+59619.5 74 153.12
+59911.5 74 155.2
+59558 74 157.28
+58859 74 159.36
+58368.5 74 161.45
+57528 74 163.53
+56870 74 165.61
+57010.5 74 167.69
+58072 74 169.77
+58730.5 74 171.85
+58690.5 74 173.93
+56980.5 74 176.01
+56420 74 178.09
+56177 74 180.17
+57094.5 74 182.25
+59252.5 74 184.34
+61166.5 74 186.42
+62689 74 188.5
+64377.5 74 190.58
+64394.5 74 192.66
+64366.5 74 194.74
+64158 74 196.82
+64042 74 198.9
+63380 74 200.98
+63735.5 74 203.06
+62878.5 74 205.14
+63498 74 207.23
+63768 74 209.31
+63575.5 74 211.39
+63435 74 213.47
+63692 74 215.55
+63737.5 74 217.63
+64486 74 219.71
+64742.5 74 221.79
+64218.5 74 223.87
+63665 74 225.95
+62347.5 74 228.03
+59660 74 230.12
+58965 74 232.2
+58002 74 234.28
+59577.5 74 236.36
+61207.5 74 238.44
+62593 74 240.52
+62722.5 74 242.6
+62482 74 244.68
+61976.5 74 246.76
+62365 74 248.84
+63537 74 250.92
+64462.5 74 253.01
+65475 74 255.09
+66658.5 74 257.17
+68131.5 74 259.25
+68766.5 74 261.33
+69686.5 74 263.41
+69935 74 265.49
+70529.5 74 267.57
+71089.5 74 269.65
+71436.5 74 271.73
+71247.5 74 273.81
+70598 74 275.9
+69672 74 277.98
+68256 74 280.06
+67709 74 282.14
+67531 74 284.22
+67739.5 74 286.3
+69155.5 74 288.38
+70404.5 74 290.46
+70851.5 74 292.54
+69968 74 294.62
+68593 74 296.71
+67691 74 298.79
+68709 74 300.87
+70393 74 302.95
+73306.5 74 305.03
+76018 74 307.11
+77818 74 309.19
+79295.5 74 311.27
+79001 74 313.35
+78458 74 315.43
+78336 74 317.51
+77167 74 319.6
+77592 74 321.68
+76668.5 74 323.76
+76309.5 74 325.84
+76214.5 74 327.92
+76471 74 330
+75905 74 332.08
+75241.5 74 334.16
+75088 74 336.24
+75122.5 74 338.32
+75553.5 74 340.4
+75380.5 74 342.49
+73868.5 74 344.57
+73042 74 346.65
+71588.5 74 348.73
+69060.5 74 350.81
+67269 74 352.89
+66963.5 74 354.97
+67323 74 357.05
+68664 74 359.13
+76197 72 1.58
+76145 72 3.68
+74911.5 72 5.79
+72971.5 72 7.89
+72047.5 72 10
+72364 72 12.11
+71827 72 14.21
+72826.5 72 16.32
+73592 72 18.42
+74649 72 20.53
+75022 72 22.63
+74525 72 24.74
+74324.5 72 26.84
+74486.5 72 28.95
+74303 72 31.05
+73794.5 72 33.16
+72250 72 35.26
+70433 72 37.37
+68717.5 72 39.47
+67283.5 72 41.58
+65908 72 43.68
+66065 72 45.79
+66647 72 47.89
+67815 72 50
+67694 72 52.11
+66917.5 72 54.21
+65030.5 72 56.32
+63396 72 58.42
+62722 72 60.53
+63809.5 72 62.63
+65511.5 72 64.74
+67965.5 72 66.84
+69624.5 72 68.95
+69794.5 72 71.05
+69933.5 72 73.16
+69445.5 72 75.26
+69006.5 72 77.37
+68792 72 79.47
+67791 72 81.58
+67028.5 72 83.68
+66579.5 72 85.79
+66075 72 87.89
+65749.5 72 90
+65876 72 92.11
+65560 72 94.21
+65329.5 72 96.32
+65023.5 72 98.42
+65397.5 72 100.53
+65365.5 72 102.63
+64849 72 104.74
+63887 72 106.84
+62138 72 108.95
+60019.5 72 111.05
+57986.5 72 113.16
+56614.5 72 115.26
+57421.5 72 117.37
+59143 72 119.47
+60480.5 72 121.58
+60522 72 123.68
+59471 72 125.79
+58920.5 72 127.89
+58600 72 130
+59439 72 132.11
+60262 72 134.21
+61131 72 136.32
+62656 72 138.42
+63386.5 72 140.53
+64429.5 72 142.63
+64669.5 72 144.74
+64736 72 146.84
+65575.5 72 148.95
+66218 72 151.05
+66701 72 153.16
+66018 72 155.26
+65179.5 72 157.37
+63882 72 159.47
+63140.5 72 161.58
+62681 72 163.68
+62715.5 72 165.79
+63638.5 72 167.89
+65235 72 170
+66186.5 72 172.11
+65773.5 72 174.21
+64065 72 176.32
+62558 72 178.42
+62073 72 180.53
+63722.5 72 182.63
+65903.5 72 184.74
+68395 72 186.84
+70614 72 188.95
+71938.5 72 191.05
+72496.5 72 193.16
+71263 72 195.26
+71339.5 72 197.37
+71497 72 199.47
+70850 72 201.58
+70139 72 203.68
+69792 72 205.79
+69967.5 72 207.89
+70276.5 72 210
+70757.5 72 212.11
+71613 72 214.21
+71954 72 216.32
+72499.5 72 218.42
+73124.5 72 220.53
+73555 72 222.63
+73423 72 224.74
+71927 72 226.84
+69435 72 228.95
+67010.5 72 231.05
+64781 72 233.16
+65242 72 235.26
+66382.5 72 237.37
+68192 72 239.47
+69894 72 241.58
+70617 72 243.68
+69652.5 72 245.79
+69136.5 72 247.89
+68458 72 250
+68596 72 252.11
+68959.5 72 254.21
+70201 72 256.32
+71650.5 72 258.42
+73506.5 72 260.53
+74303 72 262.63
+75606.5 72 264.74
+76106 72 266.84
+76810 72 268.95
+76871 72 271.05
+76313 72 273.16
+74514.5 72 275.26
+73384 72 277.37
+72081.5 72 279.47
+71763 72 281.58
+72279.5 72 283.68
+73714.5 72 285.79
+75903.5 72 287.89
+77721.5 72 290
+77474.5 72 292.11
+75771.5 72 294.21
+74213 72 296.32
+73277.5 72 298.42
+73653 72 300.53
+75832 72 302.63
+79200.5 72 304.74
+82640 72 306.84
+85032 72 308.95
+86472 72 311.05
+86563.5 72 313.16
+85530 72 315.26
+85535 72 317.37
+85032 72 319.47
+84457 72 321.58
+83001.5 72 323.68
+82495 72 325.79
+82347.5 72 327.89
+82282.5 72 330
+82425.5 72 332.11
+82774 72 334.21
+82882.5 72 336.32
+83632 72 338.42
+83696.5 72 340.53
+83637.5 72 342.63
+83684 72 344.74
+81946.5 72 346.84
+78883.5 72 348.95
+75986 72 351.05
+73504 72 353.16
+73084.5 72 355.26
+74535 72 357.37
+75621 72 359.47
+83183 70 1.95
+83299 70 4.08
+82595 70 6.21
+80585.5 70 8.34
+78380.5 70 10.47
+77032.5 70 12.6
+76070 70 14.73
+76353.5 70 16.86
+78137 70 18.99
+79131 70 21.12
+79818 70 23.25
+80419 70 25.38
+80477 70 27.51
+80363 70 29.64
+79539.5 70 31.78
+77388 70 33.91
+75042.5 70 36.04
+72329.5 70 38.17
+70820 70 40.3
+70979 70 42.43
+71873 70 44.56
+73214.5 70 46.69
+74532.5 70 48.82
+74820 70 50.95
+73499 70 53.08
+70970 70 55.21
+69167 70 57.34
+68550.5 70 59.47
+69358 70 61.6
+71280 70 63.73
+74022 70 65.86
+76377 70 67.99
+77829.5 70 70.12
+78214.5 70 72.25
+77062 70 74.38
+76370.5 70 76.51
+75488.5 70 78.64
+75128.5 70 80.77
+74003.5 70 82.9
+72854.5 70 85.03
+71954.5 70 87.16
+72270.5 70 89.29
+72541 70 91.42
+72563 70 93.55
+72852.5 70 95.68
+73068.5 70 97.81
+73061.5 70 99.94
+73662.5 70 102.07
+73434 70 104.2
+73129 70 106.33
+70565.5 70 108.46
+67225 70 110.59
+64994.5 70 112.72
+63425 70 114.85
+63665.5 70 116.98
+65082.5 70 119.11
+66809 70 121.24
+67627.5 70 123.37
+67368 70 125.5
+66038.5 70 127.63
+64712 70 129.76
+64065 70 131.89
+64203.5 70 134.02
+64645 70 136.15
+66351 70 138.28
+67680 70 140.41
+69069.5 70 142.54
+70197.5 70 144.67
+70470 70 146.8
+70971 70 148.93
+71317.5 70 151.07
+71147.5 70 153.2
+69736 70 155.33
+68423.5 70 157.46
+67281 70 159.59
+66892.5 70 161.72
+67574.5 70 163.85
+69034.5 70 165.98
+71177.5 70 168.11
+72417 70 170.24
+72585.5 70 172.37
+70756.5 70 174.5
+69337.5 70 176.63
+67557.5 70 178.76
+68094 70 180.89
+69481.5 70 183.02
+72500.5 70 185.15
+76286 70 187.28
+79002 70 189.41
+80081.5 70 191.54
+79698.5 70 193.67
+79113 70 195.8
+78000 70 197.93
+77397.5 70 200.06
+76574.5 70 202.19
+75401.5 70 204.32
+75507.5 70 206.45
+75531.5 70 208.58
+76295 70 210.71
+77374 70 212.84
+78946.5 70 214.97
+79955 70 217.1
+80876 70 219.23
+81675 70 221.36
+81934 70 223.49
+80310.5 70 225.62
+77841.5 70 227.75
+74361.5 70 229.88
+72078.5 70 232.01
+71318.5 70 234.14
+72055 70 236.27
+74058.5 70 238.4
+75844 70 240.53
+77736.5 70 242.66
+79031.5 70 244.79
+78437.5 70 246.92
+76436 70 249.05
+75412.5 70 251.18
+73492.5 70 253.31
+73727.5 70 255.44
+74857 70 257.57
+76995.5 70 259.7
+79029 70 261.83
+80806 70 263.96
+81964 70 266.09
+83088 70 268.22
+82176 70 270.35
+81259 70 272.49
+79323.5 70 274.62
+77001 70 276.75
+75907.5 70 278.88
+76390.5 70 281.01
+77955 70 283.14
+81051.5 70 285.27
+83210 70 287.4
+84777.5 70 289.53
+84289.5 70 291.66
+81800 70 293.79
+79637 70 295.92
+77757.5 70 298.05
+78822 70 300.18
+79859 70 302.31
+83711.5 70 304.44
+87151 70 306.57
+90337.5 70 308.7
+92548.5 70 310.83
+92789 70 312.96
+92430.5 70 315.09
+91610 70 317.22
+90237 70 319.35
+89246 70 321.48
+88034.5 70 323.61
+86861.5 70 325.74
+86330 70 327.87
+86914.5 70 330
+87040.5 70 332.13
+88556 70 334.26
+89324.5 70 336.39
+90648.5 70 338.52
+91458.5 70 340.65
+91319.5 70 342.78
+90193 70 344.91
+87579.5 70 347.04
+84036 70 349.17
+81282.5 70 351.3
+79277 70 353.43
+78811 70 355.56
+80078 70 357.69
+81535.5 70 359.82
+87449.5 68 0.36
+89119.5 68 2.53
+90827 68 4.7
+89975.5 68 6.87
+87334.5 68 9.04
+84419 68 11.2
+81413 68 13.37
+79753 68 15.54
+80004.5 68 17.71
+81620.5 68 19.88
+83465 68 22.05
+85012.5 68 24.22
+85040.5 68 26.39
+85183 68 28.55
+83526 68 30.72
+81466 68 32.89
+78474 68 35.06
+76598.5 68 37.23
+75000 68 39.4
+75792 68 41.57
+77542 68 43.73
+80152.5 68 45.9
+81487 68 48.07
+81776.5 68 50.24
+79940 68 52.41
+77102.5 68 54.58
+74944 68 56.75
+73142 68 58.92
+73326.5 68 61.08
+75324 68 63.25
+77650.5 68 65.42
+80628 68 67.59
+82655 68 69.76
+83828.5 68 71.93
+83652.5 68 74.1
+82365 68 76.27
+81162 68 78.43
+80293.5 68 80.6
+78321 68 82.77
+77282 68 84.94
+76191.5 68 87.11
+76399.5 68 89.28
+76656.5 68 91.45
+77362 68 93.61
+78254.5 68 95.78
+79241.5 68 97.95
+79844 68 100.12
+80818 68 102.29
+80127.5 68 104.46
+78620 68 106.63
+75683 68 108.8
+72572 68 110.96
+69938.5 68 113.13
+69025 68 115.3
+69363 68 117.47
+70885.5 68 119.64
+72875.5 68 121.81
+74415.5 68 123.98
+74706.5 68 126.14
+73846.5 68 128.31
+71448 68 130.48
+69500.5 68 132.65
+68534 68 134.82
+68731.5 68 136.99
+69981 68 139.16
+72468.5 68 141.33
+74015 68 143.49
+75099 68 145.66
+76032 68 147.83
+76734 68 150
+75643.5 68 152.17
+74017.5 68 154.34
+71740.5 68 156.51
+70552 68 158.67
+70688.5 68 160.84
+72534.5 68 163.01
+75667.5 68 165.18
+77931.5 68 167.35
+79649 68 169.52
+79095.5 68 171.69
+76812 68 173.86
+74582.5 68 176.02
+72939.5 68 178.19
+72861 68 180.36
+73813 68 182.53
+75957.5 68 184.7
+78922.5 68 186.87
+82718 68 189.04
+84617.5 68 191.2
+85475.5 68 193.37
+84800.5 68 195.54
+83665 68 197.71
+82303.5 68 199.88
+80574 68 202.05
+78837.5 68 204.22
+77449.5 68 206.39
+77543 68 208.55
+79152 68 210.72
+81702 68 212.89
+83429.5 68 215.06
+85286.5 68 217.23
+86997.5 68 219.4
+88290 68 221.57
+87164.5 68 223.73
+84772.5 68 225.9
+81987.5 68 228.07
+79662.5 68 230.24
+78797.5 68 232.41
+78377.5 68 234.58
+78651 68 236.75
+79709.5 68 238.92
+82436.5 68 241.08
+84047.5 68 243.25
+86558.5 68 245.42
+86321.5 68 247.59
+84392 68 249.76
+81583 68 251.93
+78748 68 254.1
+77789 68 256.27
+79148 68 258.43
+80907.5 68 260.6
+84051.5 68 262.77
+85810 68 264.94
+87021.5 68 267.11
+87775 68 269.28
+86930.5 68 271.45
+84031.5 68 273.61
+81624 68 275.78
+80135 68 277.95
+80142 68 280.12
+82129.5 68 282.29
+86326 68 284.46
+89291.5 68 286.63
+90667 68 288.8
+90088.5 68 290.96
+87241.5 68 293.13
+84876 68 295.3
+83017.5 68 297.47
+83222.5 68 299.64
+84462.5 68 301.81
+86818 68 303.98
+89369 68 306.14
+92590.5 68 308.31
+95320 68 310.48
+96564 68 312.65
+96246.5 68 314.82
+95688 68 316.99
+93877.5 68 319.16
+92296.5 68 321.33
+90091.5 68 323.49
+88261.5 68 325.66
+87302.5 68 327.83
+88373.5 68 330
+90432 68 332.17
+92458.5 68 334.34
+94921.5 68 336.51
+96264.5 68 338.67
+97151 68 340.84
+96411.5 68 343.01
+94063.5 68 345.18
+91083 68 347.35
+88105.5 68 349.52
+86431 68 351.69
+84934.5 68 353.86
+84441 68 356.02
+85586 68 358.19
+91132.5 66 0.73
+93779 66 2.93
+95793 66 5.12
+94921.5 66 7.32
+93251.5 66 9.51
+89320.5 66 11.71
+85156.5 66 13.9
+83408 66 16.1
+83096 66 18.29
+84496 66 20.49
+86980.5 66 22.68
+89175 66 24.88
+89725 66 27.07
+89298.5 66 29.27
+86775 66 31.46
+83155.5 66 33.66
+80192.5 66 35.85
+78400 66 38.05
+78906 66 40.24
+81427.5 66 42.44
+84833.5 66 44.63
+86797.5 66 46.83
+86980.5 66 49.02
+85592.5 66 51.22
+82910 66 53.41
+79704.5 66 55.61
+77817.5 66 57.8
+78244.5 66 60
+79447 66 62.2
+80656.5 66 64.39
+82702 66 66.59
+85172.5 66 68.78
+86915 66 70.98
+87341 66 73.17
+87304 66 75.37
+85965 66 77.56
+84514.5 66 79.76
+82477 66 81.95
+80452.5 66 84.15
+78036 66 86.34
+77653.5 66 88.54
+78566 66 90.73
+80489 66 92.93
+81841.5 66 95.12
+83757 66 97.32
+85150 66 99.51
+86285 66 101.71
+85139 66 103.9
+82580 66 106.1
+79957 66 108.29
+77597.5 66 110.49
+76056 66 112.68
+75130.5 66 114.88
+74604 66 117.07
+75656 66 119.27
+77231.5 66 121.46
+79733 66 123.66
+81579 66 125.85
+81262 66 128.05
+79274.5 66 130.24
+75795.5 66 132.44
+72907.5 66 134.63
+72073.5 66 136.83
+73305.5 66 139.02
+75783 66 141.22
+78009.5 66 143.41
+80459.5 66 145.61
+81095.5 66 147.8
+81035.5 66 150
+79994 66 152.2
+76858 66 154.39
+75071 66 156.59
+73945 66 158.78
+75310 66 160.98
+78352.5 66 163.17
+81763.5 66 165.37
+83990 66 167.56
+84357.5 66 169.76
+82977 66 171.95
+80680 66 174.15
+78662.5 66 176.34
+77284 66 178.54
+78260.5 66 180.73
+79541.5 66 182.93
+80894.5 66 185.12
+84041 66 187.32
+86099 66 189.51
+88071 66 191.71
+88998 66 193.9
+88796.5 66 196.1
+87853 66 198.29
+85654 66 200.49
+82757 66 202.68
+79870.5 66 204.88
+78930.5 66 207.07
+80046 66 209.27
+82543 66 211.46
+85945.5 66 213.66
+88767.5 66 215.85
+90867.5 66 218.05
+92168.5 66 220.24
+91537 66 222.44
+89699.5 66 224.63
+87451.5 66 226.83
+86361 66 229.02
+86136 66 231.22
+85375.5 66 233.41
+85160.5 66 235.61
+84596.5 66 237.8
+86027 66 240
+88587 66 242.2
+90892 66 244.39
+91964 66 246.59
+91880.5 66 248.78
+88356.5 66 250.98
+85095 66 253.17
+83219 66 255.37
+82248.5 66 257.56
+84318 66 259.76
+86502.5 66 261.95
+90026 66 264.15
+91624.5 66 266.34
+92133.5 66 268.54
+90655.5 66 270.73
+87459.5 66 272.93
+84806.5 66 275.12
+83581.5 66 277.32
+84704.5 66 279.51
+87830 66 281.71
+91294 66 283.9
+94121.5 66 286.1
+95086 66 288.29
+93265.5 66 290.49
+90423.5 66 292.68
+88446 66 294.88
+87923.5 66 297.07
+88827.5 66 299.27
+90476 66 301.46
+91828 66 303.66
+93351.5 66 305.85
+95338.5 66 308.05
+97028.5 66 310.24
+98417 66 312.44
+99285 66 314.63
+98597.5 66 316.83
+96904.5 66 319.02
+94012.5 66 321.22
+91141 66 323.41
+88845 66 325.61
+88059.5 66 327.8
+89482 66 330
+92109 66 332.2
+95393 66 334.39
+97324.5 66 336.59
+99536.5 66 338.78
+100137 66 340.98
+98954.5 66 343.17
+96253.5 66 345.37
+94341 66 347.56
+92462.5 66 349.76
+92286 66 351.95
+91053 66 354.15
+90031.5 66 356.34
+90287 66 358.54
+94924.5 64 1.3
+96457 64 3.54
+98502 64 5.78
+98474.5 64 8.01
+96485.5 64 10.25
+92195 64 12.48
+88225.5 64 14.72
+86177.5 64 16.96
+85857.5 64 19.19
+87498.5 64 21.43
+90145.5 64 23.66
+92452 64 25.9
+92262.5 64 28.14
+89500 64 30.37
+85838 64 32.61
+82694.5 64 34.84
+81079 64 37.08
+82394 64 39.32
+85547 64 41.55
+88929 64 43.79
+91338.5 64 46.02
+91045 64 48.26
+88933.5 64 50.5
+85955.5 64 52.73
+83524 64 54.97
+82932.5 64 57.2
+83768.5 64 59.44
+84470 64 61.68
+85623.5 64 63.91
+86799.5 64 66.15
+88589.5 64 68.39
+89666 64 70.62
+90601 64 72.86
+90273.5 64 75.09
+89564.5 64 77.33
+87275 64 79.57
+84458 64 81.8
+81709.5 64 84.04
+79488 64 86.27
+79053.5 64 88.51
+80372 64 90.75
+83513 64 92.98
+85532.5 64 95.22
+88097.5 64 97.45
+89216 64 99.69
+89250 64 101.93
+88033 64 104.16
+85831.5 64 106.4
+84091 64 108.63
+83278 64 110.87
+82619.5 64 113.11
+81768 64 115.34
+80817 64 117.58
+80592 64 119.81
+82140.5 64 122.05
+84551 64 124.29
+86195.5 64 126.52
+85504 64 128.76
+83572 64 130.99
+79703.5 64 133.23
+76475.5 64 135.47
+75488.5 64 137.7
+76672 64 139.94
+79093.5 64 142.17
+82237 64 144.41
+84672.5 64 146.65
+85252.5 64 148.88
+83521 64 151.12
+80420.5 64 153.35
+77708 64 155.59
+77172.5 64 157.83
+78758 64 160.06
+81841 64 162.3
+85375.5 64 164.53
+88407 64 166.77
+88658 64 169.01
+86325 64 171.24
+84060.5 64 173.48
+82368 64 175.71
+82826 64 177.95
+83969.5 64 180.19
+85721.5 64 182.42
+86549 64 184.66
+87646.5 64 186.89
+89676.5 64 189.13
+90892.5 64 191.37
+92009.5 64 193.6
+91813.5 64 195.84
+90494.5 64 198.07
+87686 64 200.31
+85320.5 64 202.55
+83548.5 64 204.78
+82464 64 207.02
+83708.5 64 209.25
+86380.5 64 211.49
+88872.5 64 213.73
+92278.5 64 215.96
+94488 64 218.2
+94724 64 220.43
+94433 64 222.67
+93515 64 224.91
+92459 64 227.14
+93073 64 229.38
+93076.5 64 231.61
+92431.5 64 233.85
+91339 64 236.09
+90354 64 238.32
+90892.5 64 240.56
+92958.5 64 242.8
+95084 64 245.03
+96677 64 247.27
+96300.5 64 249.5
+93801.5 64 251.74
+90105.5 64 253.98
+88274.5 64 256.21
+86665.5 64 258.45
+87122 64 260.68
+90250.5 64 262.92
+92328.5 64 265.16
+94117 64 267.39
+92914.5 64 269.63
+90812 64 271.86
+88600 64 274.1
+87069 64 276.34
+87247.5 64 278.57
+90054.5 64 280.81
+93854.5 64 283.04
+97036 64 285.28
+97817.5 64 287.52
+96521 64 289.75
+93729.5 64 291.99
+91759 64 294.22
+91911 64 296.46
+93095 64 298.7
+95030.5 64 300.93
+97026 64 303.17
+97779.5 64 305.4
+98708 64 307.64
+99490.5 64 309.88
+100216 64 312.11
+100492 64 314.35
+99097 64 316.58
+97726.5 64 318.82
+95725.5 64 321.06
+93198.5 64 323.29
+91631.5 64 325.53
+91144.5 64 327.76
+93023.5 64 330
+94494 64 332.24
+97416.5 64 334.47
+99663.5 64 336.71
+100890 64 338.94
+101440 64 341.18
+99993 64 343.42
+98850.5 64 345.65
+98364.5 64 347.89
+97645.5 64 350.12
+97557 64 352.36
+96155 64 354.6
+94777 64 356.83
+93870 64 359.07
+97849 62 1.9
+99248 62 4.18
+101062 62 6.46
+101445 62 8.73
+99283.5 62 11.01
+95610 62 13.29
+92195.5 62 15.57
+90019.5 62 17.85
+89719 62 20.13
+90815 62 22.41
+92854.5 62 24.68
+92984 62 26.96
+91875 62 29.24
+89567.5 62 31.52
+87216 62 33.8
+85164.5 62 36.08
+85587.5 62 38.35
+88547.5 62 40.63
+92536.5 62 42.91
+94972 62 45.19
+94357.5 62 47.47
+92249 62 49.75
+89296 62 52.03
+87856 62 54.3
+87439 62 56.58
+88527.5 62 58.86
+90113 62 61.14
+91506 62 63.42
+91744.5 62 65.7
+93053 62 67.97
+93248.5 62 70.25
+93207.5 62 72.53
+92260 62 74.81
+91778.5 62 77.09
+89543 62 79.37
+87405.5 62 81.65
+84900 62 83.92
+82861 62 86.2
+83026.5 62 88.48
+84582 62 90.76
+86502.5 62 93.04
+88358 62 95.32
+90092.5 62 97.59
+91580.5 62 99.87
+91310.5 62 102.15
+90392.5 62 104.43
+89373.5 62 106.71
+89549 62 108.99
+89620 62 111.27
+89295.5 62 113.54
+88034 62 115.82
+85894 62 118.1
+85118 62 120.38
+86421.5 62 122.66
+87765.5 62 124.94
+89451 62 127.22
+89837.5 62 129.49
+88000 62 131.77
+84774 62 134.05
+81632 62 136.33
+80186 62 138.61
+80329 62 140.89
+82691.5 62 143.16
+85004.5 62 145.44
+86929 62 147.72
+86405.5 62 150
+84547 62 152.28
+82550 62 154.56
+80476.5 62 156.84
+81431 62 159.11
+84655 62 161.39
+89490.5 62 163.67
+91652 62 165.95
+92292 62 168.23
+89986 62 170.51
+87683 62 172.78
+86541 62 175.06
+86802.5 62 177.34
+88630.5 62 179.62
+90561 62 181.9
+92687 62 184.18
+93514 62 186.46
+93832.5 62 188.73
+94673 62 191.01
+94494 62 193.29
+94055.5 62 195.57
+92761.5 62 197.85
+92111.5 62 200.13
+90456.5 62 202.41
+90083.5 62 204.68
+90305 62 206.96
+90924.5 62 209.24
+92282.5 62 211.52
+93655 62 213.8
+94621 62 216.08
+95648.5 62 218.35
+96017 62 220.63
+96340 62 222.91
+97204 62 225.19
+98044 62 227.47
+99072 62 229.75
+99739 62 232.03
+98794 62 234.3
+97854.5 62 236.58
+96050 62 238.86
+95982.5 62 241.14
+97052 62 243.42
+98837 62 245.7
+101057 62 247.97
+101050 62 250.25
+98614.5 62 252.53
+95612.5 62 254.81
+93130 62 257.09
+92517 62 259.37
+93296.5 62 261.65
+94706.5 62 263.92
+95184 62 266.2
+95876.5 62 268.48
+94545.5 62 270.76
+93514.5 62 273.04
+91919 62 275.32
+91637 62 277.59
+93854 62 279.87
+97680 62 282.15
+100516 62 284.43
+101384 62 286.71
+99631.5 62 288.99
+96851.5 62 291.27
+94788 62 293.54
+95831 62 295.82
+97505 62 298.1
+99170 62 300.38
+101048 62 302.66
+101955 62 304.94
+101618 62 307.22
+101505 62 309.49
+101208 62 311.77
+99591 62 314.05
+99155.5 62 316.33
+98218.5 62 318.61
+97722.5 62 320.89
+96987.5 62 323.16
+97878 62 325.44
+97858.5 62 327.72
+97974 62 330
+98611.5 62 332.28
+99089.5 62 334.56
+99863 62 336.84
+99839.5 62 339.11
+100191 62 341.39
+100305 62 343.67
+101026 62 345.95
+101492 62 348.23
+102558 62 350.51
+101646 62 352.78
+100119 62 355.06
+98460 62 357.34
+97282 62 359.62
+99474 60 0.19
+100166 60 2.52
+101383 60 4.84
+103264 60 7.16
+103950 60 9.48
+101687 60 11.81
+98611.5 60 14.13
+94360.5 60 16.45
+93085 60 18.77
+92949 60 21.1
+94232 60 23.42
+94453 60 25.74
+94500.5 60 28.06
+93266 60 30.39
+91242 60 32.71
+89414 60 35.03
+89670 60 37.35
+92099.5 60 39.68
+95689.5 60 42
+97425 60 44.32
+97024 60 46.65
+94766 60 48.97
+92211.5 60 51.29
+91145.5 60 53.61
+91473 60 55.94
+93271.5 60 58.26
+95275.5 60 60.58
+96652.5 60 62.9
+95921 60 65.23
+95763 60 67.55
+94881 60 69.87
+93707 60 72.19
+92882.5 60 74.52
+91504.5 60 76.84
+90153 60 79.16
+89715.5 60 81.48
+90100 60 83.81
+89837.5 60 86.13
+90084 60 88.45
+90065.5 60 90.77
+90544.5 60 93.1
+91072.5 60 95.42
+91160 60 97.74
+91268.5 60 100.06
+91356 60 102.39
+91775 60 104.71
+92405 60 107.03
+93785 60 109.35
+94448.5 60 111.68
+93837 60 114
+92453 60 116.32
+91231.5 60 118.65
+89673.5 60 120.97
+90206 60 123.29
+92043 60 125.61
+93585 60 127.94
+94623.5 60 130.26
+92248.5 60 132.58
+88824 60 134.9
+86443 60 137.23
+85592.5 60 139.55
+86157.5 60 141.87
+87489 60 144.19
+88585.5 60 146.52
+89086 60 148.84
+88197 60 151.16
+86905 60 153.48
+85547.5 60 155.81
+86007 60 158.13
+88500.5 60 160.45
+92685 60 162.77
+95555.5 60 165.1
+95119 60 167.42
+92800 60 169.74
+90886 60 172.06
+90534 60 174.39
+91247.5 60 176.71
+94196.5 60 179.03
+95618.5 60 181.35
+97332.5 60 183.68
+97644 60 186
+96704 60 188.32
+95754 60 190.65
+94513.5 60 192.97
+93772.5 60 195.29
+93698.5 60 197.61
+94048 60 199.94
+95895 60 202.26
+98188.5 60 204.58
+99778 60 206.9
+100379 60 209.23
+99320.5 60 211.55
+97220.5 60 213.87
+95869 60 216.19
+94886.5 60 218.52
+95230.5 60 220.84
+96688.5 60 223.16
+98219 60 225.48
+100964 60 227.81
+103066 60 230.13
+104280 60 232.45
+103433 60 234.77
+101950 60 237.1
+100851 60 239.42
+100093 60 241.74
+100868 60 244.06
+103103 60 246.39
+105589 60 248.71
+105094 60 251.03
+102156 60 253.35
+99002.5 60 255.68
+96615 60 258
+96267 60 260.32
+96746.5 60 262.65
+98324 60 264.97
+99156 60 267.29
+99313 60 269.61
+97302.5 60 271.94
+95323 60 274.26
+94677.5 60 276.58
+96294.5 60 278.9
+99932 60 281.23
+102214 60 283.55
+103180 60 285.87
+101800 60 288.19
+99557.5 60 290.52
+97452.5 60 292.84
+98631 60 295.16
+100574 60 297.48
+102636 60 299.81
+103471 60 302.13
+103589 60 304.45
+102118 60 306.77
+100837 60 309.1
+98901.5 60 311.42
+97733 60 313.74
+96608.5 60 316.06
+97708.5 60 318.39
+99629 60 320.71
+101968 60 323.03
+104070 60 325.35
+105598 60 327.68
+105017 60 330
+103169 60 332.32
+100516 60 334.65
+98369 60 336.97
+96801.5 60 339.29
+97343 60 341.61
+99004 60 343.94
+101201 60 346.26
+103352 60 348.58
+104879 60 350.9
+104868 60 353.23
+103440 60 355.55
+101278 60 357.87
+101802 58 0.79
+102382 58 3.16
+103978 58 5.53
+105986 58 7.89
+105542 58 10.26
+102716 58 12.63
+98909 58 15
+95326 58 17.37
+94883.5 58 19.74
+95207 58 22.11
+96846.5 58 24.47
+97688.5 58 26.84
+96976 58 29.21
+95018 58 31.58
+91999.5 58 33.95
+91249 58 36.32
+93056 58 38.68
+96992 58 41.05
+99162 58 43.42
+99362.5 58 45.79
+97511 58 48.16
+95026.5 58 50.53
+94121 58 52.89
+94621 58 55.26
+96279.5 58 57.63
+98037.5 58 60
+98376.5 58 62.37
+98211 58 64.74
+96733.5 58 67.11
+94419 58 69.47
+93076 58 71.84
+90243.5 58 74.21
+89709 58 76.58
+90559 58 78.95
+92224 58 81.32
+94833 58 83.68
+96643 58 86.05
+97549 58 88.42
+97100 58 90.79
+94782 58 93.16
+92243.5 58 95.53
+89686.5 58 97.89
+88757.5 58 100.26
+89068 58 102.63
+91261.5 58 105
+93529.5 58 107.37
+95823 58 109.74
+96822 58 112.11
+97679 58 114.47
+96252.5 58 116.84
+94230.5 58 119.21
+92881.5 58 121.58
+92983.5 58 123.95
+95803.5 58 126.32
+97806 58 128.68
+97993.5 58 131.05
+95245.5 58 133.42
+91955 58 135.79
+89311 58 138.16
+88963 58 140.53
+89606.5 58 142.89
+91458 58 145.26
+92576.5 58 147.63
+92634.5 58 150
+90710 58 152.37
+88980.5 58 154.74
+88610.5 58 157.11
+90038 58 159.47
+94306 58 161.84
+97500.5 58 164.21
+97391 58 166.58
+96086 58 168.95
+94390 58 171.32
+93164 58 173.68
+94904 58 176.05
+97981 58 178.42
+99881 58 180.79
+99287.5 58 183.16
+98788.5 58 185.53
+97861.5 58 187.89
+95531.5 58 190.26
+93548 58 192.63
+92474 58 195
+93246.5 58 197.37
+95721.5 58 199.74
+100145 58 202.11
+104399 58 204.47
+107065 58 206.84
+107410 58 209.21
+105833 58 211.58
+101340 58 213.95
+97176.5 58 216.32
+94937.5 58 218.68
+94051 58 221.05
+95459 58 223.42
+98460 58 225.79
+101006 58 228.16
+103969 58 230.53
+106697 58 232.89
+106614 58 235.26
+105649 58 237.63
+103568 58 240
+102943 58 242.37
+103356 58 244.74
+106285 58 247.11
+106952 58 249.47
+106046 58 251.84
+102705 58 254.21
+99599.5 58 256.58
+98108 58 258.95
+98277 58 261.32
+100046 58 263.68
+101577 58 266.05
+102335 58 268.42
+101697 58 270.79
+98339.5 58 273.16
+96486.5 58 275.53
+96816 58 277.89
+99630 58 280.26
+102458 58 282.63
+103944 58 285
+103706 58 287.37
+101546 58 289.74
+100818 58 292.11
+101068 58 294.47
+103387 58 296.84
+104943 58 299.21
+105400 58 301.58
+104714 58 303.95
+102670 58 306.32
+100652 58 308.68
+98262 58 311.05
+95819 58 313.42
+95209.5 58 315.79
+96801 58 318.16
+100594 58 320.53
+106026 58 322.89
+110144 58 325.26
+111814 58 327.63
+109968 58 330
+106224 58 332.37
+101726 58 334.74
+97035.5 58 337.11
+95212 58 339.47
+95675 58 341.84
+97587.5 58 344.21
+100710 58 346.58
+103730 58 348.95
+105504 58 351.32
+106440 58 353.68
+105927 58 356.05
+104108 58 358.42
+102246 56 1.41
+103047 56 3.83
+104512 56 6.24
+105986 56 8.66
+104535 56 11.07
+101144 56 13.49
+97895.5 56 15.91
+95974 56 18.32
+96813 56 20.74
+98710 56 23.15
+100726 56 25.57
+100284 56 27.99
+98591 56 30.4
+96036.5 56 32.82
+93790.5 56 35.23
+93760 56 37.65
+96505.5 56 40.07
+99419.5 56 42.48
+100538 56 44.9
+98870.5 56 47.32
+97322 56 49.73
+96384.5 56 52.15
+96775 56 54.56
+98761.5 56 56.98
+100573 56 59.4
+100101 56 61.81
+98934 56 64.23
+97348 56 66.64
+94556.5 56 69.06
+91876 56 71.48
+89578.5 56 73.89
+89593 56 76.31
+90159.5 56 78.72
+94477 56 81.14
+99136.5 56 83.56
+102231 56 85.97
+103486 56 88.39
+101507 56 90.81
+97849 56 93.22
+93298.5 56 95.64
+88880.5 56 98.05
+87601.5 56 100.47
+88345 56 102.89
+90727 56 105.3
+93250 56 107.72
+95822.5 56 110.13
+98661 56 112.55
+99147.5 56 114.97
+98572.5 56 117.38
+96225 56 119.8
+94777 56 122.21
+95788.5 56 124.63
+97929 56 127.05
+100100 56 129.46
+98769 56 131.88
+95421 56 134.3
+92154 56 136.71
+90173 56 139.13
+91199 56 141.54
+93109 56 143.96
+94907 56 146.38
+96338.5 56 148.79
+94999 56 151.21
+92453.5 56 153.62
+90751.5 56 156.04
+91278 56 158.46
+94218.5 56 160.87
+97973 56 163.29
+99248.5 56 165.7
+98318 56 168.12
+96919.5 56 170.54
+95802 56 172.95
+97771.5 56 175.37
+100879 56 177.79
+102330 56 180.2
+102294 56 182.62
+101335 56 185.03
+99415.5 56 187.45
+97238.5 56 189.87
+94900 56 192.28
+92922.5 56 194.7
+93731 56 197.11
+97720.5 56 199.53
+104702 56 201.95
+108978 56 204.36
+112848 56 206.78
+112468 56 209.19
+108824 56 211.61
+104258 56 214.03
+98534.5 56 216.44
+95626.5 56 218.86
+94940 56 221.28
+97245 56 223.69
+100680 56 226.11
+104342 56 228.52
+106907 56 230.94
+108142 56 233.36
+107987 56 235.77
+106250 56 238.19
+104054 56 240.6
+103886 56 243.02
+105284 56 245.44
+106697 56 247.85
+106430 56 250.27
+104994 56 252.68
+102238 56 255.1
+100708 56 257.52
+99900.5 56 259.93
+101548 56 262.35
+102602 56 264.77
+104555 56 267.18
+104320 56 269.6
+102926 56 272.01
+100396 56 274.43
+99325 56 276.85
+99780 56 279.26
+102585 56 281.68
+104310 56 284.09
+103818 56 286.51
+102196 56 288.93
+100398 56 291.34
+100798 56 293.76
+103064 56 296.17
+105632 56 298.59
+107324 56 301.01
+107089 56 303.42
+106212 56 305.84
+103861 56 308.25
+100452 56 310.67
+97049.5 56 313.09
+96095 56 315.5
+98648.5 56 317.92
+103528 56 320.34
+109996 56 322.75
+114284 56 325.17
+116248 56 327.58
+114633 56 330
+109616 56 332.42
+103426 56 334.83
+98368.5 56 337.25
+95865.5 56 339.66
+97258 56 342.08
+99882.5 56 344.5
+102703 56 346.91
+105150 56 349.33
+107492 56 351.74
+107732 56 354.16
+106402 56 356.58
+103915 56 358.99
+101077 54 2.28
+102356 54 4.76
+103836 54 7.24
+103702 54 9.72
+102956 54 12.21
+100270 54 14.69
+98947.5 54 17.17
+98491.5 54 19.66
+99538.5 54 22.14
+100760 54 24.62
+101267 54 27.1
+99635.5 54 29.59
+98029 54 32.07
+96319 54 34.55
+95991 54 37.03
+97320 54 39.52
+99441.5 54 42
+99682.5 54 44.48
+98387 54 46.97
+96950 54 49.45
+95815 54 51.93
+96653.5 54 54.41
+99800 54 56.9
+102005 54 59.38
+102668 54 61.86
+101282 54 64.34
+99700.5 54 66.83
+96145.5 54 69.31
+91789.5 54 71.79
+90165.5 54 74.28
+90621 54 76.76
+94540 54 79.24
+96191.5 54 81.72
+102322 54 84.21
+105879 54 86.69
+105974 54 89.17
+103056 54 91.66
+97723 54 94.14
+92187.5 54 96.62
+88837 54 99.1
+88728 54 101.59
+91809.5 54 104.07
+94672.5 54 106.55
+98021 54 109.03
+100415 54 111.52
+101294 54 114
+100593 54 116.48
+97723.5 54 118.97
+95619.5 54 121.45
+96020.5 54 123.93
+97998 54 126.41
+99396.5 54 128.9
+98194 54 131.38
+96323 54 133.86
+93505.5 54 136.34
+92969.5 54 138.83
+93937 54 141.31
+95424.5 54 143.79
+97151.5 54 146.28
+98240.5 54 148.76
+97299.5 54 151.24
+95356 54 153.72
+94123 54 156.21
+94825.5 54 158.69
+97324.5 54 161.17
+99588 54 163.66
+99332.5 54 166.14
+97999.5 54 168.62
+96489.5 54 171.1
+97363 54 173.59
+100472 54 176.07
+103770 54 178.55
+106320 54 181.03
+106672 54 183.52
+105347 54 186
+102951 54 188.48
+99399.5 54 190.97
+96565.5 54 193.45
+96362.5 54 195.93
+99501 54 198.41
+105600 54 200.9
+110878 54 203.38
+115660 54 205.86
+116131 54 208.34
+113380 54 210.83
+108462 54 213.31
+103375 54 215.79
+100277 54 218.28
+100014 54 220.76
+101999 54 223.24
+106154 54 225.72
+109162 54 228.21
+111052 54 230.69
+111550 54 233.17
+109910 54 235.66
+106741 54 238.14
+104564 54 240.62
+103726 54 243.1
+104880 54 245.59
+106460 54 248.07
+107114 54 250.55
+105834 54 253.03
+105007 54 255.52
+103380 54 258
+102970 54 260.48
+103286 54 262.97
+103826 54 265.45
+104068 54 267.93
+103603 54 270.41
+102545 54 272.9
+101760 54 275.38
+102266 54 277.86
+103610 54 280.34
+105210 54 282.83
+104530 54 285.31
+102310 54 287.79
+100252 54 290.28
+100126 54 292.76
+103034 54 295.24
+106712 54 297.72
+110478 54 300.21
+112198 54 302.69
+111480 54 305.17
+109134 54 307.66
+105621 54 310.14
+102017 54 312.62
+100517 54 315.1
+102178 54 317.59
+106524 54 320.07
+112193 54 322.55
+116659 54 325.03
+118465 54 327.52
+115054 54 330
+110186 54 332.48
+104406 54 334.97
+100619 54 337.45
+99444 54 339.93
+101423 54 342.41
+104458 54 344.9
+107444 54 347.38
+109860 54 349.86
+110166 54 352.34
+108370 54 354.83
+105399 54 357.31
+102250 54 359.79
+100782 52 0.64
+100305 52 3.19
+101908 52 5.74
+103998 52 8.3
+104076 52 10.85
+103676 52 13.4
+101936 52 15.96
+99677 52 18.51
+99616.5 52 21.06
+98936.5 52 23.62
+98574 52 26.17
+98367.5 52 28.72
+97824 52 31.28
+97674.5 52 33.83
+98288.5 52 36.38
+99848.5 52 38.94
+101427 52 41.49
+100220 52 44.04
+98039.5 52 46.6
+95581 52 49.15
+95177.5 52 51.7
+97204.5 52 54.26
+100940 52 56.81
+104554 52 59.36
+106168 52 61.91
+105858 52 64.47
+103002 52 67.02
+99549.5 52 69.57
+95426.5 52 72.13
+93468 52 74.68
+95954.5 52 77.23
+96473.5 52 79.79
+102532 52 82.34
+107780 52 84.89
+109329 52 87.45
+107858 52 90
+103572 52 92.55
+98025 52 95.11
+93532 52 97.66
+92829.5 52 100.21
+94777.5 52 102.77
+98320.5 52 105.32
+101405 52 107.87
+103820 52 110.43
+104006 52 112.98
+102932 52 115.53
+99609.5 52 118.09
+96974.5 52 120.64
+95422.5 52 123.19
+96533.5 52 125.74
+98761.5 52 128.3
+100574 52 130.85
+99351.5 52 133.4
+97390.5 52 135.96
+95930 52 138.51
+95760 52 141.06
+96179 52 143.62
+96972 52 146.17
+97232.5 52 148.72
+97040.5 52 151.28
+96681 52 153.83
+96197 52 156.38
+97379 52 158.94
+99435.5 52 161.49
+100139 52 164.04
+98779 52 166.6
+96184 52 169.15
+94902.5 52 171.7
+97417.5 52 174.26
+101648 52 176.81
+106160 52 179.36
+108492 52 181.91
+109812 52 184.47
+108716 52 187.02
+106041 52 189.57
+101992 52 192.13
+100932 52 194.68
+101593 52 197.23
+105315 52 199.79
+109712 52 202.34
+113406 52 204.89
+114750 52 207.45
+113436 52 210
+110027 52 212.55
+105708 52 215.11
+103894 52 217.66
+104112 52 220.21
+106151 52 222.77
+109044 52 225.32
+111868 52 227.87
+112470 52 230.43
+111548 52 232.98
+109566 52 235.53
+107072 52 238.09
+103513 52 240.64
+102056 52 243.19
+103111 52 245.74
+106154 52 248.3
+107615 52 250.85
+107767 52 253.4
+106949 52 255.96
+104862 52 258.51
+102826 52 261.06
+101170 52 263.62
+100876 52 266.17
+100259 52 268.72
+100044 52 271.28
+101139 52 273.83
+102788 52 276.38
+105622 52 278.94
+107560 52 281.49
+106666 52 284.04
+103818 52 286.6
+100998 52 289.15
+99462 52 291.7
+100848 52 294.26
+104298 52 296.81
+108671 52 299.36
+111486 52 301.91
+112023 52 304.47
+111726 52 307.02
+110328 52 309.57
+107150 52 312.13
+105477 52 314.68
+105565 52 317.23
+108168 52 319.79
+111258 52 322.34
+114386 52 324.89
+114812 52 327.45
+113289 52 330
+109560 52 332.55
+106428 52 335.11
+104589 52 337.66
+104859 52 340.21
+107250 52 342.77
+110298 52 345.32
+111283 52 347.87
+111993 52 350.43
+110274 52 352.98
+107042 52 355.53
+103430 52 358.09
+99219.5 50 1.53
+100218 50 4.16
+102903 50 6.79
+105761 50 9.42
+106544 50 12.04
+105776 50 14.67
+102354 50 17.3
+99743.5 50 19.93
+97511.5 50 22.55
+96239.5 50 25.18
+95123 50 27.81
+95576 50 30.44
+97606.5 50 33.07
+99923 50 35.69
+102781 50 38.32
+104394 50 40.95
+102462 50 43.58
+99404.5 50 46.2
+96149 50 48.83
+95118.5 50 51.46
+96451.5 50 54.09
+100268 50 56.72
+103812 50 59.34
+106316 50 61.97
+106496 50 64.6
+105210 50 67.23
+103009 50 69.85
+100884 50 72.48
+99006.5 50 75.11
+97820 50 77.74
+100444 50 80.36
+103830 50 82.99
+106378 50 85.62
+106508 50 88.25
+104074 50 90.88
+100512 50 93.5
+97639.5 50 96.13
+96894.5 50 98.76
+98688.5 50 101.39
+101798 50 104.01
+103967 50 106.64
+105046 50 109.27
+104227 50 111.9
+102303 50 114.53
+99574 50 117.15
+97479.5 50 119.78
+94850.5 50 122.41
+95119 50 125.04
+98088.5 50 127.66
+100631 50 130.29
+101034 50 132.92
+100463 50 135.55
+98000 50 138.18
+95813 50 140.8
+94339.5 50 143.43
+93786.5 50 146.06
+93480 50 148.69
+94348.5 50 151.31
+95022 50 153.94
+97349 50 156.57
+100414 50 159.2
+103351 50 161.82
+102130 50 164.45
+99404 50 167.08
+96527 50 169.71
+95398 50 172.34
+97763 50 174.96
+101248 50 177.59
+105164 50 180.22
+107630 50 182.85
+109134 50 185.47
+109254 50 188.1
+108880 50 190.73
+107429 50 193.36
+105813 50 195.99
+106596 50 198.61
+107232 50 201.24
+108642 50 203.87
+109528 50 206.5
+109809 50 209.12
+108334 50 211.75
+107431 50 214.38
+107633 50 217.01
+109341 50 219.64
+111471 50 222.26
+113074 50 224.89
+112928 50 227.52
+111608 50 230.15
+109398 50 232.77
+106870 50 235.4
+104326 50 238.03
+102777 50 240.66
+102662 50 243.28
+104668 50 245.91
+107346 50 248.54
+109446 50 251.17
+110278 50 253.8
+109948 50 256.42
+106978 50 259.05
+104324 50 261.68
+101038 50 264.31
+99949 50 266.93
+99528 50 269.56
+101216 50 272.19
+103512 50 274.82
+107306 50 277.45
+110422 50 280.07
+109905 50 282.7
+106863 50 285.33
+103197 50 287.96
+100502 50 290.58
+100286 50 293.21
+102251 50 295.84
+104824 50 298.47
+107724 50 301.09
+110036 50 303.72
+112062 50 306.35
+112800 50 308.98
+112860 50 311.61
+110942 50 314.23
+109868 50 316.86
+109546 50 319.49
+109151 50 322.12
+108858 50 324.74
+108450 50 327.37
+108174 50 330
+107038 50 332.63
+107636 50 335.26
+108582 50 337.88
+110220 50 340.51
+112222 50 343.14
+112554 50 345.77
+110662 50 348.39
+109031 50 351.02
+106424 50 353.65
+103236 50 356.28
+100812 50 358.91
+100236 48 2.48
+101420 48 5.19
+103970 48 7.89
+105928 48 10.6
+107760 48 13.31
+106907 48 16.02
+104688 48 18.72
+101264 48 21.43
+98404 48 24.14
+96743 48 26.84
+97689.5 48 29.55
+100097 48 32.26
+103131 48 34.96
+106478 48 37.67
+106538 48 40.38
+103803 48 43.08
+100140 48 45.79
+96440.5 48 48.5
+95821 48 51.2
+96400 48 53.91
+98411.5 48 56.62
+101256 48 59.32
+103456 48 62.03
+104708 48 64.74
+106092 48 67.44
+106546 48 70.15
+104678 48 72.86
+103507 48 75.56
+102544 48 78.27
+102260 48 80.98
+102238 48 83.68
+102299 48 86.39
+101552 48 89.1
+101179 48 91.8
+99750.5 48 94.51
+100064 48 97.22
+102170 48 99.92
+103925 48 102.63
+104876 48 105.34
+104878 48 108.05
+102846 48 110.75
+100778 48 113.46
+98333.5 48 116.17
+96129.5 48 118.87
+94744 48 121.58
+94980.5 48 124.29
+97648 48 126.99
+100573 48 129.7
+102601 48 132.41
+102707 48 135.11
+101060 48 137.82
+98804 48 140.53
+96097 48 143.23
+94512.5 48 145.94
+93334 48 148.65
+95105.5 48 151.35
+98282 48 154.06
+101098 48 156.77
+104902 48 159.47
+105628 48 162.18
+103662 48 164.89
+99525 48 167.59
+97602 48 170.3
+97062 48 173.01
+99869.5 48 175.71
+101696 48 178.42
+104780 48 181.13
+108088 48 183.83
+110248 48 186.54
+112190 48 189.25
+111732 48 191.95
+110682 48 194.66
+109248 48 197.37
+107187 48 200.08
+105714 48 202.78
+104560 48 205.49
+103980 48 208.2
+104360 48 210.9
+106306 48 213.61
+108138 48 216.32
+111275 48 219.02
+113828 48 221.73
+115180 48 224.44
+115323 48 227.14
+114371 48 229.85
+111982 48 232.56
+109099 48 235.26
+106142 48 237.97
+104292 48 240.68
+103304 48 243.38
+104637 48 246.09
+106394 48 248.8
+109820 48 251.5
+111094 48 254.21
+113116 48 256.92
+112103 48 259.62
+108766 48 262.33
+105820 48 265.04
+103547 48 267.74
+104501 48 270.45
+107460 48 273.16
+110116 48 275.86
+111870 48 278.57
+110646 48 281.28
+107696 48 283.98
+103962 48 286.69
+101086 48 289.4
+101282 48 292.11
+102684 48 294.81
+105372 48 297.52
+109404 48 300.23
+112181 48 302.93
+114719 48 305.64
+115776 48 308.35
+115634 48 311.05
+114462 48 313.76
+112512 48 316.47
+109670 48 319.17
+107646 48 321.88
+104790 48 324.59
+103435 48 327.29
+103704 48 330
+105306 48 332.71
+107978 48 335.41
+110498 48 338.12
+113233 48 340.83
+114272 48 343.53
+114273 48 346.24
+112340 48 348.95
+109763 48 351.65
+106454 48 354.36
+103108 48 357.07
+101051 48 359.77
+103460 46 0.7
+100762 46 3.49
+100642 46 6.28
+102845 46 9.07
+106568 46 11.86
+109012 46 14.65
+109930 46 17.44
+108174 46 20.23
+105668 46 23.02
+103751 46 25.81
+103398 46 28.6
+105508 46 31.4
+108296 46 34.19
+108728 46 36.98
+107241 46 39.77
+103576 46 42.56
+99653.5 46 45.35
+97037.5 46 48.14
+96783.5 46 50.93
+98153.5 46 53.72
+100505 46 56.51
+103996 46 59.3
+107611 46 62.09
+109410 46 64.88
+110002 46 67.67
+110122 46 70.47
+108526 46 73.26
+106321 46 76.05
+103550 46 78.84
+100840 46 81.63
+97927 46 84.42
+96877 46 87.21
+96818 46 90
+98513.5 46 92.79
+100655 46 95.58
+103189 46 98.37
+105778 46 101.16
+107610 46 103.95
+108810 46 106.74
+107648 46 109.53
+105398 46 112.33
+102754 46 115.12
+100120 46 117.91
+97379 46 120.7
+96079 46 123.49
+96775 46 126.28
+99235 46 129.07
+102364 46 131.86
+104587 46 134.65
+105844 46 137.44
+104160 46 140.23
+101867 46 143.02
+99584 46 145.81
+98707 46 148.6
+100956 46 151.4
+104355 46 154.19
+106942 46 156.98
+107836 46 159.77
+105260 46 162.56
+102028 46 165.35
+99203.5 46 168.14
+98500.5 46 170.93
+100562 46 173.72
+104077 46 176.51
+107531 46 179.3
+111888 46 182.09
+115110 46 184.88
+116704 46 187.67
+116954 46 190.47
+115814 46 193.26
+114638 46 196.05
+111376 46 198.84
+107782 46 201.63
+103546 46 204.42
+101914 46 207.21
+102744 46 210
+106203 46 212.79
+109158 46 215.58
+114026 46 218.37
+116854 46 221.16
+119273 46 223.95
+121084 46 226.74
+121064 46 229.53
+120702 46 232.33
+117469 46 235.12
+113222 46 237.91
+108486 46 240.7
+105554 46 243.49
+104021 46 246.28
+105348 46 249.07
+108421 46 251.86
+112255 46 254.65
+114282 46 257.44
+115007 46 260.23
+113550 46 263.02
+111902 46 265.81
+111394 46 268.6
+113216 46 271.4
+114628 46 274.19
+114936 46 276.98
+112720 46 279.77
+107508 46 282.56
+103148 46 285.35
+101712 46 288.14
+102438 46 290.93
+105384 46 293.72
+109969 46 296.51
+115528 46 299.3
+119604 46 302.09
+121682 46 304.88
+122299 46 307.67
+121540 46 310.47
+120534 46 313.26
+117082 46 316.05
+113434 46 318.84
+108136 46 321.63
+103989 46 324.42
+101956 46 327.21
+103208 46 330
+106776 46 332.79
+110626 46 335.58
+114314 46 338.37
+117120 46 341.16
+118677 46 343.95
+119378 46 346.74
+119070 46 349.53
+117204 46 352.33
+112746 46 355.12
+107490 46 357.91
+104402 44 1.68
+100692 44 4.56
+100781 44 7.44
+102798 44 10.32
+106788 44 13.2
+110660 44 16.08
+111884 44 18.96
+110854 44 21.84
+109936 44 24.72
+109819 44 27.6
+110942 44 30.48
+111568 44 33.36
+110304 44 36.24
+106552 44 39.12
+101163 44 42
+97934.5 44 44.88
+96935 44 47.76
+98282.5 44 50.64
+101710 44 53.52
+106683 44 56.4
+111406 44 59.28
+114392 44 62.16
+115402 44 65.04
+115595 44 67.92
+113762 44 70.8
+113017 44 73.68
+109049 44 76.56
+104592 44 79.44
+99911 44 82.32
+95848.5 44 85.2
+94961 44 88.08
+97119 44 90.96
+100604 44 93.84
+104492 44 96.72
+108006 44 99.6
+110161 44 102.48
+112495 44 105.36
+113274 44 108.24
+112650 44 111.12
+110600 44 114
+106467 44 116.88
+101869 44 119.76
+98503 44 122.64
+95976.5 44 125.52
+97171 44 128.4
+99497 44 131.28
+103511 44 134.16
+106854 44 137.04
+108094 44 139.92
+106994 44 142.8
+105624 44 145.68
+106074 44 148.56
+107594 44 151.44
+110055 44 154.32
+109916 44 157.2
+106354 44 160.08
+102510 44 162.96
+99198 44 165.84
+98288 44 168.72
+100710 44 171.6
+105563 44 174.48
+110936 44 177.36
+116232 44 180.24
+119068 44 183.12
+121363 44 186
+121758 44 188.88
+121588 44 191.76
+120248 44 194.64
+117550 44 197.52
+112335 44 200.4
+107168 44 203.28
+104144 44 206.16
+104546 44 209.04
+107272 44 211.92
+112380 44 214.8
+116602 44 217.68
+120509 44 220.56
+123411 44 223.44
+124756 44 226.32
+126275 44 229.2
+125782 44 232.08
+123196 44 234.96
+118628 44 237.84
+112804 44 240.72
+108132 44 243.6
+104912 44 246.48
+105790 44 249.36
+108189 44 252.24
+111862 44 255.12
+114474 44 258
+116777 44 260.88
+116224 44 263.76
+115598 44 266.64
+116991 44 269.52
+117929 44 272.4
+117960 44 275.28
+115466 44 278.16
+111161 44 281.04
+106362 44 283.92
+104250 44 286.8
+104036 44 289.68
+108156 44 292.56
+113070 44 295.44
+117564 44 298.32
+122306 44 301.2
+124480 44 304.08
+126742 44 306.96
+126302 44 309.84
+124674 44 312.72
+121622 44 315.6
+116560 44 318.48
+110620 44 321.36
+106372 44 324.24
+104856 44 327.12
+106890 44 330
+111111 44 332.88
+115740 44 335.76
+118907 44 338.64
+122111 44 341.52
+123124 44 344.4
+124390 44 347.28
+123138 44 350.16
+120637 44 353.04
+115379 44 355.92
+109574 44 358.8
+110797 42 0
+106097 42 3
+104297 42 6
+103890 42 9
+106148 42 12
+109774 42 15
+111280 42 18
+111932 42 21
+111666 42 24
+112570 42 27
+113512 42 30
+113818 42 33
+111248 42 36
+106746 42 39
+102014 42 42
+99183.5 42 45
+99317 42 48
+102288 42 51
+106966 42 54
+112688 42 57
+116315 42 60
+119074 42 63
+119562 42 66
+119328 42 69
+118120 42 72
+115093 42 75
+110508 42 78
+104092 42 81
+100026 42 84
+97618 42 87
+98985 42 90
+103435 42 93
+107714 42 96
+111705 42 99
+114078 42 102
+116207 42 105
+117132 42 108
+117520 42 111
+114864 42 114
+111272 42 117
+104757 42 120
+100626 42 123
+97386.5 42 126
+97676.5 42 129
+100550 42 132
+104297 42 135
+107748 42 138
+109316 42 141
+108866 42 144
+108806 42 147
+110740 42 150
+111726 42 153
+112225 42 156
+109572 42 159
+104965 42 162
+101680 42 165
+101074 42 168
+103958 42 171
+108258 42 174
+114481 42 177
+118994 42 180
+122326 42 183
+124514 42 186
+126170 42 189
+124834 42 192
+122960 42 195
+117674 42 198
+113495 42 201
+109898 42 204
+108034 42 207
+110212 42 210
+113272 42 213
+117939 42 216
+121997 42 219
+125235 42 222
+127524 42 225
+128828 42 228
+127778 42 231
+124836 42 234
+121728 42 237
+116828 42 240
+113856 42 243
+110745 42 246
+109784 42 249
+110503 42 252
+112598 42 255
+115346 42 258
+116452 42 261
+117630 42 264
+117836 42 267
+119094 42 270
+120298 42 273
+119136 42 276
+116855 42 279
+112378 42 282
+109872 42 285
+109722 42 288
+111418 42 291
+114518 42 294
+118358 42 297
+122503 42 300
+125764 42 303
+128484 42 306
+129079 42 309
+127473 42 312
+123762 42 315
+118330 42 318
+113970 42 321
+110748 42 324
+109628 42 327
+111966 42 330
+115168 42 333
+118708 42 336
+122264 42 339
+125144 42 342
+126826 42 345
+126446 42 348
+124858 42 351
+120952 42 354
+116342 42 357
+113474 40 1.3
+111034 40 4.43
+109434 40 7.57
+109648 40 10.7
+110738 40 13.83
+112508 40 16.96
+113121 40 20.09
+114266 40 23.22
+115794 40 26.35
+116040 40 29.48
+116492 40 32.61
+113578 40 35.74
+109758 40 38.87
+106885 40 42
+105083 40 45.13
+105798 40 48.26
+107485 40 51.39
+110981 40 54.52
+114236 40 57.65
+117677 40 60.78
+120718 40 63.91
+121938 40 67.04
+121849 40 70.17
+118784 40 73.3
+114550 40 76.43
+108208 40 79.57
+104986 40 82.7
+102712 40 85.83
+103318 40 88.96
+105860 40 92.09
+109746 40 95.22
+113474 40 98.35
+116670 40 101.48
+118404 40 104.61
+119475 40 107.74
+119184 40 110.87
+116524 40 114
+111959 40 117.13
+107644 40 120.26
+103836 40 123.39
+101664 40 126.52
+101632 40 129.65
+103548 40 132.78
+106528 40 135.91
+108521 40 139.04
+109902 40 142.17
+111358 40 145.3
+112636 40 148.43
+113798 40 151.57
+113610 40 154.7
+112247 40 157.83
+108842 40 160.96
+106795 40 164.09
+106788 40 167.22
+107932 40 170.35
+110930 40 173.48
+114938 40 176.61
+118496 40 179.74
+121776 40 182.87
+124685 40 186
+125644 40 189.13
+124572 40 192.26
+121484 40 195.39
+117382 40 198.52
+114551 40 201.65
+112858 40 204.78
+112865 40 207.91
+115089 40 211.04
+117474 40 214.17
+120452 40 217.3
+123756 40 220.43
+126769 40 223.57
+128116 40 226.7
+129098 40 229.83
+127386 40 232.96
+123722 40 236.09
+120566 40 239.22
+118252 40 242.35
+117173 40 245.48
+115822 40 248.61
+116084 40 251.74
+116791 40 254.87
+117903 40 258
+119504 40 261.13
+121550 40 264.26
+123952 40 267.39
+124168 40 270.52
+123816 40 273.65
+121683 40 276.78
+118754 40 279.91
+116752 40 283.04
+116198 40 286.17
+116631 40 289.3
+117796 40 292.43
+118922 40 295.57
+121302 40 298.7
+124610 40 301.83
+126950 40 304.96
+126890 40 308.09
+124519 40 311.22
+121426 40 314.35
+117929 40 317.48
+115676 40 320.61
+113945 40 323.74
+113784 40 326.87
+115038 40 330
+117285 40 333.13
+118992 40 336.26
+121823 40 339.39
+124296 40 342.52
+126189 40 345.65
+126267 40 348.78
+124183 40 351.91
+120072 40 355.04
+116068 40 358.17
+117930 38 2.73
+116397 38 6
+115264 38 9.27
+113960 38 12.55
+115106 38 15.82
+117781 38 19.09
+120102 38 22.36
+122335 38 25.64
+122478 38 28.91
+120646 38 32.18
+116702 38 35.45
+113450 38 38.73
+111924 38 42
+111392 38 45.27
+111818 38 48.55
+113223 38 51.82
+114074 38 55.09
+116818 38 58.36
+119493 38 61.64
+120656 38 64.91
+120032 38 68.18
+117685 38 71.45
+114168 38 74.73
+110844 38 78
+108629 38 81.27
+107215 38 84.55
+107422 38 87.82
+108834 38 91.09
+110785 38 94.36
+112642 38 97.64
+114910 38 100.91
+117753 38 104.18
+119650 38 107.45
+119220 38 110.73
+116648 38 114
+113366 38 117.27
+111162 38 120.55
+109472 38 123.82
+108960 38 127.09
+107918 38 130.36
+107996 38 133.64
+109157 38 136.91
+111947 38 140.18
+114409 38 143.45
+116669 38 146.73
+118467 38 150
+117992 38 153.27
+115825 38 156.55
+113930 38 159.82
+112167 38 163.09
+113038 38 166.36
+113482 38 169.64
+114846 38 172.91
+116540 38 176.18
+118765 38 179.45
+121248 38 182.73
+122600 38 186
+122360 38 189.27
+120494 38 192.55
+118590 38 195.82
+117390 38 199.09
+116757 38 202.36
+115868 38 205.64
+117150 38 208.91
+118740 38 212.18
+119888 38 215.45
+119820 38 218.73
+121150 38 222
+123598 38 225.27
+125712 38 228.55
+126102 38 231.82
+124365 38 235.09
+123144 38 238.36
+122368 38 241.64
+121861 38 244.91
+121564 38 248.18
+120228 38 251.45
+119694 38 254.73
+120082 38 258
+123412 38 261.27
+126894 38 264.55
+130018 38 267.82
+130290 38 271.09
+127842 38 274.36
+123760 38 277.64
+121390 38 280.91
+120800 38 284.18
+120718 38 287.45
+120411 38 290.73
+120506 38 294
+120518 38 297.27
+121425 38 300.55
+122470 38 303.82
+121189 38 307.09
+119601 38 310.36
+118110 38 313.64
+118066 38 316.91
+117571 38 320.18
+117193 38 323.45
+117566 38 326.73
+118349 38 330
+118694 38 333.27
+118553 38 336.55
+118728 38 339.82
+120773 38 343.09
+122921 38 346.36
+123043 38 349.64
+121836 38 352.91
+119526 38 356.18
+118530 38 359.45
+118601 36 0.86
+118889 36 4.29
+118142 36 7.71
+117057 36 11.14
+117520 36 14.57
+121202 36 18
+124320 36 21.43
+127404 36 24.86
+128056 36 28.29
+124594 36 31.71
+120316 36 35.14
+116522 36 38.57
+115706 36 42
+115902 36 45.43
+114830 36 48.86
+115139 36 52.29
+115132 36 55.71
+116128 36 59.14
+116990 36 62.57
+116478 36 66
+113758 36 69.43
+112208 36 72.86
+111780 36 76.29
+111218 36 79.71
+110368 36 83.14
+111176 36 86.57
+111818 36 90
+112488 36 93.43
+111446 36 96.86
+111366 36 100.29
+112805 36 103.71
+115174 36 107.14
+116043 36 110.57
+114864 36 114
+113075 36 117.43
+112891 36 120.86
+113084 36 124.29
+112556 36 127.71
+111614 36 131.14
+110756 36 134.57
+112669 36 138
+116274 36 141.43
+120716 36 144.86
+123218 36 148.29
+123412 36 151.71
+120282 36 155.14
+116680 36 158.57
+115302 36 162
+115666 36 165.43
+116256 36 168.86
+115494 36 172.29
+115696 36 175.71
+116464 36 179.14
+117989 36 182.57
+117896 36 186
+116821 36 189.43
+116612 36 192.86
+117799 36 196.29
+118877 36 199.71
+119421 36 203.14
+120157 36 206.57
+121313 36 210
+122140 36 213.43
+120598 36 216.86
+119066 36 220.29
+118950 36 223.71
+118768 36 227.14
+119432 36 230.57
+119576 36 234
+119694 36 237.43
+121187 36 240.86
+121620 36 244.29
+121640 36 247.71
+122160 36 251.14
+122028 36 254.57
+123697 36 258
+128221 36 261.43
+132928 36 264.86
+134756 36 268.29
+133496 36 271.71
+130194 36 275.14
+125477 36 278.57
+123034 36 282
+121821 36 285.43
+120556 36 288.86
+118084 36 292.29
+117418 36 295.71
+117135 36 299.14
+116512 36 302.57
+116400 36 306
+115886 36 309.43
+117290 36 312.86
+119630 36 316.29
+120749 36 319.71
+121786 36 323.14
+122107 36 326.57
+121658 36 330
+120606 36 333.43
+118921 36 336.86
+117318 36 340.29
+117543 36 343.71
+117458 36 347.14
+117823 36 350.57
+117528 36 354
+118221 36 357.43
+115286 34 2.4
+116237 34 6
+118130 34 9.6
+119391 34 13.2
+123283 34 16.8
+128078 34 20.4
+130770 34 24
+131111 34 27.6
+127218 34 31.2
+122373 34 34.8
+118514 34 38.4
+116733 34 42
+115618 34 45.6
+113669 34 49.2
+112408 34 52.8
+112122 34 56.4
+111480 34 60
+111378 34 63.6
+110421 34 67.2
+110178 34 70.8
+111633 34 74.4
+113028 34 78
+113903 34 81.6
+113993 34 85.2
+114728 34 88.8
+114918 34 92.4
+112798 34 96
+110660 34 99.6
+109596 34 103.2
+110472 34 106.8
+110331 34 110.4
+110428 34 114
+110895 34 117.6
+112576 34 121.2
+112761 34 124.8
+113268 34 128.4
+112880 34 132
+114320 34 135.6
+118002 34 139.2
+122736 34 142.8
+127314 34 146.4
+127112 34 150
+124290 34 153.6
+119643 34 157.2
+117134 34 160.8
+116787 34 164.4
+115026 34 168
+113670 34 171.6
+112754 34 175.2
+112598 34 178.8
+112564 34 182.4
+112918 34 186
+113726 34 189.6
+116095 34 193.2
+119166 34 196.8
+122081 34 200.4
+123684 34 204
+125262 34 207.6
+125414 34 211.2
+124040 34 214.8
+121463 34 218.4
+118303 34 222
+115842 34 225.6
+114142 34 229.2
+113342 34 232.8
+113416 34 236.4
+115336 34 240
+116522 34 243.6
+118558 34 247.2
+121219 34 250.8
+123236 34 254.4
+127192 34 258
+131555 34 261.6
+135142 34 265.2
+135366 34 268.8
+132898 34 272.4
+128777 34 276
+124374 34 279.6
+121349 34 283.2
+117074 34 286.8
+113926 34 290.4
+111536 34 294
+110583 34 297.6
+111017 34 301.2
+111678 34 304.8
+113350 34 308.4
+117440 34 312
+120647 34 315.6
+123665 34 319.2
+125036 34 322.8
+125490 34 326.4
+125720 34 330
+123391 34 333.6
+119906 34 337.2
+116490 34 340.8
+114087 34 344.4
+112032 34 348
+111485 34 351.6
+111949 34 355.2
+113842 34 358.8
+107216 32 0.32
+109912 32 4.11
+113803 32 7.89
+118248 32 11.68
+122648 32 15.47
+126841 32 19.26
+128905 32 23.05
+128414 32 26.84
+125856 32 30.63
+121634 32 34.42
+117784 32 38.21
+113838 32 42
+110002 32 45.79
+106534 32 49.58
+105013 32 53.37
+104411 32 57.16
+104931 32 60.95
+105073 32 64.74
+108296 32 68.53
+111807 32 72.32
+115135 32 76.11
+117380 32 79.89
+119006 32 83.68
+119270 32 87.47
+118288 32 91.26
+115552 32 95.05
+112135 32 98.84
+108740 32 102.63
+105524 32 106.42
+103694 32 110.21
+103356 32 114
+103743 32 117.79
+106314 32 121.58
+107444 32 125.37
+110740 32 129.16
+113646 32 132.95
+117039 32 136.74
+121515 32 140.53
+126350 32 144.32
+126743 32 148.11
+125070 32 151.89
+121406 32 155.68
+117576 32 159.47
+113912 32 163.26
+110528 32 167.05
+107256 32 170.84
+105452 32 174.63
+104408 32 178.42
+106116 32 182.21
+108098 32 186
+111860 32 189.79
+116062 32 193.58
+120644 32 197.37
+124337 32 201.16
+126881 32 204.95
+127585 32 208.74
+126870 32 212.53
+124552 32 216.32
+119868 32 220.11
+115732 32 223.89
+111287 32 227.68
+108378 32 231.47
+107100 32 235.26
+107310 32 239.05
+108374 32 242.84
+112510 32 246.63
+115946 32 250.42
+121292 32 254.21
+125277 32 258
+129034 32 261.79
+130993 32 265.58
+130445 32 269.37
+128902 32 273.16
+125616 32 276.95
+120985 32 280.74
+115896 32 284.53
+110550 32 288.32
+107257 32 292.11
+105259 32 295.89
+105602 32 299.68
+107986 32 303.47
+110941 32 307.26
+115316 32 311.05
+120547 32 314.84
+124021 32 318.63
+126908 32 322.42
+128336 32 326.21
+127508 32 330
+124364 32 333.79
+119742 32 337.58
+114133 32 341.37
+110605 32 345.16
+107344 32 348.95
+105826 32 352.74
+105722 32 356.53
+107212 30 2.36
+111384 30 6.4
+116566 30 10.45
+121274 30 14.49
+123916 30 18.54
+125134 30 22.58
+123635 30 26.63
+121848 30 30.67
+118515 30 34.72
+114030 30 38.76
+109088 30 42.81
+103746 30 46.85
+100591 30 50.9
+99705.5 30 54.94
+100773 30 58.99
+102002 30 63.03
+105842 30 67.08
+109460 30 71.12
+114537 30 75.17
+118199 30 79.21
+119354 30 83.26
+120586 30 87.3
+118623 30 91.35
+114722 30 95.39
+109746 30 99.44
+105542 30 103.48
+102156 30 107.53
+99980 30 111.57
+99005.5 30 115.62
+99152 30 119.66
+102120 30 123.71
+105679 30 127.75
+110634 30 131.8
+116384 30 135.84
+120212 30 139.89
+122554 30 143.93
+121771 30 147.98
+120741 30 152.02
+118352 30 156.07
+115231 30 160.11
+109545 30 164.16
+106011 30 168.2
+103149 30 172.25
+101549 30 176.29
+102118 30 180.34
+104805 30 184.38
+107834 30 188.43
+112191 30 192.47
+116900 30 196.52
+121739 30 200.56
+124886 30 204.61
+125433 30 208.65
+124082 30 212.7
+120742 30 216.74
+115919 30 220.79
+112176 30 224.83
+109079 30 228.88
+107196 30 232.92
+106630 30 236.97
+107604 30 241.01
+109785 30 245.06
+114771 30 249.1
+119062 30 253.15
+123817 30 257.19
+125844 30 261.24
+126452 30 265.28
+125576 30 269.33
+124318 30 273.37
+122487 30 277.42
+118317 30 281.46
+114184 30 285.51
+109821 30 289.55
+107255 30 293.6
+106602 30 297.64
+107023 30 301.69
+109116 30 305.73
+112181 30 309.78
+116346 30 313.82
+121370 30 317.87
+124312 30 321.91
+125597 30 325.95
+124532 30 330
+120524 30 334.04
+115144 30 338.09
+111000 30 342.13
+108557 30 346.18
+106100 30 350.22
+105176 30 354.27
+105345 30 358.31
+111016 28 0
+113736 28 4.29
+117074 28 8.57
+120586 28 12.86
+123055 28 17.14
+122355 28 21.43
+121266 28 25.71
+119431 28 30
+117785 28 34.29
+114392 28 38.57
+109394 28 42.86
+105442 28 47.14
+102870 28 51.43
+101590 28 55.71
+101836 28 60
+102202 28 64.29
+104948 28 68.57
+108958 28 72.86
+113044 28 77.14
+116268 28 81.43
+117436 28 85.71
+115672 28 90
+111983 28 94.29
+107288 28 98.57
+102970 28 102.86
+100393 28 107.14
+99576 28 111.43
+99032.5 28 115.71
+100160 28 120
+102030 28 124.29
+106890 28 128.57
+113028 28 132.86
+116053 28 137.14
+119132 28 141.43
+118528 28 145.71
+117498 28 150
+117066 28 154.29
+115422 28 158.57
+111836 28 162.86
+108788 28 167.14
+105694 28 171.43
+105096 28 175.71
+104599 28 180
+105594 28 184.29
+106608 28 188.57
+110303 28 192.86
+113822 28 197.14
+118080 28 201.43
+121037 28 205.71
+121482 28 210
+119422 28 214.29
+115393 28 218.57
+112872 28 222.86
+111074 28 227.14
+111074 28 231.43
+111085 28 235.71
+113100 28 240
+115263 28 244.29
+118541 28 248.57
+122442 28 252.86
+125874 28 257.14
+126262 28 261.43
+126006 28 265.71
+125336 28 270
+124054 28 274.29
+123535 28 278.57
+121016 28 282.86
+118161 28 287.14
+116006 28 291.43
+114840 28 295.71
+112624 28 300
+111800 28 304.29
+111516 28 308.57
+114238 28 312.86
+117896 28 317.14
+121016 28 321.43
+122391 28 325.71
+120984 28 330
+117426 28 334.29
+113774 28 338.57
+110757 28 342.86
+110077 28 347.14
+109726 28 351.43
+110002 28 355.71
+119860 26 2.31
+121531 26 6.92
+123370 26 11.54
+123188 26 16.15
+122096 26 20.77
+120371 26 25.38
+119796 26 30
+118486 26 34.62
+117424 26 39.23
+114323 26 43.85
+111780 26 48.46
+109862 26 53.08
+107149 26 57.69
+105500 26 62.31
+104916 26 66.92
+106749 26 71.54
+109709 26 76.15
+112530 26 80.77
+113431 26 85.38
+112228 26 90
+109198 26 94.62
+104954 26 99.23
+103090 26 103.85
+103162 26 108.46
+103186 26 113.08
+104880 26 117.69
+106888 26 122.31
+110263 26 126.92
+113854 26 131.54
+117348 26 136.15
+118454 26 140.77
+118230 26 145.38
+117396 26 150
+117653 26 154.62
+117350 26 159.23
+116054 26 163.85
+114288 26 168.46
+113451 26 173.08
+112608 26 177.69
+111268 26 182.31
+110144 26 186.92
+110993 26 191.54
+112731 26 196.15
+115538 26 200.77
+117713 26 205.38
+118340 26 210
+116964 26 214.62
+115823 26 219.23
+115544 26 223.85
+116446 26 228.46
+118400 26 233.08
+120160 26 237.69
+122138 26 242.31
+123732 26 246.92
+125604 26 251.54
+125796 26 256.15
+124906 26 260.77
+123358 26 265.38
+122805 26 270
+122830 26 274.62
+124131 26 279.23
+123816 26 283.85
+123978 26 288.46
+123708 26 293.08
+121931 26 297.69
+119772 26 302.31
+117906 26 306.92
+116852 26 311.54
+118147 26 316.15
+118526 26 320.77
+118858 26 325.38
+118294 26 330
+117352 26 334.62
+115605 26 339.23
+115953 26 343.85
+116594 26 348.46
+117623 26 353.08
+118625 26 357.69
+124062 24 4.52
+122814 24 9.45
+120448 24 14.38
+117778 24 19.32
+116923 24 24.25
+116766 24 29.18
+118416 24 34.11
+119078 24 39.04
+119528 24 43.97
+118848 24 48.9
+116830 24 53.84
+114044 24 58.77
+111892 24 63.7
+109500 24 68.63
+109212 24 73.56
+110613 24 78.49
+110924 24 83.42
+109902 24 88.36
+108420 24 93.29
+107656 24 98.22
+107835 24 103.15
+109408 24 108.08
+111437 24 113.01
+113234 24 117.95
+114434 24 122.88
+116374 24 127.81
+117049 24 132.74
+116618 24 137.67
+114854 24 142.6
+113786 24 147.53
+115025 24 152.47
+116486 24 157.4
+118619 24 162.33
+119944 24 167.26
+120068 24 172.19
+119966 24 177.12
+119126 24 182.05
+117798 24 186.99
+116819 24 191.92
+116208 24 196.85
+117068 24 201.78
+116491 24 206.71
+118008 24 211.64
+119700 24 216.58
+121606 24 221.51
+123666 24 226.44
+125468 24 231.37
+126178 24 236.3
+125710 24 241.23
+125882 24 246.16
+124632 24 251.1
+121705 24 256.03
+119222 24 260.96
+116978 24 265.89
+116971 24 270.82
+118794 24 275.75
+121606 24 280.68
+124406 24 285.62
+126599 24 290.55
+127132 24 295.48
+127244 24 300.41
+126222 24 305.34
+124453 24 310.27
+122378 24 315.21
+121970 24 320.14
+120736 24 325.07
+121180 24 330
+122136 24 334.93
+123194 24 339.86
+124582 24 344.79
+125448 24 349.73
+124826 24 354.66
+124355 24 359.59
+122508 22 2.24
+119314 22 7.61
+115512 22 12.99
+111550 22 18.36
+110885 22 23.73
+111917 22 29.1
+114490 22 34.48
+117210 22 39.85
+119509 22 45.22
+121087 22 50.6
+120767 22 55.97
+119584 22 61.34
+116534 22 66.72
+114759 22 72.09
+113050 22 77.46
+111957 22 82.84
+110322 22 88.21
+111204 22 93.58
+113716 22 98.96
+115443 22 104.33
+116532 22 109.7
+117151 22 115.07
+116579 22 120.45
+116348 22 125.82
+114578 22 131.19
+112078 22 136.57
+109595 22 141.94
+107514 22 147.31
+109335 22 152.69
+112942 22 158.06
+115980 22 163.43
+118158 22 168.81
+120512 22 174.18
+122036 22 179.55
+122980 22 184.93
+123246 22 190.3
+123190 22 195.67
+122250 22 201.04
+122408 22 206.42
+123612 22 211.79
+125696 22 217.16
+128049 22 222.54
+128112 22 227.91
+127180 22 233.28
+125404 22 238.66
+123834 22 244.03
+121574 22 249.4
+117862 22 254.78
+114526 22 260.15
+112214 22 265.52
+112326 22 270.9
+114926 22 276.27
+118620 22 281.64
+121348 22 287.01
+124216 22 292.39
+126614 22 297.76
+129036 22 303.13
+130281 22 308.51
+130474 22 313.88
+129796 22 319.25
+129208 22 324.63
+128515 22 330
+129632 22 335.37
+130046 22 340.75
+128930 22 346.12
+127163 22 351.49
+124602 22 356.87
+116690 20 5.41
+113072 20 11.31
+110098 20 17.21
+108532 20 23.11
+109394 20 29.02
+111716 20 34.92
+113811 20 40.82
+116557 20 46.72
+118822 20 52.62
+120358 20 58.52
+121302 20 64.43
+121876 20 70.33
+121510 20 76.23
+120610 20 82.13
+120107 20 88.03
+120254 20 93.93
+120978 20 99.84
+120790 20 105.74
+118472 20 111.64
+116474 20 117.54
+114266 20 123.44
+111496 20 129.34
+107804 20 135.25
+105169 20 141.15
+104044 20 147.05
+106026 20 152.95
+108878 20 158.85
+112200 20 164.75
+115458 20 170.66
+117912 20 176.56
+121640 20 182.46
+125902 20 188.36
+129360 20 194.26
+131640 20 200.16
+132322 20 206.07
+133564 20 211.97
+133816 20 217.87
+132626 20 223.77
+129366 20 229.67
+125881 20 235.57
+122742 20 241.48
+119704 20 247.38
+117100 20 253.28
+114213 20 259.18
+112630 20 265.08
+113638 20 270.98
+115802 20 276.89
+117448 20 282.79
+118772 20 288.69
+122536 20 294.59
+126394 20 300.49
+132112 20 306.39
+136084 20 312.3
+138510 20 318.2
+138852 20 324.1
+137702 20 330
+136972 20 335.9
+133936 20 341.8
+129032 20 347.7
+123888 20 353.61
+120888 20 359.51
+117804 18 2.73
+115307 18 9.27
+114173 18 15.82
+113352 18 22.36
+113296 18 28.91
+114188 18 35.45
+114380 18 42
+115385 18 48.55
+118426 18 55.09
+123073 18 61.64
+125916 18 68.18
+128750 18 74.73
+129608 18 81.27
+129152 18 87.82
+126645 18 94.36
+123802 18 100.91
+120442 18 107.45
+115930 18 114
+112698 18 120.55
+110145 18 127.09
+107792 18 133.64
+106434 18 140.18
+106578 18 146.73
+108192 18 153.27
+110331 18 159.82
+112228 18 166.36
+114272 18 172.91
+118316 18 179.45
+123718 18 186
+129550 18 192.55
+135183 18 199.09
+137102 18 205.64
+138316 18 212.18
+136553 18 218.73
+132387 18 225.27
+127162 18 231.82
+122586 18 238.36
+119492 18 244.91
+118310 18 251.45
+118758 18 258
+120208 18 264.55
+120860 18 271.09
+120852 18 277.64
+120186 18 284.18
+119996 18 290.73
+122914 18 297.27
+128235 18 303.82
+134417 18 310.36
+138760 18 316.91
+140964 18 323.45
+140780 18 330
+137568 18 336.55
+132292 18 343.09
+125568 18 349.64
+120993 18 356.18
+118824 16 6.73
+119652 16 14.08
+120117 16 21.43
+119773 16 28.78
+117450 16 36.12
+116176 16 43.47
+116375 16 50.82
+120524 16 58.16
+124652 16 65.51
+129048 16 72.86
+131093 16 80.2
+131920 16 87.55
+129136 16 94.9
+123385 16 102.24
+117648 16 109.59
+113070 16 116.94
+110787 16 124.29
+110233 16 131.63
+111491 16 138.98
+113529 16 146.33
+114197 16 153.67
+114457 16 161.02
+113730 16 168.37
+115612 16 175.71
+119368 16 183.06
+124966 16 190.41
+130319 16 197.76
+134140 16 205.1
+134128 16 212.45
+131876 16 219.8
+127320 16 227.14
+122312 16 234.49
+120122 16 241.84
+120194 16 249.18
+123285 16 256.53
+125689 16 263.88
+126240 16 271.22
+125428 16 278.57
+123564 16 285.92
+122394 16 293.27
+124069 16 300.61
+128032 16 307.96
+132279 16 315.31
+134536 16 322.65
+134274 16 330
+130482 16 337.35
+125492 16 344.69
+120980 16 352.04
+119074 16 359.39
+120621 14 3.49
+122866 14 11.86
+124614 14 20.23
+123838 14 28.6
+120333 14 36.98
+117816 14 45.35
+117608 14 53.72
+120402 14 62.09
+122838 14 70.47
+125713 14 78.84
+125854 14 87.21
+121346 14 95.58
+116848 14 103.95
+112748 14 112.33
+110542 14 120.7
+112087 14 129.07
+115208 14 137.44
+117862 14 145.81
+119323 14 154.19
+118086 14 162.56
+116683 14 170.93
+115940 14 179.3
+118114 14 187.67
+119838 14 196.05
+122548 14 204.42
+122547 14 212.79
+121574 14 221.16
+119922 14 229.53
+119506 14 237.91
+121287 14 246.28
+124260 14 254.65
+127395 14 263.02
+128636 14 271.4
+127966 14 279.77
+125030 14 288.14
+123012 14 296.51
+121355 14 304.88
+122032 14 313.26
+122469 14 321.63
+123058 14 330
+121773 14 338.37
+120693 14 346.74
+119821 14 355.12
+125017 12 8.92
+126296 12 18.65
+125256 12 28.38
+121471 12 38.11
+118810 12 47.84
+116388 12 57.57
+114503 12 67.3
+114406 12 77.03
+113998 12 86.76
+111200 12 96.49
+110484 12 106.22
+110304 12 115.95
+113285 12 125.68
+116759 12 135.41
+120594 12 145.14
+120776 12 154.86
+119960 12 164.59
+117983 12 174.32
+116151 12 184.05
+114060 12 193.78
+114246 12 203.51
+113840 12 213.24
+115280 12 222.97
+117318 12 232.7
+120730 12 242.43
+125298 12 252.16
+128118 12 261.89
+129414 12 271.62
+128478 12 281.35
+125394 12 291.08
+121757 12 300.81
+118212 12 310.54
+116518 12 320.27
+116296 12 330
+117560 12 339.73
+119201 12 349.46
+122433 12 359.19
+126122 10 4.84
+127734 10 16.45
+126354 10 28.06
+123020 10 39.68
+117723 10 51.29
+113570 10 62.9
+109310 10 74.52
+107672 10 86.13
+106280 10 97.74
+108994 10 109.35
+112844 10 120.97
+117438 10 132.58
+120106 10 144.19
+121366 10 155.81
+120848 10 167.42
+118495 10 179.03
+115282 10 190.65
+112802 10 202.26
+113352 10 213.87
+115890 10 225.48
+120387 10 237.1
+125266 10 248.71
+128470 10 260.32
+130050 10 271.94
+127916 10 283.55
+124661 10 295.16
+120456 10 306.77
+117678 10 318.39
+117086 10 330
+119052 10 341.61
+122590 10 353.23
+128700 8 13.2
+127372 8 27.6
+122086 8 42
+116014 8 56.4
+111339 8 70.8
+107794 8 85.2
+108140 8 99.6
+112703 8 114
+117430 8 128.4
+121146 8 142.8
+123138 8 157.2
+121236 8 171.6
+118860 8 186
+117226 8 200.4
+117924 8 214.8
+121039 8 229.2
+126436 8 243.6
+130992 8 258
+132992 8 272.4
+130200 8 286.8
+126734 8 301.2
+124288 8 315.6
+122921 8 330
+124270 8 344.4
+127353 8 358.8
+132773 6 10
+129138 6 30
+122436 6 50
+116633 6 70
+113612 6 90
+115610 6 110
+120746 6 130
+125124 6 150
+125122 6 170
+124308 6 190
+124874 6 210
+127863 6 230
+133360 6 250
+135897 6 270
+135888 6 290
+132614 6 310
+130998 6 330
+132293 6 350
+137412 4 0
+132860 4 30
+126598 4 60
+120490 4 90
+123454 4 120
+127431 4 150
+129424 4 180
+129616 4 210
+134000 4 240
+135905 4 270
+135863 4 300
+136204 4 330
+132812 2 30
+125464 2 90
+126637 2 150
+131288 2 210
+133782 2 270
+136983 2 330
+writing data into testmpl.dat

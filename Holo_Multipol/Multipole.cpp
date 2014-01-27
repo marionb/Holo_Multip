@@ -66,7 +66,7 @@ void Multipole::multpl()
                 std::cout<<"bnorm="<<bnorm<<std::endl;
             }
             //int_res=int_res/bnorm;
-            lcoeff.push_back(int_res);
+            lcoeff.push_back(int_res/bnorm);
 
         }
 
@@ -94,15 +94,16 @@ void Multipole::expans()
         dataType phi=messg[i][2];
         //std::cout<<phi<<std::endl;
         dataType g_theta_phi=intencity(theta,phi);
-        std::vector<dataType> temp;
         std::cout<<g_theta_phi<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
+        std::vector<dataType> temp;
+
         temp.push_back(g_theta_phi);
         temp.push_back(theta);
         temp.push_back(phi);//TODO if time: make this call better -> works for a start
 
         calc.push_back(temp);
    }
-   std::cout<<"calc:(g(theat,phi),theta,phi)\n";
+   //std::cout<<"calc:(g(theat,phi),theta,phi)\n";
 }
 
 
@@ -258,7 +259,8 @@ dataType Multipole::intencity(dataType theta, dataType phi)
     {
         int m=0;
         std::complex<dataType> coeff=alm[l/2][m];
-        summ0+=std::real(coeff*boost::math::spherical_harmonic<dataType> (l,m,theta,phi));
+        std::complex<dataType> ylm=boost::math::spherical_harmonic<dataType> (l,m,theta,phi);
+        summ0+=std::real(coeff*ylm);
         m+=ISYM;
         for(;m<=l;m+=ISYM)
         {
@@ -270,19 +272,57 @@ dataType Multipole::intencity(dataType theta, dataType phi)
     return totSumm;
 }
 
-/*void Multipole::printAlm()
+void Multipole::writeAlm(std::string almFile)
 {
-    for(unsigned int i=0;i<alm1.max_size();i++)
+
+    std::cout<<"\n--------------------------------------------------------------- \n";
+    std::cout<<"writing A_lm to file "<<almFile<<std::endl;
+
+    const char* file = almFile.c_str();
+    std::ofstream almWrite;
+    almWrite.open(file);
+    if(almWrite.is_open())
     {
-        for(unsigned int j=0;j<alm1[i].max_size();j++)
+        almWrite<<"#Coeficients for multipole expansion A_lm\n";
+        almWrite<<"#Calculated using Holo_Multipol\n";
+        almWrite<<"#Usin ";
+        almWrite<<LMAX;
+        almWrite<<" coefficients\n";
+        almWrite<<"#l";
+        almWrite<<"    ";
+        almWrite<<"m";
+        almWrite<<"    ";
+        almWrite<<"A_lm\n";
+        for(int i=0;i<=LMAX;i+=2)
         {
-            std::cout<<alm1[i][j]<<";";
+            int il=i/2;
+            for(int j=0;j<=il;j++)
+            {
+                almWrite<<i;
+                almWrite<<" ";
+                almWrite<<j;
+                almWrite<<alm[il][j];
+                almWrite<<"\n";
+            }
         }
-        std::cout<<"i \n";
+
     }
+    else
+    {
+        std::cout<<"can not write coefficients to file! "<<almFile<<std::endl;
+        return;
+    }
+    std::cout<<"coefficients for multipole expansion can be found in "<<almFile<<std::endl;
+    std::cout<<"--------------------------------------------------------------- \n";
+
+
+
+
+
+
 }
 
-int Multipole::vorz(int exp)
+/*int Multipole::vorz(int exp)
 {
     exp=abs(exp);
     if(exp%2==0)

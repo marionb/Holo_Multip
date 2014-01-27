@@ -11,6 +11,7 @@
 #include <boost/math/special_functions/legendre.hpp>
 #include <boost/math/special_functions/spherical_harmonic.hpp>
 #include <boost/math/special_functions/bessel.hpp>
+typedef std::vector<std::vector<std::complex<dataType> > > AlmType;
 
 class Multipole:public Data //:public Data //this class now has acces to all the pubilc and protected members of Data for acces to private members of Data make frined function/class
 {
@@ -57,6 +58,11 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     void expans();
 
     /**
+    *print the real coefficients that were calculated within this program
+    */
+    void writeAlm(std::string);
+
+    /**
     *calculateion of a radial image curve of the electron wave field near the photoemitter.
     *Equation (3) from A.Stucke et al. (1992) is used.
     *@param alpha, beta     dataType precission; define the radial curve; the angles are given within the same polar coordinates frame as the data.
@@ -94,10 +100,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     //void smooth(dataType grid);
 
-    /**
-    *print the real coefficients that were calculated within this program
-    */
-    //void printAlm();
+
 
 //=======================================================================================//
     private:
@@ -106,7 +109,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
 
     //const dataType k; //2*pi*sqrt(ekin/150)
 
-    std::vector<std::vector<std::complex<dataType> > > alm; //expansion coefficients
+    AlmType alm; //expansion coefficients
 
     //To add elements to the two dimensional vector use alm.push_back(row)
     //where row is a vector of dataType type containing the data that belonges in to this row

@@ -119,7 +119,7 @@ class Grid:
                 #self.grid.append([th,i*dphi,dphi,0,0])
                 self.theta.append(th)
                 self.phi.append(i*dphi)
-                self.dOmega.append(dphi*self.dtheta*sin((th)*pi/180)) #in radian
+                self.dOmega.append(dphi*pi/180*self.dtheta*pi/180*sin((th)*pi/180)) #in radian
                 self.grid.append([th,i*dphi,dphi,0,0,self.dOmega[i]])
                 #print (th,i*dphi,dphi,0,0)
             th+=theta_step
@@ -295,7 +295,7 @@ class Grid:
         print "calculated grid can be found in ",gFile
         with open(gFile, 'w\n') as outFile:
             for i in self.grid:
-                value=str("%f %f %f %f %f %f" %(i[0],i[1],i[2],i[3],i[4],i[5]))
+                value=str("%f %f" %(i[0],i[1]))
                 outFile.write(value+"\n")
  
  

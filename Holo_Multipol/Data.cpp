@@ -66,6 +66,10 @@ void Data::readData()
     }
     std::cout<<"read file succesfully! \n---------------------------------------------------------------\n";
     this->dataF.close();
+    for (twoVector::iterator it=messg.begin();it!=messg.end();it++)
+    {
+        std::cout<<(*it)[0]<<" "<<rad_to_deg((*it)[1])<<" "<<rad_to_deg((*it)[2])<<std::endl;
+    }
 }
 
 int Data::getLineNum(std::string fileGiven)
@@ -94,7 +98,7 @@ int Data::getLineNum(std::string fileGiven)
 
 void Data::apofct()
 {
-    //this function has to be caled if the certain flag is set to true!
+    //this function has to be caled if a certain flag is set to true!
     //what is thetamax?is it just the maximum of all thetas?
     double width =2.0; //where does this number come from?? is it always 2?
 
@@ -104,9 +108,9 @@ void Data::apofct()
     }
 }
 
-void Data::calcchi()
+void Data::calcchi()//bei normalization falg
 {
-    //DODO Thest this function
+    //TODO Thest this function
     dataType sumphi=0;
     dataType theta=messg[0][1];
     int count=0;
@@ -141,8 +145,8 @@ void Data::writeData(std::string output)
     dataW.open(file);
     if(dataW.is_open())
     {
-        dataW<<"Titel TODO\n";
-        dataW<<"calc. with holo1\n";
+        dataW<<"#Expanded function\n";
+        dataW<<"#Calculated using Holo_Multipol\n";
         dataW<<"#Intensity";
         dataW<<"    ";
         dataW<<"Theta angle";

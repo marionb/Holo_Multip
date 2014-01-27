@@ -1,3 +1,4 @@
+//CPP Holo_Multipol
 #include <iostream>
 #include <cmath>
 #include <complex>
@@ -61,10 +62,11 @@ int main(int argc, char** argv)
     Multipole *file=new Multipole(dataFile,lmax,symm);
     file->readData();
     file->multpl();
-    //file->printAlm();
+    file->writeAlm(outFileALM);
     file->expans();
 
-    file->writeData("testOut.tex");
+    std::cout<< "write output";
+    file->writeData(outFileMPL);
     //file->doyzimage(grid,0);
 
     //std::cout<<"apofact is "<<apofct(file->messg[0][1],file->messg[0][1]);
@@ -74,8 +76,7 @@ int main(int argc, char** argv)
 }
 
 
-//TODO Check whi oldinp.itp does not work porperly
-//TODO
+
 
 
 

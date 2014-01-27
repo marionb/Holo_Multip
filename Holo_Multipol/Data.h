@@ -108,8 +108,6 @@ class Data
         //const int yDimImage;
         //const int zDimImage;
 
-        friend class DOmega; // class DOmega can now access data directly
-
 
 };
 
