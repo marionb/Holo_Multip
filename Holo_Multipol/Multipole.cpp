@@ -48,17 +48,7 @@ void Multipole::multpl()
                 std::complex<float> temp=gmessg*temp1;
                 int_res+=temp;
 
-                /*if((m!=0) && (std::real(temp) < 0 ||  std::imag(temp)<0))
-                {
-                    std::cout<<"negative value";
-                }*/
-
-
-
-
-
             }
-            //std::cout<<"real, imag "<<int_res<<"\n";
 
             if(l==0 && m==0 && std::real(int_res)>0.001)
             {
@@ -85,16 +75,16 @@ void Multipole::expans()
 {
     std::cout<<"\n --------------------------------------------------------------- \n expanding function according to calculated coefficients \n";
     calc.clear();
-    for(int i=0;i<MAXANGLES;i++)
+
+    std::vector< std::vector<dataType> >::const_iterator itr;
+    for (itr = grid.begin(); itr != grid.end(); ++itr)
     {
         //std::cout<<"i "<<i<<std::endl;
         //std::cout<<"    values  ";
-        dataType theta=messg[i][1];
-        //std::cout<<theta <<"    ";
-        dataType phi=messg[i][2];
-        //std::cout<<phi<<std::endl;
+        dataType theta=(*itr)[0];
+        dataType phi=(*itr)[1];
         dataType g_theta_phi=intencity(theta,phi);
-        std::cout<<g_theta_phi<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
+        //std::cout<<g_theta_phi<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
         std::vector<dataType> temp;
 
         temp.push_back(g_theta_phi);
@@ -301,6 +291,7 @@ void Multipole::writeAlm(std::string almFile)
                 almWrite<<i;
                 almWrite<<" ";
                 almWrite<<j;
+                almWrite<<" ";
                 almWrite<<alm[il][j];
                 almWrite<<"\n";
             }
@@ -314,24 +305,64 @@ void Multipole::writeAlm(std::string almFile)
     }
     std::cout<<"coefficients for multipole expansion can be found in "<<almFile<<std::endl;
     std::cout<<"--------------------------------------------------------------- \n";
-
-
-
-
-
-
 }
 
-/*int Multipole::vorz(int exp)
+void Multipole::readAlm(std::string almFile)
 {
-    exp=abs(exp);
-    if(exp%2==0)
+
+    std::cout<<"\n--------------------------------------------------------------- \n";
+    std::cout<<"readig A_lm from "<<almFile<<std::endl;
+
+    const char* file = almFile.c_str();
+    std::ifstream almRead;
+    almRead.open(file);
+    if(almRead.is_open())
     {
-        return 1;
-    }else return -1;
+        alm.clear();
+        std::string line;
+        std::vector<std::complex<dataType> > lcoeff;
+        char dummy='#';
+        int lOld,l,m;
+        lOld=0;
+        l=0;
+        m=0;
+        std::complex<dataType> coeff;
+        while(std::getline(almRead,line))
+        {
+            //ignore all lines that contain a #
+            if(line.find(dummy)!=std::string::npos)
+            {
+                continue;
+            }
+
+            std::istringstream ss(line);
+
+            ss>>l>>m>>coeff;
+
+            //if l is increast append the temporary vector to the alm vector
+            if(lOld!=l)
+            {
+                alm.push_back(lcoeff);
+                lcoeff.clear();
+            }
+
+            lcoeff.push_back(coeff);
+
+            lOld=l;
+
+        }
+
+    }
+    else
+    {
+        std::cout<<"can not read coefficients from file! "<<almFile<<std::endl;
+        return;
+    }
+    std::cout<<"--------------------------------------------------------------- \n";
 }
 
-dataType Multipole::calcth(dataType y, dataType z)
+
+/*dataType Multipole::calcth(dataType y, dataType z)
 {
     if(y==0)
     {

@@ -19,6 +19,7 @@ void Data::readData()
     dataF.open(infile);
     if(dataF.is_open())
     {
+        grid.clear();
         std::cout<<"--------------------------------------------------------------- \nreading file "<<infile<<std::endl;
         for(int i=0;i<MAXANGLES;i++)
         {
@@ -47,13 +48,21 @@ void Data::readData()
                 thmax=inNum1;
             }
             //convert angles from degres to radian
+
             messg[i][1]=deg_to_rad(inNum1);
+
             messg[i][2]=deg_to_rad(inNum2);
+
             messg[i][3]=deg_to_rad(inNum3);
             thmax=deg_to_rad(thmax);
-            //std::cout<<" entry 1 "<<messg[i][1];
-            //std::cout<<" entry 2 "<<messg[i][2];
-            //std::cout<<" entry 3 "<<messg[i][3]<<std::endl;
+
+            //fill grid vector
+            std::vector<dataType> temp;
+            temp.push_back(deg_to_rad(inNum1));
+            temp.push_back(deg_to_rad(inNum2));
+            grid.push_back(temp);
+
+
 
             this->dataF.ignore (std::numeric_limits<std::streamsize>::max(), '\n'); //the rest of the row is ignored
         }
@@ -94,6 +103,58 @@ int Data::getLineNum(std::string fileGiven)
     }
     dataF.close();
     return maxangles;
+}
+
+void Data::readGrid(std::string gridFile)
+{
+    std::cout<<"---------------------------------------------------";
+    std::cout<<"reading file containing grid "<<gridFile<<std::endl;
+
+    std::ifstream grData (gridFile.c_str());
+    dataType theta, phi;
+    if(grData.is_open())
+    {
+        grid.clear(); //make shure grid is empty
+        std::cout<<"grit used in expansion\n";
+        while(grData>>theta >> phi)
+        {
+            std::cout<< theta<<"    "<<phi<<std::endl;
+            std::vector<dataType> temp;
+            temp.push_back(theta);
+            temp.push_back(phi);
+            grid.push_back(temp);
+        }
+        grData.close();
+    }
+    else
+    {
+        std::cout<<"unable to open "<<gridFile<<std::endl;
+        std::cout<<"using grid from input data";
+        return;
+    }
+
+    std::cout<<"successfully read grid file";
+    std::cout<<"---------------------------------------------------";
+}
+
+void Data::printGrid()
+{
+    std::cout<<"----------------------\n";
+    std::cout<<"print grid contence\n";
+    std::cout<<"theta   phi\n";
+    if(grid.empty())
+    {
+        std::cout<<"grid is empty!\n";
+        return;
+    }
+
+    std::vector< std::vector<dataType> >::const_iterator row;
+    for (row = grid.begin(); row != grid.end(); ++row)
+    {
+        std::cout<<(*row)[0]<<"     "<<(*row)[1]<<std::endl;
+    }
+
+    std::cout<<"----------------------\n";
 }
 
 void Data::apofct()

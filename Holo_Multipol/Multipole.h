@@ -62,6 +62,8 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     void writeAlm(std::string);
 
+    void readAlm(std::string almFile);
+
     /**
     *calculateion of a radial image curve of the electron wave field near the photoemitter.
     *Equation (3) from A.Stucke et al. (1992) is used.

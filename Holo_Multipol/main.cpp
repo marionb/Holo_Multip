@@ -16,11 +16,14 @@ int main(int argc, char** argv)
     std::string paramFile= "";
     std::string dataFile="";
     std::string gridData="";//contains the grid accoring to which the multipole expansion is made
+    std::string inFileALM="";
     std::string outFileALM="";
     std::string outFileMPL="";
+    std::string apodization=""; //apodization Flag
     int lmax=0; //max number of parameters to expand
     int symm=0; //symmetry of the tested material(or similar)
 
+    bool almFlag=false;  //if true wait for input from an alm file; else use same alm as calculated
 
 
     if( argc == 2)
@@ -58,11 +61,24 @@ int main(int argc, char** argv)
     }
     else {std::cout<<"ERROR: Unable to open file: \nPlease check that it exists in the executing folder!\n";}
 
+    //Now functions to run the computations are called.
 
     Multipole *file=new Multipole(dataFile,lmax,symm);
+
     file->readData();
     file->multpl();
     file->writeAlm(outFileALM);
+
+    if(gridData!="")
+    {
+        file->readGrid(gridData);
+    }
+
+    if(inFileALM!="")
+    {
+        file->readAlm(inFileALM);
+    }
+
     file->expans();
 
     std::cout<< "write output";

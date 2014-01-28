@@ -35,6 +35,15 @@ class Data
         void readData();
 
         /**
+        *Caling this function clears the vector grid and fills it with informaton taken from the file with the name given to the function
+        *@param gridFile    string containing the file name with the grid
+        *--> the file describen above has to contain two rows of float/double values
+        *       first row       seccond row
+        *       theta           phi
+        */
+        void readGrid(std::string);
+
+        /**
         * determine the amount of lines in the file
         * @param fileGiven  name of input file
         */
@@ -63,6 +72,8 @@ class Data
         *@return    value of the angle in degrees using dataType precission
         */
         static inline dataType rad_to_deg(dataType rad);
+
+        void printGrid();
 
 
     protected:
@@ -93,6 +104,7 @@ class Data
 //    protected:
         twoVector messg;
         twoVector calc;
+        twoVector grid;
         //dataType (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
         //dataType (*messgFinal)[3]; //dynamic array containing output data
 
