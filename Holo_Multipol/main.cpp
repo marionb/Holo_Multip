@@ -22,8 +22,10 @@ int main(int argc, char** argv)
     std::string apodization=""; //apodization Flag
     int lmax=0; //max number of parameters to expand
     int symm=0; //symmetry of the tested material(or similar)
+    int inorm=0;
+    bool apo=false;
 
-    bool almFlag=false;  //if true wait for input from an alm file; else use same alm as calculated
+
 
 
     if( argc == 2)
@@ -63,7 +65,7 @@ int main(int argc, char** argv)
 
     //Now functions to run the computations are called.
 
-    Multipole *file=new Multipole(dataFile,lmax,symm);
+    Multipole *file=new Multipole(dataFile, apo, inorm, lmax, symm);
 
     file->readData();
     file->multpl();

@@ -2,15 +2,12 @@
 #include <iostream>
 #include <stdlib.h>     /* abs */
 
-Multipole::Multipole(std::string fileName, int lmax, int isym): Data(fileName),LMAX(lmax), ISYM(isym)//, k(2*M_PI*sqrt(ekin/150))
+Multipole::Multipole(std::string fileName, bool apo, int inorm, int lmax, int isym): Data(fileName, apo),INORM(inorm),LMAX(lmax), ISYM(isym)//, k(2*M_PI*sqrt(ekin/150))
 {
     assert(LMAX<Multipole::MAX_COEFF);
 }
 Multipole::~Multipole()
 {
-    //TODO eventuelle leichen löschen
-    //delete alm1;
-    //delete alm2;
 }
 
 const int Multipole::getLMAX()
@@ -25,10 +22,6 @@ void Multipole::multpl()
     alm.clear();
     for(int l=0;l<=LMAX;l+=2)
     {
-//        std::cout<<"(l, il)"<<l<<","<<il<<std::endl;
-
-        //alm1[il].push_back(std::vector<dataType>(il)); //append a vector of length l/2+1 to make shure there is at least one element; initialize with zeros
-        //alm2[il].push_back(std::vector<dataType>(il));
         std::vector<std::complex<dataType> > lcoeff;
         for(int m=0;m<=l;m+=ISYM)
         {
@@ -43,7 +36,6 @@ void Multipole::multpl()
                 dataType gmessg=messg[i][0];
                 dataType dOmega=messg[i][3];
 
-                //std::cout<<"i, phi, theta, g "<<i<<" "<<phi<<","<<theta<<", "<<gmessg<<std::endl;
                 std::complex<float> temp1=std::conj(boost::math::spherical_harmonic<dataType>(l, m, theta, phi))*dOmega;
                 std::complex<float> temp=gmessg*temp1;
                 int_res+=temp;
@@ -55,20 +47,13 @@ void Multipole::multpl()
                 bnorm=std::real(int_res);
                 std::cout<<"bnorm="<<bnorm<<std::endl;
             }
-            //int_res=int_res/bnorm;
             lcoeff.push_back(int_res/bnorm);
 
         }
 
         alm.push_back(lcoeff);
-
-        //std::cout<<std::endl;
     }
-    for(int i=0;i<5;i++)
-    {
-       std::vector<std::complex<dataType> > t= alm[i];
-    }
-
+    removeAlmBackground();
 }
 
 void Multipole::expans()
@@ -79,21 +64,18 @@ void Multipole::expans()
     std::vector< std::vector<dataType> >::const_iterator itr;
     for (itr = grid.begin(); itr != grid.end(); ++itr)
     {
-        //std::cout<<"i "<<i<<std::endl;
-        //std::cout<<"    values  ";
         dataType theta=(*itr)[0];
         dataType phi=(*itr)[1];
         dataType g_theta_phi=intencity(theta,phi);
-        //std::cout<<g_theta_phi<<" "<<180/M_PI*theta<<" "<<180/M_PI*phi<<std::endl;
+
         std::vector<dataType> temp;
 
         temp.push_back(g_theta_phi);
         temp.push_back(theta);
-        temp.push_back(phi);//TODO if time: make this call better -> works for a start
+        temp.push_back(phi);
 
         calc.push_back(temp);
    }
-   //std::cout<<"calc:(g(theat,phi),theta,phi)\n";
 }
 
 
@@ -262,6 +244,28 @@ dataType Multipole::intencity(dataType theta, dataType phi)
     return totSumm;
 }
 
+void Multipole::removeAlmBackground()
+{
+    if(INORM<0)
+    {
+        //Function does nothing if the flag INORM is less than 0
+        return;
+    }
+    std::cout<<"removing alm with l<"<<INORM<<std::endl;
+    for(int i=0;i<=INORM;i+=2)
+    {
+        int il=i/2;
+        for(int j=0;j<=i;j++)
+        {
+
+            alm[il][j]=0;
+
+        }
+    }
+
+}
+
+/*READ WRITE functions*/
 void Multipole::writeAlm(std::string almFile)
 {
 
@@ -275,7 +279,7 @@ void Multipole::writeAlm(std::string almFile)
     {
         almWrite<<"#Coeficients for multipole expansion A_lm\n";
         almWrite<<"#Calculated using Holo_Multipol\n";
-        almWrite<<"#Usin ";
+        almWrite<<"#Using ";
         almWrite<<LMAX;
         almWrite<<" coefficients\n";
         almWrite<<"#l";
@@ -286,7 +290,7 @@ void Multipole::writeAlm(std::string almFile)
         for(int i=0;i<=LMAX;i+=2)
         {
             int il=i/2;
-            for(int j=0;j<=il;j++)
+            for(int j=0;j<=i;j++)
             {
                 almWrite<<i;
                 almWrite<<" ";

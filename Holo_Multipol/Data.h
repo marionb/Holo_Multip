@@ -20,7 +20,7 @@ class Data
 {
     public:
 
-        Data(std::string fileName);
+        Data(std::string fileName, bool apo);
         /**
         *Class constructor
         *@param input   char array of data file name
@@ -78,12 +78,12 @@ class Data
 
     protected:
 
-        /**
+        /**TODO
         *calculation of a fermi function like apodizing function
         *PRE:   dataType theta and dataType thmax -> values for which te function is calculated
         *POST:  dataType with the value of the apodizing function
         */
-        inline void apofct();
+        inline dataType apofct(dataType gTetaPhi, dataType theta, dataType thmax);
 
         /**
         * calculates the chi function from the measured hologram
@@ -114,6 +114,7 @@ class Data
 
     private:
         const char* infile; //name of file with input data
+        const bool apo;
         std::ifstream dataF; //for input
         std::ofstream dataW; //for output
         //const int xDimImage;

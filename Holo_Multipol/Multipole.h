@@ -19,11 +19,12 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     /**
     *Class constructor
     *@param fileName    name of the input file
+    *@param apo         determine wther the apodization function is caled on the walues red from the data fiel
+    *@param inorm       fag to determine wether all alm's are used. If this is grater than 0 the contribution of all alm with l<= inorm are cut/set to zero
     *@param lmax        TODO Describe
     *@param isym        TODO Describe
-    *@param ekin        kinetic enery
     */
-    Multipole(std::string fileName, int lmax, int isym);
+    Multipole(std::string fileName, bool apo, int inorm, int lmax, int isym);
 
     /**
     *getter method returning the number of expansion parameters
@@ -32,7 +33,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
 
     /**
     *Class constructor
-    *@param
+    *@param -
     */
     virtual ~Multipole();
 
@@ -62,6 +63,18 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     void writeAlm(std::string);
 
+    /**
+    * read alm values from a data file
+    *@param almFile     file name containig the alm with the folowing structure
+    *       #l  m   A_lm
+    *        0  0   (1,0)
+    *        2  0   (0.38151,0)
+    *        2  1   (-0.0132918,-0.0278365)
+    *        2  2   (0.00317809,-0.000486047)
+    *               ...     ...
+    * a line containing a # is considerd to contain comment and is not read
+    * the Complex number format of the alm are given as (real, complex)
+    */
     void readAlm(std::string almFile);
 
     /**
@@ -108,6 +121,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     private:
     const int LMAX; //maximum number of multipole expansion (amount of coefficients)
     const int ISYM;
+    const int INORM;
 
     //const dataType k; //2*pi*sqrt(ekin/150)
 
@@ -118,10 +132,10 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     //std::vector<dataType> gCalc; take this vector from the base clas
 
     /**
-    *calculate (-1)^exp with exp in [1,2,3,4,...]
-    *@param exp is a positiv or negative integer
+    * The function uses the flag INORM and sets all alm with l<=INORM to zero
+    * This is done to remove alm that have a large oszillation which influences the calculated g(theta,phi) function in an unwanted way
     */
-    //int vorz(int);
+    void removeAlmBackground();
 
 
     /**

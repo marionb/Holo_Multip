@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <iterator>
 
-Data::Data(std::string fileName):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str())
+Data::Data(std::string fileName, bool apo):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str()),apo(apo)
 {
     //the constructor takes the file name and from this name calls the static function
     //Data::getLineNum(filename) in ordet to determine the number of datapoints.
@@ -56,6 +56,11 @@ void Data::readData()
             messg[i][3]=deg_to_rad(inNum3);
             thmax=deg_to_rad(thmax);
 
+            if(apo)
+            {
+                messg[i][0]= apofct(messg[i][0], messg[i][1], thmax);
+            }
+
             //fill grid vector
             std::vector<dataType> temp;
             temp.push_back(deg_to_rad(inNum1));
@@ -83,9 +88,7 @@ void Data::readData()
 
 int Data::getLineNum(std::string fileGiven)
 {
-    /*
-    TODO: needs exeption if file can not be opened
-    */
+
     const char* file = fileGiven.c_str();
 
     int maxangles=0;
@@ -157,16 +160,12 @@ void Data::printGrid()
     std::cout<<"----------------------\n";
 }
 
-void Data::apofct()
+dataType Data::apofct(dataType gTetaPhi, dataType theta,dataType thmax)
 {
-    //this function has to be caled if a certain flag is set to true!
     //what is thetamax?is it just the maximum of all thetas?
-    double width =2.0; //where does this number come from?? is it always 2?
+    dataType width =2.0; //where does this number come from?? is it always 2?
 
-    for(int i=0;i<MAXANGLES;i++)
-    {
-        messg[i][0]*=1.0/(std::exp((messg[i][1]-thmax+3.0*width)/width) +1.0);
-    }
+    return gTetaPhi*1.0/(std::exp((theta-thmax+3.0*width)/width) +1.0);
 }
 
 void Data::calcchi()//bei normalization falg
