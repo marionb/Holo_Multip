@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>     /* abs */
 
-Multipole::Multipole(std::string fileName, bool apo, int inorm, int lmax, int isym): Data(fileName, apo),INORM(inorm),LMAX(lmax), ISYM(isym)//, k(2*M_PI*sqrt(ekin/150))
+Multipole::Multipole(std::string fileName, bool apo, int inorm, int lmax, int isym): Data(fileName, apo, inorm),LMAX(lmax), ISYM(isym), INORM(inorm)//, k(2*M_PI*sqrt(ekin/150))
 {
     assert(LMAX<Multipole::MAX_COEFF);
 }
@@ -17,7 +17,7 @@ const int Multipole::getLMAX()
 
 void Multipole::multpl()
 {
-    std::cout<<"\n --------------------------------------------------------------- \n calculating multipole coefficients"<<std::endl;
+    std::cout<<"\n--------------------------------------------------------------- \ncalculating multipole coefficients"<<std::endl;
     dataType bnorm = 1;
     alm.clear();
     for(int l=0;l<=LMAX;l+=2)
@@ -58,7 +58,7 @@ void Multipole::multpl()
 
 void Multipole::expans()
 {
-    std::cout<<"\n --------------------------------------------------------------- \n expanding function according to calculated coefficients \n";
+    std::cout<<"\n--------------------------------------------------------------- \nexpanding function according to calculated coefficients \n";
     calc.clear();
 
     std::vector< std::vector<dataType> >::const_iterator itr;
@@ -78,151 +78,6 @@ void Multipole::expans()
    }
 }
 
-
-/*void Multipole::holorad(dataType alpha, dataType beta)
-{
-    dataType r=0;
-    dataType kr=0;
-    dataType suml=0;
-    for(int nr=1;nr<=100;nr++)
-    {
-        r=nr*0.1;
-        kr=k*r;
-        for(int l=0;l<LMAX;l+=2)
-        {
-            int il=l/2;
-            suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il); //TODO:not shure if the order of l is correct
-        }
-        radimg.push_back(suml);
-    }
-
-}
-
-void Multipole::doyzimage(dataType grid, int xyz)
-{
-    dataType x=xyz*grid; //=0!
-    dataType alpha=0;
-    dataType beta=0;
-    dataType suml=0;
-    int max=63;
-
-    image2D.resize(max);
-    for(int nz=0;nz<=max;nz++)
-    {
-        image2D[nz].expand(max);
-        dataType z=nz*grid;
-        for(int ny=-max;ny<=max;ny++)
-        {
-            dataType y=ny*grid;
-            dataType rho=sqrt(x*x+y*y);
-            dataType rVec=sqrt(rho*rho+z*z);
-            alpha=calcth(rho, z);
-            beta=calcphi(x,y);
-            dataType kr=k*rVec;
-            for(int l=0;l<=LMAX;l+=2)
-            {
-                int il=l/2;
-                suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il);
-            }
-            (ny<0)?(image2D[nz].negative[abs(ny)]=suml):(image2D[nz].negative[ny]=suml); //if ny<0 safe in negative part else (if ny>=0 safe in positive part)
-        }
-    }
-}
-
-void Multipole::doxyzimage(dataType grid)
-{
-    //TODO test if everything works fine with vector structure
-    int max=63;
-    image3D.resize(max);
-    for(int nz=0;nz<=max;nz++)
-    {
-        dataType z=nz*grid;
-        image3D[nz].expand(max);
-        for(int ny=-max;ny<=max;ny++)
-        {
-            dataType y=ny*grid;
-            //(ny<0)? (image3D[nz].negative[-ny].expand(max)):(image3D[nz].positive[ny].expand(max)); //expand only the enty ny that is used next
-            SpecialVector<dataType> xtemp;
-            xtemp.expand(max);
-            for(int nx=-max;nx<=max;nx++)
-            {
-                dataType x=nx*grid;
-                dataType r=sqrt(x*x+y*y+z*z);
-                dataType alpha=acos(z/r);
-                dataType beta=calcphi(x,y);
-                dataType kr =k*r;
-                dataType suml=0;
-                for(int l=0;l<=LMAX;l+=2)
-                {
-                    int il=l/2;
-                    suml+=innerSumm(l,alpha,beta)*boost::math::sph_bessel (l, kr)*vorz(il);
-                }
-                xtemp.addElement(suml,nx);
-            }
-            image3D[nz].addElement(xtemp,ny);
-        }
-    }
-    image3D[0].positive[0].addElement(0,0);
-}
-
-
-void Multipole::scaleimage(dataType grid)
-{
-    int max=63;
-    assert(image3D.size()!=0);
-    for(int iz=0;iz<=max;iz++)
-    {
-        for(int iy=-max;iy<max;iy++)
-        {
-            SpecialVector<dataType> xtemp;
-            xtemp.expand(max);
-            for(int ix=-max;ix<max;ix++)
-            {
-                dataType r=grid*sqrt(dataType(ix*ix+iy*iy+iz*iz));
-                dataType temp= r*image3D[iz].getElement(iy).getElement(ix);
-                xtemp.addElement(temp, ix);
-
-            }
-            image3D[iz].addElement(xtemp,iy);
-        }
-    }
-
-}
-
-void Multipole::smooth(dataType grid)
-{
-   /* assert(image3D.size()!=0);
-    int box = 7; //smoothing box size half
-    dataType width = 1; //gauss sigma width
-    std::cout<<"pewforming gaussian smoothing\n";
-    std::vector<SpecialVector<SpecialVector<dataType> > > >simage;
-    simage=image3D;
-    for(int nz=0;nz<=63;nz++)
-    {
-        for(int ny=0;ny<=63;ny++)
-        {
-            for(int nx=0;nx<=63;nx++)
-            {
-                dataType imageR=image3D[nz].getElement(ny).getElement(nx);
-                for(iz=-box;iz<=box;iz++)
-                {
-                    for(iy=-box;iy<=box;iy++)
-                    {
-                        for(ix=-box;ix<=box;ix++)
-                        {
-                            dataType distsq=(ix+iy+iz)*(ix+iy+iz);
-                            dataType gs=1/(width*2.5)*exp(-0.5*distsq/(width*width));
-                            imageR+=sigma
-                        }
-                    }
-                }
-            }
-        }
-    }*--->/
-}
-
-
-/*-------------------Private--------------------------------------*/
 dataType Multipole::intencity(dataType theta, dataType phi)
 {
     std::complex<dataType> summ;//=(0,0);
@@ -364,67 +219,3 @@ void Multipole::readAlm(std::string almFile)
     }
     std::cout<<"--------------------------------------------------------------- \n";
 }
-
-
-/*dataType Multipole::calcth(dataType y, dataType z)
-{
-    if(y==0)
-    {
-        return 0;
-    }else
-    {
-        if(z<0)
-        {
-            return M_PI-abs(atan(abs(y/z)));
-        }else if(z==0.0)
-        {
-            return M_PI;
-        }else if(z>0)
-        {
-            return abs(atan(abs(y/z)));
-        }
-        return -1;
-    }
-}
-
-dataType Multipole::calcphi(dataType x, dataType y)
-{
-    if(x<0)
-    {
-        if(y<0)
-        {
-            return M_PI+abs(atan(y/x));
-        }else if(y==0.0)
-        {
-            return M_PI;
-        }else if(y>0)
-        {
-            return M_PI-abs(atan(y/x));
-        }
-    }else if(x==0.0)
-    {
-        if(y<0)
-        {
-            return 3.0/2.0*M_PI;
-        }else if(y==0.0)
-        {
-            return 0;
-        }else if(y>0)
-        {
-            return M_PI;
-        }
-    }else if(x>0)
-    {
-        if(y<0)
-        {
-            return 2.0*M_PI-abs(atan(y/x));
-        }else if(y==0.0)
-        {
-            return 0;
-        }else if(y>0)
-        {
-           return atan(y/x);
-        }
-    }
-    return -1;
-}*/

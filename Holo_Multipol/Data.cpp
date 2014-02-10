@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <iterator>
 
-Data::Data(std::string fileName, bool apo):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str()),apo(apo)
+Data::Data(std::string fileName, bool apo, bool inorm):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str()),apo(apo), INORM(inorm)
 {
     //the constructor takes the file name and from this name calls the static function
     //Data::getLineNum(filename) in ordet to determine the number of datapoints.
@@ -58,7 +58,7 @@ void Data::readData()
 
             if(apo)
             {
-                messg[i][0]= apofct(messg[i][0], messg[i][1], thmax);
+                messg[i][0]= apofct(messg[i][0], messg[i][1]);
             }
 
             //fill grid vector
@@ -80,10 +80,8 @@ void Data::readData()
     }
     std::cout<<"read file succesfully! \n---------------------------------------------------------------\n";
     this->dataF.close();
-    for (twoVector::iterator it=messg.begin();it!=messg.end();it++)
-    {
-        std::cout<<(*it)[0]<<" "<<rad_to_deg((*it)[1])<<" "<<rad_to_deg((*it)[2])<<std::endl;
-    }
+    //calcchi();
+
 }
 
 int Data::getLineNum(std::string fileGiven)
@@ -110,7 +108,7 @@ int Data::getLineNum(std::string fileGiven)
 
 void Data::readGrid(std::string gridFile)
 {
-    std::cout<<"---------------------------------------------------";
+    std::cout<<"---------------------------------------------------\n";
     std::cout<<"reading file containing grid "<<gridFile<<std::endl;
 
     std::ifstream grData (gridFile.c_str());
@@ -121,7 +119,7 @@ void Data::readGrid(std::string gridFile)
         std::cout<<"grit used in expansion\n";
         while(grData>>theta >> phi)
         {
-            std::cout<< theta<<"    "<<phi<<std::endl;
+            //std::cout<< theta<<"    "<<phi<<std::endl;
             std::vector<dataType> temp;
             temp.push_back(theta);
             temp.push_back(phi);
@@ -136,7 +134,7 @@ void Data::readGrid(std::string gridFile)
         return;
     }
 
-    std::cout<<"successfully read grid file";
+    std::cout<<"successfully read grid file\n";
     std::cout<<"---------------------------------------------------";
 }
 
@@ -160,31 +158,42 @@ void Data::printGrid()
     std::cout<<"----------------------\n";
 }
 
-dataType Data::apofct(dataType gTetaPhi, dataType theta,dataType thmax)
+dataType Data::apofct(dataType gThetaPhi, dataType theta)
 {
     //what is thetamax?is it just the maximum of all thetas?
     dataType width =2.0; //where does this number come from?? is it always 2?
 
-    return gTetaPhi*1.0/(std::exp((theta-thmax+3.0*width)/width) +1.0);
+    return gThetaPhi*1.0/(std::exp((theta-this->thmax+3.0*width)/width) +1.0);
 }
 
-void Data::calcchi()//bei normalization falg
+void Data::calcchi()
 {
-    //TODO Thest this function
+    //TODO Test this function
+    //funcion is only then called if normalization flag is set to <0
+    if(INORM<0)
+    {
+        return;
+    }
+    std::cout<<"---------------------------------------------------------------"<<std::endl;
+    std::cout<<"calculating the chi function on the measured data"<<std::endl;
     dataType sumphi=0;
-    dataType theta=messg[0][1];
+    dataType theta=messg[0][1]; //set first theta value
     int count=0;
+
     std::vector<dataType> normFactor;
+
     for (int i=0;i<MAXANGLES;i++)
     {
-        sumphi+=messg[i][0];
+        sumphi+=messg[i][0]; //add g(theta,phi)
         if(theta!=messg[i+1][1])
         {
 
             if(i-count<=0)
             {
               sumphi=sumphi/(i-count);
-            }else{ std::cout<< "ERROR: can not calculate average in function calcchi, result migt be wrong!";}
+            }
+            else{ std::cout<< "ERROR: can not calculate average in function calcchi, result migt be wrong!";}
+
             for(int k=count;k<=i;k++)
             {
                 messg[k][0]=messg[k][0]/sumphi;
@@ -195,6 +204,7 @@ void Data::calcchi()//bei normalization falg
         }
 
     }
+    std::cout<<"---------------------------------------------------------------"<<std::endl;
 }
 
 void Data::writeData(std::string output)

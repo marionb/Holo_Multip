@@ -20,7 +20,7 @@ class Data
 {
     public:
 
-        Data(std::string fileName, bool apo);
+        Data(std::string fileName, bool apo, bool inorm);
         /**
         *Class constructor
         *@param input   char array of data file name
@@ -43,12 +43,6 @@ class Data
         */
         void readGrid(std::string);
 
-        /**
-        * determine the amount of lines in the file
-        * @param fileGiven  name of input file
-        */
-        static int getLineNum(std::string fileGiven);
-
 
         /**
         * write data from messgFinal in to an outpu file
@@ -56,8 +50,19 @@ class Data
         */
         void writeData(std::string output);
 
+        /**
+        *Print the grid used for the calculation of g(theta,phi) on to the CMD-line
+        */
+        void printGrid();
+
         //------------------------------------------------------//
         //Static functions
+
+        /**
+        * determine the amount of lines in the file
+        * @param fileGiven  name of input file
+        */
+        static int getLineNum(std::string fileGiven);
 
         /**
         *convert an angle in degre to rad
@@ -73,53 +78,49 @@ class Data
         */
         static inline dataType rad_to_deg(dataType rad);
 
-        void printGrid();
+
 
 
     protected:
 
-        /**TODO
-        *calculation of a fermi function like apodizing function
-        *PRE:   dataType theta and dataType thmax -> values for which te function is calculated
-        *POST:  dataType with the value of the apodizing function
-        */
-        inline dataType apofct(dataType gTetaPhi, dataType theta, dataType thmax);
-
-        /**
-        * calculates the chi function from the measured hologram
-        * according to the procedure of chuck fadley, i.e. by
-        * normalizing the data on each phi-circle to zero average.
-        */
-        void calcchi();
-
-        //const int LMAX; //maximum number of multipole expansion (amount of coefficients)
-
         const int MAXANGLES; //number of data points
         const int ROWNUMBER; //number of rows in the file read
 
+        dataType thmax;//the largest theta that is contained within the data
 
-//        bool iapo;
-        dataType thmax;
+        twoVector messg;//measured g(theta,phi); theta; phi
+        twoVector calc; //calculated g(theta, phi);theta, phi
+        twoVector grid; //grid that is used for the expansion
 
-//    protected:
-        twoVector messg;
-        twoVector calc;
-        twoVector grid;
-        //dataType (*messg)[3]; //dynamic array containing input data -> this data needs to be accesible
-        //dataType (*messgFinal)[3]; //dynamic array containing output data
+        /**
+        *calculation of a fermi function like apodizing function
+        *
+        *@param gTetaPhi    intencity value g(theta, phi)
+        *@param theta       value theta at gTetaPhi/g(theta, phi)
+        */
+        inline dataType apofct(dataType gThetaPhi, dataType theta);
 
-        oneVector radimg;
-        twoVectorxNyZ image2D;
-        threeVectorxNyZzZ image3D;
+
+
+
 
     private:
-        const char* infile; //name of file with input data
-        const bool apo;
-        std::ifstream dataF; //for input
-        std::ofstream dataW; //for output
-        //const int xDimImage;
-        //const int yDimImage;
-        //const int zDimImage;
+        const char* infile;     //name of file with input data
+        const bool apo;         //aposization falg
+        const int INORM;
+        std::ifstream dataF;    //for input
+        std::ofstream dataW;    //for output
+
+        /**
+        * calculates the chi function from the measured data
+        * according to the procedure of chuck fadley, i.e. by
+        * normalizing the data on each theta-circle to zero average.
+        * the Function is alway called, however it only modifies the
+        * measured data if the local flag inorm < 0
+        *
+        */
+        void calcchi();
+
 
 
 };

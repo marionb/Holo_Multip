@@ -8,12 +8,13 @@
 #include <complex>
 
 #include "Data.h"
+
 #include <boost/math/special_functions/legendre.hpp>
 #include <boost/math/special_functions/spherical_harmonic.hpp>
 #include <boost/math/special_functions/bessel.hpp>
 typedef std::vector<std::vector<std::complex<dataType> > > AlmType;
 
-class Multipole:public Data //:public Data //this class now has acces to all the pubilc and protected members of Data for acces to private members of Data make frined function/class
+class Multipole:public Data //this class now has acces to all the pubilc and protected members of Data for acces to private members of Data make frined function/class
 {
     public:
     /**
@@ -32,7 +33,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     const int getLMAX();
 
     /**
-    *Class constructor
+    *Class destructor
     *@param -
     */
     virtual ~Multipole();
@@ -61,7 +62,7 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     /**
     *print the real coefficients that were calculated within this program
     */
-    void writeAlm(std::string);
+    void writeAlm(std::string almFile);
 
     /**
     * read alm values from a data file
@@ -77,48 +78,13 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     void readAlm(std::string almFile);
 
-    /**
-    *calculateion of a radial image curve of the electron wave field near the photoemitter.
-    *Equation (3) from A.Stucke et al. (1992) is used.
-    *@param alpha, beta     dataType precission; define the radial curve; the angles are given within the same polar coordinates frame as the data.
-    *The radial grid is in angstrom with 0.1\AA spacing
-    *Function is adopted from the fortran Program by Juerg Osterwalde writen in 1993
-    */
-    //void holorad(dataType, dataType);
 
-    /**
-    *Calculates a two dimensional image of the electron wave field near the photoemitter.
-    *Equation (3) from A.Stucke et al. (1992) is used.
-    *Ther radial grid is in angstroem with grid spacing in Angstroe
-    *Function is adopted from the fortran Program by Juerg Osterwalde writen in 1993
-    */
-    //void doyzimage(dataType grid, int xyz);
-
-    /**
-    *Calculates a two-dimensional image of the electron wave field near the photoemitter.
-    *Equation (3) from A.Stucke et al. (1992) is used.
-    *the radial grid is in angstroem with grid angstroem spacing.
-    *Function is adapted from the fortran program by Juerg Osterwalder written in 6.7.93
-    */
-    //void doxyzimage(dataType grid);
-
-    /**
-    *Takes a 2D image array and maps it into a 2d image array of integer numbers ranging from 0 to 255.
-    *Function makes input in to 'image program more convenient for mac.
-    *Calculates r * |img(xy)|**2 to produce images.
-    *adapted from fortran program by Juerg Osterwalder, universite de fribourg, 12.7.93
-    */
-    //void scaleimage(dataType grid);
-
-    /**
-    *Function performes a gausian smoothing of the image function
-    */
-    //void smooth(dataType grid);
 
 
 
 //=======================================================================================//
     private:
+    static const int MAX_COEFF=100;//100 is the maximum amunt of coefficients that can be calculated
     const int LMAX; //maximum number of multipole expansion (amount of coefficients)
     const int ISYM;
     const int INORM;
@@ -147,20 +113,8 @@ class Multipole:public Data //:public Data //this class now has acces to all the
     */
     dataType intencity(dataType theta, dataType phi);
 
-    /**
-    *calculation of the proper polar angle within the yz-plane.
-    *All polar angles are positive; negative y values should be accounted for by adding PI to the value of phi.
-    *@return polar angle in radian (dataType precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
-    */
-    //dataType calcth(dataType y, dataType z);
 
-    /**
-    *calculation of the proper azimutal angle within the yz-plane.
-    *@return azimutal angle in radian (dataType precission)   ->  if the function returnes -1 there calculation was corrupded or the function is wrong
-    */
-    //dataType calcphi(dataType x, dataType y);
 
-    static const int MAX_COEFF=100;//100 is the maximum amunt of coefficients that can be calculated
 };
 
 

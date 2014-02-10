@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     std::string apodization=""; //apodization Flag
     int lmax=0; //max number of parameters to expand
     int symm=0; //symmetry of the tested material(or similar)
-    int inorm=0;
+    int inorm=1;
     bool apo=false;
 
 
