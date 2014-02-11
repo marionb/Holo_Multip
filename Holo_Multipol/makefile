@@ -12,9 +12,9 @@ all: holo_multip.exe
 
 #create executable with the first target
 holo_multip.exe: $(OBJS)
-	$(CC) $(OBJS) -o run
+	$(CC) $(OBJS) -o Holo_Multi.run
 
-Multipole.o: Multipole.cpp specialVector.h main.o
+Multipole.o: Multipole.cpp main.o
 	$(CC) $(CFLAGS) Multipole.cpp
 
 Data.o: Data.cpp main.o
@@ -27,7 +27,7 @@ main.o: main.cpp Param.h Data.h Multipole.h
 	$(CC) $(CFLAGS) main.cpp
 
 clean:
-	\rm *.o run
+	\rm *.o *.run
 
 #TODO tar:
 #	tar cfv task.tar 

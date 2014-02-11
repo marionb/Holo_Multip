@@ -36,6 +36,7 @@
 		<Unit filename="Data.h" />
 		<Unit filename="Multipole.cpp" />
 		<Unit filename="Multipole.h" />
+		<Unit filename="ReadInput.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

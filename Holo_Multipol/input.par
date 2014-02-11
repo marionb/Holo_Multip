@@ -1,5 +1,5 @@
    500                                  file format version
-newinp.itp                              data input file (angle set)
+CPPOutOld.dat                           data input file (angle set)
 test                                    title
 test.alm                                coefficients input/output file
 test.mpl                                multipole output file
@@ -10,7 +10,7 @@ holotest.rad                            radial output file
    1                                    symmetry
   -3                                    normalization flag
    0                                    apodization flag
-   1                                    enable coeff input/output
+                                        enable coeff input/output
    1                                    enable multipole output
    0                                    enable yz output
    0                                    enable xy output
@@ -19,3 +19,4 @@ holotest.rad                            radial output file
 1092.00                                 electron kinetic energy
    0                                    radial cut alpha angle
    0                                    radial cut beta angle
+grid.dat				file containgin the grid accoring to which the multipole expansion is made

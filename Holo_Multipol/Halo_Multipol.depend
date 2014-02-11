@@ -24,24 +24,23 @@
 	<cmath>
 	<limits>
 
-1392066476 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/Data.cpp
+1392146572 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/Data.cpp
 	"Data.h"
 	<iostream>
 
-1392066313 /home/marion/Documents/Compclinic/code/Holo_Multipol/Data.h
+1392153587 /home/marion/Documents/Compclinic/code/Holo_Multipol/Data.h
 	<fstream>
 	<iostream>
 	<cmath>
 	<limits>
 	<vector>
-	"specialVector.h"
 
 1381847754 /home/marion/Documents/Compclinic/code/Holo_Multipol/specialVector.h
 	<vector>
 	<cmath>
 	<assert.h>
 
-1392065905 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/Multipole.cpp
+1392067277 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/Multipole.cpp
 	"Multipole.h"
 	<iostream>
 	<stdlib.h>
@@ -56,7 +55,7 @@
 	<boost/math/special_functions/spherical_harmonic.hpp>
 	<boost/math/special_functions/bessel.hpp>
 
-1391628294 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/main.cpp
+1392153138 source:/home/marion/Documents/Compclinic/code/Holo_Multipol/main.cpp
 	<iostream>
 	<cmath>
 	<complex>

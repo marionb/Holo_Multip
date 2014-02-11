@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <iterator>
 
-Data::Data(std::string fileName, bool apo, bool inorm):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str()),apo(apo), INORM(inorm)
+Data::Data(std::string fileName, bool apo, bool inorm):MAXANGLES(Data::getLineNum(fileName)), ROWNUMBER(4) ,infile(fileName.c_str()),apo(apo), INORM(-inorm)
 {
     //the constructor takes the file name and from this name calls the static function
     //Data::getLineNum(filename) in ordet to determine the number of datapoints.
@@ -80,7 +80,7 @@ void Data::readData()
     }
     std::cout<<"read file succesfully! \n---------------------------------------------------------------\n";
     this->dataF.close();
-    //calcchi();
+    calcchi();
 
 }
 
@@ -180,27 +180,31 @@ void Data::calcchi()
     dataType theta=messg[0][1]; //set first theta value
     int count=0;
 
-    std::vector<dataType> normFactor;
 
     for (int i=0;i<MAXANGLES;i++)
     {
+        ++count;
         sumphi+=messg[i][0]; //add g(theta,phi)
-        if(theta!=messg[i+1][1])
+        if((((i+1)<MAXANGLES)&&(theta!=messg[i+1][1]))or i==MAXANGLES)
         {
 
-            if(i-count<=0)
+            if(count>0)
             {
-              sumphi=sumphi/(i-count);
+              sumphi=sumphi/(count);
             }
-            else{ std::cout<< "ERROR: can not calculate average in function calcchi, result migt be wrong!";}
+            else{ std::cout<< "ERROR: can not calculate average in function calcchi, result migt be wrong!\n";}
 
             for(int k=count;k<=i;k++)
             {
                 messg[k][0]=messg[k][0]/sumphi;
             }
-            sumphi=0;
-            theta=messg[i+1][1];
-            count=i;
+            if(i<MAXANGLES)
+            {
+                sumphi=0;
+                theta=messg[i+1][1];
+                count=0;
+            }
+
         }
 
     }

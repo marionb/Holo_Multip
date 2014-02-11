@@ -8,14 +8,12 @@
 #include <cmath>
 #include <limits>
 #include <vector>
-#include "specialVector.h"
+//#include "specialVector.h"
 
 typedef float dataType;
 typedef std::vector<dataType> oneVector;
 typedef std::vector<std::vector<dataType> > twoVector; //a two dimensional vectors
-typedef std::vector<SpecialVector<dataType> > twoVectorxNyZ; //a two dimensional vector with negative and positive y positions
-typedef std::vector<std::vector<std::vector<dataType> > > threeVector;
-typedef std::vector<SpecialVector<SpecialVector<dataType> > > threeVectorxNyZzZ;//a three dimensional vector with negative and positive y and z positions
+
 class Data
 {
     public:
