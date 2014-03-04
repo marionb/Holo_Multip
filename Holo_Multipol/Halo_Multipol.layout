@@ -5,15 +5,15 @@
 		<Cursor position="3136" topLine="101" />
 	</File>
 	<File name="Data.h" open="1" top="0" tabpos="5">
-		<Cursor position="3585" topLine="87" />
+		<Cursor position="516" topLine="0" />
 	</File>
-	<File name="Multipole.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="1718" topLine="36" />
+	<File name="Multipole.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1995" topLine="55" />
 	</File>
 	<File name="Multipole.h" open="1" top="0" tabpos="4">
-		<Cursor position="3160" topLine="81" />
+		<Cursor position="3959" topLine="81" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="714" topLine="13" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="3308" topLine="84" />
 	</File>
 </CodeBlocks_layout_file>

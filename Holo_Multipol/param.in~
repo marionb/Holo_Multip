@@ -1,0 +1,6 @@
+CPPOut.dat		#name of file containing the data
+testalm.dat		#name of file to write the coefficients in
+testmpl.dat		#name of fiel to write the resulting expansion
+10			#amount of coefficiens foe the multipoe expansion (MAX is 100)
+1			#symetry value
+

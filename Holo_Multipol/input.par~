@@ -1,0 +1,21 @@
+   500                                  file format version
+newinp.itp                              data input file (angle set)
+test                                    title
+test.alm                                coefficients input/output file
+test.mpl                                multipole output file
+holotest.yz                             yz output file
+holotest.xyz                            xyz output file
+holotest.rad                            radial output file
+  50                                    lmax of multipole expansion
+   1                                    symmetry
+  -3                                    normalization flag
+   0                                    apodization flag
+   1                                    enable coeff input/output
+   1                                    enable multipole output
+   0                                    enable yz output
+   0                                    enable xy output
+   0                                    enable radial output
+   0.09                                 grid spacing [\AA]
+1092.00                                 electron kinetic energy
+   0                                    radial cut alpha angle
+   0                                    radial cut beta angle

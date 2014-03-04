@@ -15,13 +15,13 @@ __date__ = "$Date: 14/10/2013 $"
 
 from numpy import *
 import sys
-import griding2 as gr2
+#import griding2 as gr2
 
 
 
 class Grid:
     #Global variables
-    def __init__(self, gfile="oldinp.itp", nfile="newinp.itp"):
+    def __init__(self, gfile, nfile="newinp.itp"):
         self.gridfile=gfile   # file containing the grid information
         self.outputfile=""
         self.newFile=nfile    # file containing the measured data
@@ -50,7 +50,7 @@ class Grid:
             self.theta, self.phi=loadtxt(self.gridfile, usecols=(1,2), unpack=True)
             print "Beginning grid processing"
         except:
-            print "data file could not be opend. Check that ",gridfile," exists in runing directory and run again."
+            print "data file could not be opend. Check that ", self.gridfile ," exists in runing directory and run again."
             print"------------------ERROR-------------------------"
             print "will exit program!"
             print"------------------------------------------------"
@@ -182,7 +182,7 @@ class Grid:
                 self.grid[i][3]=self.grid[i][3]/self.grid[i][4]
             else:
                 continue
-        print "mached new data in to base grid."
+        print "matched new data in to base grid."
         print"------------------------------------------------"
     
        
@@ -303,14 +303,14 @@ def main():
     
     print "Running", sys.argv[0]
     paramFile=""
-    parameter=list()#maximum amount of parameters in param file
-    maximum=8 
+    parameter=list()
+    maximum=9 #maximum amount of parameters in param file
     
     if len(sys.argv) == 2:#the name of the base grid and the name of the data fiel has to be given
         paramFile=sys.argv[1]
 
     elif len(sys.argv) == 1:
-        paramFile="PythonFile.param"
+        paramFile="PythonInput.param"
         
     else:
         print "to many arguments given program takes no argument or two arguments(name of fiel with grid, name of file containing data)"
@@ -320,10 +320,11 @@ def main():
     
     try:
         pm=open(paramFile, 'r')
-        parameter=pm.readlines()
+        temp=pm.readlines()
         
-        for i in range(len(parameter)):
-            parameter[i]=parameter[i].replace("\n","")
+        for i in range(len(temp)):
+            if ("#" not in temp[i]):
+                parameter.append(temp[i].replace("\n",""))
         
     except:
         print "parameter file could not be opend. Check that ",paramFile," exists in runing directory and run again."
@@ -331,13 +332,16 @@ def main():
         print "Programm will exit!"
         print"------------------------------------------------"
         return
-    
-    expGrid= Grid()
+
+    if(parameter[2]==""):
+        expGrid= Grid(parameter[1])
+    else:
+        expGrid= Grid(parameter[1], parameter[2])
     
     if(len(parameter)==(maximum-1)):
-        expGrid.calcGrid(float(parameter[2]),float(parameter[3]),float(parameter[4]))
+        expGrid.calcGrid(float(parameter[3]),float(parameter[4]),float(parameter[5]))
     elif(len(parameter)==maximum):
-        expGrid.calcGrid(float(parameter[2]),float(parameter[3]),float(parameter[4]),float(parameter[5]))
+        expGrid.calcGrid(float(parameter[3]),float(parameter[4]),float(parameter[5]),float(parameter[6]))
         
     if(parameter[-2]=="True" or parameter[-2]=="true" or parameter[-2]=="TRUE"):
         expGrid.plotGrid()
@@ -351,7 +355,9 @@ def main():
 
  
     print "dOmega=", expGrid.OmegaArea()
+    print "file containing grid",expGrid.newFile
     expGrid.fitNewToOldGrid()
+    
 
 
    

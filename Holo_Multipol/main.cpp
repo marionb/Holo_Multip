@@ -15,7 +15,7 @@ struct ReadInput{
     std::string inFileALM;
     std::string outFileALM;
     std::string outFileMPL;
-    std::string apodization; //apodization Flag
+    //std::string apodization; //apodization Flag
     int lmax; //max number of parameters to expand
     int symm; //symmetry of the tested material(or similar)
     int inorm;
@@ -99,66 +99,13 @@ int main(int argc, char** argv)
     }
     else
     {
-        paramFile = "input.par";
+        paramFile = "CPPInput.param";
         std::cout<<"\nno parameter file given; will use "<< paramFile <<std::endl;
     }
 
     input.readfile(paramFile);
 
-    //read arguments from parameter File
-   /* std::ifstream pFile (paramFile.c_str());
-    if(pFile.is_open())
-    {
-        std::cout<<"---------------------------------------------------------------\n";
-        std::cout<<"reading file "<< paramFile <<std::endl;
-        pFile>>dummy; //file format version not needed
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
 
-        pFile>>input.dataFile; //data input fiel (angle set)
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>dummy; //title not needed
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.outFileALM; //output file for ALM coefficients
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.outFileMPL; //output file for multipole
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>dummy; //file for xy output not needed
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>dummy; //file for xyz output not needed
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>dummy; //file for radial output not needed
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.lmax; //lmax of multipole expansion
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.symm; //symmetry
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.inorm; //normalization flag
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.apo; //apodization flag
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>input.inFileALM;
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile>>gridData;
-        pFile.ignore (std::numeric_limits<std::streamsize>::max(), '\n');
-
-        pFile.close();
-        std::cout<<"read "<< paramFile <<" successfully"<<std::endl;
-        std::cout<<"--------------------------------------------------------------- \n";
-    }
-    else {std::cout<<"ERROR: Unable to open file: \nPlease check that it exists in the executing folder!\n";}
-*/
     //Now functions to run the computations are called.
 
     Multipole *file=new Multipole(input.dataFile, input.apo, input.inorm, input.lmax, input.symm);

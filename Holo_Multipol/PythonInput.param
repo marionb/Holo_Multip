@@ -1,6 +1,6 @@
-# parameter file for creating a grid as given below
+#parameter file for creating a grid as given below
 #True -> create grid + merge dataFile; False -> create grid
-#File containing grid (can be the same as the file containing the measured data)
+#File containing grid
 #File containing measured data; If no file is given "newinp.itp" will be used
 #Phi_ref
 #Theta_step
@@ -9,7 +9,7 @@
 #plot grit (True/Flase)
 #Output (options are CPP or Fortran)
 #--------------------------------------------------
-True
+True           
 Grid.dat
 newinp.itp
 1
